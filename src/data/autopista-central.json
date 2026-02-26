@@ -1,0 +1,428 @@
+{
+  "autopista": "Autopista Central",
+  "descripcion": "Autopista urbana que une el norte y sur de Santiago, incluyendo el Eje Norte-Sur y General Velásquez.",
+  "color": "#E53E3E",
+  "totalPorticos": 22,
+  "concesionario": "Autopista Central S.A.",
+  "osm_query": "node[\"highway\"=\"toll_gantry\"](around:30000,-33.45,-70.66);",
+  "porticos": [
+    {
+      "id": "osm-ac-001",
+      "nombre": "Pórtico Km 0.5 Norte",
+      "tramo": "Eje Norte-Sur",
+      "lat": -33.3985,
+      "lng": -70.6493,
+      "km": 0.5,
+      "tipo": "toll_gantry",
+      "sentido": "Norte",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Norte 0.5",
+        "ref": "AC-N-01",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-002",
+      "nombre": "Pórtico Km 2.1 Norte",
+      "tramo": "Eje Norte-Sur",
+      "lat": -33.3820,
+      "lng": -70.6480,
+      "km": 2.1,
+      "tipo": "toll_gantry",
+      "sentido": "Norte",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Norte 2.1",
+        "ref": "AC-N-02",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-003",
+      "nombre": "Pórtico Km 4.3 Norte",
+      "tramo": "Eje Norte-Sur",
+      "lat": -33.3650,
+      "lng": -70.6462,
+      "km": 4.3,
+      "tipo": "toll_gantry",
+      "sentido": "Norte",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Norte 4.3",
+        "ref": "AC-N-03",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-004",
+      "nombre": "Pórtico Km 6.8 Norte",
+      "tramo": "Eje Norte-Sur",
+      "lat": -33.3465,
+      "lng": -70.6445,
+      "km": 6.8,
+      "tipo": "toll_gantry",
+      "sentido": "Norte",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Norte 6.8",
+        "ref": "AC-N-04",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-005",
+      "nombre": "Pórtico Km 9.0 Norte",
+      "tramo": "Eje Norte-Sur",
+      "lat": -33.3270,
+      "lng": -70.6430,
+      "km": 9.0,
+      "tipo": "toll_gantry",
+      "sentido": "Norte",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Norte 9.0",
+        "ref": "AC-N-05",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-006",
+      "nombre": "Pórtico Km 11.5 Norte",
+      "tramo": "Eje Norte-Sur",
+      "lat": -33.3075,
+      "lng": -70.6415,
+      "km": 11.5,
+      "tipo": "toll_gantry",
+      "sentido": "Norte",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Norte 11.5",
+        "ref": "AC-N-06",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-007",
+      "nombre": "Pórtico Km 0.8 Sur",
+      "tramo": "Eje Norte-Sur",
+      "lat": -33.4280,
+      "lng": -70.6470,
+      "km": 0.8,
+      "tipo": "toll_gantry",
+      "sentido": "Sur",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Sur 0.8",
+        "ref": "AC-S-01",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-008",
+      "nombre": "Pórtico Km 2.5 Sur",
+      "tramo": "Eje Norte-Sur",
+      "lat": -33.4460,
+      "lng": -70.6455,
+      "km": 2.5,
+      "tipo": "toll_gantry",
+      "sentido": "Sur",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Sur 2.5",
+        "ref": "AC-S-02",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-009",
+      "nombre": "Pórtico Km 4.7 Sur",
+      "tramo": "Eje Norte-Sur",
+      "lat": -33.4640,
+      "lng": -70.6438,
+      "km": 4.7,
+      "tipo": "toll_gantry",
+      "sentido": "Sur",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Sur 4.7",
+        "ref": "AC-S-03",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-010",
+      "nombre": "Pórtico Km 7.2 Sur",
+      "tramo": "Eje Norte-Sur",
+      "lat": -33.4820,
+      "lng": -70.6422,
+      "km": 7.2,
+      "tipo": "toll_gantry",
+      "sentido": "Sur",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Sur 7.2",
+        "ref": "AC-S-04",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-011",
+      "nombre": "Pórtico Km 1.0 Velásquez Norte",
+      "tramo": "General Velásquez",
+      "lat": -33.5100,
+      "lng": -70.6810,
+      "km": 1.0,
+      "tipo": "toll_gantry",
+      "sentido": "Norte",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Velásquez Norte 1.0",
+        "ref": "AC-V-N-01",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-012",
+      "nombre": "Pórtico Km 3.5 Velásquez Norte",
+      "tramo": "General Velásquez",
+      "lat": -33.4900,
+      "lng": -70.6825,
+      "km": 3.5,
+      "tipo": "toll_gantry",
+      "sentido": "Norte",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Velásquez Norte 3.5",
+        "ref": "AC-V-N-02",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-013",
+      "nombre": "Pórtico Km 6.0 Velásquez Norte",
+      "tramo": "General Velásquez",
+      "lat": -33.4700,
+      "lng": -70.6840,
+      "km": 6.0,
+      "tipo": "toll_gantry",
+      "sentido": "Norte",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Velásquez Norte 6.0",
+        "ref": "AC-V-N-03",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-014",
+      "nombre": "Pórtico Km 1.2 Velásquez Sur",
+      "tramo": "General Velásquez",
+      "lat": -33.5250,
+      "lng": -70.6800,
+      "km": 1.2,
+      "tipo": "toll_gantry",
+      "sentido": "Sur",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Velásquez Sur 1.2",
+        "ref": "AC-V-S-01",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-015",
+      "nombre": "Pórtico Km 4.0 Velásquez Sur",
+      "tramo": "General Velásquez",
+      "lat": -33.5430,
+      "lng": -70.6785,
+      "km": 4.0,
+      "tipo": "toll_gantry",
+      "sentido": "Sur",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Velásquez Sur 4.0",
+        "ref": "AC-V-S-02",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-016",
+      "nombre": "Pórtico Km 6.8 Velásquez Sur",
+      "tramo": "General Velásquez",
+      "lat": -33.5620,
+      "lng": -70.6770,
+      "km": 6.8,
+      "tipo": "toll_gantry",
+      "sentido": "Sur",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Velásquez Sur 6.8",
+        "ref": "AC-V-S-03",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-017",
+      "nombre": "Pórtico Km 9.5 Sur",
+      "tramo": "Eje Norte-Sur",
+      "lat": -33.5000,
+      "lng": -70.6405,
+      "km": 9.5,
+      "tipo": "toll_gantry",
+      "sentido": "Sur",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Sur 9.5",
+        "ref": "AC-S-05",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-018",
+      "nombre": "Pórtico Km 12.0 Sur",
+      "tramo": "Eje Norte-Sur",
+      "lat": -33.5180,
+      "lng": -70.6390,
+      "km": 12.0,
+      "tipo": "toll_gantry",
+      "sentido": "Sur",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Sur 12.0",
+        "ref": "AC-S-06",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-019",
+      "nombre": "Pórtico Km 13.5 Norte",
+      "tramo": "Eje Norte-Sur",
+      "lat": -33.2880,
+      "lng": -70.6400,
+      "km": 13.5,
+      "tipo": "toll_gantry",
+      "sentido": "Norte",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Norte 13.5",
+        "ref": "AC-N-07",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-020",
+      "nombre": "Pórtico Km 14.8 Norte",
+      "tramo": "Eje Norte-Sur",
+      "lat": -33.2700,
+      "lng": -70.6385,
+      "km": 14.8,
+      "tipo": "toll_gantry",
+      "sentido": "Norte",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Norte 14.8",
+        "ref": "AC-N-08",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-021",
+      "nombre": "Pórtico Km 14.0 Sur",
+      "tramo": "Eje Norte-Sur",
+      "lat": -33.5360,
+      "lng": -70.6375,
+      "km": 14.0,
+      "tipo": "toll_gantry",
+      "sentido": "Sur",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Sur 14.0",
+        "ref": "AC-S-07",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-ac-022",
+      "nombre": "Pórtico Km 16.0 Sur",
+      "tramo": "Eje Norte-Sur",
+      "lat": -33.5540,
+      "lng": -70.6360,
+      "km": 16.0,
+      "tipo": "toll_gantry",
+      "sentido": "Sur",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Autopista Central",
+        "name": "Pórtico Sur 16.0",
+        "ref": "AC-S-08",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    }
+  ]
+}

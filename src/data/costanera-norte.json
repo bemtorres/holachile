@@ -1,0 +1,585 @@
+{
+  "autopista": "Costanera Norte",
+  "descripcion": "Autopista urbana que une el oriente y poniente de Santiago a través del río Mapocho.",
+  "color": "#3182CE",
+  "totalPorticos": 30,
+  "concesionario": "Costanera Norte S.A.",
+  "osm_query": "node[\"highway\"=\"toll_gantry\"](around:20000,-33.42,-70.61);",
+  "porticos": [
+    {
+      "id": "osm-cn-001",
+      "nombre": "Pórtico Tramo I - Km 0.5",
+      "tramo": "Tramo I (Kennedy - Vespucio)",
+      "lat": -33.4102,
+      "lng": -70.5350,
+      "km": 0.5,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo I 0.5",
+        "ref": "CN-I-01",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-002",
+      "nombre": "Pórtico Tramo I - Km 2.0",
+      "tramo": "Tramo I (Kennedy - Vespucio)",
+      "lat": -33.4098,
+      "lng": -70.5510,
+      "km": 2.0,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo I 2.0",
+        "ref": "CN-I-02",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-003",
+      "nombre": "Pórtico Tramo I - Km 3.8",
+      "tramo": "Tramo I (Kennedy - Vespucio)",
+      "lat": -33.4090,
+      "lng": -70.5690,
+      "km": 3.8,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo I 3.8",
+        "ref": "CN-I-03",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-004",
+      "nombre": "Pórtico Tramo I - Km 5.5",
+      "tramo": "Tramo I (Kennedy - Vespucio)",
+      "lat": -33.4082,
+      "lng": -70.5870,
+      "km": 5.5,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo I 5.5",
+        "ref": "CN-I-04",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-005",
+      "nombre": "Pórtico Tramo I - Km 7.2",
+      "tramo": "Tramo I (Kennedy - Vespucio)",
+      "lat": -33.4075,
+      "lng": -70.6050,
+      "km": 7.2,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo I 7.2",
+        "ref": "CN-I-05",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-006",
+      "nombre": "Pórtico Tramo I - Km 0.6 Oriente",
+      "tramo": "Tramo I (Kennedy - Vespucio)",
+      "lat": -33.4108,
+      "lng": -70.5390,
+      "km": 0.6,
+      "tipo": "toll_gantry",
+      "sentido": "Oriente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo I 0.6 Or",
+        "ref": "CN-I-06",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-007",
+      "nombre": "Pórtico Tramo I - Km 2.2 Oriente",
+      "tramo": "Tramo I (Kennedy - Vespucio)",
+      "lat": -33.4115,
+      "lng": -70.5550,
+      "km": 2.2,
+      "tipo": "toll_gantry",
+      "sentido": "Oriente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo I 2.2 Or",
+        "ref": "CN-I-07",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-008",
+      "nombre": "Pórtico Tramo II - Km 1.0",
+      "tramo": "Tramo II (Vespucio - Autopista Central)",
+      "lat": -33.4068,
+      "lng": -70.6230,
+      "km": 1.0,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo II 1.0",
+        "ref": "CN-II-01",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-009",
+      "nombre": "Pórtico Tramo II - Km 2.8",
+      "tramo": "Tramo II (Vespucio - Autopista Central)",
+      "lat": -33.4062,
+      "lng": -70.6410,
+      "km": 2.8,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo II 2.8",
+        "ref": "CN-II-02",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-010",
+      "nombre": "Pórtico Tramo II - Km 4.5",
+      "tramo": "Tramo II (Vespucio - Autopista Central)",
+      "lat": -33.4055,
+      "lng": -70.6590,
+      "km": 4.5,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo II 4.5",
+        "ref": "CN-II-03",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-011",
+      "nombre": "Pórtico Tramo II - Km 6.0",
+      "tramo": "Tramo II (Vespucio - Autopista Central)",
+      "lat": -33.4048,
+      "lng": -70.6770,
+      "km": 6.0,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo II 6.0",
+        "ref": "CN-II-04",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-012",
+      "nombre": "Pórtico Tramo II - Km 1.1 Oriente",
+      "tramo": "Tramo II (Vespucio - Autopista Central)",
+      "lat": -33.4072,
+      "lng": -70.6250,
+      "km": 1.1,
+      "tipo": "toll_gantry",
+      "sentido": "Oriente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo II 1.1 Or",
+        "ref": "CN-II-05",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-013",
+      "nombre": "Pórtico Tramo II - Km 3.0 Oriente",
+      "tramo": "Tramo II (Vespucio - Autopista Central)",
+      "lat": -33.4065,
+      "lng": -70.6430,
+      "km": 3.0,
+      "tipo": "toll_gantry",
+      "sentido": "Oriente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo II 3.0 Or",
+        "ref": "CN-II-06",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-014",
+      "nombre": "Pórtico Tramo III - Km 1.0",
+      "tramo": "Tramo III (Tunel San Cristóbal)",
+      "lat": -33.4040,
+      "lng": -70.6950,
+      "km": 1.0,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo III 1.0",
+        "ref": "CN-III-01",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "tunnel": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-015",
+      "nombre": "Pórtico Tramo III - Km 2.5",
+      "tramo": "Tramo III (Tunel San Cristóbal)",
+      "lat": -33.4033,
+      "lng": -70.7130,
+      "km": 2.5,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo III 2.5",
+        "ref": "CN-III-02",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "tunnel": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-016",
+      "nombre": "Pórtico Tramo III - Km 4.0",
+      "tramo": "Tramo III (Tunel San Cristóbal)",
+      "lat": -33.4026,
+      "lng": -70.7310,
+      "km": 4.0,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo III 4.0",
+        "ref": "CN-III-03",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "tunnel": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-017",
+      "nombre": "Pórtico Tramo III - Km 1.1 Oriente",
+      "tramo": "Tramo III (Tunel San Cristóbal)",
+      "lat": -33.4045,
+      "lng": -70.6970,
+      "km": 1.1,
+      "tipo": "toll_gantry",
+      "sentido": "Oriente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo III 1.1 Or",
+        "ref": "CN-III-04",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "tunnel": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-018",
+      "nombre": "Pórtico Tramo III - Km 3.0 Oriente",
+      "tramo": "Tramo III (Tunel San Cristóbal)",
+      "lat": -33.4038,
+      "lng": -70.7150,
+      "km": 3.0,
+      "tipo": "toll_gantry",
+      "sentido": "Oriente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo III 3.0 Or",
+        "ref": "CN-III-05",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "tunnel": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-019",
+      "nombre": "Pórtico Tramo IV - Km 1.0",
+      "tramo": "Tramo IV (El Salto - Lo Boza)",
+      "lat": -33.4020,
+      "lng": -70.7490,
+      "km": 1.0,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo IV 1.0",
+        "ref": "CN-IV-01",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-020",
+      "nombre": "Pórtico Tramo IV - Km 3.0",
+      "tramo": "Tramo IV (El Salto - Lo Boza)",
+      "lat": -33.4014,
+      "lng": -70.7670,
+      "km": 3.0,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo IV 3.0",
+        "ref": "CN-IV-02",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-021",
+      "nombre": "Pórtico Tramo IV - Km 5.0",
+      "tramo": "Tramo IV (El Salto - Lo Boza)",
+      "lat": -33.4008,
+      "lng": -70.7850,
+      "km": 5.0,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo IV 5.0",
+        "ref": "CN-IV-03",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-022",
+      "nombre": "Pórtico Tramo IV - Km 7.0",
+      "tramo": "Tramo IV (El Salto - Lo Boza)",
+      "lat": -33.4002,
+      "lng": -70.8030,
+      "km": 7.0,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo IV 7.0",
+        "ref": "CN-IV-04",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-023",
+      "nombre": "Pórtico Tramo IV - Km 1.2 Oriente",
+      "tramo": "Tramo IV (El Salto - Lo Boza)",
+      "lat": -33.4025,
+      "lng": -70.7510,
+      "km": 1.2,
+      "tipo": "toll_gantry",
+      "sentido": "Oriente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo IV 1.2 Or",
+        "ref": "CN-IV-05",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-024",
+      "nombre": "Pórtico Tramo IV - Km 3.5 Oriente",
+      "tramo": "Tramo IV (El Salto - Lo Boza)",
+      "lat": -33.4018,
+      "lng": -70.7690,
+      "km": 3.5,
+      "tipo": "toll_gantry",
+      "sentido": "Oriente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo IV 3.5 Or",
+        "ref": "CN-IV-06",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-025",
+      "nombre": "Pórtico Tramo IV - Km 5.5 Oriente",
+      "tramo": "Tramo IV (El Salto - Lo Boza)",
+      "lat": -33.4012,
+      "lng": -70.7870,
+      "km": 5.5,
+      "tipo": "toll_gantry",
+      "sentido": "Oriente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo IV 5.5 Or",
+        "ref": "CN-IV-07",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-026",
+      "nombre": "Pórtico Tramo IV - Km 7.5 Oriente",
+      "tramo": "Tramo IV (El Salto - Lo Boza)",
+      "lat": -33.4005,
+      "lng": -70.8050,
+      "km": 7.5,
+      "tipo": "toll_gantry",
+      "sentido": "Oriente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Pórtico CN Tramo IV 7.5 Or",
+        "ref": "CN-IV-08",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-027",
+      "nombre": "Pórtico Acceso El Salto",
+      "tramo": "Accesos",
+      "lat": -33.3998,
+      "lng": -70.6110,
+      "km": 0.1,
+      "tipo": "toll_gantry",
+      "sentido": "Ambos",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Acceso El Salto",
+        "ref": "CN-A-01",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-028",
+      "nombre": "Pórtico Acceso Vespucio",
+      "tramo": "Accesos",
+      "lat": -33.4078,
+      "lng": -70.6050,
+      "km": 0.2,
+      "tipo": "toll_gantry",
+      "sentido": "Ambos",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Acceso Vespucio",
+        "ref": "CN-A-02",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-029",
+      "nombre": "Pórtico Acceso NorOeste",
+      "tramo": "Accesos",
+      "lat": -33.3992,
+      "lng": -70.8210,
+      "km": 0.1,
+      "tipo": "toll_gantry",
+      "sentido": "Ambos",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Acceso NorOeste",
+        "ref": "CN-A-03",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    },
+    {
+      "id": "osm-cn-030",
+      "nombre": "Pórtico Acceso Kennedy",
+      "tramo": "Accesos",
+      "lat": -33.4112,
+      "lng": -70.5300,
+      "km": 0.1,
+      "tipo": "toll_gantry",
+      "sentido": "Ambos",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Costanera Norte",
+        "name": "Acceso Kennedy",
+        "ref": "CN-A-04",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes"
+      }
+    }
+  ]
+}

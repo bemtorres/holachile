@@ -1,0 +1,2541 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-02-25T18:24:43Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13877100",
+        "highway": "toll_gantry",
+        "name": "P3 Ruta 68 - Costanera Norte",
+        "ref": "P3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7831378,
+          -33.4387137
+        ]
+      },
+      "id": "node/13877100"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13881069",
+        "highway": "toll_gantry",
+        "name": "P14 Guanaco - El Salto",
+        "ref": "P14"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6333164,
+          -33.3886039
+        ]
+      },
+      "id": "node/13881069"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/157288624",
+        "highway": "toll_gantry",
+        "name": "PA32 - Las Acacias - Lo Blanco",
+        "ref": "PA32"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7105862,
+          -33.5588804
+        ]
+      },
+      "id": "node/157288624"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/253434286",
+        "highway": "toll_gantry",
+        "name": "P00 Puente Padre Arteaga - Puente San Francisco",
+        "ref": "P00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.52258,
+          -33.3710033
+        ]
+      },
+      "id": "node/253434286"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/285899561",
+        "highway": "toll_gantry",
+        "name": "PA28 - Río Mapocho - Ruta 5 Norte",
+        "ref": "PA28"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6955624,
+          -33.3822386
+        ]
+      },
+      "id": "node/285899561"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/288057884",
+        "highway": "toll_gantry",
+        "name": "PA16 - Río Mapocho - 14 de la Fama - Américo Vespucio Norte",
+        "ref": "PA16"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6787232,
+          -33.4171865
+        ]
+      },
+      "id": "node/288057884"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/335626019",
+        "highway": "toll_gantry",
+        "name": "PA2 - Los Guindos - La Capilla",
+        "ref": "PA2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7116107,
+          -33.6473389
+        ]
+      },
+      "id": "node/335626019"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/382079878",
+        "highway": "toll_gantry",
+        "name": "P64 Troncal Oriente",
+        "ref": "P64"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6342524,
+          -33.3113183
+        ]
+      },
+      "id": "node/382079878"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/454636152",
+        "highway": "toll_gantry",
+        "name": "Américo Vespucio",
+        "ref": "T1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7410211,
+          -33.4848651
+        ]
+      },
+      "id": "node/454636152"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/454636182",
+        "highway": "toll_gantry",
+        "name": "Américo Vespucio",
+        "ref": "T1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.741127,
+          -33.4847582
+        ]
+      },
+      "id": "node/454636182"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/636752664",
+        "highway": "toll_gantry",
+        "name": "P102 Kennedy - El salto",
+        "ref": "PC 102"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6151323,
+          -33.3988003
+        ]
+      },
+      "id": "node/636752664"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2077631034",
+        "highway": "toll_gantry",
+        "name": "PA17 - 14 de la Fama - Américo Vespucio Norte",
+        "ref": "PA17"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6991042,
+          -33.3685816
+        ]
+      },
+      "id": "node/2077631034"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2486323474",
+        "highway": "toll_gantry",
+        "name": "P07 Estoril - Las Tranqueras",
+        "ref": "P07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5429258,
+          -33.3876805
+        ]
+      },
+      "id": "node/2486323474"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2490264555",
+        "highway": "toll_gantry",
+        "name": "PA7 - Las Acacias - Américo Vespucio",
+        "ref": "PA7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6970069,
+          -33.5478986
+        ]
+      },
+      "id": "node/2490264555"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2490264558",
+        "highway": "toll_gantry",
+        "name": "PA8 - Américo Vespucio - Las Acacias",
+        "ref": "PA8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.696839,
+          -33.5476268
+        ]
+      },
+      "id": "node/2490264558"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2612857718",
+        "highway": "toll_gantry",
+        "name": "P05 Vivaceta - Carrascal",
+        "ref": "P05"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.669833,
+          -33.4264381
+        ]
+      },
+      "id": "node/2612857718"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2948768935",
+        "highway": "toll_gantry",
+        "name": "P2.2 Puente Lo Saldes - Centenario",
+        "ref": "P2.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6033861,
+          -33.3944443
+        ]
+      },
+      "id": "node/2948768935"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2951662070",
+        "highway": "toll_gantry",
+        "name": "P01 Puente La Dehesa - Gran Vía",
+        "ref": "P01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5426489,
+          -33.3758198
+        ]
+      },
+      "id": "node/2951662070"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3241339769",
+        "highway": "toll_gantry",
+        "name": "P8.1 Las Tranqueras - Costanera Norte (Longitud 5,46 Kms)",
+        "ref": "P8.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5997632,
+          -33.4081406
+        ]
+      },
+      "id": "node/3241339769"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4399757534",
+        "highway": "toll_gantry",
+        "name": "PA31 - Carlos Valdovinos - Alameda",
+        "ref": "PA31"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6562428,
+          -33.469011
+        ]
+      },
+      "id": "node/4399757534"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4455202302",
+        "highway": "toll_gantry",
+        "name": "P1 Ruta 78 - Santa Elena",
+        "ref": "P1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7530939,
+          -33.483359
+        ]
+      },
+      "id": "node/4455202302"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4999156427",
+        "highway": "toll_gantry",
+        "name": "P63 Troncal Poniente",
+        "ref": "P63"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6704931,
+          -33.2994711
+        ]
+      },
+      "id": "node/4999156427"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4999156428",
+        "highway": "toll_gantry",
+        "name": "P62 Troncal Poniente",
+        "ref": "P62"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6704998,
+          -33.2993839
+        ]
+      },
+      "id": "node/4999156428"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4999156848",
+        "highway": "toll_gantry",
+        "name": "P65 Troncal Oriente",
+        "ref": "P65"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6341887,
+          -33.3113895
+        ]
+      },
+      "id": "node/4999156848"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5035918756",
+        "highway": "toll_gantry"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6017535,
+          -33.3881842
+        ]
+      },
+      "id": "node/5035918756"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5145133779",
+        "highway": "toll_gantry",
+        "name": "PA20 - Américo Vespucio - Ruta 5 Sur",
+        "ref": "PA20"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7076591,
+          -33.5364729
+        ]
+      },
+      "id": "node/5145133779"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5521500757",
+        "highway": "toll_gantry",
+        "name": "P17 Los Mares - Ruta 78",
+        "ref": "P17"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7535733,
+          -33.4828675
+        ]
+      },
+      "id": "node/5521500757"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5532689550",
+        "highway": "toll_gantry",
+        "name": "Padre Hurtado",
+        "ref": "T3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.8139017,
+          -33.5528306
+        ]
+      },
+      "id": "node/5532689550"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5568374798",
+        "highway": "toll_gantry",
+        "name": "P61 Lateral",
+        "ref": "P61"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6242867,
+          -33.3259183
+        ]
+      },
+      "id": "node/5568374798"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5568374819",
+        "highway": "toll_gantry",
+        "name": "P60 Lateral",
+        "ref": "P60"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6248043,
+          -33.3246935
+        ]
+      },
+      "id": "node/5568374819"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5572951836",
+        "highway": "toll_gantry",
+        "name": "P05 Carrascal - Vivaceta",
+        "ref": "P05"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6701402,
+          -33.426442
+        ]
+      },
+      "id": "node/5572951836"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5579887517",
+        "highway": "toll_gantry",
+        "name": "P8.0 Las Tranqueras - Costanera Norte",
+        "ref": "P8.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.599764,
+          -33.4080729
+        ]
+      },
+      "id": "node/5579887517"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5788252112",
+        "highway": "toll_gantry",
+        "name": "P8.0 Costanera Norte - Las Tranqueras",
+        "ref": "P8.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6043271,
+          -33.40909
+        ]
+      },
+      "id": "node/5788252112"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5788252531",
+        "highway": "toll_gantry",
+        "name": "P8.1 Costanera Norte - Las Tranqueras",
+        "ref": "P8.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6038986,
+          -33.4090708
+        ]
+      },
+      "id": "node/5788252531"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6114084134",
+        "highway": "toll_gantry",
+        "name": "PA12 - Alameda - Carlos Valdovinos",
+        "ref": "PA12"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6565584,
+          -33.468848
+        ]
+      },
+      "id": "node/6114084134"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6114084135",
+        "highway": "toll_gantry",
+        "name": "PA13 - Alameda - Río Mapocho",
+        "ref": "PA13"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6595919,
+          -33.4489228
+        ]
+      },
+      "id": "node/6114084135"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6114084136",
+        "highway": "toll_gantry",
+        "name": "PA14 - Río Mapocho - Alameda",
+        "ref": "PA14"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6600861,
+          -33.4483818
+        ]
+      },
+      "id": "node/6114084136"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6114138859",
+        "highway": "toll_gantry",
+        "name": "PA18 - Américo Vespucio Norte - 14 de la Fama",
+        "ref": "PA18"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6994258,
+          -33.3682982
+        ]
+      },
+      "id": "node/6114138859"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6114138863",
+        "highway": "toll_gantry",
+        "name": "PA19 - Ruta 5 Sur - Américo Vespucio",
+        "ref": "PA19"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7090613,
+          -33.5514043
+        ]
+      },
+      "id": "node/6114138863"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6114166012",
+        "highway": "toll_gantry",
+        "name": "P4.3 Coronel - Santa Julia",
+        "ref": "P4.3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6149956,
+          -33.5411449
+        ]
+      },
+      "id": "node/6114166012"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6114166014",
+        "highway": "toll_gantry",
+        "name": "P4.2 Gnmo. de Alderete - Vicuña Mackena",
+        "ref": "P4.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6025742,
+          -33.5268018
+        ]
+      },
+      "id": "node/6114166014"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6114181656",
+        "highway": "toll_gantry",
+        "name": "P1.3 2a Transversal - Camino a Melipilla",
+        "ref": "P1.3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.728455,
+          -33.5058611
+        ]
+      },
+      "id": "node/6114181656"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6114181658",
+        "highway": "toll_gantry",
+        "name": "P1.1 General Velásquez - Ruta 78",
+        "ref": "P1.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7125335,
+          -33.5165613
+        ]
+      },
+      "id": "node/6114181658"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6114181660",
+        "highway": "toll_gantry",
+        "name": "P2.2 Gral. Velásquez - Ruta 5",
+        "ref": "P2.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6941029,
+          -33.526262
+        ]
+      },
+      "id": "node/6114181660"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6114181662",
+        "highway": "toll_gantry",
+        "name": "P2.1 Ruta 5 - General Velásquez",
+        "ref": "P2.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6940167,
+          -33.5260519
+        ]
+      },
+      "id": "node/6114181662"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6114181664",
+        "highway": "toll_gantry",
+        "name": "P3.3 Gran Avenida - Ruta 5",
+        "ref": "P3.3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6763449,
+          -33.5335852
+        ]
+      },
+      "id": "node/6114181664"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6114181666",
+        "highway": "toll_gantry",
+        "name": "P3.4 Ruta 5 - Gran Avenida",
+        "ref": "P3.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6764509,
+          -33.5338163
+        ]
+      },
+      "id": "node/6114181666"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6114181668",
+        "highway": "toll_gantry",
+        "name": "P3.2 Gran Avenida - Santa Rosa",
+        "ref": "P3.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6529975,
+          -33.5398418
+        ]
+      },
+      "id": "node/6114181668"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6114181670",
+        "highway": "toll_gantry",
+        "name": "P3.1 Santa Rosa - Gran Avenida",
+        "ref": "P3.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6529431,
+          -33.539608
+        ]
+      },
+      "id": "node/6114181670"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6114221889",
+        "highway": "toll_gantry",
+        "name": "P101 Salto - Kennedy",
+        "ref": "PC 101"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6157247,
+          -33.3986159
+        ]
+      },
+      "id": "node/6114221889"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6114286295",
+        "highway": "toll_gantry",
+        "name": "PA4 - Calera de Tango - La Capilla",
+        "ref": "PA4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7148676,
+          -33.6219812
+        ]
+      },
+      "id": "node/6114286295"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6114286297",
+        "highway": "toll_gantry",
+        "name": "PA3 - La Capilla - Colón",
+        "ref": "PA3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7145696,
+          -33.6227591
+        ]
+      },
+      "id": "node/6114286297"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6114291823",
+        "highway": "toll_gantry",
+        "name": "PA5 - Colón - Las Acacias",
+        "ref": "PA5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7138422,
+          -33.5827543
+        ]
+      },
+      "id": "node/6114291823"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6114291826",
+        "highway": "toll_gantry",
+        "name": "PA6 - Lo Blanco - Colón",
+        "ref": "PA6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7139749,
+          -33.5824122
+        ]
+      },
+      "id": "node/6114291826"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116236796",
+        "highway": "toll_gantry",
+        "name": "EV Entrada Vivaceta",
+        "ref": "EV"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6572269,
+          -33.4302801
+        ]
+      },
+      "id": "node/6116236796"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116236797",
+        "highway": "toll_gantry",
+        "name": "P04 Vivaceta - Torres Tajamar",
+        "ref": "P04"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6579611,
+          -33.4302245
+        ]
+      },
+      "id": "node/6116236797"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116236799",
+        "highway": "toll_gantry",
+        "name": "PA15 - 14 de la Fama - Río Mapocho",
+        "ref": "PA15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6688947,
+          -33.4265149
+        ]
+      },
+      "id": "node/6116236799"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116282528",
+        "highway": "toll_gantry",
+        "name": "P07 Las Tranqueras - Estoril",
+        "ref": "P07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5413721,
+          -33.3872062
+        ]
+      },
+      "id": "node/6116282528"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116324740",
+        "highway": "toll_gantry",
+        "name": "PA23 - Carlos Valdovinos - Alameda",
+        "ref": "PA23"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6881273,
+          -33.4690606
+        ]
+      },
+      "id": "node/6116324740"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116324742",
+        "highway": "toll_gantry",
+        "name": "PA24 - Alameda - Carlos Valdovinos",
+        "ref": "PA24"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6882455,
+          -33.4698378
+        ]
+      },
+      "id": "node/6116324742"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116324745",
+        "highway": "toll_gantry",
+        "name": "PA21 - Américo Vespucio - Carlos Valdovinos",
+        "ref": "PA21"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.697251,
+          -33.5064259
+        ]
+      },
+      "id": "node/6116324745"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116324746",
+        "highway": "toll_gantry",
+        "name": "PA22 - Carlos Valdovinos - Américo Vespucio",
+        "ref": "PA22"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6970203,
+          -33.5056315
+        ]
+      },
+      "id": "node/6116324746"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116337639",
+        "highway": "toll_gantry",
+        "name": "PA29 - Ruta 5 Norte - Río Mapocho",
+        "ref": "PA29"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6954739,
+          -33.3819384
+        ]
+      },
+      "id": "node/6116337639"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116337640",
+        "highway": "toll_gantry",
+        "name": "PA25 - Alameda - Río Mapocho",
+        "ref": "PA25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6920804,
+          -33.4467397
+        ]
+      },
+      "id": "node/6116337640"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116337642",
+        "highway": "toll_gantry",
+        "name": "PA26 - Río Mapocho - Alameda",
+        "ref": "PA26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6922865,
+          -33.4474517
+        ]
+      },
+      "id": "node/6116337642"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116371328",
+        "highway": "toll_gantry",
+        "name": "PA10 - Departamental - Carlos Valdovinos",
+        "ref": "PA10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6638989,
+          -33.4957722
+        ]
+      },
+      "id": "node/6116371328"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116371330",
+        "highway": "toll_gantry",
+        "name": "PA11 - Carlos Valdovinos - Departamental",
+        "ref": "PA11"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6638932,
+          -33.4953488
+        ]
+      },
+      "id": "node/6116371330"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116371333",
+        "highway": "toll_gantry",
+        "name": "PA9 - Departamental - Américo Vespucio",
+        "ref": "PA9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6694242,
+          -33.5071477
+        ]
+      },
+      "id": "node/6116371333"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116371334",
+        "highway": "toll_gantry",
+        "name": "PA30 - Américo Vespucio - Departamental",
+        "ref": "PA30"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6693191,
+          -33.5072881
+        ]
+      },
+      "id": "node/6116371334"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116371480",
+        "highway": "toll_gantry",
+        "name": "P6 Condell - Costanera Norte",
+        "ref": "P6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7755638,
+          -33.3993533
+        ]
+      },
+      "id": "node/6116371480"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116371481",
+        "highway": "toll_gantry",
+        "name": "P5 Costanera Norte - Condell",
+        "ref": "P5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7756381,
+          -33.3996244
+        ]
+      },
+      "id": "node/6116371481"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116371482",
+        "highway": "toll_gantry",
+        "name": "P4 Costanera Norte - Ruta 68",
+        "ref": "P4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7848507,
+          -33.4312884
+        ]
+      },
+      "id": "node/6116371482"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116872049",
+        "highway": "toll_gantry",
+        "name": "P5.4 Las Torres - Quilín",
+        "ref": "P5.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5845023,
+          -33.4960669
+        ]
+      },
+      "id": "node/6116872049"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116872050",
+        "highway": "toll_gantry",
+        "name": "P5.3 Quilín - Las Torres",
+        "ref": "P5.3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5844562,
+          -33.4955584
+        ]
+      },
+      "id": "node/6116872050"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116872054",
+        "highway": "toll_gantry",
+        "name": "P5.1 Grecia - Quilín",
+        "ref": "P5.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5790434,
+          -33.4809446
+        ]
+      },
+      "id": "node/6116872054"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6116872055",
+        "highway": "toll_gantry",
+        "name": "P5.2 Quilín - Grecia",
+        "ref": "P5.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5787734,
+          -33.4810039
+        ]
+      },
+      "id": "node/6116872055"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6117130667",
+        "highway": "toll_gantry",
+        "name": "P2.2 Centenario - Puente Lo Saldes",
+        "ref": "P2.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6035262,
+          -33.3944093
+        ]
+      },
+      "id": "node/6117130667"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6117130668",
+        "highway": "toll_gantry",
+        "name": "P15 El Salto - Recoleta",
+        "ref": "P15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6329673,
+          -33.3886636
+        ]
+      },
+      "id": "node/6117130668"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6117130669",
+        "highway": "toll_gantry",
+        "name": "P12 Pedro Fontova - Guanaco",
+        "ref": "P12"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6649728,
+          -33.3733937
+        ]
+      },
+      "id": "node/6117130669"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6117130670",
+        "highway": "toll_gantry",
+        "name": "P13 Recoleta - Pedro Fontova",
+        "ref": "P13"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6646148,
+          -33.3733644
+        ]
+      },
+      "id": "node/6117130670"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6117130671",
+        "highway": "toll_gantry",
+        "name": "P11 Pedro Fontova - Ruta 5 Norte",
+        "ref": "P11"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6951137,
+          -33.3658211
+        ]
+      },
+      "id": "node/6117130671"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6117130672",
+        "highway": "toll_gantry",
+        "name": "P10 Ruta 5 Norte - Pedro Fontova",
+        "ref": "P10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6969041,
+          -33.3659479
+        ]
+      },
+      "id": "node/6117130672"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6117130673",
+        "highway": "toll_gantry",
+        "name": "P9 Lo Echevers - Ruta 5 Norte",
+        "ref": "P9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7043428,
+          -33.3688771
+        ]
+      },
+      "id": "node/6117130673"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6117130674",
+        "highway": "toll_gantry",
+        "lit": "yes",
+        "name": "P8 Ruta 5 Norte - Condell",
+        "operator": "Sociedad Concesionaria Vespucio Norte Express S.A.",
+        "ref": "P8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7113029,
+          -33.3730357
+        ]
+      },
+      "id": "node/6117130674"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6117130675",
+        "highway": "toll_gantry",
+        "name": "P7 Condell - Lo Echevers",
+        "ref": "P7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7539367,
+          -33.38132
+        ]
+      },
+      "id": "node/6117130675"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6117141442",
+        "highway": "toll_gantry",
+        "name": "P01 Gran Vía - Puente La Dehesa",
+        "ref": "P01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5430603,
+          -33.3757292
+        ]
+      },
+      "id": "node/6117141442"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6122216578",
+        "highway": "toll_gantry",
+        "operator": "Sociedad Concesionaria Nueva Aconcagua S.A.",
+        "ref": "P3 - Enlace Buenaventura"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7120052,
+          -33.3398283
+        ]
+      },
+      "id": "node/6122216578"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6223443638",
+        "charge": "200CLP motorcycle;700CLP motocar;1400CLP hgv",
+        "check_date": "2024-04-25",
+        "highway": "toll_gantry",
+        "name": "Peaje Lampa",
+        "operator": "Sociedad Concesionaria Nueva Aconcagua S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7590362,
+          -33.2355983
+        ]
+      },
+      "id": "node/6223443638"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6277890252",
+        "charge": "200CLP motorcycle;700CLP motocar;1400CLP hgv",
+        "check_date": "2024-04-25",
+        "highway": "toll_gantry",
+        "name": "Peaje Lampa",
+        "operator": "Sociedad Concesionaria Nueva Aconcagua S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7588357,
+          -33.2356286
+        ]
+      },
+      "id": "node/6277890252"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6316909495",
+        "highway": "toll_gantry",
+        "name": "Peaje Acceso Vial AMB"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7927267,
+          -33.4165959
+        ]
+      },
+      "id": "node/6316909495"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6508970705",
+        "highway": "toll_gantry",
+        "name": "P09 Ruta 68 - Américo Vespucio Poniente",
+        "ref": "P09"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7910033,
+          -33.418078
+        ]
+      },
+      "id": "node/6508970705"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6508970707",
+        "highway": "toll_gantry",
+        "name": "P09 Américo Vespucio Poniente - Ruta 68",
+        "ref": "P09"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7908552,
+          -33.4178581
+        ]
+      },
+      "id": "node/6508970707"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6509152132",
+        "highway": "toll_gantry",
+        "name": "P6.2 Américo Vespucio Poniente - Petersen",
+        "ref": "P6.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7667427,
+          -33.4130639
+        ]
+      },
+      "id": "node/6509152132"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6509152133",
+        "highway": "toll_gantry",
+        "name": "P6.2 Petersen - Américo Vespucio Poniente",
+        "ref": "P6.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7664565,
+          -33.4129722
+        ]
+      },
+      "id": "node/6509152133"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6548809057",
+        "highway": "toll_gantry",
+        "operator": "Sociedad Concesionaria Nueva Aconcagua S.A.",
+        "ref": "P4 - Enlace Buenaventura"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7122122,
+          -33.3398151
+        ]
+      },
+      "id": "node/6548809057"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6548823501",
+        "highway": "toll_gantry",
+        "operator": "Sociedad Concesionaria Nueva Aconcagua S.A.",
+        "ref": "P2 - Paso Superior Lo Marcoleta"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7040905,
+          -33.357992
+        ]
+      },
+      "id": "node/6548823501"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6548823505",
+        "highway": "toll_gantry",
+        "operator": "Sociedad Concesionaria Nueva Aconcagua S.A.",
+        "ref": "P1 - Paso Superior Lo Marcoleta"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7038343,
+          -33.3580071
+        ]
+      },
+      "id": "node/6548823505"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6615396115",
+        "highway": "toll_gantry",
+        "operator": "Sociedad Concesionaria Nueva Aconcagua S.A.",
+        "ref": "P8 - Enlace Lo Pinto"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7390951,
+          -33.2799197
+        ]
+      },
+      "id": "node/6615396115"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6615396116",
+        "highway": "toll_gantry",
+        "operator": "Sociedad Concesionaria Nueva Aconcagua S.A.",
+        "ref": "P7 - Enlace Lo Pinto"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7388797,
+          -33.2799505
+        ]
+      },
+      "id": "node/6615396116"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6615396126",
+        "highway": "toll_gantry",
+        "operator": "Sociedad Concesionaria Nueva Aconcagua S.A.",
+        "ref": "P6 - Paso Superior La Montaña"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7224257,
+          -33.3170797
+        ]
+      },
+      "id": "node/6615396126"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6615396127",
+        "highway": "toll_gantry",
+        "operator": "Sociedad Concesionaria Nueva Aconcagua S.A.",
+        "ref": "P5 - Paso Superior La Montaña"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7221978,
+          -33.3171089
+        ]
+      },
+      "id": "node/6615396127"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6876949435",
+        "highway": "toll_gantry",
+        "ref": "P203"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6041337,
+          -33.3961477
+        ]
+      },
+      "id": "node/6876949435"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6876949475",
+        "highway": "toll_gantry",
+        "ref": "P212"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5970934,
+          -33.3916344
+        ]
+      },
+      "id": "node/6876949475"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6876949534",
+        "highway": "toll_gantry",
+        "ref": "P201"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6198001,
+          -33.3964481
+        ]
+      },
+      "id": "node/6876949534"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6876949652",
+        "fixme": "approx location",
+        "highway": "toll_gantry",
+        "ref": "P110"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6101099,
+          -33.3952496
+        ]
+      },
+      "id": "node/6876949652"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7857987358",
+        "highway": "toll_gantry",
+        "ref": "P101"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5747034,
+          -33.4301386
+        ]
+      },
+      "id": "node/7857987358"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7857987360",
+        "highway": "toll_gantry",
+        "ref": "P210"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5756851,
+          -33.4259696
+        ]
+      },
+      "id": "node/7857987360"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7857987369",
+        "highway": "toll_gantry"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5814201,
+          -33.4204151
+        ]
+      },
+      "id": "node/7857987369"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7857987371",
+        "highway": "toll_gantry",
+        "ref": "P108"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5887555,
+          -33.3966044
+        ]
+      },
+      "id": "node/7857987371"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7857987375",
+        "highway": "toll_gantry"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5924714,
+          -33.3927556
+        ]
+      },
+      "id": "node/7857987375"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7857987382",
+        "highway": "toll_gantry",
+        "ref": "P205"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5875491,
+          -33.4002342
+        ]
+      },
+      "id": "node/7857987382"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7858008986",
+        "highway": "toll_gantry",
+        "ref": "P104"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5869709,
+          -33.4094018
+        ]
+      },
+      "id": "node/7858008986"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7858008992",
+        "highway": "toll_gantry",
+        "ref": "P209"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5784158,
+          -33.4244301
+        ]
+      },
+      "id": "node/7858008992"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9193098855",
+        "highway": "toll_gantry"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6000072,
+          -33.3896504
+        ]
+      },
+      "id": "node/9193098855"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9193205577",
+        "highway": "toll_gantry",
+        "ref": "P211"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5744918,
+          -33.4325433
+        ]
+      },
+      "id": "node/9193205577"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9193322368",
+        "highway": "toll_gantry",
+        "ref": "P103"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5820353,
+          -33.4124572
+        ]
+      },
+      "id": "node/9193322368"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9193389137",
+        "highway": "toll_gantry"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5804876,
+          -33.401491
+        ]
+      },
+      "id": "node/9193389137"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9193389152",
+        "highway": "toll_gantry"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5863334,
+          -33.4050356
+        ]
+      },
+      "id": "node/9193389152"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9515305316",
+        "highway": "toll_gantry",
+        "name": "P8.3 Costanera Norte - Las Tranqueras",
+        "ref": "P8.3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6017246,
+          -33.4090615
+        ]
+      },
+      "id": "node/9515305316"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9515321517",
+        "highway": "toll_gantry",
+        "name": "P8.2 Costanera Norte - Las Tranqueras",
+        "ref": "P8.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6019447,
+          -33.4084907
+        ]
+      },
+      "id": "node/9515321517"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9516346638",
+        "highway": "toll_gantry",
+        "name": "SB Salida Bellavista",
+        "ref": "SB"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6198252,
+          -33.4221473
+        ]
+      },
+      "id": "node/9516346638"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9566814796",
+        "highway": "toll_gantry",
+        "name": "PA37 - Colón - Calera de Tango",
+        "ref": "PA37"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7157922,
+          -33.596894
+        ]
+      },
+      "id": "node/9566814796"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9611695677",
+        "highway": "toll_gantry",
+        "name": "P2 Ruta 68 - Los Mares",
+        "ref": "P2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7671428,
+          -33.4563722
+        ]
+      },
+      "id": "node/9611695677"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9611695678",
+        "highway": "toll_gantry",
+        "name": "P16 Santa Elena - Ruta 68",
+        "ref": "P16"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7729987,
+          -33.4512259
+        ]
+      },
+      "id": "node/9611695678"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9624207147",
+        "highway": "toll_gantry",
+        "name": "P4.1 Gnmo. de Alderete - Santa Julia",
+        "ref": "P4.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6048452,
+          -33.5297901
+        ]
+      },
+      "id": "node/9624207147"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9626675441",
+        "highway": "toll_gantry",
+        "name": "P00 Puente San Francsico - Puente Padre Arteaga",
+        "ref": "P00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5229107,
+          -33.3712087
+        ]
+      },
+      "id": "node/9626675441"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9627393148",
+        "highway": "toll_gantry",
+        "ref": "P2.1 Gran Vía - Centenario"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5926964,
+          -33.3846042
+        ]
+      },
+      "id": "node/9627393148"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9627393149",
+        "highway": "toll_gantry",
+        "ref": "P2.1 Puente Centenario - Gran Vía"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5926045,
+          -33.3846827
+        ]
+      },
+      "id": "node/9627393149"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9638303963",
+        "highway": "toll_gantry",
+        "name": "P03 Torres Tajamar - Puente Lo Saldes",
+        "ref": "P03"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6218108,
+          -33.4241131
+        ]
+      },
+      "id": "node/9638303963"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9638303965",
+        "highway": "toll_gantry",
+        "name": "P03 Puente Lo Saldes - Vivaceta",
+        "ref": "P03"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6219547,
+          -33.4239919
+        ]
+      },
+      "id": "node/9638303965"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9641637788",
+        "highway": "toll_gantry",
+        "name": "P6.1 Petersen - Carrascal",
+        "ref": "P6.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7395828,
+          -33.411826
+        ]
+      },
+      "id": "node/9641637788"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9641637789",
+        "highway": "toll_gantry",
+        "name": "P6.1 Carrascal - Petersen",
+        "ref": "P6.1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7395811,
+          -33.4117097
+        ]
+      },
+      "id": "node/9641637789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9645902676",
+        "highway": "toll_gantry"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7018568,
+          -33.3099829
+        ]
+      },
+      "id": "node/9645902676"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9645902677",
+        "highway": "toll_gantry"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7017482,
+          -33.310002
+        ]
+      },
+      "id": "node/9645902677"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9651968599",
+        "highway": "toll_gantry"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.8948554,
+          -33.4555165
+        ]
+      },
+      "id": "node/9651968599"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9651968600",
+        "highway": "toll_gantry"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.8948976,
+          -33.455434
+        ]
+      },
+      "id": "node/9651968600"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9695367765",
+        "highway": "toll_gantry",
+        "name": "P8.3 Costanera Norte - Las Tranqueras",
+        "ref": "P8.3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5816916,
+          -33.4024008
+        ]
+      },
+      "id": "node/9695367765"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9844306687",
+        "highway": "toll_gantry",
+        "name": "PA1 - La Capilla - Los Guindos",
+        "ref": "PA1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7236723,
+          -33.6954354
+        ]
+      },
+      "id": "node/9844306687"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9938078827",
+        "highway": "toll_gantry"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5869372,
+          -33.409307
+        ]
+      },
+      "id": "node/9938078827"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10052503573",
+        "highway": "toll_gantry"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.8016625,
+          -33.3656212
+        ]
+      },
+      "id": "node/10052503573"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10052503576",
+        "highway": "toll_gantry"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.8016893,
+          -33.365656
+        ]
+      },
+      "id": "node/10052503576"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12511401244",
+        "highway": "toll_gantry",
+        "name": "Talagante",
+        "ref": "T6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.8756342,
+          -33.6429011
+        ]
+      },
+      "id": "node/12511401244"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12511401245",
+        "highway": "toll_gantry",
+        "name": "Talagante",
+        "ref": "T6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.8754904,
+          -33.6429391
+        ]
+      },
+      "id": "node/12511401245"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12511401260",
+        "highway": "toll_gantry",
+        "name": "Rinconada",
+        "ref": "T2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7771624,
+          -33.4956473
+        ]
+      },
+      "id": "node/12511401260"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12511401261",
+        "highway": "toll_gantry",
+        "name": "Rinconada",
+        "ref": "T2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.777166,
+          -33.4955303
+        ]
+      },
+      "id": "node/12511401261"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12511401267",
+        "highway": "toll_gantry",
+        "name": "Padre Hurtado",
+        "ref": "T3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.8137842,
+          -33.5529192
+        ]
+      },
+      "id": "node/12511401267"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12511401272",
+        "highway": "toll_gantry",
+        "name": "Malloco",
+        "ref": "T4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.8450495,
+          -33.5878075
+        ]
+      },
+      "id": "node/12511401272"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12511401277",
+        "highway": "toll_gantry",
+        "name": "Malloco",
+        "ref": "T4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.8471047,
+          -33.6012541
+        ]
+      },
+      "id": "node/12511401277"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12511401282",
+        "highway": "toll_gantry",
+        "name": "El Paico",
+        "ref": "T7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.943167,
+          -33.6848212
+        ]
+      },
+      "id": "node/12511401282"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12511401283",
+        "highway": "toll_gantry",
+        "name": "El Paico",
+        "ref": "T7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.943213,
+          -33.6846963
+        ]
+      },
+      "id": "node/12511401283"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13122129279",
+        "highway": "toll_gantry",
+        "name": "P11 Pedro Fontova - Ruta 5 Norte",
+        "ref": "P11"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6951146,
+          -33.3657718
+        ]
+      },
+      "id": "node/13122129279"
+    }
+  ]
+}

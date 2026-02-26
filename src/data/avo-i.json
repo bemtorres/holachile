@@ -1,0 +1,230 @@
+{
+  "autopista": "AVO I (Autopista Vespucio Oriente I)",
+  "descripcion": "Autopista urbana que conecta Las Condes y Peñalolén en el sector oriente de Santiago, incluyendo el túnel bajo el cerro San Ramón.",
+  "color": "#D69E2E",
+  "totalPorticos": 11,
+  "concesionario": "AVO I Concesiones S.A.",
+  "osm_query": "node[\"highway\"=\"toll_gantry\"](around:15000,-33.47,-70.55);",
+  "porticos": [
+    {
+      "id": "osm-avo-001",
+      "nombre": "Pórtico AVO I - Acceso Norte Las Condes",
+      "tramo": "Tramo Norte (Las Condes - Peñalolén)",
+      "lat": -33.4030,
+      "lng": -70.5380,
+      "km": 0.5,
+      "tipo": "toll_gantry",
+      "salida": "S-01",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "AVO I",
+        "name": "Acceso Norte Las Condes",
+        "ref": "AVO-01",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "tunnel": "no"
+      }
+    },
+    {
+      "id": "osm-avo-002",
+      "nombre": "Pórtico AVO I - Salida Tobalaba",
+      "tramo": "Tramo Norte (Las Condes - Peñalolén)",
+      "lat": -33.4180,
+      "lng": -70.5320,
+      "km": 2.0,
+      "tipo": "toll_gantry",
+      "salida": "S-02",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "AVO I",
+        "name": "Salida Tobalaba",
+        "ref": "AVO-02",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "tunnel": "no"
+      }
+    },
+    {
+      "id": "osm-avo-003",
+      "nombre": "Pórtico AVO I - Entrada Túnel Norte",
+      "tramo": "Túnel San Ramón",
+      "lat": -33.4320,
+      "lng": -70.5260,
+      "km": 3.5,
+      "tipo": "toll_gantry",
+      "salida": "S-03",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "AVO I",
+        "name": "Entrada Túnel Norte",
+        "ref": "AVO-03",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "tunnel": "yes"
+      }
+    },
+    {
+      "id": "osm-avo-004",
+      "nombre": "Pórtico AVO I - Interior Túnel Km 1",
+      "tramo": "Túnel San Ramón",
+      "lat": -33.4450,
+      "lng": -70.5200,
+      "km": 4.5,
+      "tipo": "toll_gantry",
+      "salida": "S-04",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "AVO I",
+        "name": "Interior Túnel Km 1",
+        "ref": "AVO-04",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "tunnel": "yes"
+      }
+    },
+    {
+      "id": "osm-avo-005",
+      "nombre": "Pórtico AVO I - Interior Túnel Km 2",
+      "tramo": "Túnel San Ramón",
+      "lat": -33.4580,
+      "lng": -70.5140,
+      "km": 5.5,
+      "tipo": "toll_gantry",
+      "salida": "S-05",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "AVO I",
+        "name": "Interior Túnel Km 2",
+        "ref": "AVO-05",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "tunnel": "yes"
+      }
+    },
+    {
+      "id": "osm-avo-006",
+      "nombre": "Pórtico AVO I - Salida Túnel Sur",
+      "tramo": "Túnel San Ramón",
+      "lat": -33.4700,
+      "lng": -70.5080,
+      "km": 6.5,
+      "tipo": "toll_gantry",
+      "salida": "S-06",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "AVO I",
+        "name": "Salida Túnel Sur",
+        "ref": "AVO-06",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "tunnel": "yes"
+      }
+    },
+    {
+      "id": "osm-avo-007",
+      "nombre": "Pórtico AVO I - Acceso Peñalolén Norte",
+      "tramo": "Tramo Sur (Peñalolén)",
+      "lat": -33.4820,
+      "lng": -70.5100,
+      "km": 7.5,
+      "tipo": "toll_gantry",
+      "salida": "S-07",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "AVO I",
+        "name": "Acceso Peñalolén Norte",
+        "ref": "AVO-07",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "tunnel": "no"
+      }
+    },
+    {
+      "id": "osm-avo-008",
+      "nombre": "Pórtico AVO I - Av. Grecia",
+      "tramo": "Tramo Sur (Peñalolén)",
+      "lat": -33.4950,
+      "lng": -70.5120,
+      "km": 9.0,
+      "tipo": "toll_gantry",
+      "salida": "S-08",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "AVO I",
+        "name": "Av. Grecia",
+        "ref": "AVO-08",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "tunnel": "no"
+      }
+    },
+    {
+      "id": "osm-avo-009",
+      "nombre": "Pórtico AVO I - Embalse Sur",
+      "tramo": "Tramo Sur (Peñalolén)",
+      "lat": -33.5080,
+      "lng": -70.5140,
+      "km": 10.5,
+      "tipo": "toll_gantry",
+      "salida": "S-09",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "AVO I",
+        "name": "Embalse Sur",
+        "ref": "AVO-09",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "tunnel": "no"
+      }
+    },
+    {
+      "id": "osm-avo-010",
+      "nombre": "Pórtico AVO I - Acceso Sur Las Condes",
+      "tramo": "Tramo Norte (Las Condes - Peñalolén)",
+      "lat": -33.4060,
+      "lng": -70.5395,
+      "km": 0.8,
+      "tipo": "toll_gantry",
+      "salida": "S-10",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "AVO I",
+        "name": "Acceso Sur Las Condes",
+        "ref": "AVO-10",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "tunnel": "no"
+      }
+    },
+    {
+      "id": "osm-avo-011",
+      "nombre": "Pórtico AVO I - Vespucio Oriente",
+      "tramo": "Conexión Vespucio",
+      "lat": -33.3900,
+      "lng": -70.5490,
+      "km": 0.2,
+      "tipo": "toll_gantry",
+      "salida": "S-11",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "AVO I",
+        "name": "Vespucio Oriente",
+        "ref": "AVO-11",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "tunnel": "no"
+      }
+    }
+  ]
+}

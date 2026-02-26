@@ -1,0 +1,472 @@
+{
+  "autopista": "Vespucio Norte Express / Vespucio Sur",
+  "descripcion": "Sistema de autopistas que recorre el anillo Américo Vespucio en el norte y sur de Santiago.",
+  "color": "#805AD5",
+  "totalPorticos": 30,
+  "concesionario": "Autopistas Vespucio Norte/Sur",
+  "osm_query": "node[\"highway\"=\"toll_gantry\"](around:20000,-33.50,-70.65);",
+  "porticos": [
+    {
+      "id": "osm-vn-001",
+      "nombre": "Pórtico VNE Km 1.0 - Lo Barnechea",
+      "tramo": "Vespucio Norte Express",
+      "comuna": "Lo Barnechea",
+      "lat": -33.3710,
+      "lng": -70.5480,
+      "km": 1.0,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Norte Express",
+        "name": "Pórtico VNE Lo Barnechea",
+        "ref": "VNE-01",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "Lo Barnechea"
+      }
+    },
+    {
+      "id": "osm-vn-002",
+      "nombre": "Pórtico VNE Km 3.5 - Las Condes",
+      "tramo": "Vespucio Norte Express",
+      "comuna": "Las Condes",
+      "lat": -33.3740,
+      "lng": -70.5700,
+      "km": 3.5,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Norte Express",
+        "name": "Pórtico VNE Las Condes",
+        "ref": "VNE-02",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "Las Condes"
+      }
+    },
+    {
+      "id": "osm-vn-003",
+      "nombre": "Pórtico VNE Km 6.0 - Vitacura",
+      "tramo": "Vespucio Norte Express",
+      "comuna": "Vitacura",
+      "lat": -33.3775,
+      "lng": -70.5920,
+      "km": 6.0,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Norte Express",
+        "name": "Pórtico VNE Vitacura",
+        "ref": "VNE-03",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "Vitacura"
+      }
+    },
+    {
+      "id": "osm-vn-004",
+      "nombre": "Pórtico VNE Km 8.5 - Providencia",
+      "tramo": "Vespucio Norte Express",
+      "comuna": "Providencia",
+      "lat": -33.3810,
+      "lng": -70.6140,
+      "km": 8.5,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Norte Express",
+        "name": "Pórtico VNE Providencia",
+        "ref": "VNE-04",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "Providencia"
+      }
+    },
+    {
+      "id": "osm-vn-005",
+      "nombre": "Pórtico VNE Km 11.0 - Huechuraba",
+      "tramo": "Vespucio Norte Express",
+      "comuna": "Huechuraba",
+      "lat": -33.3845,
+      "lng": -70.6360,
+      "km": 11.0,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Norte Express",
+        "name": "Pórtico VNE Huechuraba",
+        "ref": "VNE-05",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "Huechuraba"
+      }
+    },
+    {
+      "id": "osm-vn-006",
+      "nombre": "Pórtico VNE Km 13.5 - Quilicura",
+      "tramo": "Vespucio Norte Express",
+      "comuna": "Quilicura",
+      "lat": -33.3880,
+      "lng": -70.6580,
+      "km": 13.5,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Norte Express",
+        "name": "Pórtico VNE Quilicura",
+        "ref": "VNE-06",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "Quilicura"
+      }
+    },
+    {
+      "id": "osm-vn-007",
+      "nombre": "Pórtico VNE Km 1.5 Oriente",
+      "tramo": "Vespucio Norte Express",
+      "comuna": "Lo Barnechea",
+      "lat": -33.3720,
+      "lng": -70.5490,
+      "km": 1.5,
+      "tipo": "toll_gantry",
+      "sentido": "Oriente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Norte Express",
+        "name": "Pórtico VNE Or Lo Barnechea",
+        "ref": "VNE-07",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "Lo Barnechea"
+      }
+    },
+    {
+      "id": "osm-vn-008",
+      "nombre": "Pórtico VNE Km 4.0 Oriente",
+      "tramo": "Vespucio Norte Express",
+      "comuna": "Las Condes",
+      "lat": -33.3750,
+      "lng": -70.5710,
+      "km": 4.0,
+      "tipo": "toll_gantry",
+      "sentido": "Oriente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Norte Express",
+        "name": "Pórtico VNE Or Las Condes",
+        "ref": "VNE-08",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "Las Condes"
+      }
+    },
+    {
+      "id": "osm-vn-009",
+      "nombre": "Pórtico VNE Km 6.5 Oriente",
+      "tramo": "Vespucio Norte Express",
+      "comuna": "Vitacura",
+      "lat": -33.3785,
+      "lng": -70.5930,
+      "km": 6.5,
+      "tipo": "toll_gantry",
+      "sentido": "Oriente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Norte Express",
+        "name": "Pórtico VNE Or Vitacura",
+        "ref": "VNE-09",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "Vitacura"
+      }
+    },
+    {
+      "id": "osm-vn-010",
+      "nombre": "Pórtico VNE Km 9.0 Oriente",
+      "tramo": "Vespucio Norte Express",
+      "comuna": "Providencia",
+      "lat": -33.3820,
+      "lng": -70.6150,
+      "km": 9.0,
+      "tipo": "toll_gantry",
+      "sentido": "Oriente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Norte Express",
+        "name": "Pórtico VNE Or Providencia",
+        "ref": "VNE-10",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "Providencia"
+      }
+    },
+    {
+      "id": "osm-vs-001",
+      "nombre": "Pórtico VS Km 1.0 - Maipú",
+      "tramo": "Vespucio Sur",
+      "comuna": "Maipú",
+      "lat": -33.5100,
+      "lng": -70.7200,
+      "km": 1.0,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Sur",
+        "name": "Pórtico VS Maipú",
+        "ref": "VS-01",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "Maipú"
+      }
+    },
+    {
+      "id": "osm-vs-002",
+      "nombre": "Pórtico VS Km 3.5 - Cerrillos",
+      "tramo": "Vespucio Sur",
+      "comuna": "Cerrillos",
+      "lat": -33.5050,
+      "lng": -70.7000,
+      "km": 3.5,
+      "tipo": "toll_gantry",
+      "sentido": "Oriente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Sur",
+        "name": "Pórtico VS Cerrillos",
+        "ref": "VS-02",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "Cerrillos"
+      }
+    },
+    {
+      "id": "osm-vs-003",
+      "nombre": "Pórtico VS Km 6.0 - Pedro Aguirre Cerda",
+      "tramo": "Vespucio Sur",
+      "comuna": "Pedro Aguirre Cerda",
+      "lat": -33.4980,
+      "lng": -70.6800,
+      "km": 6.0,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Sur",
+        "name": "Pórtico VS P.A.Cerda",
+        "ref": "VS-03",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "Pedro Aguirre Cerda"
+      }
+    },
+    {
+      "id": "osm-vs-004",
+      "nombre": "Pórtico VS Km 8.5 - La Cisterna",
+      "tramo": "Vespucio Sur",
+      "comuna": "La Cisterna",
+      "lat": -33.5200,
+      "lng": -70.6600,
+      "km": 8.5,
+      "tipo": "toll_gantry",
+      "sentido": "Oriente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Sur",
+        "name": "Pórtico VS La Cisterna",
+        "ref": "VS-04",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "La Cisterna"
+      }
+    },
+    {
+      "id": "osm-vs-005",
+      "nombre": "Pórtico VS Km 11.0 - San Miguel",
+      "tramo": "Vespucio Sur",
+      "comuna": "San Miguel",
+      "lat": -33.5150,
+      "lng": -70.6400,
+      "km": 11.0,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Sur",
+        "name": "Pórtico VS San Miguel",
+        "ref": "VS-05",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "San Miguel"
+      }
+    },
+    {
+      "id": "osm-vs-006",
+      "nombre": "Pórtico VS Km 13.5 - La Florida",
+      "tramo": "Vespucio Sur",
+      "comuna": "La Florida",
+      "lat": -33.5100,
+      "lng": -70.6200,
+      "km": 13.5,
+      "tipo": "toll_gantry",
+      "sentido": "Oriente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Sur",
+        "name": "Pórtico VS La Florida",
+        "ref": "VS-06",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "La Florida"
+      }
+    },
+    {
+      "id": "osm-vs-007",
+      "nombre": "Pórtico VS Km 16.0 - Puente Alto",
+      "tramo": "Vespucio Sur",
+      "comuna": "Puente Alto",
+      "lat": -33.5050,
+      "lng": -70.6000,
+      "km": 16.0,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Sur",
+        "name": "Pórtico VS Puente Alto",
+        "ref": "VS-07",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "Puente Alto"
+      }
+    },
+    {
+      "id": "osm-vs-008",
+      "nombre": "Pórtico VS Km 18.5 - La Pintana",
+      "tramo": "Vespucio Sur",
+      "comuna": "La Pintana",
+      "lat": -33.5000,
+      "lng": -70.5800,
+      "km": 18.5,
+      "tipo": "toll_gantry",
+      "sentido": "Oriente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Sur",
+        "name": "Pórtico VS La Pintana",
+        "ref": "VS-08",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "La Pintana"
+      }
+    },
+    {
+      "id": "osm-vn-011",
+      "nombre": "Pórtico VNE Km 11.5 Oriente",
+      "tramo": "Vespucio Norte Express",
+      "comuna": "Huechuraba",
+      "lat": -33.3855,
+      "lng": -70.6370,
+      "km": 11.5,
+      "tipo": "toll_gantry",
+      "sentido": "Oriente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Norte Express",
+        "name": "Pórtico VNE Or Huechuraba",
+        "ref": "VNE-11",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "Huechuraba"
+      }
+    },
+    {
+      "id": "osm-vn-012",
+      "nombre": "Pórtico VNE Km 14.0 Oriente",
+      "tramo": "Vespucio Norte Express",
+      "comuna": "Quilicura",
+      "lat": -33.3890,
+      "lng": -70.6590,
+      "km": 14.0,
+      "tipo": "toll_gantry",
+      "sentido": "Oriente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Norte Express",
+        "name": "Pórtico VNE Or Quilicura",
+        "ref": "VNE-12",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "Quilicura"
+      }
+    },
+    {
+      "id": "osm-vs-009",
+      "nombre": "Pórtico VS Km 2.0 Poniente",
+      "tramo": "Vespucio Sur",
+      "comuna": "Maipú",
+      "lat": -33.5110,
+      "lng": -70.7210,
+      "km": 2.0,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Sur",
+        "name": "Pórtico VS Maipú Pon",
+        "ref": "VS-09",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "Maipú"
+      }
+    },
+    {
+      "id": "osm-vs-010",
+      "nombre": "Pórtico VS Km 5.0 Poniente",
+      "tramo": "Vespucio Sur",
+      "comuna": "Cerrillos",
+      "lat": -33.5060,
+      "lng": -70.7010,
+      "km": 5.0,
+      "tipo": "toll_gantry",
+      "sentido": "Poniente",
+      "tags": {
+        "highway": "toll_gantry",
+        "operator": "Vespucio Sur",
+        "name": "Pórtico VS Cerrillos Pon",
+        "ref": "VS-10",
+        "payment:electronic": "yes",
+        "payment:cash": "no",
+        "toll": "yes",
+        "addr:city": "Cerrillos"
+      }
+    }
+  ]
+}
