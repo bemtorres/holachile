@@ -1,0 +1,170 @@
+{
+  "concesion": "AUTOPISTA DE LA REGIÓN DE ANTOFAGASTA",
+  "periodo_tarifario": "2026",
+  "nota": "Rutas Transversales",
+  "estructura_tarifaria": {
+    "categorias_vehiculos": [
+      {
+        "id": 1,
+        "descripcion": "Motos y motonetas",
+        "dimensiones": "No superan dimensiones máximas permitidas"
+      },
+      {
+        "id": 2,
+        "descripcion": "Autos y camionetas con y sin remolque",
+        "dimensiones": "No superan dimensiones máximas permitidas"
+      },
+      {
+        "id": 3,
+        "descripcion": "Buses de dos ejes que no superen las dimensiones máximas permitidas",
+        "dimensiones": "No superan dimensiones máximas permitidas"
+      },
+      {
+        "id": 4,
+        "descripcion": "Camiones de dos ejes, camionetas doble rueda trasera, maquinarias agrícolas y maquinarias de construcción que no superen las dimensiones máx. permitidas",
+        "dimensiones": "No superan dimensiones máximas permitidas"
+      },
+      {
+        "id": 5,
+        "descripcion": "Buses de más de dos ejes que no superen las dimensiones máx. permitidas",
+        "dimensiones": "No superan dimensiones máximas permitidas"
+      },
+      {
+        "id": 6,
+        "descripcion": "Camiones de más de dos ejes que no superen las dimensiones máx. permitidas",
+        "dimensiones": "No superan dimensiones máximas permitidas"
+      },
+      {
+        "id": 7,
+        "descripcion": "Vehículos que superan las dimensiones máx. permitidas, con ancho mayor a 2,6 mts. y ≤ 4,5 mts. y/o largo mayor a 23 mts. y ≤ 30 mts. independiente del nº de ejes",
+        "dimensiones": "Superan dimensiones máximas permitidas"
+      },
+      {
+        "id": 8,
+        "descripcion": "Vehículos que superan las dimensiones máx. permitidas, con ancho mayor a 4,5 mts. y/o largo mayor a 30 mts. independiente del nº de ejes",
+        "dimensiones": "Superan dimensiones máximas permitidas"
+      }
+    ],
+    "plazas_peaje": [
+      {
+        "nombre": "TRONCAL RUTA 1",
+        "tipo": "Troncal",
+        "tarifas": [
+          {
+            "categoria_vehiculo_id": 1,
+            "precio": 800
+          },
+          {
+            "categoria_vehiculo_id": 2,
+            "precio": 1700
+          },
+          {
+            "categoria_vehiculo_id": 3,
+            "precio": 5000
+          },
+          {
+            "categoria_vehiculo_id": 4,
+            "precio": 8900
+          },
+          {
+            "categoria_vehiculo_id": 5,
+            "precio": 8900
+          },
+          {
+            "categoria_vehiculo_id": 6,
+            "precio": 13900
+          },
+          {
+            "categoria_vehiculo_id": 7,
+            "precio": 27800
+          },
+          {
+            "categoria_vehiculo_id": 8,
+            "precio": 55650
+          }
+        ]
+      },
+      {
+        "nombre": "ACCESO AEROPUERTO",
+        "tipo": "Acceso",
+        "tarifas": [
+          {
+            "categoria_vehiculo_id": 1,
+            "precio": 550
+          },
+          {
+            "categoria_vehiculo_id": 2,
+            "precio": 1150
+          },
+          {
+            "categoria_vehiculo_id": 3,
+            "precio": 3300
+          },
+          {
+            "categoria_vehiculo_id": 4,
+            "precio": 5900
+          },
+          {
+            "categoria_vehiculo_id": 5,
+            "precio": 5900
+          },
+          {
+            "categoria_vehiculo_id": 6,
+            "precio": 9250
+          },
+          {
+            "categoria_vehiculo_id": 7,
+            "precio": 18550
+          },
+          {
+            "categoria_vehiculo_id": 8,
+            "precio": 37100
+          }
+        ]
+      },
+      {
+        "nombre": "TRONCAL RUTA 5",
+        "tipo": "Troncal",
+        "tarifas": [
+          {
+            "categoria_vehiculo_id": 1,
+            "precio": 1350
+          },
+          {
+            "categoria_vehiculo_id": 2,
+            "precio": 2850
+          },
+          {
+            "categoria_vehiculo_id": 3,
+            "precio": 8300
+          },
+          {
+            "categoria_vehiculo_id": 4,
+            "precio": 14800
+          },
+          {
+            "categoria_vehiculo_id": 5,
+            "precio": 14800
+          },
+          {
+            "categoria_vehiculo_id": 6,
+            "precio": 23150
+          },
+          {
+            "categoria_vehiculo_id": 7,
+            "precio": 46350
+          },
+          {
+            "categoria_vehiculo_id": 8,
+            "precio": 92750
+          }
+        ]
+      }
+    ]
+  },
+  "observaciones": [
+    "No se detectan horarios punta/valle en el texto proporcionado.",
+    "No se detectan rebajas o descuentos específicos en el texto proporcionado.",
+    "Las tarifas son fijas por plaza y categoría de vehículo."
+  ]
+}

@@ -5,6 +5,8 @@ import dynamic from 'next/dynamic';
 import autopistas, { allPorticos } from '@/data';
 import Sidebar from '@/components/Sidebar';
 import PorticoList from '@/components/PorticoList';
+import SimulationTab, { type SimParams } from '@/components/SimulationTab';
+import ComunaCard from '@/components/ComunaCard';
 import type { Portico } from '@/data';
 import * as turf from '@turf/turf';
 
@@ -12,7 +14,7 @@ const MapView = dynamic(() => import('@/components/MapView'), { ssr: false });
 
 export default function HomePage() {
   const [selectedAutopista, setSelectedAutopista] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<'lista' | 'tags' | 'ruta'>('ruta');
+  const [activeTab, setActiveTab] = useState<'lista' | 'tags' | 'ruta' | 'simulacion'>('ruta');
   const [selectedPortico, setSelectedPortico] = useState<Portico | null>(null);
   const [isMobileListOpen, setIsMobileListOpen] = useState(false);
 
@@ -29,6 +31,20 @@ export default function HomePage() {
   const [fuelCost, setFuelCost] = useState(0);
   const [isCalculating, setIsCalculating] = useState(false);
   // --- End Route Calculator State ---
+
+  // --- Simulation State ---
+  const [isSimulating, setIsSimulating] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const [simCompleted, setSimCompleted] = useState(false);
+  const [simParams, setSimParams] = useState<SimParams | null>(null);
+  const [liveVehicles, setLiveVehicles] = useState(0);
+  const [liveRevenue, setLiveRevenue] = useState(0);
+  const [liveMinutes, setLiveMinutes] = useState(0);
+  // --- End Simulation State ---
+
+  // --- Map Layer State ---
+  const [showComunas, setShowComunas] = useState(false);
+  // --- End Map Layer State ---
 
   const handlePorticoClick = useCallback((p: Portico) => {
     setSelectedPortico(p);
@@ -62,7 +78,6 @@ export default function HomePage() {
     if (!origin || !destination) return;
     setIsCalculating(true);
     try {
-      // Usar OSRM public API con alternatives
       const res = await fetch(`https://router.project-osrm.org/route/v1/driving/${origin[1]},${origin[0]};${destination[1]},${destination[0]}?overview=full&geometries=geojson&alternatives=3`);
       const data = await res.json();
 
@@ -79,7 +94,6 @@ export default function HomePage() {
     }
   };
 
-  // Calculate stats for the selected alternative
   useEffect(() => {
     if (routeAlternatives.length > 0 && routeAlternatives[selectedRouteIndex]) {
       const route = routeAlternatives[selectedRouteIndex];
@@ -98,13 +112,11 @@ export default function HomePage() {
       }
       setFuelCost(distance * costPerKm);
 
-      // Find intersecting porticos using Turf.js
       const routeLine = turf.lineString(geometry.coordinates);
 
       const found = allPorticos.filter(p => {
         const pt = turf.point([p.lng, p.lat]);
         const distanceBytes = turf.pointToLineDistance(pt, routeLine, { units: 'meters' });
-        // Si está a menos de 50 metros de la ruta, asume que pasó por él
         return distanceBytes < 50;
       });
 
@@ -116,47 +128,72 @@ export default function HomePage() {
     }
   }, [routeAlternatives, selectedRouteIndex, vehicleType]);
 
+  // --- Simulation handlers ---
+  const handleSimStart = useCallback((params: SimParams) => {
+    setSimParams(params);
+    setLiveVehicles(0);
+    setLiveRevenue(0);
+    setLiveMinutes(0);
+    setSimCompleted(false);
+    setIsPaused(false);
+    setIsSimulating(true);
+  }, []);
+
+  const handleSimPause = useCallback(() => setIsPaused(true), []);
+  const handleSimResume = useCallback(() => setIsPaused(false), []);
+
+  const handleSimReset = useCallback(() => {
+    setIsSimulating(false);
+    setIsPaused(false);
+    setSimCompleted(false);
+    setLiveVehicles(0);
+    setLiveRevenue(0);
+    setLiveMinutes(0);
+    setSimParams(null);
+  }, []);
+
+  const handleSimTick = useCallback((vehicles: number, revenue: number, minutes: number) => {
+    setLiveVehicles(vehicles);
+    setLiveRevenue(revenue);
+    setLiveMinutes(minutes);
+  }, []);
+
+  const handleSimComplete = useCallback(() => {
+    setIsSimulating(false);
+    setSimCompleted(true);
+  }, []);
+
   return (
-    <div className="flex flex-col h-screen bg-slate-950 overflow-hidden">
+    <div className="flex flex-col h-screen bg-zinc-950 overflow-hidden font-sans text-zinc-50">
       {/* Top bar */}
-      <header className="flex items-center justify-between px-4 py-2.5 bg-slate-900/90 backdrop-blur border-b border-slate-700/50 z-20 shrink-0">
+      <header className="flex items-center justify-between px-6 py-3 bg-zinc-950 border-b border-zinc-800 z-20 shrink-0">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-linear-to-br from-blue-500 to-violet-600 flex items-center justify-center shrink-0">
-            <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-            </svg>
+          <div className="w-8 h-8 rounded-md bg-zinc-100 flex items-center justify-center shrink-0 shadow-sm shadow-white/10">
+            <span className="text-zinc-950 font-semibold text-lg">T</span>
           </div>
           <div>
-            <h1 className="text-sm font-bold text-white leading-none">TAG Chile — Pórticos de Peaje</h1>
-            <p className="text-xs text-slate-400 mt-0.5 hidden sm:block">highway=toll_gantry · OpenStreetMap</p>
+            <h1 className="text-sm font-semibold text-zinc-100 leading-none">TAG Chile</h1>
+            <p className="text-xs text-zinc-400 mt-1">Plataforma de Consulta</p>
           </div>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           {selectedAutopista && (
             <div
-              className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium border"
-              style={{
-                backgroundColor: `${currentAutopista?.color}15`,
-                borderColor: `${currentAutopista?.color}40`,
-                color: currentAutopista?.color,
-              }}
+              className="hidden sm:flex items-center gap-2 px-3 py-1.5 border border-zinc-800 rounded-md text-xs font-medium bg-zinc-900/50 shadow-sm"
             >
-              <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: currentAutopista?.color }} />
+              <div className="w-2 h-2 rounded-full" style={{ backgroundColor: currentAutopista?.color || '#fff' }} />
               {selectedAutopista}
             </div>
           )}
-          <div className="flex items-center gap-1 bg-slate-800 border border-slate-700/50 rounded-lg px-2.5 py-1.5">
-            <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-xs text-slate-300">{allPorticos.length} pórticos</span>
+          <div className="flex items-center gap-2 border border-zinc-800 bg-zinc-900/50 px-3 py-1.5 rounded-md shadow-sm">
+            <div className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
+            <span className="text-xs text-zinc-300 font-medium">{allPorticos.length} Nodos</span>
           </div>
           <button
-            className="sm:hidden flex items-center gap-1.5 bg-slate-800 border border-slate-700/50 rounded-lg px-3 py-1.5 text-xs text-slate-300"
+            className="sm:hidden flex items-center gap-2 border border-zinc-800 bg-zinc-900 px-3 py-1.5 text-xs text-zinc-300 rounded-md"
             onClick={() => setIsMobileListOpen(!isMobileListOpen)}
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
             Filtros
           </button>
         </div>
@@ -165,7 +202,7 @@ export default function HomePage() {
       {/* Main content */}
       <div className="flex flex-1 overflow-hidden">
         {/* Left sidebar — autopista selector */}
-        <aside className="hidden lg:flex flex-col w-72 xl:w-80 bg-slate-900/70 border-r border-slate-700/50 overflow-hidden shrink-0">
+        <aside className="hidden lg:flex flex-col w-72 xl:w-80 bg-zinc-950 border-r border-zinc-800 overflow-hidden shrink-0 z-10 shadow-lg">
           <Sidebar
             autopistas={autopistas}
             selectedAutopista={selectedAutopista}
@@ -175,122 +212,163 @@ export default function HomePage() {
         </aside>
 
         {/* Map */}
-        <main className="flex-1 relative overflow-hidden">
-          <div className="absolute inset-0 p-2">
+        <main className="flex-1 relative overflow-hidden bg-zinc-950">
+          <div className="absolute inset-0">
             <MapView
-              porticos={activeTab === 'ruta' ? routePorticos : allPorticos}
+              porticos={activeTab === 'ruta' || activeTab === 'simulacion' ? routePorticos : allPorticos}
               selectedAutopista={selectedAutopista}
               onPorticoClick={handlePorticoClick}
               onMapClick={handleMapClick}
               origin={origin}
               destination={destination}
               routeGeometry={routeGeometry}
+              simActive={isSimulating}
+              simPaused={isPaused}
+              flowPerHour={simParams?.flowPerHour ?? 1500}
+              pctCat1={simParams?.pctCat1 ?? 70}
+              pctCat2={simParams?.pctCat2 ?? 20}
+              routePorticos={routePorticos}
+              timeProfile={simParams?.timeProfile ?? 'punta'}
+              showComunas={showComunas}
+              onComunaClick={(nombre) => {
+                // optionally switch to a portico with that commune
+                const found = allPorticos.find(p => p.comuna?.toLowerCase() === nombre.toLowerCase());
+                if (found) { setSelectedPortico(found); setActiveTab('tags'); }
+              }}
+              onSimTick={handleSimTick}
+              onSimComplete={handleSimComplete}
             />
+          </div>
+
+          {/* ── Comunas toggle ── */}
+          <div className="absolute top-3 left-1/2 -translate-x-1/2 z-[9999] pointer-events-auto">
+            <button
+              id="toggle-comunas"
+              onClick={() => setShowComunas(v => !v)}
+              className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xl border transition-all duration-200
+                ${showComunas
+                  ? 'bg-indigo-600 border-indigo-500 text-white shadow-indigo-900/40'
+                  : 'bg-zinc-900/90 border-zinc-700 text-zinc-300 hover:bg-zinc-800 hover:text-white'
+                }`
+              }
+            >
+              <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5Z" />
+              </svg>
+              Comunas RM
+              {showComunas && (
+                <span className="ml-0.5 w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              )}
+            </button>
           </div>
 
           {/* Map overlay info */}
           {selectedAutopista && currentAutopista && (
-            <div
-              className="absolute top-4 left-4 z-10 rounded-xl border px-4 py-3 backdrop-blur-sm"
-              style={{
-                backgroundColor: `${currentAutopista.color}18`,
-                borderColor: `${currentAutopista.color}40`,
-              }}
-            >
-              <div className="text-xs font-semibold" style={{ color: currentAutopista.color }}>
-                {currentAutopista.autopista}
+            <div className="absolute top-6 left-6 z-50 rounded-lg border border-zinc-800 p-4 bg-zinc-950/90 backdrop-blur-md shadow-lg pointer-events-none">
+              <div className="text-sm font-semibold flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full" style={{ backgroundColor: currentAutopista.color || '#fff' }} />
+                <span>{currentAutopista.autopista}</span>
               </div>
-              <div className="text-xs text-slate-400 mt-0.5">
-                {currentAutopista.totalPorticos} pórticos · {currentAutopista.concesionario}
+              <div className="text-xs text-zinc-400 mt-1 font-medium ml-5">
+                {currentAutopista.totalPorticos} pórticos activos
               </div>
             </div>
           )}
 
-          <button
-            className="absolute bottom-4 left-4 z-10 bg-slate-900/80 backdrop-blur-sm border border-slate-700/50 rounded-lg px-3 py-2 text-xs text-slate-400 hover:text-slate-200 transition-colors flex items-center gap-2"
-            onClick={() => setSelectedAutopista(null)}
-          >
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-            </svg>
-            Ver todas
-          </button>
+          {selectedAutopista && (
+            <button
+              className="absolute bottom-6 left-6 z-50 bg-white hover:bg-zinc-200 text-black px-4 py-2.5 rounded-md text-sm font-medium transition-colors shadow-lg border border-zinc-200"
+              onClick={() => setSelectedAutopista(null)}
+            >
+              Reiniciar Vista
+            </button>
+          )}
         </main>
 
         {/* Right panel — pórtico list */}
-        <aside className="hidden md:flex flex-col w-72 xl:w-80 bg-slate-900/70 border-l border-slate-700/50 overflow-hidden shrink-0">
-          {/* Tabs */}
-          <div className="flex border-b border-slate-700/50 shrink-0">
-            <button
-              className={`flex-1 py-3 text-xs font-medium transition-colors ${activeTab === 'lista' ? 'text-white border-b-2 border-blue-500' : 'text-slate-500 hover:text-slate-300'}`}
-              onClick={() => setActiveTab('lista')}
-            >
-              Lista
-            </button>
-            <button
-              className={`flex-1 py-3 text-xs font-medium transition-colors ${activeTab === 'ruta' ? 'text-white border-b-2 border-blue-500' : 'text-slate-500 hover:text-slate-300'}`}
-              onClick={() => setActiveTab('ruta')}
-            >
-              Calculadora
-            </button>
-            <button
-              className={`flex-1 py-3 text-xs font-medium transition-colors ${activeTab === 'tags' ? 'text-white border-b-2 border-blue-500' : 'text-slate-500 hover:text-slate-300'}`}
-              onClick={() => setActiveTab('tags')}
-            >
-              OSM Tags
-            </button>
+        <aside className="hidden md:flex flex-col w-80 xl:w-96 bg-zinc-950 border-l border-zinc-800 overflow-hidden shrink-0 z-10 shadow-xl">
+          {/* Tabs - shadcn style */}
+          <div className="p-3 border-b border-zinc-800 shrink-0 bg-zinc-950/50">
+            <div className="flex items-center gap-1 p-1 bg-zinc-900 rounded-md">
+              <button
+                className={`flex-1 py-1.5 px-3 rounded-sm text-sm font-medium transition-all ${activeTab === 'lista' ? 'bg-zinc-800 text-zinc-50 shadow-sm' : 'text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/50'}`}
+                onClick={() => setActiveTab('lista')}
+              >
+                Lista
+              </button>
+              <button
+                className={`flex-1 py-1.5 px-2 rounded-sm text-xs font-medium transition-all ${activeTab === 'ruta' ? 'bg-zinc-800 text-zinc-50 shadow-sm' : 'text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/50'}`}
+                onClick={() => setActiveTab('ruta')}
+              >
+                Ruta
+              </button>
+              <button
+                className={`flex-1 py-1.5 px-2 rounded-sm text-xs font-medium transition-all ${activeTab === 'simulacion' ? 'bg-zinc-800 text-purple-400 shadow-sm' : 'text-zinc-400 hover:text-purple-300 hover:bg-zinc-800/50'}`}
+                onClick={() => setActiveTab('simulacion')}
+              >
+                Simulación
+              </button>
+              <button
+                className={`flex-1 py-1.5 px-2 rounded-sm text-xs font-medium transition-all ${activeTab === 'tags' ? 'bg-zinc-800 text-zinc-50 shadow-sm' : 'text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/50'}`}
+                onClick={() => setActiveTab('tags')}
+              >
+                Detalles
+              </button>
+            </div>
           </div>
 
           {activeTab === 'ruta' && (
-            <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4">
-              <div className="bg-slate-800/60 rounded-xl p-4 border border-slate-700/50 flex flex-col gap-4">
-                <h2 className="text-sm font-bold text-white mb-2">Calculadora de Viaje</h2>
+            <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-5 custom-scrollbar bg-zinc-950 cursor-default">
+              <div className="bg-zinc-950 p-5 rounded-lg border border-zinc-800 shadow-sm flex flex-col gap-4">
+                <h2 className="text-sm font-semibold text-zinc-100 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-blue-500" />
+                  Calculadora de Ruta
+                </h2>
 
                 {/* Origen */}
-                <div>
-                  <label className="text-xs text-slate-400 mb-1 block">Punto de Origen</label>
+                <div className="space-y-2 relative pt-2">
+                  <label className="text-xs text-zinc-400 font-medium">Sitio de Origen</label>
                   <div className="flex gap-2">
                     <button
                       onClick={requestGeolocation}
-                      className="flex-1 bg-slate-700 hover:bg-slate-600 px-3 py-2 rounded-lg text-xs flex items-center justify-center gap-2 transition"
+                      className="bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 rounded-md px-3 py-2 text-xs font-medium transition-colors text-zinc-300"
                     >
-                      <svg className="w-3 h-3 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" /></svg>
-                      Mi ubicación
+                      GPS
                     </button>
                     <button
                       onClick={() => setPickingMode('origin')}
-                      className={`flex-1 px-3 py-2 rounded-lg text-xs transition ${pickingMode === 'origin' ? 'bg-blue-600 text-white' : 'bg-slate-700 hover:bg-slate-600 text-slate-300'}`}
+                      className={`flex-1 rounded-md px-3 py-2 text-xs font-medium transition-colors border ${pickingMode === 'origin' ? 'bg-blue-600/20 text-blue-400 border-blue-600/50' : 'bg-zinc-950 border-zinc-800 hover:bg-zinc-900 text-zinc-300'}`}
                     >
-                      {origin ? 'Cambiar en mapa' : 'Elegir en mapa'}
+                      {origin ? 'Cambiar Origen' : '🗺️ Elegir en Mapa'}
                     </button>
                   </div>
-                  {origin && <div className="text-[10px] text-emerald-400 mt-1 font-mono">Seleccionado: {origin[0].toFixed(4)}, {origin[1].toFixed(4)}</div>}
+                  {origin && <div className="text-xs text-zinc-500 font-mono">LAT {origin[0].toFixed(4)}, LNG {origin[1].toFixed(4)}</div>}
                 </div>
 
                 {/* Destino */}
-                <div>
-                  <label className="text-xs text-slate-400 mb-1 block">Destino</label>
+                <div className="space-y-2">
+                  <label className="text-xs text-zinc-400 font-medium">Destino</label>
                   <button
                     onClick={() => setPickingMode('destination')}
-                    className={`w-full px-3 py-2 rounded-lg text-xs transition border border-dashed ${pickingMode === 'destination' ? 'border-red-500 bg-red-500/20 text-white' : 'border-slate-600 hover:border-slate-500 text-slate-300'}`}
+                    className={`w-full rounded-md px-3 py-2 text-xs font-medium transition-colors border ${pickingMode === 'destination' ? 'bg-red-600/20 text-red-400 border-red-600/50' : 'bg-zinc-950 border-zinc-800 hover:bg-zinc-900 text-zinc-300'}`}
                   >
-                    {destination ? 'Cambiar destino en mapa' : '📍 Marcar destino en mapa'}
+                    {destination ? 'Cambiar Destino' : '📍 Marcar Destino'}
                   </button>
-                  {destination && <div className="text-[10px] text-red-400 mt-1 font-mono">Seleccionado: {destination[0].toFixed(4)}, {destination[1].toFixed(4)}</div>}
+                  {destination && <div className="text-xs text-zinc-500 font-mono">LAT {destination[0].toFixed(4)}, LNG {destination[1].toFixed(4)}</div>}
                 </div>
 
                 {/* Tipo de Vehículo */}
-                <div>
-                  <label className="text-xs text-slate-400 mb-1 block">Tipo de Vehículo</label>
+                <div className="space-y-2">
+                  <label className="text-xs text-zinc-400 font-medium">Tipo de Vehículo</label>
                   <select
                     value={vehicleType}
                     onChange={(e) => setVehicleType(e.target.value)}
-                    className="w-full bg-slate-700 border border-slate-600 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500 transition"
+                    className="w-full bg-zinc-950 border border-zinc-800 rounded-md px-3 py-2 text-sm font-medium text-zinc-100 focus:outline-none focus:ring-2 focus:ring-zinc-700 transition appearance-none"
                   >
-                    <option value="gasolina">Auto Bencinero (Gasolina)</option>
-                    <option value="diesel">Auto Petrolero (Diésel)</option>
-                    <option value="hibrido">Auto Híbrido</option>
-                    <option value="electrico">Auto Eléctrico</option>
+                    <option value="gasolina">Combustión (Gasolina)</option>
+                    <option value="diesel">Combustión (Diésel)</option>
+                    <option value="hibrido">Híbrido</option>
+                    <option value="electrico">Eléctrico</option>
                   </select>
                 </div>
 
@@ -298,24 +376,27 @@ export default function HomePage() {
                   <button
                     onClick={calculateRoute}
                     disabled={!origin || !destination || isCalculating}
-                    className="w-full bg-blue-600 hover:bg-blue-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium py-2.5 rounded-lg text-sm transition"
+                    className="w-full bg-white hover:bg-zinc-200 disabled:bg-zinc-900 disabled:text-zinc-500 disabled:border-zinc-800 border-transparent rounded-md text-zinc-900 font-semibold py-2.5 text-sm transition-colors shadow-sm disabled:shadow-none pointer flex items-center justify-center gap-2 disabled:cursor-not-allowed"
                   >
-                    {isCalculating ? 'Calculando...' : 'Calcular Ruta y Peajes'}
+                    {isCalculating ? (
+                      <span className="animate-pulse">Calculando...</span>
+                    ) : (
+                      'Trazar Ruta'
+                    )}
                   </button>
                 </div>
               </div>
 
               {/* Resultados */}
               {routeAlternatives.length > 0 && routeGeometry && (
-                <div className="bg-slate-800/60 rounded-xl p-4 border border-slate-700/50 flex flex-col gap-3">
-
+                <div className="bg-zinc-950 rounded-lg p-5 border border-zinc-800 shadow-sm flex flex-col gap-4 animate-in fade-in slide-in-from-bottom-2">
                   {routeAlternatives.length > 1 && (
-                    <div className="flex bg-slate-900 rounded-lg p-1 gap-1 mb-2">
+                    <div className="flex bg-zinc-900 rounded-md p-1 gap-1">
                       {routeAlternatives.map((r, i) => (
                         <button
                           key={i}
                           onClick={() => setSelectedRouteIndex(i)}
-                          className={`flex-1 py-1.5 text-xs font-medium rounded-md transition ${selectedRouteIndex === i ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800'}`}
+                          className={`flex-1 py-1.5 rounded-sm text-xs font-medium transition-colors ${selectedRouteIndex === i ? 'bg-zinc-800 text-zinc-50 shadow-sm' : 'text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/50'}`}
                         >
                           Ruta {i + 1}
                         </button>
@@ -324,33 +405,42 @@ export default function HomePage() {
                   )}
 
                   <div className="grid grid-cols-2 gap-3">
-                    <div>
-                      <div className="text-xs text-slate-400">Distancia</div>
-                      <div className="text-xl font-bold text-white">{routeDistanceKm.toFixed(1)} <span className="text-sm font-normal text-slate-400">km</span></div>
+                    <div className="border border-zinc-800 rounded-md p-3 bg-zinc-900/40">
+                      <div className="text-xs text-zinc-500 font-medium mb-1">Distancia</div>
+                      <div className="text-2xl font-semibold text-zinc-100">{routeDistanceKm.toFixed(1)} <span className="text-xs font-medium text-zinc-500">km</span></div>
                     </div>
-                    <div>
-                      <div className="text-xs text-slate-400">Costo de energía</div>
-                      <div className="text-xl font-bold text-emerald-400">${Math.round(fuelCost).toLocaleString('es-CL')} <span className="text-sm font-normal text-slate-400">CLP</span></div>
+                    <div className="border border-zinc-800 rounded-md p-3 bg-zinc-900/40">
+                      <div className="text-xs text-zinc-500 font-medium mb-1">Costo Combustible</div>
+                      <div className="text-2xl font-semibold text-zinc-100">${Math.round(fuelCost).toLocaleString('es-CL')} <span className="text-xs font-medium text-zinc-500">CLP</span></div>
                     </div>
                   </div>
-                  <div className="mt-1">
-                    <div className="text-xs text-slate-400">TAGs/Peajes interceptados</div>
-                    <div className="text-xl font-bold text-blue-400">{routePorticos.length} <span className="text-sm font-normal text-slate-400">detectados</span></div>
+
+                  <div className="border border-zinc-800 rounded-md p-3 bg-zinc-900/40 flex items-center justify-between">
+                    <div>
+                      <div className="text-xs text-zinc-500 font-medium mb-1">Peajes Intersectados</div>
+                      <div className="text-2xl font-semibold text-zinc-100">{routePorticos.length} <span className="text-xs font-medium text-zinc-500">nodos</span></div>
+                    </div>
                   </div>
 
                   {routePorticos.length > 0 && (
-                    <div className="mt-3">
-                      <div className="text-xs font-semibold text-slate-400 mb-2 uppercase tracking-wide">Desglose de Ruta</div>
-                      <div className="flex flex-col gap-2 max-h-60 overflow-y-auto pr-2 custom-scrollbar">
+                    <div className="border-t border-zinc-800 pt-4 mt-2">
+                      <div className="text-xs font-semibold text-zinc-400 mb-3 flex items-center justify-between">
+                        <span>DETALLE DE PÓRTICOS</span>
+                        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                      </div>
+                      <div className="flex flex-col gap-2 max-h-[35vh] overflow-y-auto pr-1 custom-scrollbar">
                         {routePorticos.map((p, i) => (
-                          <div key={p.id + '-' + i} className="flex flex-col bg-slate-900/50 rounded-lg p-2.5 border border-slate-700/30 text-xs">
-                            <div className="flex items-start justify-between gap-2">
-                              <span className="font-semibold text-slate-200">{p.nombre}</span>
-                              <span className="text-[10px] px-1.5 py-0.5 rounded font-mono" style={{ backgroundColor: `${p.color}20`, color: p.color }}>{p.autopista}</span>
+                          <div key={p.id + '-' + i} className="flex flex-col bg-zinc-950 p-3 rounded-md border border-zinc-800 hover:bg-zinc-900 hover:border-zinc-700 transition-colors cursor-pointer group" onClick={() => handlePorticoClick(p)}>
+                            <div className="flex items-start justify-between gap-3">
+                              <span className="font-medium text-sm text-zinc-200 group-hover:text-white transition-colors leading-tight">{p.nombre}</span>
+                              <span className="text-[10px] px-2 py-0.5 rounded-full border border-zinc-800 whitespace-nowrap bg-zinc-950 text-zinc-300 font-medium flex items-center gap-1.5" style={{ borderColor: p.color ? `${p.color}40` : '#333' }}>
+                                <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: p.color || '#fff' }} />
+                                {p.autopista}
+                              </span>
                             </div>
                             {(p.salida || p.sentido) && (
-                              <div className="text-slate-500 text-[10px] mt-1">
-                                {[p.sentido, p.salida].filter(Boolean).join(' · ')}
+                              <div className="text-zinc-500 text-xs mt-2 font-medium">
+                                {[p.sentido, p.salida].filter(Boolean).join(' • ')}
                               </div>
                             )}
                           </div>
@@ -364,75 +454,138 @@ export default function HomePage() {
           )}
 
           {activeTab === 'lista' && (
-            <PorticoList
-              porticos={allPorticos}
-              selectedAutopista={selectedAutopista}
-              onPorticoClick={handlePorticoClick}
-            />
+            <div className="py-2">
+              <PorticoList
+                porticos={allPorticos}
+                selectedAutopista={selectedAutopista}
+                onPorticoClick={handlePorticoClick}
+              />
+            </div>
           )}
 
           {activeTab === 'tags' && selectedPortico && (
-            <div className="flex-1 overflow-y-auto p-4">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: selectedPortico.color }} />
-                <h2 className="text-sm font-bold text-white leading-snug">{selectedPortico.nombre}</h2>
+            <div className="flex-1 overflow-y-auto p-5 custom-scrollbar bg-zinc-950 cursor-default">
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-zinc-800">
+                <div className="w-3 h-3 rounded-full shrink-0 shadow-sm" style={{ backgroundColor: selectedPortico.color || '#fff' }} />
+                <h2 className="text-lg font-semibold text-zinc-50 leading-tight">{selectedPortico.nombre}</h2>
               </div>
 
-              <div className="space-y-3">
-                <div className="bg-slate-800/60 rounded-lg p-3 border border-slate-700/40">
-                  <div className="text-xs text-slate-400 uppercase tracking-wider mb-2 font-semibold">Información</div>
-                  <div className="space-y-1.5">
+              <div className="space-y-4">
+                <div className="bg-zinc-950 p-4 rounded-lg border border-zinc-800 shadow-sm">
+                  <div className="flex items-center gap-2 mb-4 pb-3 border-b border-zinc-800/80">
+                    <span className="text-xs font-semibold text-zinc-400">Detalles Geográficos</span>
+                  </div>
+                  <div className="space-y-3">
                     <InfoRow label="Autopista" value={selectedPortico.autopista} color={selectedPortico.color} />
                     <InfoRow label="Tramo" value={selectedPortico.tramo} />
-                    <InfoRow label="Kilómetro" value={`${selectedPortico.km} km`} />
+                    <InfoRow label="Kilómetro" value={`KM ${selectedPortico.km}`} />
                     {selectedPortico.sentido && <InfoRow label="Sentido" value={selectedPortico.sentido} />}
                     {selectedPortico.salida && <InfoRow label="Salida" value={selectedPortico.salida} />}
                     {selectedPortico.comuna && <InfoRow label="Comuna" value={selectedPortico.comuna} />}
-                    <InfoRow label="Latitud" value={selectedPortico.lat.toFixed(6)} mono />
-                    <InfoRow label="Longitud" value={selectedPortico.lng.toFixed(6)} mono />
+                    <div className="pt-3 mt-3 border-t border-zinc-800/80 space-y-3">
+                      <InfoRow label="Latitud" value={selectedPortico.lat.toFixed(6)} mono />
+                      <InfoRow label="Longitud" value={selectedPortico.lng.toFixed(6)} mono />
+                    </div>
                   </div>
                 </div>
 
-                <div className="bg-slate-800/60 rounded-lg p-3 border border-slate-700/40">
-                  <div className="text-xs text-slate-400 uppercase tracking-wider mb-2 font-semibold">Tags OSM</div>
-                  <div className="space-y-1.5">
-                    {Object.entries(selectedPortico.tags).map(([k, v]) => (
-                      <div key={k} className="flex justify-between gap-3 text-xs">
-                        <span className="text-slate-500 font-mono">{k}</span>
-                        <span className={`font-mono ${v === 'yes' ? 'text-emerald-400' : v === 'no' ? 'text-red-400' : 'text-slate-300'}`}>
-                          {v}
-                        </span>
+                {/* Estructura Tarifaria Extraída */}
+                {(selectedPortico.precio || selectedPortico.tarifas_urbanas) && (
+                  <div className="bg-zinc-950 p-4 rounded-lg border border-zinc-800 shadow-sm">
+                    <div className="flex items-center gap-2 mb-4 pb-3 border-b border-zinc-800/80">
+                      <span className="text-xs font-semibold text-zinc-400">Cuadro Tarifario Extraído (CLP)</span>
+                    </div>
+
+                    {selectedPortico.precio && !selectedPortico.tarifas_urbanas && (
+                      <InfoRow label="Tarifa Estándar Base" value={`$${selectedPortico.precio.toLocaleString('es-CL')}`} color="#22c55e" />
+                    )}
+
+                    {selectedPortico.tarifas_urbanas && (
+                      <div className="space-y-4">
+                        {Object.entries(selectedPortico.tarifas_urbanas).map(([k, v]) => {
+                          if (typeof v === 'object' && v !== null) {
+                            return (
+                              <div key={k} className="border-t border-zinc-800 pt-3 mt-3 first:mt-0 first:border-0 first:pt-0">
+                                <div className="text-xs text-blue-400 font-medium mb-3 capitalize">{k.replace(/_/g, ' ')}</div>
+                                <div className="space-y-2.5">
+                                  {Object.entries(v).map(([sk, sv]) => (
+                                    <div key={sk} className="flex justify-between items-center text-sm">
+                                      <span className="text-zinc-400 capitalize block truncate pr-4 text-xs" title={sk}>{sk.replace(/_/g, ' ')}</span>
+                                      <span className="text-zinc-50 font-medium bg-zinc-900 rounded-md px-2 py-1 border border-zinc-800 shadow-sm">${Number(sv).toLocaleString('es-CL')}</span>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            );
+                          }
+                          return (
+                            <InfoRow key={k} label={k.replace(/_/g, ' ')} value={`$${Number(v).toLocaleString('es-CL')}`} mono />
+                          );
+                        })}
+
+                        {/* Category Legend */}
+                        {JSON.stringify(selectedPortico.tarifas_urbanas).includes('categoria') && (
+                          <div className="bg-zinc-900 border border-zinc-800 rounded-md p-3.5 mt-5 text-xs text-zinc-400 leading-relaxed font-sans shadow-sm">
+                            <span className="text-zinc-200 font-semibold block mb-2">Clasificación Vehicular</span>
+                            <span className="text-zinc-300 font-medium block mt-1">Categoría 1 / 1_4:</span> Motos, Autos y Camionetas. (Tarifa Base Liviana) 🚗
+                            <span className="text-zinc-300 font-medium block mt-3">Categoría 2:</span> Buses y Camiones de 2 ejes. (Recargo por dimensiones y peso) 🚍
+                            <span className="text-zinc-300 font-medium block mt-3">Categoría 3:</span> Camiones con remolque o +2 ejes. (Máximo recargo por desgaste de pavimento) 🚛
+                          </div>
+                        )}
+                        {/* Time Legend */}
+                        {JSON.stringify(selectedPortico.tarifas_urbanas).includes('TBP') && (
+                          <div className="bg-zinc-900 border border-zinc-800 rounded-md p-3.5 mt-3 text-xs text-zinc-400 leading-relaxed shadow-sm">
+                            <span className="text-zinc-200 font-semibold block mb-2">Multiplicadores y Horarios</span>
+                            <span className="text-emerald-400 block mt-1"><strong className="text-zinc-300">TBFP:</strong> Tarifa Base / Normal. 🟢</span>
+                            <span className="text-yellow-500 block mt-1.5"><strong className="text-zinc-300">TBP:</strong> Tarifa Punta / Alta congestión. 🟡</span>
+                            <span className="text-red-400 block mt-1.5"><strong className="text-zinc-300">TS:</strong> Tarifa Saturación / Demanda límite. 🔴</span>
+                          </div>
+                        )}
                       </div>
-                    ))}
+                    )}
                   </div>
-                </div>
+                )}
+                {/* ── FICHA DE LA COMUNA (Wikipedia) ── */}
+                {selectedPortico.comuna && (
+                  <ComunaCard comuna={selectedPortico.comuna} />
+                )}
 
-                <div className="bg-slate-800/60 rounded-lg p-3 border border-slate-700/40">
-                  <div className="text-xs text-slate-400 uppercase tracking-wider mb-2 font-semibold">ID OSM</div>
-                  <code className="text-xs text-blue-400 font-mono">{selectedPortico.id}</code>
-                </div>
-
-                <a
-                  href={`https://www.openstreetmap.org/?mlat=${selectedPortico.lat}&mlon=${selectedPortico.lng}&zoom=17`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full py-2.5 bg-blue-600/20 hover:bg-blue-600/30 border border-blue-500/30 rounded-lg text-blue-400 text-sm font-medium transition-colors"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                  Ver en OpenStreetMap
-                </a>
               </div>
             </div>
           )}
 
+          {activeTab === 'simulacion' && (
+            <SimulationTab
+              routePorticos={routePorticos}
+              routeDistanceKm={routeDistanceKm}
+              origin={origin}
+              destination={destination}
+              pickingMode={pickingMode}
+              setPickingMode={setPickingMode}
+              calculateRoute={calculateRoute}
+              isCalculating={isCalculating}
+              requestGeolocation={requestGeolocation}
+              onStart={handleSimStart}
+              onPause={handleSimPause}
+              onResume={handleSimResume}
+              onReset={handleSimReset}
+              isSimulating={isSimulating}
+              isPaused={isPaused}
+              simCompleted={simCompleted}
+              liveVehicles={liveVehicles}
+              liveRevenue={liveRevenue}
+              liveMinutes={liveMinutes}
+            />
+          )}
+
           {activeTab === 'tags' && !selectedPortico && (
-            <div className="flex-1 flex flex-col items-center justify-center gap-3 text-slate-600 p-6 text-center">
-              <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-              </svg>
-              <p className="text-sm">Haz clic en un pórtico<br />en el mapa o la lista</p>
+            <div className="flex-1 flex flex-col items-center justify-center gap-4 p-8 text-center bg-zinc-950">
+              <div className="w-16 h-16 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center shadow-sm">
+                <svg className="w-6 h-6 text-zinc-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                </svg>
+              </div>
+              <p className="text-sm font-medium text-zinc-500 max-w-xs">Selecciona un marcador en el mapa para analizar su cuadro tarifario completo y datos.</p>
             </div>
           )}
         </aside>
@@ -440,18 +593,18 @@ export default function HomePage() {
 
       {/* Mobile bottom sheet */}
       {isMobileListOpen && (
-        <div className="lg:hidden fixed inset-0 z-30 flex flex-col justify-end">
-          <div className="absolute inset-0 bg-black/60" onClick={() => setIsMobileListOpen(false)} />
-          <div className="relative bg-slate-900 rounded-t-2xl border-t border-slate-700/50 h-2/3 flex flex-col z-10">
-            <div className="flex items-center justify-between px-4 py-3 border-b border-slate-700/50">
-              <h2 className="text-sm font-semibold text-white">Autopistas y Pórticos</h2>
-              <button onClick={() => setIsMobileListOpen(false)} className="text-slate-400 hover:text-white">
+        <div className="lg:hidden fixed inset-0 z-50 flex flex-col justify-end">
+          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={() => setIsMobileListOpen(false)} />
+          <div className="relative bg-zinc-950 border-t border-zinc-800 h-[85vh] flex flex-col z-10 shadow-2xl rounded-t-2xl">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-zinc-800">
+              <h2 className="text-sm font-semibold text-zinc-100">Filtros de Red</h2>
+              <button onClick={() => setIsMobileListOpen(false)} className="text-zinc-500 hover:text-white transition-colors p-2 -mr-2 cursor-pointer">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
-            <div className="flex-1 overflow-y-auto">
+            <div className="flex-1 overflow-y-auto bg-zinc-950">
               <Sidebar
                 autopistas={autopistas}
                 selectedAutopista={selectedAutopista}
@@ -468,9 +621,9 @@ export default function HomePage() {
 
 function InfoRow({ label, value, color, mono }: { label: string; value: string; color?: string; mono?: boolean }) {
   return (
-    <div className="flex justify-between gap-3 text-xs">
-      <span className="text-slate-500">{label}</span>
-      <span className={`${color ? 'font-semibold' : 'text-slate-300'} ${mono ? 'font-mono' : ''}`} style={color ? { color } : {}}>
+    <div className="flex justify-between gap-4 text-xs items-center">
+      <span className="text-zinc-400 font-medium capitalize">{label}</span>
+      <span className={`text-right ${color ? 'font-semibold' : 'text-zinc-200'} ${mono ? 'font-mono' : 'font-medium'}`} style={color ? { color } : {}}>
         {value}
       </span>
     </div>

@@ -1,0 +1,52 @@
+{
+  "concesion": "ACCESO VIAL AMB",
+  "tipo_tarifario": "PEAJES TARIFAS 2026",
+  "ambito": "Autopistas Urbanas",
+  "plazas_peaje": [
+    {
+      "nombre_plaza": "PÓRTICO",
+      "modalidad_cobro": "MANUAL",
+      "tarifas": [
+        {
+          "categoria_vehiculo": "Autos y Camionetas con o sin remolque",
+          "precio": 889
+        },
+        {
+          "categoria_vehiculo": "Camiones y Buses",
+          "precio": 1778
+        },
+        {
+          "categoria_vehiculo": "Camiones con remolque",
+          "precio": 2667
+        },
+        {
+          "categoria_vehiculo": "Motos y Motonetas",
+          "precio": 889
+        }
+      ]
+    },
+    {
+      "nombre_plaza": "MANUAL",
+      "modalidad_cobro": "MANUAL",
+      "tarifas": [
+        {
+          "categoria_vehiculo": "Autos y Camionetas con o sin remolque",
+          "precio": 1800
+        },
+        {
+          "categoria_vehiculo": "Camiones y Buses",
+          "precio": 2650
+        },
+        {
+          "categoria_vehiculo": "Camiones con remolque",
+          "precio": 3550
+        },
+        {
+          "categoria_vehiculo": "Motos y Motonetas",
+          "precio": 1800
+        }
+      ]
+    }
+  ],
+  "observaciones": "No se detectan rebajas, horarios punta/valle u otra metadata tarifaria específica en el fragmento proporcionado."
+}

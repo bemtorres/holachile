@@ -1,0 +1,41 @@
+{
+  "concesion": "Rutas Transversales",
+  "anio_tarifario": 2026,
+  "peajes": [
+    {
+      "nombre": "Puente Industrial",
+      "modalidades": [
+        {
+          "nombre": "Pase Diario",
+          "descripcion": "Cobro por pasada",
+          "tarifas": [
+            {
+              "categoria": "Auto y Camionetas, con o sin remolque",
+              "precio_tag": 772,
+              "precio_sin_tag": 926,
+              "precio_pase_diario": 4240
+            },
+            {
+              "categoria": "Buses y camiones",
+              "precio_tag": 2316,
+              "precio_sin_tag": 2779,
+              "precio_pase_diario": 12720
+            },
+            {
+              "categoria": "Camiones con remolque",
+              "precio_tag": 3860,
+              "precio_sin_tag": 4632,
+              "precio_pase_diario": 21200
+            },
+            {
+              "categoria": "Motos, cuadrimotos y motonetas",
+              "precio_tag": 232,
+              "precio_sin_tag": 278,
+              "precio_pase_diario": 1272
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

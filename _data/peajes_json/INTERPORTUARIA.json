@@ -1,0 +1,160 @@
+{
+  "concesion": "RUTA INTERPORTUARIA / TALCAHUANO - PENCO",
+  "tramo": "TRONCAL RUTA F/90",
+  "anio_tarifario": 2026,
+  "categoria_ruta": "Rutas Transversales",
+  "plazas_peaje": [
+    {
+      "nombre": "PENCO",
+      "sentidos": [
+        {
+          "direccion": "DE TALCAHUANO",
+          "destino": "AEROPUERTO",
+          "tarifas": [
+            {
+              "tipo_vehiculo": "Autos, Camionetas y Station Wagon con uno o más ejes adicionales",
+              "precios": {
+                "normal": 1750,
+                "punta": 1750
+              }
+            },
+            {
+              "tipo_vehiculo": "Camiones y Buses de dos ejes, Maquinaria Agrícola, de Construcción y Camionetas con doble rueda trasera",
+              "precios": {
+                "normal": 3200,
+                "punta": 3200
+              }
+            },
+            {
+              "tipo_vehiculo": "Camiones y Buses con más de dos ejes",
+              "precios": {
+                "normal": 5650,
+                "punta": 5650
+              }
+            },
+            {
+              "tipo_vehiculo": "Motos",
+              "precios": {
+                "normal": 550,
+                "punta": 550
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "AEROPUERTO",
+      "sentidos": [
+        {
+          "direccion": "DE TALCAHUANO",
+          "destino": "PENCO",
+          "tarifas": [
+            {
+              "tipo_vehiculo": "Autos, Camionetas y Station Wagon con uno o más ejes adicionales",
+              "precios": {
+                "normal": 1250,
+                "punta": 1800
+              }
+            },
+            {
+              "tipo_vehiculo": "Camiones y Buses de dos ejes, Maquinaria Agrícola, de Construcción y Camionetas con doble rueda trasera",
+              "precios": {
+                "normal": 2250,
+                "punta": 3200
+              }
+            },
+            {
+              "tipo_vehiculo": "Camiones y Buses con más de dos ejes",
+              "precios": {
+                "normal": 4000,
+                "punta": 5700
+              }
+            },
+            {
+              "tipo_vehiculo": "Motos",
+              "precios": {
+                "normal": 350,
+                "punta": 550
+              }
+            }
+          ]
+        },
+        {
+          "direccion": "DE PENCO",
+          "destino": "TALCAHUANO",
+          "tarifas": [
+            {
+              "tipo_vehiculo": "Autos, Camionetas y Station Wagon con uno o más ejes adicionales",
+              "precios": {
+                "normal": 1750,
+                "punta": 2500
+              }
+            },
+            {
+              "tipo_vehiculo": "Camiones y Buses de dos ejes, Maquinaria Agrícola, de Construcción y Camionetas con doble rueda trasera",
+              "precios": {
+                "normal": 3200,
+                "punta": 4550
+              }
+            },
+            {
+              "tipo_vehiculo": "Camiones y Buses con más de dos ejes",
+              "precios": {
+                "normal": 5650,
+                "punta": 8050
+              }
+            },
+            {
+              "tipo_vehiculo": "Motos",
+              "precios": {
+                "normal": 550,
+                "punta": 750
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "TALCAHUANO",
+      "sentidos": [
+        {
+          "direccion": "DE AEROPUERTO",
+          "destino": "PENCO",
+          "tarifas": [
+            {
+              "tipo_vehiculo": "Autos, Camionetas y Station Wagon con uno o más ejes adicionales",
+              "precios": {
+                "normal": 2500,
+                "punta": 2500
+              }
+            },
+            {
+              "tipo_vehiculo": "Camiones y Buses de dos ejes, Maquinaria Agrícola, de Construcción y Camionetas con doble rueda trasera",
+              "precios": {
+                "normal": 4550,
+                "punta": 4550
+              }
+            },
+            {
+              "tipo_vehiculo": "Camiones y Buses con más de dos ejes",
+              "precios": {
+                "normal": 8050,
+                "punta": 8050
+              }
+            },
+            {
+              "tipo_vehiculo": "Motos",
+              "precios": {
+                "normal": 750,
+                "punta": 750
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "observaciones": "Los precios están en pesos chilenos ($). Los horarios 'punta' y 'normal' no están definidos en el fragmento proporcionado."
+}

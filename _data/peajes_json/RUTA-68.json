@@ -1,0 +1,83 @@
+{
+  "concesion": "RUTA 68 / SANTIAGO - VALPARAÍSO - VIÑA",
+  "descripcion": "PEAJES TARIFAS 2026 / Rutas Transversales",
+  "plazas_peaje": [
+    {
+      "nombre": "LATERAL Y TRONCAL SUR",
+      "modalidad_pago": "USUARIOS CON TAG O PAGO MANUAL",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Autos, camionetas y Station Wagon",
+          "descripcion_adicional": "Autos, camionetas y Station Wagon con uno o más ejes adicionales",
+          "precio_normal": 1100,
+          "precio_punta": 2700,
+          "precio_valle": null,
+          "moneda": "CLP"
+        },
+        {
+          "tipo_vehiculo": "Camiones y buses de dos ejes, Maquinaria Agrícola, de construcción y camionetas con doble rueda trasera",
+          "descripcion_adicional": null,
+          "precio_normal": 1900,
+          "precio_punta": 4800,
+          "precio_valle": null,
+          "moneda": "CLP"
+        },
+        {
+          "tipo_vehiculo": "Camiones y Buses de más de dos ejes",
+          "descripcion_adicional": null,
+          "precio_normal": 3500,
+          "precio_punta": 8600,
+          "precio_valle": null,
+          "moneda": "CLP"
+        },
+        {
+          "tipo_vehiculo": "Motos",
+          "descripcion_adicional": null,
+          "precio_normal": 300,
+          "precio_punta": 800,
+          "precio_valle": null,
+          "moneda": "CLP"
+        }
+      ]
+    },
+    {
+      "nombre": "TRONCAL",
+      "modalidad_pago": "USUARIOS CON TAG O PAGO MANUAL",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Autos, camionetas y Station Wagon",
+          "descripcion_adicional": "Autos, camionetas y Station Wagon con uno o más ejes adicionales",
+          "precio_normal": 4000,
+          "precio_punta": null,
+          "precio_valle": null,
+          "moneda": "CLP"
+        },
+        {
+          "tipo_vehiculo": "Camiones y buses de dos ejes, Maquinaria Agrícola, de construcción y camionetas con doble rueda trasera",
+          "descripcion_adicional": null,
+          "precio_normal": 7200,
+          "precio_punta": null,
+          "precio_valle": null,
+          "moneda": "CLP"
+        },
+        {
+          "tipo_vehiculo": "Camiones y Buses de más de dos ejes",
+          "descripcion_adicional": null,
+          "precio_normal": 12900,
+          "precio_punta": null,
+          "precio_valle": null,
+          "moneda": "CLP"
+        },
+        {
+          "tipo_vehiculo": "Motos",
+          "descripcion_adicional": null,
+          "precio_normal": 1200,
+          "precio_punta": null,
+          "precio_valle": null,
+          "moneda": "CLP"
+        }
+      ]
+    }
+  ],
+  "observaciones": "Los precios 'PUNTA' solo se especifican para la plaza 'LATERAL Y TRONCAL SUR'. Para la plaza 'TRONCAL' solo se indica un precio normal (sin diferenciación horaria)."
+}

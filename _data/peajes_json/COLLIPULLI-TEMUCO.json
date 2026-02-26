@@ -1,0 +1,56 @@
+{
+  "concesion": "LATERAL TRONCAL COLLIPULLI - TEMUCO",
+  "ruta": "Ruta 5 Sur",
+  "periodo_tarifario": "2026",
+  "plazas_peaje": [
+    {
+      "nombre": "Collipulli - Temuco",
+      "tipo": "Lateral Troncal",
+      "tarifas": [
+        {
+          "categoria": "Motos y motonetas",
+          "tarifa_normal": 300,
+          "tarifa_horario_punta": 1000,
+          "tarifa_horario_valle": null
+        },
+        {
+          "categoria": "Autos y camionetas",
+          "tarifa_normal": 900,
+          "tarifa_horario_punta": 3600,
+          "tarifa_horario_valle": null
+        },
+        {
+          "categoria": "Autos y camionetas con remolque",
+          "tarifa_normal": 1300,
+          "tarifa_horario_punta": 5200,
+          "tarifa_horario_valle": null
+        },
+        {
+          "categoria": "Buses de dos ejes",
+          "tarifa_normal": 1600,
+          "tarifa_horario_punta": 6400,
+          "tarifa_horario_valle": null
+        },
+        {
+          "categoria": "Camiones de dos ejes",
+          "tarifa_normal": 1600,
+          "tarifa_horario_punta": 6400,
+          "tarifa_horario_valle": null
+        },
+        {
+          "categoria": "Buses de más de dos ejes",
+          "tarifa_normal": 2800,
+          "tarifa_horario_punta": 11400,
+          "tarifa_horario_valle": null
+        },
+        {
+          "categoria": "Camiones de más de dos ejes",
+          "tarifa_normal": 2800,
+          "tarifa_horario_punta": 11400,
+          "tarifa_horario_valle": null
+        }
+      ]
+    }
+  ],
+  "observaciones": "El texto muestra dos columnas de precios: la primera (izquierda) se interpreta como tarifa normal y la segunda (derecha) como tarifa en horario punta. No se especifica horario valle."
+}

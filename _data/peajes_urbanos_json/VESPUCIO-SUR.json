@@ -1,0 +1,427 @@
+{
+  "autopista": "VESPUCIO SUR",
+  "moneda": "CLP",
+  "requisito_tag": "Tarifas aplicables a usuarios con Televía (TAG) habilitado",
+  "definiciones_tarifarias": {
+    "TBFP": "Tarifa Base Fuera de Punta",
+    "TBP": "Tarifa Base Punta",
+    "TS": "Tarifa Saturación"
+  },
+  "definiciones_categorias": {
+    "Categoria_1_y_4": "motos, autos y camionetas",
+    "Categoria_2": "buses y camiones",
+    "Categoria_3": "camiones con remolque"
+  },
+  "horarios_tarifarios": {
+    "lunes_a_viernes": {
+      "horario_base_punta": "8:30-9:30, 18:00-18:30, 19:30-20:00",
+      "horario_saturacion": "13:00-15:00, 18:00-21:00, 19:00-22:00"
+    },
+    "sabado": {
+      "horario_base_punta": "7:30-8:30, 18:30-19:30",
+      "horario_saturacion": "8:30-9:30, 20:00-22:00, 13:00-15:00, 11:00-14:00, 20:00-22:00, 19:00-22:00, 21:00-23:00"
+    },
+    "domingo_o_festivo": {
+      "horario_base_punta": "7:30-8:30, 19:00-20:00",
+      "horario_saturacion": "13:00-15:00, 20:00-22:00"
+    }
+  },
+  "porticos": [
+    {
+      "portico": "1",
+      "sectores": "No especificado en fragmento",
+      "longitud_km": "No especificado en fragmento",
+      "tarifas": {
+        "Categoria_1_y_4": {
+          "TBFP": 532.59,
+          "TBP": 251.22,
+          "TS": 120.59
+        },
+        "Categoria_2": {
+          "TBFP": 472.30,
+          "TBP": 45.22,
+          "TS": 266.30
+        },
+        "Categoria_3": {
+          "TBFP": 382.86,
+          "TBP": 290.41,
+          "TS": null
+        }
+      }
+    },
+    {
+      "portico": "2",
+      "sectores": "No especificado en fragmento",
+      "longitud_km": "No especificado en fragmento",
+      "tarifas": {
+        "Categoria_1_y_4": {
+          "TBFP": 1065.18,
+          "TBP": 502.45,
+          "TS": 241.17
+        },
+        "Categoria_2": {
+          "TBFP": 944.60,
+          "TBP": 90.44,
+          "TS": 532.59
+        },
+        "Categoria_3": {
+          "TBFP": 765.73,
+          "TBP": 580.83,
+          "TS": null
+        }
+      }
+    },
+    {
+      "portico": "3",
+      "sectores": "No especificado en fragmento",
+      "longitud_km": "No especificado en fragmento",
+      "tarifas": {
+        "Categoria_1_y_4": {
+          "TBFP": 1065.18,
+          "TBP": 502.45,
+          "TS": 241.17
+        },
+        "Categoria_2": {
+          "TBFP": 944.60,
+          "TBP": 90.44,
+          "TS": 532.59
+        },
+        "Categoria_3": {
+          "TBFP": 765.73,
+          "TBP": 580.83,
+          "TS": null
+        }
+      }
+    },
+    {
+      "portico": "4",
+      "sectores": "No especificado en fragmento",
+      "longitud_km": "No especificado en fragmento",
+      "tarifas": {
+        "Categoria_1_y_4": {
+          "TBFP": 1597.78,
+          "TBP": 753.67,
+          "TS": 361.76
+        },
+        "Categoria_2": {
+          "TBFP": 1416.89,
+          "TBP": 135.66,
+          "TS": 798.89
+        },
+        "Categoria_3": {
+          "TBFP": 1148.59,
+          "TBP": 871.24,
+          "TS": null
+        }
+      }
+    },
+    {
+      "portico": "5",
+      "sectores": "No especificado en fragmento",
+      "longitud_km": "No especificado en fragmento",
+      "tarifas": {
+        "Categoria_1_y_4": {
+          "TBFP": 3195.55,
+          "TBP": 1507.34,
+          "TS": 723.52
+        },
+        "Categoria_2": {
+          "TBFP": 2833.79,
+          "TBP": 271.32,
+          "TS": 1597.78
+        },
+        "Categoria_3": {
+          "TBFP": 2297.18,
+          "TBP": 1742.48,
+          "TS": null
+        }
+      }
+    },
+    {
+      "portico": "6",
+      "sectores": "No especificado en fragmento",
+      "longitud_km": "No especificado en fragmento",
+      "tarifas": {
+        "Categoria_1_y_4": {
+          "TBFP": 4793.33,
+          "TBP": 2261.00,
+          "TS": 1085.28
+        },
+        "Categoria_2": {
+          "TBFP": 4250.68,
+          "TBP": 406.98,
+          "TS": 2396.66
+        },
+        "Categoria_3": {
+          "TBFP": 3445.77,
+          "TBP": 2613.72,
+          "TS": null
+        }
+      }
+    },
+    {
+      "portico": "7",
+      "sectores": "No especificado en fragmento",
+      "longitud_km": "No especificado en fragmento",
+      "tarifas": {
+        "Categoria_1_y_4": {
+          "TBFP": 2130.37,
+          "TBP": 1004.89,
+          "TS": 482.35
+        },
+        "Categoria_2": {
+          "TBFP": 1889.19,
+          "TBP": 180.88,
+          "TS": 1065.18
+        },
+        "Categoria_3": {
+          "TBFP": 1531.45,
+          "TBP": 1161.65,
+          "TS": null
+        }
+      }
+    },
+    {
+      "portico": "8",
+      "sectores": "No especificado en fragmento",
+      "longitud_km": "No especificado en fragmento",
+      "tarifas": {
+        "Categoria_1_y_4": {
+          "TBFP": 3195.55,
+          "TBP": 1507.34,
+          "TS": 723.52
+        },
+        "Categoria_2": {
+          "TBFP": 2833.79,
+          "TBP": 271.32,
+          "TS": 1597.78
+        },
+        "Categoria_3": {
+          "TBFP": 2297.18,
+          "TBP": 1742.48,
+          "TS": null
+        }
+      }
+    },
+    {
+      "portico": "9",
+      "sectores": "No especificado en fragmento",
+      "longitud_km": "No especificado en fragmento",
+      "tarifas": {
+        "Categoria_1_y_4": {
+          "TBFP": 1597.78,
+          "TBP": 753.67,
+          "TS": 361.76
+        },
+        "Categoria_2": {
+          "TBFP": 1416.89,
+          "TBP": 135.66,
+          "TS": 798.89
+        },
+        "Categoria_3": {
+          "TBFP": 1148.59,
+          "TBP": 871.24,
+          "TS": null
+        }
+      }
+    },
+    {
+      "portico": "10",
+      "sectores": "No especificado en fragmento",
+      "longitud_km": "No especificado en fragmento",
+      "tarifas": {
+        "Categoria_1_y_4": {
+          "TBFP": 121.59,
+          "TBP": 551.68,
+          "TS": 311.52
+        },
+        "Categoria_2": {
+          "TBFP": 332.62,
+          "TBP": 260.27,
+          "TS": 251.22
+        },
+        "Categoria_3": {
+          "TBFP": 532.59,
+          "TBP": null,
+          "TS": null
+        }
+      }
+    },
+    {
+      "portico": "11",
+      "sectores": "No especificado en fragmento",
+      "longitud_km": "No especificado en fragmento",
+      "tarifas": {
+        "Categoria_1_y_4": {
+          "TBFP": 243.18,
+          "TBP": 1103.37,
+          "TS": 623.03
+        },
+        "Categoria_2": {
+          "TBFP": 665.24,
+          "TBP": 520.53,
+          "TS": 502.45
+        },
+        "Categoria_3": {
+          "TBFP": 1065.18,
+          "TBP": null,
+          "TS": null
+        }
+      }
+    },
+    {
+      "portico": "12",
+      "sectores": "No especificado en fragmento",
+      "longitud_km": "No especificado en fragmento",
+      "tarifas": {
+        "Categoria_1_y_4": {
+          "TBFP": 243.18,
+          "TBP": 1103.37,
+          "TS": 623.03
+        },
+        "Categoria_2": {
+          "TBFP": 665.24,
+          "TBP": 520.53,
+          "TS": 502.45
+        },
+        "Categoria_3": {
+          "TBFP": 1065.18,
+          "TBP": null,
+          "TS": null
+        }
+      }
+    },
+    {
+      "portico": "13",
+      "sectores": "No especificado en fragmento",
+      "longitud_km": "No especificado en fragmento",
+      "tarifas": {
+        "Categoria_1_y_4": {
+          "TBFP": 364.78,
+          "TBP": 1655.05,
+          "TS": 934.55
+        },
+        "Categoria_2": {
+          "TBFP": 997.86,
+          "TBP": 780.80,
+          "TS": 753.67
+        },
+        "Categoria_3": {
+          "TBFP": 1597.78,
+          "TBP": null,
+          "TS": null
+        }
+      }
+    },
+    {
+      "portico": "14",
+      "sectores": "No especificado en fragmento",
+      "longitud_km": "No especificado en fragmento",
+      "tarifas": {
+        "Categoria_1_y_4": {
+          "TBFP": 729.55,
+          "TBP": 3310.11,
+          "TS": 1869.10
+        },
+        "Categoria_2": {
+          "TBFP": 1995.71,
+          "TBP": 1561.60,
+          "TS": 1507.34
+        },
+        "Categoria_3": {
+          "TBFP": 3195.55,
+          "TBP": null,
+          "TS": null
+        }
+      }
+    },
+    {
+      "portico": "15",
+      "sectores": "No especificado en fragmento",
+      "longitud_km": "No especificado en fragmento",
+      "tarifas": {
+        "Categoria_1_y_4": {
+          "TBFP": 1094.33,
+          "TBP": 4965.16,
+          "TS": null
+        },
+        "Categoria_2": {
+          "TBFP": 2993.57,
+          "TBP": 2342.40,
+          "TS": 2261.00
+        },
+        "Categoria_3": {
+          "TBFP": null,
+          "TBP": null,
+          "TS": null
+        }
+      }
+    },
+    {
+      "portico": "16",
+      "sectores": "No especificado en fragmento",
+      "longitud_km": "No especificado en fragmento",
+      "tarifas": {
+        "Categoria_1_y_4": {
+          "TBFP": 486.37,
+          "TBP": 2206.74,
+          "TS": 1246.06
+        },
+        "Categoria_2": {
+          "TBFP": 1330.47,
+          "TBP": 1041.07,
+          "TS": 1004.89
+        },
+        "Categoria_3": {
+          "TBFP": 2130.37,
+          "TBP": null,
+          "TS": null
+        }
+      }
+    },
+    {
+      "portico": "17",
+      "sectores": "No especificado en fragmento",
+      "longitud_km": "No especificado en fragmento",
+      "tarifas": {
+        "Categoria_1_y_4": {
+          "TBFP": 729.55,
+          "TBP": 3310.11,
+          "TS": null
+        },
+        "Categoria_2": {
+          "TBFP": 1995.71,
+          "TBP": 1561.60,
+          "TS": 1507.34
+        },
+        "Categoria_3": {
+          "TBFP": null,
+          "TBP": null,
+          "TS": null
+        }
+      }
+    },
+    {
+      "portico": "18",
+      "sectores": "No especificado en fragmento",
+      "longitud_km": "No especificado en fragmento",
+      "tarifas": {
+        "Categoria_1_y_4": {
+          "TBFP": 364.78,
+          "TBP": 1655.05,
+          "TS": null
+        },
+        "Categoria_2": {
+          "TBFP": 997.86,
+          "TBP": 780.80,
+          "TS": 753.67
+        },
+        "Categoria_3": {
+          "TBFP": null,
+          "TBP": null,
+          "TS": null
+        }
+      }
+    }
+  ]
+}

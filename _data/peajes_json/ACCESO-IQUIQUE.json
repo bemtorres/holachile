@@ -1,0 +1,74 @@
+{
+  "concesion": "Rutas Transversales",
+  "anio_tarifario": 2026,
+  "tramos": [
+    {
+      "nombre": "TRONCAL RUTA 1TRONCAL RUTA 16",
+      "plazas_peaje": [
+        {
+          "nombre": "TRONCAL RUTA 1TRONCAL RUTA 16",
+          "tarifas": [
+            {
+              "tipo_vehiculo": "Motos y motonetas",
+              "precio": 450
+            },
+            {
+              "tipo_vehiculo": "Autos y camionetas con y sin remolque",
+              "precio": 1550
+            },
+            {
+              "tipo_vehiculo": "Buses de dos ejes",
+              "precio": 2800
+            },
+            {
+              "tipo_vehiculo": "Camiones de dos ejes, camionetas doble rueda trasera, maquinaria agrícola y maquinaria de construcción",
+              "precio": 4700
+            },
+            {
+              "tipo_vehiculo": "Buses de más de dos ejes",
+              "precio": 5000
+            },
+            {
+              "tipo_vehiculo": "Camiones de más de dos ejes",
+              "precio": 7850
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "ACCESO IQUIQUE",
+      "plazas_peaje": [
+        {
+          "nombre": "ACCESO IQUIQUE",
+          "tarifas": [
+            {
+              "tipo_vehiculo": "Motos y motonetas",
+              "precio": 700
+            },
+            {
+              "tipo_vehiculo": "Autos y camionetas con y sin remolque",
+              "precio": 2350
+            },
+            {
+              "tipo_vehiculo": "Buses de dos ejes",
+              "precio": 4200
+            },
+            {
+              "tipo_vehiculo": "Camiones de dos ejes, camionetas doble rueda trasera, maquinaria agrícola y maquinaria de construcción",
+              "precio": 7050
+            },
+            {
+              "tipo_vehiculo": "Buses de más de dos ejes",
+              "precio": 7550
+            },
+            {
+              "tipo_vehiculo": "Camiones de más de dos ejes",
+              "precio": 11800
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

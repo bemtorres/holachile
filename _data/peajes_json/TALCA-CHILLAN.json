@@ -1,0 +1,75 @@
+{
+  "concesion": "Ruta 5 Sur",
+  "tramo": "TALCA - CHILLÁN",
+  "anio_tarifario": 2026,
+  "tipo_estructura_tarifaria": "lateral_troncal",
+  "plazas_peaje": [
+    {
+      "nombre_plaza": "LATERAL",
+      "tarifas": [
+        {
+          "categoria": "Motos, cuatrimotos y motonetas",
+          "precio": 1000
+        },
+        {
+          "categoria": "Autos y camionetas",
+          "precio": 3300
+        },
+        {
+          "categoria": "Autos con remolque y camionetas con remolque",
+          "precio": 4900
+        },
+        {
+          "categoria": "Buses de dos ejes y casas rodantes",
+          "precio": 5900
+        },
+        {
+          "categoria": "Camiones de dos ejes, maquinaria agrícola y maquinaria de construcción de dos ejes",
+          "precio": 5900
+        },
+        {
+          "categoria": "Buses de más de dos ejes",
+          "precio": 10400
+        },
+        {
+          "categoria": "Camiones de más de dos ejes, maquinaria agrícola de más de dos ejes, maquinaria de construcción de más de dos ejes y vehículos con sobredimensión",
+          "precio": 10400
+        }
+      ]
+    },
+    {
+      "nombre_plaza": "TRONCAL",
+      "tarifas": [
+        {
+          "categoria": "Motos, cuatrimotos y motonetas",
+          "precio": 200
+        },
+        {
+          "categoria": "Autos y camionetas",
+          "precio": 800
+        },
+        {
+          "categoria": "Autos con remolque y camionetas con remolque",
+          "precio": 1200
+        },
+        {
+          "categoria": "Buses de dos ejes y casas rodantes",
+          "precio": 1500
+        },
+        {
+          "categoria": "Camiones de dos ejes, maquinaria agrícola y maquinaria de construcción de dos ejes",
+          "precio": 1500
+        },
+        {
+          "categoria": "Buses de más de dos ejes",
+          "precio": 2600
+        },
+        {
+          "categoria": "Camiones de más de dos ejes, maquinaria agrícola de más de dos ejes, maquinaria de construcción de más de dos ejes y vehículos con sobredimensión",
+          "precio": 2600
+        }
+      ]
+    }
+  ],
+  "observaciones": "No se especifican horarios punta/valle ni rebajas en el fragmento proporcionado."
+}

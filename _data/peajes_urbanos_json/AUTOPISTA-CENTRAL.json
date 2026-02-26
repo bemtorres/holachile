@@ -1,0 +1,486 @@
+{
+  "concesion": "AUTOPISTA CENTRAL",
+  "definiciones": {
+    "tarifas": {
+      "TBFP": "Tarifa Base Fuera de Punta",
+      "TBP": "Tarifa Base Punta",
+      "TS": "Tarifa Saturación"
+    },
+    "categorias_vehiculos": {
+      "categoria_1_4": "motos, autos y camionetas",
+      "categoria_2": "buses y camiones",
+      "categoria_3": "camiones con remolque"
+    }
+  },
+  "ejes": [
+    {
+      "nombre": "EJE NORTE SUR",
+      "sentidos": [
+        {
+          "direccion": "SUR-NORTE",
+          "porticos": [
+            {
+              "codigo": "PA2",
+              "referencia_tramo": "Los Guindos - La Capilla",
+              "kilometraje": 868.37,
+              "longitud_km": 7.68,
+              "tarifas": {
+                "categoria_1_4": {
+                  "TBFP": 585.09,
+                  "TBP": 669.27,
+                  "TS": 1003.9
+                },
+                "categoria_2": {
+                  "TBFP": 334.63,
+                  "TBP": 904.14,
+                  "TS": 1736.74
+                },
+                "categoria_3": {
+                  "TBFP": 452.06,
+                  "TBP": 785.66,
+                  "TS": 1170.18
+                }
+              },
+              "horarios_tbp": "07:00-07:30"
+            },
+            {
+              "codigo": "PA3",
+              "referencia_tramo": "La Capilla - Colón",
+              "kilometraje": 585.09,
+              "longitud_km": 5.63,
+              "tarifas": {
+                "categoria_1_4": {
+                  "TBFP": 669.27,
+                  "TBP": 904.13,
+                  "TS": 1003.9
+                },
+                "categoria_2": {
+                  "TBFP": 904.14,
+                  "TBP": 785.66,
+                  "TS": 1736.74
+                },
+                "categoria_3": {
+                  "TBFP": 785.66,
+                  "TBP": 571.58,
+                  "TS": 1170.18
+                }
+              },
+              "horarios_tbp": "07:00-08:00"
+            },
+            {
+              "codigo": "PA5",
+              "referencia_tramo": "Colón - Las Acacias",
+              "kilometraje": 334.63,
+              "longitud_km": 3.22,
+              "tarifas": {
+                "categoria_1_4": {
+                  "TBFP": 904.13,
+                  "TBP": 785.66,
+                  "TS": 1356.2
+                },
+                "categoria_2": {
+                  "TBFP": 785.66,
+                  "TBP": 571.58,
+                  "TS": 1170.18
+                },
+                "categoria_3": {
+                  "TBFP": 571.58,
+                  "TBP": 737.86,
+                  "TS": 669.27
+                }
+              },
+              "horarios_tbp": "17:30-18:00"
+            },
+            {
+              "codigo": "PA7",
+              "referencia_tramo": "Las Acacias - A. Vespucio",
+              "kilometraje": 452.06,
+              "longitud_km": 4.35,
+              "tarifas": {
+                "categoria_1_4": {
+                  "TBFP": 785.66,
+                  "TBP": 571.58,
+                  "TS": 1178.49
+                },
+                "categoria_2": {
+                  "TBFP": 571.58,
+                  "TBP": 737.86,
+                  "TS": 904.14
+                },
+                "categoria_3": {
+                  "TBFP": 737.86,
+                  "TBP": 363.73,
+                  "TS": 785.66
+                }
+              },
+              "horarios_tbp": "10:00-10:30 / 15:30-16:00 / 19:30-20:00"
+            },
+            {
+              "codigo": "PA30",
+              "referencia_tramo": "Americo Vespucio - Departamental",
+              "kilometraje": 392.83,
+              "longitud_km": 3.78,
+              "tarifas": {
+                "categoria_1_4": {
+                  "TBFP": 571.58,
+                  "TBP": 737.86,
+                  "TS": 857.37
+                },
+                "categoria_2": {
+                  "TBFP": 737.86,
+                  "TBP": 363.73,
+                  "TS": 571.58
+                },
+                "categoria_3": {
+                  "TBFP": 363.73,
+                  "TBP": 850.09,
+                  "TS": 737.86
+                }
+              },
+              "horarios_tbp": "10:00-10:30 / 15:30-16:00 / 19:30-20:00"
+            },
+            {
+              "codigo": "PA10",
+              "referencia_tramo": "Departamental - Carlos Valdovinos",
+              "kilometraje": 285.79,
+              "longitud_km": 2.75,
+              "tarifas": {
+                "categoria_1_4": {
+                  "TBFP": 737.86,
+                  "TBP": 363.73,
+                  "TS": 1106.79
+                },
+                "categoria_2": {
+                  "TBFP": 363.73,
+                  "TBP": 850.09,
+                  "TS": 737.86
+                },
+                "categoria_3": {
+                  "TBFP": 850.09,
+                  "TBP": 924.92,
+                  "TS": 363.73
+                }
+              },
+              "horarios_tbp": "17:30-19:30"
+            },
+            {
+              "codigo": "PA31",
+              "referencia_tramo": "Carlos Valdovinos - Alameda",
+              "kilometraje": 368.93,
+              "longitud_km": 3.55,
+              "tarifas": {
+                "categoria_1_4": {
+                  "TBFP": 363.73,
+                  "TBP": 850.09,
+                  "TS": 545.6
+                },
+                "categoria_2": {
+                  "TBFP": 850.09,
+                  "TBP": 924.92,
+                  "TS": 850.09
+                },
+                "categoria_3": {
+                  "TBFP": 924.92,
+                  "TBP": 2340.37,
+                  "TS": 924.92
+                }
+              },
+              "horarios_tbp": "17:30-19:30"
+            },
+            {
+              "codigo": "PA13",
+              "referencia_tramo": "Alameda - Río Mapocho",
+              "kilometraje": 181.86,
+              "longitud_km": 1.75,
+              "tarifas": {
+                "categoria_1_4": {
+                  "TBFP": 850.09,
+                  "TBP": 924.92,
+                  "TS": 1275.14
+                },
+                "categoria_2": {
+                  "TBFP": 924.92,
+                  "TBP": 2340.37,
+                  "TS": 850.09
+                },
+                "categoria_3": {
+                  "TBFP": 2340.37,
+                  "TBP": 1338.54,
+                  "TS": 924.92
+                }
+              },
+              "horarios_tbp": "07:30-09:30"
+            },
+            {
+              "codigo": "PA16",
+              "referencia_tramo": "Río Mapocho - 14 de la Fama",
+              "kilometraje": 425.04,
+              "longitud_km": 4.09,
+              "tarifas": {
+                "categoria_1_4": {
+                  "TBFP": 924.92,
+                  "TBP": 2340.37,
+                  "TS": 1387.38
+                },
+                "categoria_2": {
+                  "TBFP": 2340.37,
+                  "TBP": 1338.54,
+                  "TS": 924.92
+                },
+                "categoria_3": {
+                  "TBFP": 1338.54,
+                  "TBP": 1808.28,
+                  "TS": 2340.37
+                }
+              },
+              "horarios_tbp": "07:30-09:30"
+            },
+            {
+              "codigo": "PA17",
+              "referencia_tramo": "14 de la Fama - A.Vespucio Norte",
+              "kilometraje": 462.46,
+              "longitud_km": 4.45,
+              "tarifas": {
+                "categoria_1_4": {
+                  "TBFP": 2340.37,
+                  "TBP": 1338.54,
+                  "TS": 3510.56
+                },
+                "categoria_2": {
+                  "TBFP": 1338.54,
+                  "TBP": 1808.28,
+                  "TS": 2007.81
+                },
+                "categoria_3": {
+                  "TBFP": 1808.28,
+                  "TBP": 1571.33,
+                  "TS": 2605.11
+                }
+              },
+              "horarios_tbp": "10:00-13:00"
+            }
+          ]
+        },
+        {
+          "direccion": "NORTE-SUR",
+          "porticos": [
+            {
+              "codigo": "PA18",
+              "referencia_tramo": "A. Vespucio Norte - 14 de la Fama",
+              "kilometraje": 4.45,
+              "longitud_km": 462.46,
+              "tarifas": {
+                "categoria_1_4": {
+                  "TBFP": 4.09,
+                  "TBP": 1.75,
+                  "TS": 3.55
+                },
+                "categoria_2": {
+                  "TBFP": 1.75,
+                  "TBP": 3.55,
+                  "TS": 2.75
+                },
+                "categoria_3": {
+                  "TBFP": 3.55,
+                  "TBP": 2.75,
+                  "TS": 3.78
+                }
+              },
+              "horarios_tbp": "10:00-13:00"
+            },
+            {
+              "codigo": "PA15",
+              "referencia_tramo": "14 de la Fama - Río Mapocho",
+              "kilometraje": 4.09,
+              "longitud_km": 425.04,
+              "tarifas": {
+                "categoria_1_4": {
+                  "TBFP": 1.75,
+                  "TBP": 3.55,
+                  "TS": 2.75
+                },
+                "categoria_2": {
+                  "TBFP": 3.55,
+                  "TBP": 2.75,
+                  "TS": 3.78
+                },
+                "categoria_3": {
+                  "TBFP": 2.75,
+                  "TBP": 3.78,
+                  "TS": 4.35
+                }
+              },
+              "horarios_tbp": "11:00-15:00"
+            },
+            {
+              "codigo": "PA14",
+              "referencia_tramo": "Río Mapocho - Alameda",
+              "kilometraje": 1.75,
+              "longitud_km": 181.86,
+              "tarifas": {
+                "categoria_1_4": {
+                  "TBFP": 3.55,
+                  "TBP": 2.75,
+                  "TS": 3.78
+                },
+                "categoria_2": {
+                  "TBFP": 2.75,
+                  "TBP": 3.78,
+                  "TS": 4.35
+                },
+                "categoria_3": {
+                  "TBFP": 3.78,
+                  "TBP": 4.35,
+                  "TS": 1.7
+                }
+              },
+              "horarios_tbp": "11:00-15:00"
+            },
+            {
+              "codigo": "PA12",
+              "referencia_tramo": "Alameda - C. Valdovinos",
+              "kilometraje": 3.55,
+              "longitud_km": 368.93,
+              "tarifas": {
+                "categoria_1_4": {
+                  "TBFP": 2.75,
+                  "TBP": 3.78,
+                  "TS": 4.35
+                },
+                "categoria_2": {
+                  "TBFP": 3.78,
+                  "TBP": 4.35,
+                  "TS": 1.7
+                },
+                "categoria_3": {
+                  "TBFP": 4.35,
+                  "TBP": 1.7,
+                  "TS": 1.52
+                }
+              },
+              "horarios_tbp": "11:00-15:00"
+            },
+            {
+              "codigo": "PA11",
+              "referencia_tramo": "C. Valdovinos - Departamental",
+              "kilometraje": 2.75,
+              "longitud_km": 285.79,
+              "tarifas": {
+                "categoria_1_4": {
+                  "TBFP": 3.78,
+                  "TBP": 4.35,
+                  "TS": 1.7
+                },
+                "categoria_2": {
+                  "TBFP": 4.35,
+                  "TBP": 1.7,
+                  "TS": 1.52
+                },
+                "categoria_3": {
+                  "TBFP": 1.7,
+                  "TBP": 1.52,
+                  "TS": 4.38
+                }
+              },
+              "horarios_tbp": "11:00-15:00"
+            },
+            {
+              "codigo": "PA9",
+              "referencia_tramo": "Departamental - A. Vespucio",
+              "kilometraje": 3.78,
+              "longitud_km": 392.83,
+              "tarifas": {
+                "categoria_1_4": {
+                  "TBFP": 4.35,
+                  "TBP": 1.7,
+                  "TS": 1.52
+                },
+                "categoria_2": {
+                  "TBFP": 1.7,
+                  "TBP": 1.52,
+                  "TS": 4.38
+                },
+                "categoria_3": {
+                  "TBFP": 1.52,
+                  "TBP": 4.38,
+                  "TS": 1.25
+                }
+              },
+              "horarios_tbp": "18:00-20:00"
+            },
+            {
+              "codigo": "PA8",
+              "referencia_tramo": "A. Vespucio - Las Acacias",
+              "kilometraje": 4.35,
+              "longitud_km": 452.06,
+              "tarifas": {
+                "categoria_1_4": {
+                  "TBFP": 1.7,
+                  "TBP": 1.52,
+                  "TS": 4.38
+                },
+                "categoria_2": {
+                  "TBFP": 1.52,
+                  "TBP": 4.38,
+                  "TS": 1.25
+                },
+                "categoria_3": {
+                  "TBFP": 4.38,
+                  "TBP": 1.25,
+                  "TS": 7.68
+                }
+              },
+              "horarios_tbp": "18:00-20:00"
+            },
+            {
+              "codigo": "PA 32",
+              "referencia_tramo": "Las Acacias - Lo Blanco",
+              "kilometraje": 1.7,
+              "longitud_km": 176.67,
+              "tarifas": {
+                "categoria_1_4": {
+                  "TBFP": 1.52,
+                  "TBP": 4.38,
+                  "TS": 1.25
+                },
+                "categoria_2": {
+                  "TBFP": 4.38,
+                  "TBP": 1.25,
+                  "TS": 7.68
+                },
+                "categoria_3": {
+                  "TBFP": 1.25,
+                  "TBP": 7.68,
+                  "TS": 462.46
+                }
+              },
+              "horarios_tbp": "18:30-20:30"
+            },
+            {
+              "codigo": "PA6",
+              "referencia_tramo": "Lo Blanco - Colón",
+              "kilometraje": 1.52,
+              "longitud_km": 157.96,
+              "tarifas": {
+                "categoria_1_4": {
+                  "TBFP": 4.38,
+                  "TBP": 1.25,
+                  "TS": 7.68
+                },
+                "categoria_2": {
+                  "TBFP": 1.25,
+                  "TBP": 7.68,
+                  "TS": 462.46
+                },
+                "categoria_3": {
+                  "TBFP": 7.68,
+                  "TBP": 462.46,
+                  "TS": 924.92
+                }
+              },
+              "horarios_tbp": "18:30-20:30"
+            },
+            {
+              "codigo": "PA 37",
+              "referencia_tramo": "Col
+}

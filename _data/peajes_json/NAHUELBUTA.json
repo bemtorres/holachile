@@ -1,0 +1,62 @@
+{
+  "concesion": "RUTA NAHUELBUTA",
+  "tramos": [
+    {
+      "nombre": "TRONCAL RENAICO TRONCAL COIHUELATERAL SANTA FE",
+      "plazas_peaje": [
+        {
+          "nombre": "PEAJE TRONCAL RENAICO TRONCAL COIHUELATERAL SANTA FE",
+          "tarifas": [
+            {
+              "tipo_vehiculo": "Motos y Motonetas",
+              "tarifa_normal": 700,
+              "tarifa_rebaja": 400,
+              "tarifa_horario_valle": 0
+            },
+            {
+              "tipo_vehiculo": "Autos o Camionetas con y sin Remolque",
+              "tarifa_normal": 2250,
+              "tarifa_rebaja": 1300,
+              "tarifa_horario_valle": 0
+            },
+            {
+              "tipo_vehiculo": "Camionetas doble rueda trasera",
+              "tarifa_normal": 2250,
+              "tarifa_rebaja": 1300,
+              "tarifa_horario_valle": 0
+            },
+            {
+              "tipo_vehiculo": "Buses 2 ejes",
+              "tarifa_normal": 2250,
+              "tarifa_rebaja": 1300,
+              "tarifa_horario_valle": 800
+            },
+            {
+              "tipo_vehiculo": "Camiones de 2 ejes, Maquinarias agrícolas y de Construcción",
+              "tarifa_normal": 6800,
+              "tarifa_rebaja": 3900,
+              "tarifa_horario_valle": 2450
+            },
+            {
+              "tipo_vehiculo": "Buses más 2 ejes",
+              "tarifa_normal": 2250,
+              "tarifa_rebaja": 1300,
+              "tarifa_horario_valle": 800
+            },
+            {
+              "tipo_vehiculo": "Camiones más 2 ejes",
+              "tarifa_normal": 11350,
+              "tarifa_rebaja": 6500,
+              "tarifa_horario_valle": 4050
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "periodo_tarifario": "2026",
+    "categoria_ruta": "Rutas Transversales",
+    "fuente": "PEAJES TARIFAS 2026 /Rutas Transversales"
+  }
+}

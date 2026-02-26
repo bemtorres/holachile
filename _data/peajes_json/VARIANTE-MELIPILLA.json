@@ -1,0 +1,74 @@
+{
+  "concesion": "VARIANTE MELIPILLA",
+  "tipo_tarifa": "PEAJES TARIFAS 2026",
+  "categoria_ruta": "Rutas Transversales",
+  "plazas_peaje": [
+    {
+      "nombre": "NORMAL",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Motos",
+          "precio": 1150
+        },
+        {
+          "tipo_vehiculo": "Autos y camionetas",
+          "precio": 3900
+        },
+        {
+          "tipo_vehiculo": "Autos y camionetas con remolque",
+          "precio": 5850
+        },
+        {
+          "tipo_vehiculo": "Buses de dos ejes",
+          "precio": 7000
+        },
+        {
+          "tipo_vehiculo": "Camiones de dos ejes",
+          "precio": 7000
+        },
+        {
+          "tipo_vehiculo": "Buses de más de dos ejes",
+          "precio": 12450
+        },
+        {
+          "tipo_vehiculo": "Camiones de más de dos ejes",
+          "precio": 12450
+        }
+      ]
+    },
+    {
+      "nombre": "TRONCAL",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Motos",
+          "precio": 1150
+        },
+        {
+          "tipo_vehiculo": "Autos y camionetas",
+          "precio": 3900
+        },
+        {
+          "tipo_vehiculo": "Autos y camionetas con remolque",
+          "precio": 5850
+        },
+        {
+          "tipo_vehiculo": "Buses de dos ejes",
+          "precio": 7000
+        },
+        {
+          "tipo_vehiculo": "Camiones de dos ejes",
+          "precio": 7000
+        },
+        {
+          "tipo_vehiculo": "Buses de más de dos ejes",
+          "precio": 12450
+        },
+        {
+          "tipo_vehiculo": "Camiones de más de dos ejes",
+          "precio": 12450
+        }
+      ]
+    }
+  ],
+  "observaciones": "Los precios son idénticos para ambas plazas de peaje (NORMAL y TRONCAL). No se especifican rebajas ni horarios punta/valle en el texto proporcionado."
+}

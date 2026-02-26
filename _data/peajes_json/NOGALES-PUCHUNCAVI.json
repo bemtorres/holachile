@@ -1,0 +1,192 @@
+{
+  "concesion": "Rutas Transversales",
+  "anio_tarifario": 2026,
+  "tramos": [
+    {
+      "nombre": "CAMINO NOGALES - PUCHUNCAVÍ",
+      "plazas_peaje": [
+        {
+          "nombre": "CAMINO NOGALES - PUCHUNCAVÍ (Normal)",
+          "tipo_tarifa": "normal",
+          "tarifas": [
+            {
+              "tipo_vehiculo": "Autos y camionetas",
+              "precio": 1950
+            },
+            {
+              "tipo_vehiculo": "Camionetas doble rueda trasera y/o autos y camionetas con remolque",
+              "precio": 2950
+            },
+            {
+              "tipo_vehiculo": "Camiones de dos ejes, maquinaria agrícola o de construcción",
+              "precio": 4300
+            },
+            {
+              "tipo_vehiculo": "Camiones de más de dos ejes",
+              "precio": 7450
+            },
+            {
+              "tipo_vehiculo": "Buses de dos ejes",
+              "precio": 3900
+            },
+            {
+              "tipo_vehiculo": "Buses de más de dos ejes",
+              "precio": 5850
+            },
+            {
+              "tipo_vehiculo": "Motos y motonetas",
+              "precio": 800
+            }
+          ]
+        },
+        {
+          "nombre": "CAMINO NOGALES - PUCHUNCAVÍ (Punta)",
+          "tipo_tarifa": "punta",
+          "tarifas": [
+            {
+              "tipo_vehiculo": "Autos y camionetas",
+              "precio": 3900
+            },
+            {
+              "tipo_vehiculo": "Camionetas doble rueda trasera y/o autos y camionetas con remolque",
+              "precio": 5850
+            },
+            {
+              "tipo_vehiculo": "Camiones de dos ejes, maquinaria agrícola o de construcción",
+              "precio": 12900
+            },
+            {
+              "tipo_vehiculo": "Camiones de más de dos ejes",
+              "precio": 18600
+            },
+            {
+              "tipo_vehiculo": "Buses de dos ejes",
+              "precio": 7850
+            },
+            {
+              "tipo_vehiculo": "Buses de más de dos ejes",
+              "precio": 11750
+            },
+            {
+              "tipo_vehiculo": "Motos y motonetas",
+              "precio": 1550
+            }
+          ]
+        }
+      ],
+      "tarifas_especiales": [
+        {
+          "nombre": "PASE DIARIO",
+          "tarifas": [
+            {
+              "tipo_vehiculo": "Autos y camionetas",
+              "precio": 11700
+            },
+            {
+              "tipo_vehiculo": "Camionetas doble rueda trasera y/o autos y camionetas con remolque",
+              "precio": 17700
+            },
+            {
+              "tipo_vehiculo": "Camiones de dos ejes, maquinaria agrícola o de construcción",
+              "precio": 25800
+            },
+            {
+              "tipo_vehiculo": "Camiones de más de dos ejes",
+              "precio": 44700
+            },
+            {
+              "tipo_vehiculo": "Buses de dos ejes",
+              "precio": 23400
+            },
+            {
+              "tipo_vehiculo": "Buses de más de dos ejes",
+              "precio": 35100
+            },
+            {
+              "tipo_vehiculo": "Motos y motonetas",
+              "precio": 4800
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "TRONCAL NOGALES",
+      "plazas_peaje": [
+        {
+          "nombre": "TRONCAL NOGALES (Normal)",
+          "tipo_tarifa": "normal",
+          "tarifas": [
+            {
+              "tipo_vehiculo": "Autos y camionetas",
+              "precio": 500
+            },
+            {
+              "tipo_vehiculo": "Camionetas doble rueda trasera y/o autos y camionetas con remolque",
+              "precio": 750
+            },
+            {
+              "tipo_vehiculo": "Camiones de dos ejes, maquinaria agrícola o de construcción",
+              "precio": 1100
+            },
+            {
+              "tipo_vehiculo": "Camiones de más de dos ejes",
+              "precio": 1950
+            },
+            {
+              "tipo_vehiculo": "Buses de dos ejes",
+              "precio": 1000
+            },
+            {
+              "tipo_vehiculo": "Buses de más de dos ejes",
+              "precio": 1550
+            },
+            {
+              "tipo_vehiculo": "Motos y motonetas",
+              "precio": 200
+            }
+          ]
+        },
+        {
+          "nombre": "TRONCAL NOGALES (Punta)",
+          "tipo_tarifa": "punta",
+          "tarifas": [
+            {
+              "tipo_vehiculo": "Autos y camionetas",
+              "precio": 1000
+            },
+            {
+              "tipo_vehiculo": "Camionetas doble rueda trasera y/o autos y camionetas con remolque",
+              "precio": 1550
+            },
+            {
+              "tipo_vehiculo": "Camiones de dos ejes, maquinaria agrícola o de construcción",
+              "precio": 3350
+            },
+            {
+              "tipo_vehiculo": "Camiones de más de dos ejes",
+              "precio": 4850
+            },
+            {
+              "tipo_vehiculo": "Buses de dos ejes",
+              "precio": 2050
+            },
+            {
+              "tipo_vehiculo": "Buses de más de dos ejes",
+              "precio": 3050
+            },
+            {
+              "tipo_vehiculo": "Motos y motonetas",
+              "precio": 400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "BYPASS PUCHUNCAVÍ",
+      "plazas_peaje": [],
+      "tarifas_especiales": []
+    }
+  ]
+}

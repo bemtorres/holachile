@@ -1,0 +1,69 @@
+{
+  "concesion": "Ruta 5 Norte",
+  "periodo_tarifario": "2026",
+  "tramos": [
+    {
+      "nombre": "VALLENAR - CALDERA",
+      "plazas_peaje": [
+        {
+          "nombre": "PUERTO VIEJO TRONCAL",
+          "tarifas": [
+            {
+              "tipo_vehiculo": "Motos y motonetas",
+              "precio": 500
+            },
+            {
+              "tipo_vehiculo": "Autos y camionetas con y sin remolque",
+              "precio": 1700
+            },
+            {
+              "tipo_vehiculo": "Buses de dos ejes",
+              "precio": 3100
+            },
+            {
+              "tipo_vehiculo": "Camiones de dos ejes, camionetas de doble rueda trasera, maquinaria agrícola, maquinaria de construcción",
+              "precio": 5150
+            },
+            {
+              "tipo_vehiculo": "Buses de más de dos ejes",
+              "precio": 5500
+            },
+            {
+              "tipo_vehiculo": "Camiones de más de dos ejes",
+              "precio": 6900
+            }
+          ]
+        },
+        {
+          "nombre": "TOTORAL TRONCAL",
+          "tarifas": [
+            {
+              "tipo_vehiculo": "Motos y motonetas",
+              "precio": 850
+            },
+            {
+              "tipo_vehiculo": "Autos y camionetas con y sin remolque",
+              "precio": 2850
+            },
+            {
+              "tipo_vehiculo": "Buses de dos ejes",
+              "precio": 5150
+            },
+            {
+              "tipo_vehiculo": "Camiones de dos ejes, camionetas de doble rueda trasera, maquinaria agrícola, maquinaria de construcción",
+              "precio": 8600
+            },
+            {
+              "tipo_vehiculo": "Buses de más de dos ejes",
+              "precio": 9200
+            },
+            {
+              "tipo_vehiculo": "Camiones de más de dos ejes",
+              "precio": 11500
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

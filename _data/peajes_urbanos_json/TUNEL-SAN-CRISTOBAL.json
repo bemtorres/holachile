@@ -1,0 +1,307 @@
+{
+  "concesion": "TÚNEL SAN CRISTÓBAL",
+  "tramo": "Variante Vespucio - El Salto - Kennedy",
+  "periodo_validez": {
+    "inicio": "01-01-2026",
+    "fin": "31-12-2026"
+  },
+  "estructura_tarifaria": [
+    {
+      "tipo_vehiculo": "Autos y Camionetas",
+      "tarifas_por_tramo": [
+        {
+          "tramo": "El Salto - Kennedy",
+          "tarifas": [
+            {
+              "tipo_dia": "Laboral",
+              "horario": "07:00 a 07:30",
+              "tipo_tarifa": "TBP",
+              "valor": 904
+            },
+            {
+              "tipo_dia": "Laboral",
+              "horario": "07:30 a 09:30",
+              "tipo_tarifa": "TS",
+              "valor": 1131
+            },
+            {
+              "tipo_dia": "Laboral",
+              "horario": "10:00 a 11:00",
+              "tipo_tarifa": "TBP",
+              "valor": 904
+            },
+            {
+              "tipo_dia": "Laboral",
+              "horario": "15:30 a 17:30",
+              "tipo_tarifa": "TBP",
+              "valor": 904
+            },
+            {
+              "tipo_dia": "Laboral",
+              "horario": "17:30 a 20:30",
+              "tipo_tarifa": "TS",
+              "valor": 1131
+            },
+            {
+              "tipo_dia": "Sábado",
+              "horario": "10:00 a 14:00",
+              "tipo_tarifa": "TBP",
+              "valor": 904
+            },
+            {
+              "tipo_dia": "Festivo",
+              "horario": "10:00 a 14:00",
+              "tipo_tarifa": "TBP",
+              "valor": 904
+            }
+          ]
+        },
+        {
+          "tramo": "Kennedy - El Salto",
+          "tarifas": [
+            {
+              "tipo_dia": "Laboral",
+              "horario": "07:00 a 10:00",
+              "tipo_tarifa": "TBP",
+              "valor": 678
+            },
+            {
+              "tipo_dia": "Laboral",
+              "horario": "17:30 a 20:30",
+              "tipo_tarifa": "TBP",
+              "valor": 678
+            },
+            {
+              "tipo_dia": "Sábado",
+              "horario": "10:00 a 14:00",
+              "tipo_tarifa": "TBP",
+              "valor": 678
+            },
+            {
+              "tipo_dia": "Domingo",
+              "horario": "17:00 a 21:00",
+              "tipo_tarifa": "TBP",
+              "valor": 678
+            },
+            {
+              "tipo_dia": "Festivo",
+              "horario": "10:00 a 14:00",
+              "tipo_tarifa": "TBP",
+              "valor": 678
+            }
+          ]
+        }
+      ],
+      "tarifa_base": {
+        "valor": 565,
+        "descripcion": "Tarifa Base (TB)"
+      },
+      "tarifa_punta": {
+        "valor": 1696,
+        "descripcion": "Tarifa Punta (TBP)"
+      },
+      "tarifa_saturacion": {
+        "valor": 2826,
+        "descripcion": "Tarifa Saturación (TS)"
+      }
+    },
+    {
+      "tipo_vehiculo": "Motos",
+      "tarifas_por_tramo": [
+        {
+          "tramo": "El Salto - Kennedy",
+          "tarifas": [
+            {
+              "tipo_dia": "Laboral",
+              "horario": "07:00 a 07:30",
+              "tipo_tarifa": "TBP",
+              "valor": 5062
+            },
+            {
+              "tipo_dia": "Laboral",
+              "horario": "07:30 a 09:30",
+              "tipo_tarifa": "TS",
+              "valor": 6334
+            },
+            {
+              "tipo_dia": "Laboral",
+              "horario": "10:00 a 11:00",
+              "tipo_tarifa": "TBP",
+              "valor": 5062
+            },
+            {
+              "tipo_dia": "Laboral",
+              "horario": "16:30 a 17:30",
+              "tipo_tarifa": "TBP",
+              "valor": 5062
+            },
+            {
+              "tipo_dia": "Laboral",
+              "horario": "17:30 a 20:30",
+              "tipo_tarifa": "TS",
+              "valor": 6334
+            },
+            {
+              "tipo_dia": "Sábado",
+              "horario": "10:00 a 14:00",
+              "tipo_tarifa": "TBP",
+              "valor": 5062
+            },
+            {
+              "tipo_dia": "Festivo",
+              "horario": "10:00 a 14:00",
+              "tipo_tarifa": "TBP",
+              "valor": 5062
+            }
+          ]
+        },
+        {
+          "tramo": "Kennedy - El Salto",
+          "tarifas": [
+            {
+              "tipo_dia": "Laboral",
+              "horario": "07:00 a 10:00",
+              "tipo_tarifa": "TBP",
+              "valor": 3797
+            },
+            {
+              "tipo_dia": "Laboral",
+              "horario": "17:30 a 20:30",
+              "tipo_tarifa": "TBP",
+              "valor": 3797
+            },
+            {
+              "tipo_dia": "Sábado",
+              "horario": "10:00 a 14:00",
+              "tipo_tarifa": "TBP",
+              "valor": 3797
+            },
+            {
+              "tipo_dia": "Domingo",
+              "horario": "17:00 a 21:00",
+              "tipo_tarifa": "TBP",
+              "valor": 3797
+            },
+            {
+              "tipo_dia": "Festivo",
+              "horario": "10:00 a 14:00",
+              "tipo_tarifa": "TBP",
+              "valor": 3797
+            }
+          ]
+        }
+      ],
+      "tarifa_base": {
+        "valor": 3164,
+        "descripcion": "Tarifa Base (TB)"
+      },
+      "tarifa_punta": {
+        "valor": 9498,
+        "descripcion": "Tarifa Punta (TBP)"
+      },
+      "tarifa_saturacion": {
+        "valor": 15826,
+        "descripcion": "Tarifa Saturación (TS)"
+      }
+    },
+    {
+      "tipo_vehiculo": "Camiones y Buses",
+      "tarifas_por_tramo": [
+        {
+          "tramo": "El Salto - Kennedy",
+          "tarifas": [
+            {
+              "tipo_dia": "Laboral",
+              "horario": "07:00 a 07:30",
+              "tipo_tarifa": "TBP",
+              "valor": 2713
+            },
+            {
+              "tipo_dia": "Laboral",
+              "horario": "07:30 a 09:30",
+              "tipo_tarifa": "TS",
+              "valor": 3392
+            },
+            {
+              "tipo_dia": "Laboral",
+              "horario": "10:00 a 11:00",
+              "tipo_tarifa": "TBP",
+              "valor": 2713
+            },
+            {
+              "tipo_dia": "Laboral",
+              "horario": "15:30 a 17:30",
+              "tipo_tarifa": "TBP",
+              "valor": 2713
+            },
+            {
+              "tipo_dia": "Laboral",
+              "horario": "17:30 a 20:30",
+              "tipo_tarifa": "TS",
+              "valor": 3392
+            },
+            {
+              "tipo_dia": "Sábado",
+              "horario": "10:00 a 14:00",
+              "tipo_tarifa": "TBP",
+              "valor": 2713
+            },
+            {
+              "tipo_dia": "Festivo",
+              "horario": "10:00 a 14:00",
+              "tipo_tarifa": "TBP",
+              "valor": 2713
+            }
+          ]
+        },
+        {
+          "tramo": "Kennedy - El Salto",
+          "tarifas": [
+            {
+              "tipo_dia": "Laboral",
+              "horario": "07:00 a 10:00",
+              "tipo_tarifa": "TBP",
+              "valor": 2035
+            },
+            {
+              "tipo_dia": "Laboral",
+              "horario": "17:30 a 20:30",
+              "tipo_tarifa": "TBP",
+              "valor": 2035
+            },
+            {
+              "tipo_dia": "Sábado",
+              "horario": "10:00 a 14:00",
+              "tipo_tarifa": "TBP",
+              "valor": 2035
+            },
+            {
+              "tipo_dia": "Domingo",
+              "horario": "17:00 a 21:00",
+              "tipo_tarifa": "TBP",
+              "valor": 2035
+            },
+            {
+              "tipo_dia": "Festivo",
+              "horario": "10:00 a 14:00",
+              "tipo_tarifa": "TBP",
+              "valor": 2035
+            }
+          ]
+        }
+      ],
+      "tarifa_base": {
+        "valor": 452,
+        "descripcion": "Tarifa Base (TB)"
+      },
+      "tarifa_punta": {
+        "valor": 1357,
+        "descripcion": "Tarifa Punta (TBP)"
+      },
+      "tarifa_saturacion": {
+        "valor": 2261,
+        "descripcion": "Tarifa Saturación (TS)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "concesion": "Rutas del Loa",
+  "periodo_tarifario": "2026",
+  "tipo_ruta": "Rutas Transversales",
+  "plazas_peaje": [
+    {
+      "nombre_plaza": "No especificada en el fragmento",
+      "tarifas": [
+        {
+          "categoria_vehiculo": "Motos, cuatrimotos y motonetas",
+          "descripcion": "Vehículos de dos ruedas o similares",
+          "tarifa": 1700,
+          "moneda": "CLP",
+          "horario": null,
+          "rebaja": null
+        },
+        {
+          "categoria_vehiculo": "Autos, camionetas, station wagon, furgones y camionetas de doble rueda trasera, con o sin remolque",
+          "descripcion": "Vehículos ligeros de hasta dos ejes",
+          "tarifa": 3350,
+          "moneda": "CLP",
+          "horario": null,
+          "rebaja": null
+        },
+        {
+          "categoria_vehiculo": "Buses de dos ejes que no superen las dimensiones máximas permitidas",
+          "descripcion": "Buses de dos ejes dentro de dimensiones estándar",
+          "tarifa": 10150,
+          "moneda": "CLP",
+          "horario": null,
+          "rebaja": null
+        },
+        {
+          "categoria_vehiculo": "Camiones de dos ejes, maquinarias agrícolas y maquinarias de construcción que no superen las dimensiones máximas permitidas",
+          "descripcion": "Camiones y maquinaria de dos ejes dentro de dimensiones estándar",
+          "tarifa": 18000,
+          "moneda": "CLP",
+          "horario": null,
+          "rebaja": null
+        },
+        {
+          "categoria_vehiculo": "Buses de más de dos ejes que no superen las dimensiones máximas permitidas",
+          "descripcion": "Buses de tres o más ejes dentro de dimensiones estándar",
+          "tarifa": 18000,
+          "moneda": "CLP",
+          "horario": null,
+          "rebaja": null
+        },
+        {
+          "categoria_vehiculo": "Camiones de más de dos ejes que no superen las dimensiones máximas permitidas",
+          "descripcion": "Camiones de tres o más ejes dentro de dimensiones estándar",
+          "tarifa": 28150,
+          "moneda": "CLP",
+          "horario": null,
+          "rebaja": null
+        },
+        {
+          "categoria_vehiculo": "Vehículos que superan las dimensiones máximas permitidas, con ancho mayor a 2,6 metros y menor o igual a 4,5 metros o largo mayor a 23 metro y menor o igual a 30 metros independiente del número de ejes",
+          "descripcion": "Vehículos sobredimensionados (ancho 2.6-4.5m o largo 23-30m)",
+          "tarifa": 56250,
+          "moneda": "CLP",
+          "horario": null,
+          "rebaja": null
+        },
+        {
+          "categoria_vehiculo": "Vehículos que superan las dimensiones máximas permitidas, con ancho mayor a 4,5 metros o largo mayor a 30 metros independiente del número de ejes",
+          "descripcion": "Vehículos extra sobredimensionados (ancho >4.5m o largo >30m)",
+          "tarifa": 112550,
+          "moneda": "CLP",
+          "horario": null,
+          "rebaja": null
+        }
+      ]
+    }
+  ],
+  "observaciones": "El fragmento no especifica nombres de plazas de peaje individuales, horarios diferenciados (punta/valle) ni rebajas. Las tarifas son únicas por categoría de vehículo."
+}

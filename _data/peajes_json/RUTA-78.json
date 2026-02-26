@@ -1,0 +1,139 @@
+{
+  "concesion": "Ruta 78",
+  "anio_tarifario": 2026,
+  "tramos": [
+    {
+      "nombre": "Américo Vespucio - Rinconada - Padre Hurtado - Malloco - Talagante - El Paico - Pomaire/Melipilla - Puangue",
+      "plazas_peaje": [
+        "Américo Vespucio",
+        "Rinconada",
+        "Padre Hurtado",
+        "Malloco",
+        "Talagante",
+        "El Paico",
+        "Pomaire/Melipilla",
+        "Puangue"
+      ],
+      "tarifas": [
+        {
+          "horario": "normal",
+          "requisito_tag": "habilitado",
+          "categorias_vehiculos": [
+            {
+              "categoria": "Motos, cuatrimotos y motonetas",
+              "precio": 215.40
+            },
+            {
+              "categoria": "Autos y camionetas",
+              "precio": 718.00
+            },
+            {
+              "categoria": "Autos con remolque y camionetas con remolque",
+              "precio": 718.00
+            },
+            {
+              "categoria": "Buses de dos ejes y casas rodantes",
+              "precio": 1436.00
+            },
+            {
+              "categoria": "Camiones de dos ejes, maquinaria agrícola y maquinaria de construcción de dos ejes",
+              "precio": 1436.00
+            },
+            {
+              "categoria": "Buses de más de dos ejes",
+              "precio": 2513.00
+            },
+            {
+              "categoria": "Camiones de más de dos ejes, maquinaria agrícola de más de dos ejes, maquinaria de construcción de más de dos ejes y vehículos con sobredimensión",
+              "precio": 2513.00
+            }
+          ]
+        },
+        {
+          "horario": "punta",
+          "requisito_tag": "habilitado",
+          "categorias_vehiculos": [
+            {
+              "categoria": "Motos, cuatrimotos y motonetas",
+              "precio": 430.80
+            },
+            {
+              "categoria": "Autos y camionetas",
+              "precio": 1077.00
+            },
+            {
+              "categoria": "Autos con remolque y camionetas con remolque",
+              "precio": 1077.00
+            },
+            {
+              "categoria": "Buses de dos ejes y casas rodantes",
+              "precio": 2872.00
+            },
+            {
+              "categoria": "Camiones de dos ejes, maquinaria agrícola y maquinaria de construcción de dos ejes",
+              "precio": 2872.00
+            },
+            {
+              "categoria": "Buses de más de dos ejes",
+              "precio": 5026.00
+            },
+            {
+              "categoria": "Camiones de más de dos ejes, maquinaria agrícola de más de dos ejes, maquinaria de construcción de más de dos ejes y vehículos con sobredimensión",
+              "precio": 5026.00
+            }
+          ]
+        }
+      ],
+      "definiciones_horarios": {
+        "horario_punta": {
+          "direccion_hacia_santiago": [
+            {
+              "tipo": "Temporada Alta",
+              "periodo": "20 de diciembre al 10 de marzo",
+              "dias": "domingos",
+              "horario": "18:00 - 22:00 hrs"
+            },
+            {
+              "tipo": "Fines de Semana Largos",
+              "descripcion": "días de retorno (último día feriado)",
+              "horario": "18:00 - 22:00 hrs"
+            }
+          ],
+          "direccion_hacia_san_antonio": [
+            {
+              "tipo": "Temporada Alta",
+              "periodo": "20 de diciembre al 10 de marzo",
+              "dias": "viernes",
+              "horario": "18:00 - 22:00 hrs"
+            },
+            {
+              "tipo": "Temporada Alta",
+              "periodo": "20 de diciembre al 10 de marzo",
+              "dias": "sábados",
+              "horario": "10:00 - 13:00 hrs"
+            },
+            {
+              "tipo": "Fines de Semana Largos",
+              "descripcion": "días víspera de fines de semana largos",
+              "horario": "18:00 - 22:00 hrs"
+            },
+            {
+              "tipo": "Fines de Semana Largos",
+              "descripcion": "primer día feriado de fines de semana largos",
+              "horario": "10:00 - 13:00 hrs"
+            }
+          ]
+        },
+        "definicion_fines_semana_largos": [
+          "El conjunto de días jueves o viernes, sábado y domingo consecutivos, en que el día jueves o viernes de ese conjunto sea un feriado legal.",
+          "El conjunto de días sábado, domingo y lunes o martes consecutivos, en que el día lunes o martes de ese conjunto sea un feriado legal."
+        ]
+      }
+    }
+  ],
+  "notas": [
+    "Los precios están en pesos chilenos ($).",
+    "Las tarifas mostradas aplican para usuarios con TAG habilitado.",
+    "El texto incluye listas de precios adicionales (ej: $99,00, $330,00, etc.) que parecen corresponder a otras plazas o categorías no explícitamente detalladas en el fragmento proporcionado, por lo que no se han incluido en la estructura principal."
+  ]
+}

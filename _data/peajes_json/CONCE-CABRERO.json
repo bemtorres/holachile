@@ -1,0 +1,66 @@
+{
+  "concesion": "CONCEPCIÓN - CABRERO",
+  "tipo_tarifas": "Rutas Transversales",
+  "anio_vigencia": 2026,
+  "plazas_peaje": [
+    {
+      "nombre": "TRONCAL 1 HUINANCO",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Motos y Motonetas",
+          "precio": 1150
+        },
+        {
+          "tipo_vehiculo": "Autos y Camionetas con y sin remolque",
+          "precio": 3900
+        },
+        {
+          "tipo_vehiculo": "Buses de 2 Ejes",
+          "precio": 7000
+        },
+        {
+          "tipo_vehiculo": "Camiones de 2 Ejes, Camionetas doble rueda trasera, Maquinaria Agrícola y Maquinaria de Construcción",
+          "precio": 11650
+        },
+        {
+          "tipo_vehiculo": "Buses de más de 2 Ejes",
+          "precio": 12400
+        },
+        {
+          "tipo_vehiculo": "Camiones de más de 2 Ejes",
+          "precio": 19400
+        }
+      ]
+    },
+    {
+      "nombre": "TRONCAL 2 PUENTES NEGROS",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Motos y Motonetas",
+          "precio": 150
+        },
+        {
+          "tipo_vehiculo": "Autos y Camionetas con y sin remolque",
+          "precio": 550
+        },
+        {
+          "tipo_vehiculo": "Buses de 2 Ejes",
+          "precio": 950
+        },
+        {
+          "tipo_vehiculo": "Camiones de 2 Ejes, Camionetas doble rueda trasera, Maquinaria Agrícola y Maquinaria de Construcción",
+          "precio": 1600
+        },
+        {
+          "tipo_vehiculo": "Buses de más de 2 Ejes",
+          "precio": 1750
+        },
+        {
+          "tipo_vehiculo": "Camiones de más de 2 Ejes",
+          "precio": 2700
+        }
+      ]
+    }
+  ],
+  "notas": "Tarifas 2026 para Rutas Transversales. No se especifican horarios punta/valle ni rebajas en el texto proporcionado."
+}

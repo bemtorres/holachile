@@ -1,0 +1,38 @@
+{
+  "concesion": "Ruta 5 Sur",
+  "tramo": "Temuco - Río Bueno",
+  "tipo_via": "Lateral/Troncal",
+  "anio_tarifas": 2026,
+  "plazas_peaje": [
+    {
+      "nombre": "Temuco - Río Bueno",
+      "tarifas": [
+        {
+          "categoria": "Autos, camionetas y station wagons con uno o más ejes adicionales",
+          "precio_punta": 900,
+          "precio_valle": 3600,
+          "moneda": "CLP"
+        },
+        {
+          "categoria": "Camiones y buses de dos ejes, maquinaria agrícola, maquinaria de construcción y camionetas de doble rueda trasera",
+          "precio_punta": 1600,
+          "precio_valle": 6500,
+          "moneda": "CLP"
+        },
+        {
+          "categoria": "Camiones y buses de más de dos ejes",
+          "precio_punta": 2900,
+          "precio_valle": 11600,
+          "moneda": "CLP"
+        },
+        {
+          "categoria": "Motos",
+          "precio_punta": 300,
+          "precio_valle": 1100,
+          "moneda": "CLP"
+        }
+      ]
+    }
+  ],
+  "observaciones": "Los precios se presentan en dos columnas: tarifa punta (izquierda) y tarifa valle (derecha)."
+}

@@ -1,0 +1,38 @@
+{
+  "concesion": "RUTA 43 / LA SERENA - OVALLE",
+  "tipo_ruta": "TRONCAL",
+  "fecha_tarifas": "2026",
+  "categoria_ruta": "Rutas Transversales",
+  "plazas_peaje": [
+    {
+      "nombre_plaza": "TRONCAL",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Motos y Motonetas",
+          "precio": 1100
+        },
+        {
+          "tipo_vehiculo": "Autos y Camionetas con y sin remolque",
+          "precio": 3700
+        },
+        {
+          "tipo_vehiculo": "Buses de 2 Ejes",
+          "precio": 6650
+        },
+        {
+          "tipo_vehiculo": "Camiones de 2 Ejes, Camionetas doble rueda trasera, Maquinaria Agrícola y Maquinaria de Construcción",
+          "precio": 6650
+        },
+        {
+          "tipo_vehiculo": "Buses de más de 2 Ejes",
+          "precio": 6650
+        },
+        {
+          "tipo_vehiculo": "Camiones de más de 2 Ejes",
+          "precio": 11850
+        }
+      ],
+      "observaciones": "No se especifican horarios punta/valle ni rebajas en el texto proporcionado."
+    }
+  ]
+}

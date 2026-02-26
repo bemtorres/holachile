@@ -1,0 +1,78 @@
+{
+  "concesion": "Ruta 5 Sur",
+  "tramo": "Santiago - Talca",
+  "anio_tarifas": 2026,
+  "plazas_peaje": [
+    {
+      "nombre": "Río Maipo",
+      "tipo": "Troncal",
+      "ubicacion": "Ruta 5",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Motos y motonetas",
+          "precio": 1100
+        },
+        {
+          "tipo_vehiculo": "Autos y camionetas",
+          "precio": 3800
+        },
+        {
+          "tipo_vehiculo": "Autos y camionetas con remolque",
+          "precio": 5600
+        },
+        {
+          "tipo_vehiculo": "Buses de dos ejes",
+          "precio": 6900
+        },
+        {
+          "tipo_vehiculo": "Camiones de dos ejes",
+          "precio": 6900
+        },
+        {
+          "tipo_vehiculo": "Buses de más de dos ejes",
+          "precio": 12200
+        },
+        {
+          "tipo_vehiculo": "Camiones de más de dos ejes",
+          "precio": 12200
+        }
+      ]
+    },
+    {
+      "nombre": "Acceso Sur",
+      "tipo": "Laterales",
+      "ubicacion": "Ruta 5",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Motos y motonetas",
+          "precio": 300
+        },
+        {
+          "tipo_vehiculo": "Autos y camionetas",
+          "precio": 900
+        },
+        {
+          "tipo_vehiculo": "Autos y camionetas con remolque",
+          "precio": 1400
+        },
+        {
+          "tipo_vehiculo": "Buses de dos ejes",
+          "precio": 1600
+        },
+        {
+          "tipo_vehiculo": "Camiones de dos ejes",
+          "precio": 1600
+        },
+        {
+          "tipo_vehiculo": "Buses de más de dos ejes",
+          "precio": 2900
+        },
+        {
+          "tipo_vehiculo": "Camiones de más de dos ejes",
+          "precio": 2900
+        }
+      ]
+    }
+  ],
+  "observaciones": "Los precios listados corresponden a tarifas base. No se mencionan horarios punta/valle ni rebajas específicas en el texto proporcionado."
+}

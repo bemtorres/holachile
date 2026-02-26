@@ -1,0 +1,553 @@
+{
+  "autopista": "VESPUCIO NORTE",
+  "periodo_validez": "1 de enero al 31 de diciembre de 2026",
+  "definiciones_categorias": {
+    "categoria_1_y_4": "motos, autos y camionetas",
+    "categoria_2": "buses y camiones",
+    "categoria_3": "camiones con remolque"
+  },
+  "definiciones_tarifas": {
+    "TBFP": "Tarifa Base Fuera de Punta",
+    "TBP": "Tarifa Base Punta",
+    "TS": "Tarifa Saturación"
+  },
+  "sentidos": [
+    {
+      "sentido": "NORTE - SUR",
+      "tramos": [
+        {
+          "tramo": "El Salto - Recoleta",
+          "longitud_km": 1,
+          "asociacion_km": 1,
+          "portico": "P15",
+          "tarifas": {
+            "categoria_1_y_4": {
+              "laboral": {
+                "TBFP": 140.68,
+                "TBP": 241.17,
+                "TS": 361.76
+              },
+              "sabados_festivos": {
+                "TBFP": 241.17,
+                "TBP": 482.35,
+                "TS": 723.52
+              },
+              "domingo": {
+                "TBFP": 361.76,
+                "TBP": 723.52,
+                "TS": 1085.28
+              }
+            },
+            "categoria_2": {
+              "laboral": {
+                "TBFP": 412.00,
+                "TBP": 964.69,
+                "TS": 1447.04
+              },
+              "sabados_festivos": {
+                "TBFP": 964.69,
+                "TBP": 1929.39,
+                "TS": 2894.08
+              },
+              "domingo": {
+                "TBFP": 1447.04,
+                "TBP": 2894.08,
+                "TS": 4341.12
+              }
+            },
+            "categoria_3": {
+              "laboral": {
+                "TBFP": 301.47,
+                "TBP": 703.42,
+                "TS": null
+              },
+              "sabados_festivos": {
+                "TBFP": 703.42,
+                "TBP": 1406.85,
+                "TS": null
+              },
+              "domingo": {
+                "TBFP": 1055.13,
+                "TBP": 2110.27,
+                "TS": null
+              }
+            }
+          },
+          "horarios_tarifas": {
+            "TBP": "07:30 - 09:00",
+            "TS": "07:30 - 09:30"
+          }
+        },
+        {
+          "tramo": "Recoleta - Pedro Fontova",
+          "longitud_km": 1,
+          "asociacion_km": 2,
+          "portico": "P13",
+          "tarifas": {
+            "categoria_1_y_4": {
+              "laboral": {
+                "TBFP": 4.10,
+                "TBP": 4.10,
+                "TS": 4.10
+              },
+              "sabados_festivos": {
+                "TBFP": 4.10,
+                "TBP": 4.10,
+                "TS": 4.10
+              },
+              "domingo": {
+                "TBFP": 4.10,
+                "TBP": 4.10,
+                "TS": 4.10
+              }
+            },
+            "categoria_2": {
+              "laboral": {
+                "TBFP": 4.10,
+                "TBP": 4.10,
+                "TS": 4.10
+              },
+              "sabados_festivos": {
+                "TBFP": 4.10,
+                "TBP": 4.10,
+                "TS": 4.10
+              },
+              "domingo": {
+                "TBFP": 4.10,
+                "TBP": 4.10,
+                "TS": 4.10
+              }
+            },
+            "categoria_3": {
+              "laboral": {
+                "TBFP": 4.10,
+                "TBP": 4.10,
+                "TS": null
+              },
+              "sabados_festivos": {
+                "TBFP": 4.10,
+                "TBP": 4.10,
+                "TS": null
+              },
+              "domingo": {
+                "TBFP": 4.10,
+                "TBP": 4.10,
+                "TS": null
+              }
+            }
+          },
+          "horarios_tarifas": {
+            "TBP": "07:30 - 09:30",
+            "TS": "07:30 - 09:30"
+          }
+        },
+        {
+          "tramo": "Pedro Fontova - Ruta 5 Norte",
+          "longitud_km": 2,
+          "asociacion_km": 3,
+          "portico": "P11",
+          "tarifas": {
+            "categoria_1_y_4": {
+              "laboral": {
+                "TBFP": 3.00,
+                "TBP": 6.00,
+                "TS": 9.00
+              },
+              "sabados_festivos": {
+                "TBFP": 6.00,
+                "TBP": 12.00,
+                "TS": 18.00
+              },
+              "domingo": {
+                "TBFP": 9.00,
+                "TBP": 18.00,
+                "TS": 27.00
+              }
+            },
+            "categoria_2": {
+              "laboral": {
+                "TBFP": 6.50,
+                "TBP": 13.00,
+                "TS": 19.50
+              },
+              "sabados_festivos": {
+                "TBFP": 13.00,
+                "TBP": 26.00,
+                "TS": 39.00
+              },
+              "domingo": {
+                "TBFP": 19.50,
+                "TBP": 39.00,
+                "TS": 58.50
+              }
+            },
+            "categoria_3": {
+              "laboral": {
+                "TBFP": 4.50,
+                "TBP": 9.00,
+                "TS": null
+              },
+              "sabados_festivos": {
+                "TBFP": 9.00,
+                "TBP": 18.00,
+                "TS": null
+              },
+              "domingo": {
+                "TBFP": 13.50,
+                "TBP": 27.00,
+                "TS": null
+              }
+            }
+          },
+          "horarios_tarifas": {
+            "TBP": null,
+            "TS": null
+          }
+        },
+        {
+          "tramo": "Ruta 5 Norte - Condell",
+          "longitud_km": 3,
+          "asociacion_km": 4,
+          "portico": "P8",
+          "tarifas": {
+            "categoria_1_y_4": {
+              "laboral": {
+                "TBFP": 4.50,
+                "TBP": 9.00,
+                "TS": 13.50
+              },
+              "sabados_festivos": {
+                "TBFP": 9.00,
+                "TBP": 18.00,
+                "TS": 27.00
+              },
+              "domingo": {
+                "TBFP": 13.50,
+                "TBP": 27.00,
+                "TS": 40.50
+              }
+            },
+            "categoria_2": {
+              "laboral": {
+                "TBFP": 3.50,
+                "TBP": 7.00,
+                "TS": 10.50
+              },
+              "sabados_festivos": {
+                "TBFP": 7.00,
+                "TBP": 14.00,
+                "TS": 21.00
+              },
+              "domingo": {
+                "TBFP": 10.50,
+                "TBP": 21.00,
+                "TS": 31.50
+              }
+            },
+            "categoria_3": {
+              "laboral": {
+                "TBFP": 2.10,
+                "TBP": 4.20,
+                "TS": null
+              },
+              "sabados_festivos": {
+                "TBFP": 4.20,
+                "TBP": 8.40,
+                "TS": null
+              },
+              "domingo": {
+                "TBFP": 6.30,
+                "TBP": 12.60,
+                "TS": null
+              }
+            }
+          },
+          "horarios_tarifas": {
+            "TBP": null,
+            "TS": null
+          }
+        },
+        {
+          "tramo": "Condell - Costanera Norte",
+          "longitud_km": 4,
+          "asociacion_km": 5,
+          "portico": "P6",
+          "tarifas": {
+            "categoria_1_y_4": {
+              "laboral": {
+                "TBFP": 3.50,
+                "TBP": 7.00,
+                "TS": 10.50
+              },
+              "sabados_festivos": {
+                "TBFP": 7.00,
+                "TBP": 14.00,
+                "TS": 21.00
+              },
+              "domingo": {
+                "TBFP": 10.50,
+                "TBP": 21.00,
+                "TS": 31.50
+              }
+            },
+            "categoria_2": {
+              "laboral": {
+                "TBFP": 2.10,
+                "TBP": 4.20,
+                "TS": 6.30
+              },
+              "sabados_festivos": {
+                "TBFP": 4.20,
+                "TBP": 8.40,
+                "TS": 12.60
+              },
+              "domingo": {
+                "TBFP": 6.30,
+                "TBP": 12.60,
+                "TS": 18.90
+              }
+            },
+            "categoria_3": {
+              "laboral": {
+                "TBFP": 3.90,
+                "TBP": 7.80,
+                "TS": null
+              },
+              "sabados_festivos": {
+                "TBFP": 7.80,
+                "TBP": 15.60,
+                "TS": null
+              },
+              "domingo": {
+                "TBFP": 11.70,
+                "TBP": 23.40,
+                "TS": null
+              }
+            }
+          },
+          "horarios_tarifas": {
+            "TBP": null,
+            "TS": null
+          }
+        },
+        {
+          "tramo": "Costanera Norte - Ruta 68",
+          "longitud_km": 5,
+          "asociacion_km": 6,
+          "portico": "P4",
+          "tarifas": {
+            "categoria_1_y_4": {
+              "laboral": {
+                "TBFP": 2.10,
+                "TBP": 4.20,
+                "TS": 6.30
+              },
+              "sabados_festivos": {
+                "TBFP": 4.20,
+                "TBP": 8.40,
+                "TS": 12.60
+              },
+              "domingo": {
+                "TBFP": 6.30,
+                "TBP": 12.60,
+                "TS": 18.90
+              }
+            },
+            "categoria_2": {
+              "laboral": {
+                "TBFP": 3.90,
+                "TBP": 7.80,
+                "TS": 11.70
+              },
+              "sabados_festivos": {
+                "TBFP": 7.80,
+                "TBP": 15.60,
+                "TS": 23.40
+              },
+              "domingo": {
+                "TBFP": 11.70,
+                "TBP": 23.40,
+                "TS": 35.10
+              }
+            },
+            "categoria_3": {
+              "laboral": {
+                "TBFP": 1.20,
+                "TBP": 2.40,
+                "TS": null
+              },
+              "sabados_festivos": {
+                "TBFP": 2.40,
+                "TBP": 4.80,
+                "TS": null
+              },
+              "domingo": {
+                "TBFP": 3.60,
+                "TBP": 7.20,
+                "TS": null
+              }
+            }
+          },
+          "horarios_tarifas": {
+            "TBP": "17:30 - 18:30",
+            "TS": "17:30 - 18:30"
+          }
+        },
+        {
+          "tramo": "Ruta 68 - Los Mares",
+          "longitud_km": 6,
+          "asociacion_km": 6,
+          "portico": "P2",
+          "tarifas": {
+            "categoria_1_y_4": {
+              "laboral": {
+                "TBFP": 3.90,
+                "TBP": 7.80,
+                "TS": 11.70
+              },
+              "sabados_festivos": {
+                "TBFP": 7.80,
+                "TBP": 15.60,
+                "TS": 23.40
+              },
+              "domingo": {
+                "TBFP": 11.70,
+                "TBP": 23.40,
+                "TS": 35.10
+              }
+            },
+            "categoria_2": {
+              "laboral": {
+                "TBFP": 1.20,
+                "TBP": 2.40,
+                "TS": 3.60
+              },
+              "sabados_festivos": {
+                "TBFP": 2.40,
+                "TBP": 4.80,
+                "TS": 7.20
+              },
+              "domingo": {
+                "TBFP": 3.60,
+                "TBP": 7.20,
+                "TS": 10.80
+              }
+            },
+            "categoria_3": {
+              "laboral": {
+                "TBFP": 4.80,
+                "TBP": 9.60,
+                "TS": null
+              },
+              "sabados_festivos": {
+                "TBFP": 9.60,
+                "TBP": 19.20,
+                "TS": null
+              },
+              "domingo": {
+                "TBFP": 14.40,
+                "TBP": 28.80,
+                "TS": null
+              }
+            }
+          },
+          "horarios_tarifas": {
+            "TBP": null,
+            "TS": null
+          }
+        },
+        {
+          "tramo": "Los Mares - Ruta 78",
+          "longitud_km": 6,
+          "asociacion_km": 6,
+          "portico": "P17",
+          "tarifas": {
+            "categoria_1_y_4": {
+              "laboral": {
+                "TBFP": 1.40,
+                "TBP": 2.80,
+                "TS": 4.20
+              },
+              "sabados_festivos": {
+                "TBFP": 2.80,
+                "TBP": 5.60,
+                "TS": 8.40
+              },
+              "domingo": {
+                "TBFP": 4.20,
+                "TBP": 8.40,
+                "TS": 12.60
+              }
+            },
+            "categoria_2": {
+              "laboral": {
+                "TBFP": 4.10,
+                "TBP": 8.20,
+                "TS": 12.30
+              },
+              "sabados_festivos": {
+                "TBFP": 8.20,
+                "TBP": 16.40,
+                "TS": 24.60
+              },
+              "domingo": {
+                "TBFP": 12.30,
+                "TBP": 24.60,
+                "TS": 36.90
+              }
+            },
+            "categoria_3": {
+              "laboral": {
+                "TBFP": 3.00,
+                "TBP": 6.00,
+                "TS": null
+              },
+              "sabados_festivos": {
+                "TBFP": 6.00,
+                "TBP": 12.00,
+                "TS": null
+              },
+              "domingo": {
+                "TBFP": 9.00,
+                "TBP": 18.00,
+                "TS": null
+              }
+            }
+          },
+          "horarios_tarifas": {
+            "TBP": null,
+            "TS": null
+          }
+        }
+      ]
+    },
+    {
+      "sentido": "PONIENTE - ORIENTE",
+      "tramos": [
+        {
+          "tramo": "Ruta 78 - Santa Elena",
+          "longitud_km": 6,
+          "asociacion_km": 6,
+          "portico": "P1",
+          "tarifas": {
+            "categoria_1_y_4": {
+              "laboral": {
+                "TBFP": 1.20,
+                "TBP": 2.40,
+                "TS": 3.60
+              },
+              "sabados_festivos": {
+                "TBFP": 2.40,
+                "TBP": 4.80,
+                "TS": 7.20
+              },
+              "domingo": {
+                "TBFP": 3.60,
+                "TBP": 7.20,
+                "TS": 10.80
+              }
+            },
+            "categoria_2": {
+              "laboral": {
+                "TBFP": 4.80,
+}

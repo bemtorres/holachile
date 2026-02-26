@@ -1,0 +1,88 @@
+{
+  "concesion": "LA SERENA - VALLENAR",
+  "ruta": "Ruta 5 Norte",
+  "periodo_tarifario": "2026",
+  "plazas_peaje": [
+    {
+      "nombre": "CACHIYUYO TRONCAL",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Motos y motonetas",
+          "descripcion": "Motos y motonetas",
+          "precio": 950
+        },
+        {
+          "tipo_vehiculo": "Autos y camionetas",
+          "descripcion": "Autos y camionetas con y sin remolque",
+          "precio": 3150
+        },
+        {
+          "tipo_vehiculo": "Buses de dos ejes",
+          "descripcion": "Buses de dos ejes",
+          "precio": 5650
+        },
+        {
+          "tipo_vehiculo": "Camiones de dos ejes",
+          "descripcion": "Camiones de dos ejes, camionetas de doble rueda trasera, maquinarias agrícolas, maquinarias de construcción",
+          "precio": 9400
+        },
+        {
+          "tipo_vehiculo": "Buses de más de dos ejes",
+          "descripcion": "Buses de más de dos ejes",
+          "precio": 10000
+        },
+        {
+          "tipo_vehiculo": "Camiones de más de dos ejes",
+          "descripcion": "Camiones de más de dos ejes",
+          "precio": 12500
+        },
+        {
+          "tipo_vehiculo": "Vehículos que superan las dimensiones máximas permitidas",
+          "descripcion": "Vehículos que superan las dimensiones máximas permitidas",
+          "precio": 25000
+        }
+      ]
+    },
+    {
+      "nombre": "PUNTA COLORADA",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Motos y motonetas",
+          "descripcion": "Motos y motonetas",
+          "precio": 950
+        },
+        {
+          "tipo_vehiculo": "Autos y camionetas",
+          "descripcion": "Autos y camionetas con y sin remolque",
+          "precio": 3150
+        },
+        {
+          "tipo_vehiculo": "Buses de dos ejes",
+          "descripcion": "Buses de dos ejes",
+          "precio": 5650
+        },
+        {
+          "tipo_vehiculo": "Camiones de dos ejes",
+          "descripcion": "Camiones de dos ejes, camionetas de doble rueda trasera, maquinarias agrícolas, maquinarias de construcción",
+          "precio": 9400
+        },
+        {
+          "tipo_vehiculo": "Buses de más de dos ejes",
+          "descripcion": "Buses de más de dos ejes",
+          "precio": 10000
+        },
+        {
+          "tipo_vehiculo": "Camiones de más de dos ejes",
+          "descripcion": "Camiones de más de dos ejes",
+          "precio": 12500
+        },
+        {
+          "tipo_vehiculo": "Vehículos que superan las dimensiones máximas permitidas",
+          "descripcion": "Vehículos que superan las dimensiones máximas permitidas",
+          "precio": 25000
+        }
+      ]
+    }
+  ],
+  "observaciones": "No se detectan rebajas o diferencias de horario (punta/valle) en el texto proporcionado. Las tarifas son idénticas para ambas plazas de peaje listadas."
+}

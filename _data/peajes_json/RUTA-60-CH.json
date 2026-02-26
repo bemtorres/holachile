@@ -1,0 +1,139 @@
+{
+  "concesion": "RUTA 60 CH",
+  "tipo_tarifas": "PEAJES TARIFAS 2026 / Rutas Transversales",
+  "plazas_peaje": [
+    {
+      "nombre": "TRONCAL QUILLOTA",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Motos y motonetas",
+          "precios": {
+            "normal": 1600,
+            "punta": 2400
+          }
+        },
+        {
+          "tipo_vehiculo": "Autos y camionetas, sin y con remolque",
+          "precios": {
+            "normal": 5350,
+            "punta": 8050
+          }
+        },
+        {
+          "tipo_vehiculo": "Camiones y buses de dos ejes",
+          "precios": {
+            "normal": 9650,
+            "punta": 14500
+          }
+        },
+        {
+          "tipo_vehiculo": "Camiones y buses con más de dos ejes",
+          "precios": {
+            "normal": 17200,
+            "punta": 25800
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "QUILLOTA LATERAL",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Motos y motonetas",
+          "precios": {
+            "normal": 900,
+            "punta": 1400
+          }
+        },
+        {
+          "tipo_vehiculo": "Autos y camionetas, sin y con remolque",
+          "precios": {
+            "normal": 3050,
+            "punta": 4600
+          }
+        },
+        {
+          "tipo_vehiculo": "Camiones y buses de dos ejes",
+          "precios": {
+            "normal": 5500,
+            "punta": 8300
+          }
+        },
+        {
+          "tipo_vehiculo": "Camiones y buses con más de dos ejes",
+          "precios": {
+            "normal": 9800,
+            "punta": 14750
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "LATERAL ESPANQUEHUE",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Motos y motonetas",
+          "precios": {
+            "normal": 600,
+            "punta": 900
+          }
+        },
+        {
+          "tipo_vehiculo": "Autos y camionetas, sin y con remolque",
+          "precios": {
+            "normal": 2050,
+            "punta": 3100
+          }
+        },
+        {
+          "tipo_vehiculo": "Camiones y buses de dos ejes",
+          "precios": {
+            "normal": 3700,
+            "punta": 5550
+          }
+        },
+        {
+          "tipo_vehiculo": "Camiones y buses con más de dos ejes",
+          "precios": {
+            "normal": 6550,
+            "punta": 9850
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "MONASTERIO",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Motos y motonetas",
+          "precios": {
+            "normal": 700,
+            "punta": 1050
+          }
+        },
+        {
+          "tipo_vehiculo": "Autos y camionetas, sin y con remolque",
+          "precios": {
+            "normal": 2300,
+            "punta": 3450
+          }
+        },
+        {
+          "tipo_vehiculo": "Camiones y buses de dos ejes",
+          "precios": {
+            "normal": 4150,
+            "punta": 6250
+          }
+        },
+        {
+          "tipo_vehiculo": "Camiones y buses con más de dos ejes",
+          "precios": {
+            "normal": 7400,
+            "punta": 11050
+          }
+        }
+      ]
+    }
+  ],
+  "observaciones": "Los precios están en pesos chilenos ($). Se presentan tarifas NORMAL y PUNTA para cada plaza y tipo de vehículo."
+}

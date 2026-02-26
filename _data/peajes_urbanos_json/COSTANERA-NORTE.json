@@ -1,0 +1,419 @@
+{
+    "concesion": "COSTANERA NORTE",
+    "tipo_usuario": "usuarios con Televía (TAG) habilitado",
+    "ejes": [
+        {
+            "nombre": "EJE COSTANERA",
+            "sentidos": [
+                {
+                    "nombre": "SENTIDO PONIENTE - ORIENTE",
+                    "porticos": [
+                        {
+                            "codigo": "P0",
+                            "descripcion": "Puente Padre Arteaga - P. San Francisco",
+                            "longitud_km": 2.3385,
+                            "tarifas": {
+                                "categoria_1_4": {
+                                    "tarifa_base_fuera_punta": 535.0,
+                                    "tarifa_base_punta": 1070.0,
+                                    "tarifa_saturacion": 1605.0
+                                },
+                                "categoria_2": {
+                                    "tarifa_base_fuera_punta": 250.21,
+                                    "tarifa_base_punta": 500.43,
+                                    "tarifa_saturacion": 750.65
+                                },
+                                "categoria_3": {
+                                    "tarifa_base_fuera_punta": 481.73,
+                                    "tarifa_base_punta": 963.46,
+                                    "tarifa_saturacion": 1445.19
+                                }
+                            }
+                        },
+                        {
+                            "codigo": "P0",
+                            "descripcion": "P. San Francisco - Puente Padre Arteaga",
+                            "longitud_km": 2.3385,
+                            "tarifas": {
+                                "categoria_1_4": {
+                                    "tarifa_base_fuera_punta": 535.0,
+                                    "tarifa_base_punta": 1070.0,
+                                    "tarifa_saturacion": 1605.0
+                                },
+                                "categoria_2": {
+                                    "tarifa_base_fuera_punta": 250.21,
+                                    "tarifa_base_punta": 500.43,
+                                    "tarifa_saturacion": 750.65
+                                },
+                                "categoria_3": {
+                                    "tarifa_base_fuera_punta": 481.73,
+                                    "tarifa_base_punta": 963.46,
+                                    "tarifa_saturacion": 1445.19
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "nombre": "SENTIDO ORIENTE - PONIENTE",
+                    "porticos": [
+                        {
+                            "codigo": "P1",
+                            "descripcion": "Gran Vía – Puente San Francisco",
+                            "longitud_km": 5.4565,
+                            "tarifas": {
+                                "categoria_1_4": {
+                                    "tarifa_base_fuera_punta": 149.8,
+                                    "tarifa_base_punta": 299.6,
+                                    "tarifa_saturacion": 449.4
+                                },
+                                "categoria_2": {
+                                    "tarifa_base_fuera_punta": 583.84,
+                                    "tarifa_base_punta": 1167.69,
+                                    "tarifa_saturacion": 1751.53
+                                },
+                                "categoria_3": {
+                                    "tarifa_base_fuera_punta": 1124.03,
+                                    "tarifa_base_punta": 2248.07,
+                                    "tarifa_saturacion": 3372.11
+                                }
+                            }
+                        },
+                        {
+                            "codigo": "P2.1",
+                            "descripcion": "Gran Vía – Centenario",
+                            "longitud_km": 1.4,
+                            "tarifas": {
+                                "categoria_1_4": {
+                                    "tarifa_base_fuera_punta": 449.4,
+                                    "tarifa_base_punta": 898.8,
+                                    "tarifa_saturacion": 1348.2
+                                },
+                                "categoria_2": {
+                                    "tarifa_base_fuera_punta": 583.84,
+                                    "tarifa_base_punta": 1167.69,
+                                    "tarifa_saturacion": 1751.53
+                                },
+                                "categoria_3": {
+                                    "tarifa_base_fuera_punta": 1124.03,
+                                    "tarifa_base_punta": 2248.07,
+                                    "tarifa_saturacion": 3372.11
+                                }
+                            }
+                        },
+                        {
+                            "codigo": "P2.2",
+                            "descripcion": "Centenario – Puente Lo Saldes",
+                            "longitud_km": 4.2,
+                            "tarifas": {
+                                "categoria_1_4": {
+                                    "tarifa_base_fuera_punta": 425.86,
+                                    "tarifa_base_punta": 851.72,
+                                    "tarifa_saturacion": 1277.58
+                                },
+                                "categoria_2": {
+                                    "tarifa_base_fuera_punta": 583.84,
+                                    "tarifa_base_punta": 1167.69,
+                                    "tarifa_saturacion": 1751.53
+                                },
+                                "categoria_3": {
+                                    "tarifa_base_fuera_punta": 1124.03,
+                                    "tarifa_base_punta": 2248.07,
+                                    "tarifa_saturacion": 3372.11
+                                }
+                            }
+                        },
+                        {
+                            "codigo": "P3",
+                            "descripcion": "Puente Lo Saldes – Vivaceta",
+                            "longitud_km": 3.98,
+                            "tarifas": {
+                                "categoria_1_4": {
+                                    "tarifa_base_fuera_punta": 264.29,
+                                    "tarifa_base_punta": 528.58,
+                                    "tarifa_saturacion": 792.87
+                                },
+                                "categoria_2": {
+                                    "tarifa_base_fuera_punta": 583.84,
+                                    "tarifa_base_punta": 1167.69,
+                                    "tarifa_saturacion": 1751.53
+                                },
+                                "categoria_3": {
+                                    "tarifa_base_fuera_punta": 1124.03,
+                                    "tarifa_base_punta": 2248.07,
+                                    "tarifa_saturacion": 3372.11
+                                }
+                            }
+                        },
+                        {
+                            "codigo": "P4",
+                            "descripcion": "Carrascal – Petersen",
+                            "longitud_km": 2.47,
+                            "tarifas": {
+                                "categoria_1_4": {
+                                    "tarifa_base_fuera_punta": 233.79,
+                                    "tarifa_base_punta": 467.59,
+                                    "tarifa_saturacion": 701.38
+                                },
+                                "categoria_2": {
+                                    "tarifa_base_fuera_punta": 583.84,
+                                    "tarifa_base_punta": 1167.69,
+                                    "tarifa_saturacion": 1751.53
+                                },
+                                "categoria_3": {
+                                    "tarifa_base_fuera_punta": 1124.03,
+                                    "tarifa_base_punta": 2248.07,
+                                    "tarifa_saturacion": 3372.11
+                                }
+                            }
+                        },
+                        {
+                            "codigo": "P5",
+                            "descripcion": "Petersen – Américo Vespucio Poniente",
+                            "longitud_km": 2.185,
+                            "tarifas": {
+                                "categoria_1_4": {
+                                    "tarifa_base_fuera_punta": 719.04,
+                                    "tarifa_base_punta": 1438.08,
+                                    "tarifa_saturacion": 2157.12
+                                },
+                                "categoria_2": {
+                                    "tarifa_base_fuera_punta": 583.84,
+                                    "tarifa_base_punta": 1167.69,
+                                    "tarifa_saturacion": 1751.53
+                                },
+                                "categoria_3": {
+                                    "tarifa_base_fuera_punta": 1124.03,
+                                    "tarifa_base_punta": 2248.07,
+                                    "tarifa_saturacion": 3372.11
+                                }
+                            }
+                        },
+                        {
+                            "codigo": "P6.1",
+                            "descripcion": "Estoril – Las Tranqueras",
+                            "longitud_km": 6.72,
+                            "tarifas": {
+                                "categoria_1_4": {
+                                    "tarifa_base_fuera_punta": 225.77,
+                                    "tarifa_base_punta": 451.54,
+                                    "tarifa_saturacion": 677.31
+                                },
+                                "categoria_2": {
+                                    "tarifa_base_fuera_punta": 583.84,
+                                    "tarifa_base_punta": 1167.69,
+                                    "tarifa_saturacion": 1751.53
+                                },
+                                "categoria_3": {
+                                    "tarifa_base_fuera_punta": 1124.03,
+                                    "tarifa_base_punta": 2248.07,
+                                    "tarifa_saturacion": 3372.11
+                                }
+                            }
+                        },
+                        {
+                            "codigo": "P6.2",
+                            "descripcion": "Las Tranqueras – Costanera Norte",
+                            "longitud_km": 2.11,
+                            "tarifas": {
+                                "categoria_1_4": {
+                                    "tarifa_base_fuera_punta": 119.41,
+                                    "tarifa_base_punta": 238.82,
+                                    "tarifa_saturacion": 358.23
+                                },
+                                "categoria_2": {
+                                    "tarifa_base_fuera_punta": 583.84,
+                                    "tarifa_base_punta": 1167.69,
+                                    "tarifa_saturacion": 1751.53
+                                },
+                                "categoria_3": {
+                                    "tarifa_base_fuera_punta": 1124.03,
+                                    "tarifa_base_punta": 2248.07,
+                                    "tarifa_saturacion": 3372.11
+                                }
+                            }
+                        },
+                        {
+                            "codigo": "P7",
+                            "descripcion": "Vivaceta – Carrascal",
+                            "longitud_km": 1.116,
+                            "tarifas": {
+                                "categoria_1_4": {
+                                    "tarifa_base_fuera_punta": 715.83,
+                                    "tarifa_base_punta": 1431.66,
+                                    "tarifa_saturacion": 2147.49
+                                },
+                                "categoria_2": {
+                                    "tarifa_base_fuera_punta": 583.84,
+                                    "tarifa_base_punta": 1167.69,
+                                    "tarifa_saturacion": 1751.53
+                                },
+                                "categoria_3": {
+                                    "tarifa_base_fuera_punta": 1124.03,
+                                    "tarifa_base_punta": 2248.07,
+                                    "tarifa_saturacion": 3372.11
+                                }
+                            }
+                        },
+                        {
+                            "codigo": "P8.0",
+                            "descripcion": "Petersen – Carrascal",
+                            "longitud_km": 6.69,
+                            "tarifas": {
+                                "categoria_1_4": {
+                                    "tarifa_base_fuera_punta": 239.68,
+                                    "tarifa_base_punta": 479.36,
+                                    "tarifa_saturacion": 719.04
+                                },
+                                "categoria_2": {
+                                    "tarifa_base_fuera_punta": 583.84,
+                                    "tarifa_base_punta": 1167.69,
+                                    "tarifa_saturacion": 1751.53
+                                },
+                                "categoria_3": {
+                                    "tarifa_base_fuera_punta": 1124.03,
+                                    "tarifa_base_punta": 2248.07,
+                                    "tarifa_saturacion": 3372.11
+                                }
+                            }
+                        },
+                        {
+                            "codigo": "P8.1",
+                            "descripcion": "Américo Vespucio Poniente – Petersen",
+                            "longitud_km": 2.24,
+                            "tarifas": {
+                                "categoria_1_4": {
+                                    "tarifa_base_fuera_punta": 364.87,
+                                    "tarifa_base_punta": 729.74,
+                                    "tarifa_saturacion": 1094.61
+                                },
+                                "categoria_2": {
+                                    "tarifa_base_fuera_punta": 583.84,
+                                    "tarifa_base_punta": 1167.69,
+                                    "tarifa_saturacion": 1751.53
+                                },
+                                "categoria_3": {
+                                    "tarifa_base_fuera_punta": 1124.03,
+                                    "tarifa_base_punta": 2248.07,
+                                    "tarifa_saturacion": 3372.11
+                                }
+                            }
+                        },
+                        {
+                            "codigo": "P8.2",
+                            "descripcion": "Las Tranqueras – Estoril",
+                            "longitud_km": 3.41,
+                            "tarifas": {
+                                "categoria_1_4": {
+                                    "tarifa_base_fuera_punta": 535.0,
+                                    "tarifa_base_punta": 1070.0,
+                                    "tarifa_saturacion": 1605.0
+                                },
+                                "categoria_2": {
+                                    "tarifa_base_fuera_punta": 583.84,
+                                    "tarifa_base_punta": 1167.69,
+                                    "tarifa_saturacion": 1751.53
+                                },
+                                "categoria_3": {
+                                    "tarifa_base_fuera_punta": 1124.03,
+                                    "tarifa_base_punta": 2248.07,
+                                    "tarifa_saturacion": 3372.11
+                                }
+                            }
+                        },
+                        {
+                            "codigo": "P8.3",
+                            "descripcion": "Torres Tajamar – Puente Lo Saldes",
+                            "longitud_km": 5.0,
+                            "tarifas": {
+                                "categoria_1_4": {
+                                    "tarifa_base_fuera_punta": 535.0,
+                                    "tarifa_base_punta": 1070.0,
+                                    "tarifa_saturacion": 1605.0
+                                },
+                                "categoria_2": {
+                                    "tarifa_base_fuera_punta": 583.84,
+                                    "tarifa_base_punta": 1167.69,
+                                    "tarifa_saturacion": 1751.53
+                                },
+                                "categoria_3": {
+                                    "tarifa_base_fuera_punta": 1124.03,
+                                    "tarifa_base_punta": 2248.07,
+                                    "tarifa_saturacion": 3372.11
+                                }
+                            }
+                        },
+                        {
+                            "codigo": "P9",
+                            "descripcion": "Ruta 68 – Américo Vespucio Poniente",
+                            "longitud_km": 3.86,
+                            "tarifas": {
+                                "categoria_1_4": {
+                                    "tarifa_base_fuera_punta": 535.0,
+                                    "tarifa_base_punta": 1070.0,
+                                    "tarifa_saturacion": 1605.0
+                                },
+                                "categoria_2": {
+                                    "tarifa_base_fuera_punta": 583.84,
+                                    "tarifa_base_punta": 1167.69,
+                                    "tarifa_saturacion": 1751.53
+                                },
+                                "categoria_3": {
+                                    "tarifa_base_fuera_punta": 1124.03,
+                                    "tarifa_base_punta": 2248.07,
+                                    "tarifa_saturacion": 3372.11
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "EJE KENNEDY",
+            "sentidos": [
+                {
+                    "nombre": "SENTIDO NORTE A SUR",
+                    "porticos": [
+                        {
+                            "codigo": "P1",
+                            "descripcion": "Puente San Francisco – Gran Vía",
+                            "longitud_km": 5.4565,
+                            "tarifas": {
+                                "categoria_1_4": {
+                                    "tarifa_base_fuera_punta": 288.4,
+                                    "tarifa_base_punta": 576.8,
+                                    "tarifa_saturacion": 865.2
+                                },
+                                "categoria_2": {
+                                    "tarifa_base_fuera_punta": 583.84,
+                                    "tarifa_base_punta": 1167.69,
+                                    "tarifa_saturacion": 1751.53
+                                },
+                                "categoria_3": {
+                                    "tarifa_base_fuera_punta": 1124.03,
+                                    "tarifa_base_punta": 2248.07,
+                                    "tarifa_saturacion": 3372.11
+                                }
+                            }
+                        },
+                        {
+                            "codigo": "P2.1",
+                            "descripcion": "Centenario – Gran Vía",
+                            "longitud_km": 1.4,
+                            "tarifas": {
+                                "categoria_1_4": {
+                                    "tarifa_base_fuera_punta": 865.2,
+                                    "tarifa_base_punta": 1730.4,
+                                    "tarifa_saturacion": 2595.6
+                                },
+                                "categoria_2": {
+                                    "tarifa_base_fuera_punta": 583.84,
+                                    "tarifa_base_punta": 1167.69,
+                                    "tarifa_saturacion": 1751.53
+                                },
+                                "categoria_3": {
+                                    "tarifa_base_fuera_punta": 1124.03,
+                                    "tarifa_base_punta": 2248.07,
+                                    "tarifa_saturacion":
+}

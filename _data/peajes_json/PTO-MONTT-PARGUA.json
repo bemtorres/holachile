@@ -1,0 +1,116 @@
+{
+  "concesion": "TRONCAL TRAPÉN - MAULLÍN - CALBUCO",
+  "ruta": "Ruta 5 Sur",
+  "periodo_tarifario": "2026",
+  "peajes": [
+    {
+      "nombre": "PUERTO MONTT - PARGUA",
+      "ubicacion": "Ruta 5 Sur",
+      "tarifas": [
+        {
+          "categoria": "Motos y motonetas",
+          "precio": 900
+        },
+        {
+          "categoria": "Autos y camionetas con y sin remolque",
+          "precio": 3100
+        },
+        {
+          "categoria": "Buses de dos ejes",
+          "precio": 5600
+        },
+        {
+          "categoria": "Camiones de dos ejes, camionetas de doble rueda trasera, maquinarias agrícolas y maquinarias de construcción",
+          "precio": 9400
+        },
+        {
+          "categoria": "Buses de más de dos ejes",
+          "precio": 10000
+        },
+        {
+          "categoria": "Camión de más de dos ejes",
+          "precio": 12550
+        }
+      ],
+      "tarifas_rebajadas": [
+        {
+          "categoria": "Motos y motonetas",
+          "precio": 250
+        },
+        {
+          "categoria": "Autos y camionetas con y sin remolque",
+          "precio": 850
+        },
+        {
+          "categoria": "Buses de dos ejes",
+          "precio": 1600
+        },
+        {
+          "categoria": "Camiones de dos ejes, camionetas de doble rueda trasera, maquinarias agrícolas y maquinarias de construcción",
+          "precio": 2650
+        },
+        {
+          "categoria": "Buses de más de dos ejes",
+          "precio": 2850
+        },
+        {
+          "categoria": "Camión de más de dos ejes",
+          "precio": 3550
+        }
+      ],
+      "tarifas_adicionales": [
+        {
+          "categoria": "Motos y motonetas",
+          "precio": 200
+        },
+        {
+          "categoria": "Autos y camionetas con y sin remolque",
+          "precio": 650
+        },
+        {
+          "categoria": "Buses de dos ejes",
+          "precio": 1200
+        },
+        {
+          "categoria": "Camiones de dos ejes, camionetas de doble rueda trasera, maquinarias agrícolas y maquinarias de construcción",
+          "precio": 2000
+        },
+        {
+          "categoria": "Buses de más de dos ejes",
+          "precio": 2150
+        },
+        {
+          "categoria": "Camión de más de dos ejes",
+          "precio": 2650
+        }
+      ],
+      "tarifas_especiales": [
+        {
+          "categoria": "Motos y motonetas",
+          "precio": 400
+        },
+        {
+          "categoria": "Autos y camionetas con y sin remolque",
+          "precio": 1450
+        },
+        {
+          "categoria": "Buses de dos ejes",
+          "precio": 2600
+        },
+        {
+          "categoria": "Camiones de dos ejes, camionetas de doble rueda trasera, maquinarias agrícolas y maquinarias de construcción",
+          "precio": 4350
+        },
+        {
+          "categoria": "Buses de más de dos ejes",
+          "precio": 4650
+        },
+        {
+          "categoria": "Camión de más de dos ejes",
+          "precio": 5800
+        }
+      ]
+    }
+  ],
+  "notas": "El texto muestra múltiples columnas de precios para la misma plaza de peaje, interpretadas como tarifas regulares, rebajadas, adicionales y especiales (posiblemente horarios punta/valle o categorías específicas). Los nombres de las categorías de vehículos se aplican a todas las columnas de precios."
+}

@@ -15,7 +15,9 @@
       "ref": "P3"
     },
     "autopista": "Costanera Norte",
-    "color": "#3182CE"
+    "color": "#3182CE",
+    "precio": 350,
+    "comuna": "Lo Prado"
   },
   {
     "id": "node/13881069",
@@ -33,7 +35,14 @@
       "ref": "P14"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 481,
+    "tarifas_urbanas": {
+      "TBFP": 729.55,
+      "TBP": 3310.11,
+      "TS": 1869.1
+    },
+    "comuna": "Recoleta"
   },
   {
     "id": "node/157288624",
@@ -51,7 +60,14 @@
       "ref": "PA32"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 176,
+    "tarifas_urbanas": {
+      "TBFP": 121.59,
+      "TBP": 551.68,
+      "TS": 311.52
+    },
+    "comuna": "El Bosque"
   },
   {
     "id": "node/253434286",
@@ -69,7 +85,25 @@
       "ref": "P00"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "categoria_1_4": {
+        "tarifa_base_fuera_punta": 535,
+        "tarifa_base_punta": 1070,
+        "tarifa_saturacion": 1605
+      },
+      "categoria_2": {
+        "tarifa_base_fuera_punta": 250.21,
+        "tarifa_base_punta": 500.43,
+        "tarifa_saturacion": 750.65
+      },
+      "categoria_3": {
+        "tarifa_base_fuera_punta": 481.73,
+        "tarifa_base_punta": 963.46,
+        "tarifa_saturacion": 1445.19
+      }
+    },
+    "comuna": "Lo Barnechea"
   },
   {
     "id": "node/285899561",
@@ -87,7 +121,14 @@
       "ref": "PA28"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 512,
+    "tarifas_urbanas": {
+      "TBFP": 243.18,
+      "TBP": 1103.37,
+      "TS": 623.03
+    },
+    "comuna": "Renca"
   },
   {
     "id": "node/288057884",
@@ -105,7 +146,14 @@
       "ref": "PA16"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 425,
+    "tarifas_urbanas": {
+      "TBFP": 729.55,
+      "TBP": 3310.11,
+      "TS": null
+    },
+    "comuna": "Independencia"
   },
   {
     "id": "node/335626019",
@@ -123,7 +171,14 @@
       "ref": "PA2"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 868,
+    "tarifas_urbanas": {
+      "TBFP": 532.59,
+      "TBP": 251.22,
+      "TS": 120.59
+    },
+    "comuna": "San Bernardo"
   },
   {
     "id": "node/382079878",
@@ -141,7 +196,8 @@
       "ref": "P64"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "Conchalí"
   },
   {
     "id": "node/454636152",
@@ -159,7 +215,8 @@
       "ref": "T1"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "comuna": "Cerrillos"
   },
   {
     "id": "node/454636182",
@@ -177,7 +234,8 @@
       "ref": "T1"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "comuna": "Cerrillos"
   },
   {
     "id": "node/636752664",
@@ -195,7 +253,14 @@
       "ref": "PC 102"
     },
     "autopista": "Costanera Norte",
-    "color": "#3182CE"
+    "color": "#3182CE",
+    "precio": 565,
+    "tarifas_urbanas": {
+      "TB": 565,
+      "TBP": 678,
+      "TS": null
+    },
+    "comuna": "Vitacura"
   },
   {
     "id": "node/2077631034",
@@ -213,7 +278,14 @@
       "ref": "PA17"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 462,
+    "tarifas_urbanas": {
+      "TBFP": 121.59,
+      "TBP": 551.68,
+      "TS": 311.52
+    },
+    "comuna": "Huechuraba"
   },
   {
     "id": "node/2486323474",
@@ -231,7 +303,25 @@
       "ref": "P07"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "categoria_1_4": {
+        "tarifa_base_fuera_punta": 225.77,
+        "tarifa_base_punta": 451.54,
+        "tarifa_saturacion": 677.31
+      },
+      "categoria_2": {
+        "tarifa_base_fuera_punta": 583.84,
+        "tarifa_base_punta": 1167.69,
+        "tarifa_saturacion": 1751.53
+      },
+      "categoria_3": {
+        "tarifa_base_fuera_punta": 1124.03,
+        "tarifa_base_punta": 2248.07,
+        "tarifa_saturacion": 3372.11
+      }
+    },
+    "comuna": "Lo Barnechea"
   },
   {
     "id": "node/2490264555",
@@ -249,7 +339,14 @@
       "ref": "PA7"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 452,
+    "tarifas_urbanas": {
+      "TBFP": 3195.55,
+      "TBP": 1507.34,
+      "TS": 723.52
+    },
+    "comuna": "La Cisterna"
   },
   {
     "id": "node/2490264558",
@@ -267,7 +364,14 @@
       "ref": "PA8"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 452,
+    "tarifas_urbanas": {
+      "TBFP": 1597.78,
+      "TBP": 753.67,
+      "TS": 361.76
+    },
+    "comuna": "La Cisterna"
   },
   {
     "id": "node/2612857718",
@@ -285,7 +389,25 @@
       "ref": "P05"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "categoria_1_4": {
+        "tarifa_base_fuera_punta": 715.83,
+        "tarifa_base_punta": 1431.66,
+        "tarifa_saturacion": 2147.49
+      },
+      "categoria_2": {
+        "tarifa_base_fuera_punta": 583.84,
+        "tarifa_base_punta": 1167.69,
+        "tarifa_saturacion": 1751.53
+      },
+      "categoria_3": {
+        "tarifa_base_fuera_punta": 1124.03,
+        "tarifa_base_punta": 2248.07,
+        "tarifa_saturacion": 3372.11
+      }
+    },
+    "comuna": "Independencia"
   },
   {
     "id": "node/2948768935",
@@ -303,7 +425,8 @@
       "ref": "P2.2"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "Vitacura"
   },
   {
     "id": "node/2951662070",
@@ -321,7 +444,8 @@
       "ref": "P01"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "Lo Barnechea"
   },
   {
     "id": "node/3241339769",
@@ -339,7 +463,8 @@
       "ref": "P8.1"
     },
     "autopista": "Costanera Norte",
-    "color": "#3182CE"
+    "color": "#3182CE",
+    "comuna": "Vitacura"
   },
   {
     "id": "node/4399757534",
@@ -357,7 +482,14 @@
       "ref": "PA31"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 368,
+    "tarifas_urbanas": {
+      "TBFP": 364.78,
+      "TBP": 1655.05,
+      "TS": 934.55
+    },
+    "comuna": "Santiago"
   },
   {
     "id": "node/4455202302",
@@ -375,7 +507,28 @@
       "ref": "P1"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 120,
+    "tarifas_urbanas": {
+      "categoria_1_y_4": {
+        "laboral": {
+          "TBFP": 1.2,
+          "TBP": 2.4,
+          "TS": 3.6
+        },
+        "sabados_festivos": {
+          "TBFP": 2.4,
+          "TBP": 4.8,
+          "TS": 7.2
+        },
+        "domingo": {
+          "TBFP": 3.6,
+          "TBP": 7.2,
+          "TS": 10.8
+        }
+      }
+    },
+    "comuna": "Maipú"
   },
   {
     "id": "node/4999156427",
@@ -393,7 +546,8 @@
       "ref": "P63"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "Huechuraba"
   },
   {
     "id": "node/4999156428",
@@ -411,7 +565,8 @@
       "ref": "P62"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "Huechuraba"
   },
   {
     "id": "node/4999156848",
@@ -429,7 +584,8 @@
       "ref": "P65"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "Conchalí"
   },
   {
     "id": "node/5035918756",
@@ -445,7 +601,9 @@
       "highway": "toll_gantry"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "precio": 364,
+    "comuna": "Vitacura"
   },
   {
     "id": "node/5145133779",
@@ -463,7 +621,14 @@
       "ref": "PA20"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 412,
+    "tarifas_urbanas": {
+      "TBFP": 729.55,
+      "TBP": 3310.11,
+      "TS": 1869.1
+    },
+    "comuna": "Lo Espejo"
   },
   {
     "id": "node/5521500757",
@@ -481,7 +646,28 @@
       "ref": "P17"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 390,
+    "tarifas_urbanas": {
+      "categoria_1_y_4": {
+        "laboral": {
+          "TBFP": 1.4,
+          "TBP": 2.8,
+          "TS": 4.2
+        },
+        "sabados_festivos": {
+          "TBFP": 2.8,
+          "TBP": 5.6,
+          "TS": 8.4
+        },
+        "domingo": {
+          "TBFP": 4.2,
+          "TBP": 8.4,
+          "TS": 12.6
+        }
+      }
+    },
+    "comuna": "Maipú"
   },
   {
     "id": "node/5532689550",
@@ -499,7 +685,9 @@
       "ref": "T3"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "precio": 1400,
+    "comuna": "Padre Hurtado"
   },
   {
     "id": "node/5568374798",
@@ -517,7 +705,8 @@
       "ref": "P61"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "Conchalí"
   },
   {
     "id": "node/5568374819",
@@ -535,7 +724,8 @@
       "ref": "P60"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "Conchalí"
   },
   {
     "id": "node/5572951836",
@@ -553,7 +743,8 @@
       "ref": "P05"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "Independencia"
   },
   {
     "id": "node/5579887517",
@@ -571,7 +762,8 @@
       "ref": "P8.0"
     },
     "autopista": "Costanera Norte",
-    "color": "#3182CE"
+    "color": "#3182CE",
+    "comuna": "Vitacura"
   },
   {
     "id": "node/5788252112",
@@ -589,7 +781,8 @@
       "ref": "P8.0"
     },
     "autopista": "Costanera Norte",
-    "color": "#3182CE"
+    "color": "#3182CE",
+    "comuna": "Vitacura"
   },
   {
     "id": "node/5788252531",
@@ -607,7 +800,8 @@
       "ref": "P8.1"
     },
     "autopista": "Costanera Norte",
-    "color": "#3182CE"
+    "color": "#3182CE",
+    "comuna": "Vitacura"
   },
   {
     "id": "node/6114084134",
@@ -625,7 +819,13 @@
       "ref": "PA12"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "tarifas_urbanas": {
+      "TBFP": 243.18,
+      "TBP": 1103.37,
+      "TS": 623.03
+    },
+    "comuna": "Santiago"
   },
   {
     "id": "node/6114084135",
@@ -643,7 +843,14 @@
       "ref": "PA13"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 181,
+    "tarifas_urbanas": {
+      "TBFP": 243.18,
+      "TBP": 1103.37,
+      "TS": 623.03
+    },
+    "comuna": "Santiago"
   },
   {
     "id": "node/6114084136",
@@ -661,7 +868,14 @@
       "ref": "PA14"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 181,
+    "tarifas_urbanas": {
+      "TBFP": 121.59,
+      "TBP": 551.68,
+      "TS": 311.52
+    },
+    "comuna": "Santiago"
   },
   {
     "id": "node/6114138859",
@@ -679,7 +893,14 @@
       "ref": "PA18"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 462,
+    "tarifas_urbanas": {
+      "TBFP": 364.78,
+      "TBP": 1655.05,
+      "TS": null
+    },
+    "comuna": "Huechuraba"
   },
   {
     "id": "node/6114138863",
@@ -697,7 +918,14 @@
       "ref": "PA19"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 412,
+    "tarifas_urbanas": {
+      "TBFP": 364.78,
+      "TBP": 1655.05,
+      "TS": 934.55
+    },
+    "comuna": "El Bosque"
   },
   {
     "id": "node/6114166012",
@@ -715,7 +943,13 @@
       "ref": "P4.3"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "TBFP": 729.55,
+      "TBP": 3310.11,
+      "TS": null
+    },
+    "comuna": "San Joaquín"
   },
   {
     "id": "node/6114166014",
@@ -733,7 +967,13 @@
       "ref": "P4.2"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "TBFP": 486.37,
+      "TBP": 2206.74,
+      "TS": 1246.06
+    },
+    "comuna": "San Joaquín"
   },
   {
     "id": "node/6114181656",
@@ -751,7 +991,13 @@
       "ref": "P1.3"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "TBFP": 1094.33,
+      "TBP": 4965.16,
+      "TS": null
+    },
+    "comuna": "Lo Espejo"
   },
   {
     "id": "node/6114181658",
@@ -769,7 +1015,13 @@
       "ref": "P1.1"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "TBFP": 729.55,
+      "TBP": 3310.11,
+      "TS": 1869.1
+    },
+    "comuna": "Lo Espejo"
   },
   {
     "id": "node/6114181660",
@@ -787,7 +1039,13 @@
       "ref": "P2.2"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "TBFP": 364.78,
+      "TBP": 1655.05,
+      "TS": 934.55
+    },
+    "comuna": "Lo Espejo"
   },
   {
     "id": "node/6114181662",
@@ -805,7 +1063,13 @@
       "ref": "P2.1"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "TBFP": 243.18,
+      "TBP": 1103.37,
+      "TS": 623.03
+    },
+    "comuna": "Lo Espejo"
   },
   {
     "id": "node/6114181664",
@@ -823,7 +1087,8 @@
       "ref": "P3.3"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "La Cisterna"
   },
   {
     "id": "node/6114181666",
@@ -841,7 +1106,8 @@
       "ref": "P3.4"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "La Cisterna"
   },
   {
     "id": "node/6114181668",
@@ -859,7 +1125,8 @@
       "ref": "P3.2"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "La Cisterna"
   },
   {
     "id": "node/6114181670",
@@ -877,7 +1144,8 @@
       "ref": "P3.1"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "La Cisterna"
   },
   {
     "id": "node/6114221889",
@@ -895,7 +1163,14 @@
       "ref": "PC 101"
     },
     "autopista": "Costanera Norte",
-    "color": "#3182CE"
+    "color": "#3182CE",
+    "precio": 452,
+    "tarifas_urbanas": {
+      "TB": 565,
+      "TBP": 904,
+      "TS": 1131
+    },
+    "comuna": "Vitacura"
   },
   {
     "id": "node/6114286295",
@@ -913,7 +1188,14 @@
       "ref": "PA4"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 129,
+    "tarifas_urbanas": {
+      "TBFP": 1065.18,
+      "TBP": 502.45,
+      "TS": 241.17
+    },
+    "comuna": "San Bernardo"
   },
   {
     "id": "node/6114286297",
@@ -931,7 +1213,14 @@
       "ref": "PA3"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 585,
+    "tarifas_urbanas": {
+      "TBFP": 1597.78,
+      "TBP": 753.67,
+      "TS": 361.76
+    },
+    "comuna": "San Bernardo"
   },
   {
     "id": "node/6114291823",
@@ -949,7 +1238,14 @@
       "ref": "PA5"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 334,
+    "tarifas_urbanas": {
+      "TBFP": 4793.33,
+      "TBP": 2261,
+      "TS": 1085.28
+    },
+    "comuna": "San Bernardo"
   },
   {
     "id": "node/6114291826",
@@ -967,7 +1263,14 @@
       "ref": "PA6"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 157,
+    "tarifas_urbanas": {
+      "TBFP": 2130.37,
+      "TBP": 1004.89,
+      "TS": 482.35
+    },
+    "comuna": "San Bernardo"
   },
   {
     "id": "node/6116236796",
@@ -985,7 +1288,8 @@
       "ref": "EV"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "comuna": "Independencia"
   },
   {
     "id": "node/6116236797",
@@ -1003,7 +1307,8 @@
       "ref": "P04"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "Independencia"
   },
   {
     "id": "node/6116236799",
@@ -1021,7 +1326,14 @@
       "ref": "PA15"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 425,
+    "tarifas_urbanas": {
+      "TBFP": 243.18,
+      "TBP": 1103.37,
+      "TS": 623.03
+    },
+    "comuna": "Independencia"
   },
   {
     "id": "node/6116282528",
@@ -1039,7 +1351,25 @@
       "ref": "P07"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "categoria_1_4": {
+        "tarifa_base_fuera_punta": 535,
+        "tarifa_base_punta": 1070,
+        "tarifa_saturacion": 1605
+      },
+      "categoria_2": {
+        "tarifa_base_fuera_punta": 583.84,
+        "tarifa_base_punta": 1167.69,
+        "tarifa_saturacion": 1751.53
+      },
+      "categoria_3": {
+        "tarifa_base_fuera_punta": 1124.03,
+        "tarifa_base_punta": 2248.07,
+        "tarifa_saturacion": 3372.11
+      }
+    },
+    "comuna": "Lo Barnechea"
   },
   {
     "id": "node/6116324740",
@@ -1057,7 +1387,14 @@
       "ref": "PA23"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 287,
+    "tarifas_urbanas": {
+      "TBFP": 364.78,
+      "TBP": 1655.05,
+      "TS": null
+    },
+    "comuna": "Estación Central"
   },
   {
     "id": "node/6116324742",
@@ -1075,7 +1412,14 @@
       "ref": "PA24"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 287,
+    "tarifas_urbanas": {
+      "TBFP": 729.55,
+      "TBP": 3310.11,
+      "TS": null
+    },
+    "comuna": "Estación Central"
   },
   {
     "id": "node/6116324745",
@@ -1093,7 +1437,14 @@
       "ref": "PA21"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 512,
+    "tarifas_urbanas": {
+      "TBFP": 486.37,
+      "TBP": 2206.74,
+      "TS": 1246.06
+    },
+    "comuna": "Pedro Aguirre Cerda"
   },
   {
     "id": "node/6116324746",
@@ -1111,7 +1462,14 @@
       "ref": "PA22"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 512,
+    "tarifas_urbanas": {
+      "TBFP": 1094.33,
+      "TBP": 4965.16,
+      "TS": null
+    },
+    "comuna": "Pedro Aguirre Cerda"
   },
   {
     "id": "node/6116337639",
@@ -1129,7 +1487,14 @@
       "ref": "PA29"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 512,
+    "tarifas_urbanas": {
+      "TBFP": 486.37,
+      "TBP": 2206.74,
+      "TS": 1246.06
+    },
+    "comuna": "Renca"
   },
   {
     "id": "node/6116337640",
@@ -1147,7 +1512,14 @@
       "ref": "PA25"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 421,
+    "tarifas_urbanas": {
+      "TBFP": 1094.33,
+      "TBP": 4965.16,
+      "TS": null
+    },
+    "comuna": "Quinta Normal"
   },
   {
     "id": "node/6116337642",
@@ -1165,7 +1537,14 @@
       "ref": "PA26"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 421,
+    "tarifas_urbanas": {
+      "TBFP": 729.55,
+      "TBP": 3310.11,
+      "TS": 1869.1
+    },
+    "comuna": "Quinta Normal"
   },
   {
     "id": "node/6116371328",
@@ -1183,7 +1562,14 @@
       "ref": "PA10"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 285,
+    "tarifas_urbanas": {
+      "TBFP": 729.55,
+      "TBP": 3310.11,
+      "TS": 1869.1
+    },
+    "comuna": "San Miguel"
   },
   {
     "id": "node/6116371330",
@@ -1201,7 +1587,14 @@
       "ref": "PA11"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 285,
+    "tarifas_urbanas": {
+      "TBFP": 364.78,
+      "TBP": 1655.05,
+      "TS": 934.55
+    },
+    "comuna": "San Miguel"
   },
   {
     "id": "node/6116371333",
@@ -1219,7 +1612,14 @@
       "ref": "PA9"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 392,
+    "tarifas_urbanas": {
+      "TBFP": 243.18,
+      "TBP": 1103.37,
+      "TS": 623.03
+    },
+    "comuna": "San Miguel"
   },
   {
     "id": "node/6116371334",
@@ -1237,7 +1637,14 @@
       "ref": "PA30"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 392,
+    "tarifas_urbanas": {
+      "TBFP": 243.18,
+      "TBP": 1103.37,
+      "TS": 623.03
+    },
+    "comuna": "San Miguel"
   },
   {
     "id": "node/6116371480",
@@ -1255,7 +1662,28 @@
       "ref": "P6"
     },
     "autopista": "Costanera Norte",
-    "color": "#3182CE"
+    "color": "#3182CE",
+    "precio": 450,
+    "tarifas_urbanas": {
+      "categoria_1_y_4": {
+        "laboral": {
+          "TBFP": 3.5,
+          "TBP": 7,
+          "TS": 10.5
+        },
+        "sabados_festivos": {
+          "TBFP": 7,
+          "TBP": 14,
+          "TS": 21
+        },
+        "domingo": {
+          "TBFP": 10.5,
+          "TBP": 21,
+          "TS": 31.5
+        }
+      }
+    },
+    "comuna": "Renca"
   },
   {
     "id": "node/6116371481",
@@ -1273,7 +1701,9 @@
       "ref": "P5"
     },
     "autopista": "Costanera Norte",
-    "color": "#3182CE"
+    "color": "#3182CE",
+    "precio": 450,
+    "comuna": "Renca"
   },
   {
     "id": "node/6116371482",
@@ -1291,7 +1721,28 @@
       "ref": "P4"
     },
     "autopista": "Costanera Norte",
-    "color": "#3182CE"
+    "color": "#3182CE",
+    "precio": 350,
+    "tarifas_urbanas": {
+      "categoria_1_y_4": {
+        "laboral": {
+          "TBFP": 2.1,
+          "TBP": 4.2,
+          "TS": 6.3
+        },
+        "sabados_festivos": {
+          "TBFP": 4.2,
+          "TBP": 8.4,
+          "TS": 12.6
+        },
+        "domingo": {
+          "TBFP": 6.3,
+          "TBP": 12.6,
+          "TS": 18.9
+        }
+      }
+    },
+    "comuna": "Renca"
   },
   {
     "id": "node/6116872049",
@@ -1309,7 +1760,8 @@
       "ref": "P5.4"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "Macul"
   },
   {
     "id": "node/6116872050",
@@ -1327,7 +1779,8 @@
       "ref": "P5.3"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "Macul"
   },
   {
     "id": "node/6116872054",
@@ -1345,7 +1798,8 @@
       "ref": "P5.1"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "Macul"
   },
   {
     "id": "node/6116872055",
@@ -1363,7 +1817,8 @@
       "ref": "P5.2"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "Macul"
   },
   {
     "id": "node/6117130667",
@@ -1381,7 +1836,25 @@
       "ref": "P2.2"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "categoria_1_4": {
+        "tarifa_base_fuera_punta": 425.86,
+        "tarifa_base_punta": 851.72,
+        "tarifa_saturacion": 1277.58
+      },
+      "categoria_2": {
+        "tarifa_base_fuera_punta": 583.84,
+        "tarifa_base_punta": 1167.69,
+        "tarifa_saturacion": 1751.53
+      },
+      "categoria_3": {
+        "tarifa_base_fuera_punta": 1124.03,
+        "tarifa_base_punta": 2248.07,
+        "tarifa_saturacion": 3372.11
+      }
+    },
+    "comuna": "Vitacura"
   },
   {
     "id": "node/6117130668",
@@ -1399,7 +1872,28 @@
       "ref": "P15"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 140,
+    "tarifas_urbanas": {
+      "categoria_1_y_4": {
+        "laboral": {
+          "TBFP": 140.68,
+          "TBP": 241.17,
+          "TS": 361.76
+        },
+        "sabados_festivos": {
+          "TBFP": 241.17,
+          "TBP": 482.35,
+          "TS": 723.52
+        },
+        "domingo": {
+          "TBFP": 361.76,
+          "TBP": 723.52,
+          "TS": 1085.28
+        }
+      }
+    },
+    "comuna": "Recoleta"
   },
   {
     "id": "node/6117130669",
@@ -1417,7 +1911,14 @@
       "ref": "P12"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 69,
+    "tarifas_urbanas": {
+      "TBFP": 729.55,
+      "TBP": 3310.11,
+      "TS": 1869.1
+    },
+    "comuna": "Huechuraba"
   },
   {
     "id": "node/6117130670",
@@ -1435,7 +1936,14 @@
       "ref": "P13"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 410,
+    "tarifas_urbanas": {
+      "TBFP": 1094.33,
+      "TBP": 4965.16,
+      "TS": null
+    },
+    "comuna": "Huechuraba"
   },
   {
     "id": "node/6117130671",
@@ -1453,7 +1961,14 @@
       "ref": "P11"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 300,
+    "tarifas_urbanas": {
+      "TBFP": 486.37,
+      "TBP": 2206.74,
+      "TS": 1246.06
+    },
+    "comuna": "Huechuraba"
   },
   {
     "id": "node/6117130672",
@@ -1471,7 +1986,14 @@
       "ref": "P10"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 300,
+    "tarifas_urbanas": {
+      "TBFP": 729.55,
+      "TBP": 3310.11,
+      "TS": null
+    },
+    "comuna": "Huechuraba"
   },
   {
     "id": "node/6117130673",
@@ -1489,7 +2011,14 @@
       "ref": "P9"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 546,
+    "tarifas_urbanas": {
+      "TBFP": 364.78,
+      "TBP": 1655.05,
+      "TS": null
+    },
+    "comuna": "Huechuraba"
   },
   {
     "id": "node/6117130674",
@@ -1509,7 +2038,14 @@
       "ref": "P8"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 650,
+    "tarifas_urbanas": {
+      "TBFP": 121.59,
+      "TBP": 551.68,
+      "TS": 311.52
+    },
+    "comuna": "Renca"
   },
   {
     "id": "node/6117130675",
@@ -1527,7 +2063,14 @@
       "ref": "P7"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 104,
+    "tarifas_urbanas": {
+      "TBFP": 243.18,
+      "TBP": 1103.37,
+      "TS": 623.03
+    },
+    "comuna": "Quilicura"
   },
   {
     "id": "node/6117141442",
@@ -1545,7 +2088,8 @@
       "ref": "P01"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "Lo Barnechea"
   },
   {
     "id": "node/6122216578",
@@ -1563,7 +2107,9 @@
       "ref": "P3 - Enlace Buenaventura"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 218,
+    "comuna": "Huechuraba"
   },
   {
     "id": "node/6223443638",
@@ -1583,7 +2129,9 @@
       "operator": "Sociedad Concesionaria Nueva Aconcagua S.A."
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "precio": 900,
+    "comuna": "Colina"
   },
   {
     "id": "node/6277890252",
@@ -1603,7 +2151,9 @@
       "operator": "Sociedad Concesionaria Nueva Aconcagua S.A."
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "precio": 900,
+    "comuna": "Colina"
   },
   {
     "id": "node/6316909495",
@@ -1620,7 +2170,9 @@
       "name": "Peaje Acceso Vial AMB"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "precio": 1100,
+    "comuna": "Renca"
   },
   {
     "id": "node/6508970705",
@@ -1638,7 +2190,13 @@
       "ref": "P09"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "tarifas_urbanas": {
+      "TBFP": 486.37,
+      "TBP": 2206.74,
+      "TS": 1246.06
+    },
+    "comuna": "Renca"
   },
   {
     "id": "node/6508970707",
@@ -1656,7 +2214,13 @@
       "ref": "P09"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "tarifas_urbanas": {
+      "TBFP": 1094.33,
+      "TBP": 4965.16,
+      "TS": null
+    },
+    "comuna": "Renca"
   },
   {
     "id": "node/6509152132",
@@ -1674,7 +2238,13 @@
       "ref": "P6.2"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "tarifas_urbanas": {
+      "TBFP": 364.78,
+      "TBP": 1655.05,
+      "TS": null
+    },
+    "comuna": "Renca"
   },
   {
     "id": "node/6509152133",
@@ -1692,7 +2262,13 @@
       "ref": "P6.2"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "tarifas_urbanas": {
+      "TBFP": 729.55,
+      "TBP": 3310.11,
+      "TS": null
+    },
+    "comuna": "Renca"
   },
   {
     "id": "node/6548809057",
@@ -1710,7 +2286,9 @@
       "ref": "P4 - Enlace Buenaventura"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 218,
+    "comuna": "Huechuraba"
   },
   {
     "id": "node/6548823501",
@@ -1728,7 +2306,9 @@
       "ref": "P2 - Paso Superior Lo Marcoleta"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 181,
+    "comuna": "Huechuraba"
   },
   {
     "id": "node/6548823505",
@@ -1746,7 +2326,9 @@
       "ref": "P1 - Paso Superior Lo Marcoleta"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 181,
+    "comuna": "Huechuraba"
   },
   {
     "id": "node/6615396115",
@@ -1764,7 +2346,9 @@
       "ref": "P8 - Enlace Lo Pinto"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 486,
+    "comuna": "Quilicura"
   },
   {
     "id": "node/6615396116",
@@ -1782,7 +2366,9 @@
       "ref": "P7 - Enlace Lo Pinto"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 486,
+    "comuna": "Quilicura"
   },
   {
     "id": "node/6615396126",
@@ -1800,7 +2386,9 @@
       "ref": "P6 - Paso Superior La Montaña"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 397,
+    "comuna": "Quilicura"
   },
   {
     "id": "node/6615396127",
@@ -1818,7 +2406,9 @@
       "ref": "P5 - Paso Superior La Montaña"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 397,
+    "comuna": "Quilicura"
   },
   {
     "id": "node/6876949435",
@@ -1835,7 +2425,13 @@
       "ref": "P203"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 2167,
+    "tarifas_urbanas": {
+      "TBFP": 267,
+      "TBP": 534
+    },
+    "comuna": "Vitacura"
   },
   {
     "id": "node/6876949475",
@@ -1852,7 +2448,13 @@
       "ref": "P212"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 278,
+    "tarifas_urbanas": {
+      "TBFP": 645,
+      "TBP": 1289
+    },
+    "comuna": "Vitacura"
   },
   {
     "id": "node/6876949534",
@@ -1869,7 +2471,13 @@
       "ref": "P201"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 1999,
+    "tarifas_urbanas": {
+      "TBFP": 536,
+      "TBP": 1072
+    },
+    "comuna": "Vitacura"
   },
   {
     "id": "node/6876949652",
@@ -1887,7 +2495,12 @@
       "ref": "P110"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "TBFP": 549,
+      "TBP": 1099
+    },
+    "comuna": "Vitacura"
   },
   {
     "id": "node/7857987358",
@@ -1904,7 +2517,13 @@
       "ref": "P101"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 900,
+    "tarifas_urbanas": {
+      "TBFP": 545,
+      "TBP": 1090
+    },
+    "comuna": "Las Condes"
   },
   {
     "id": "node/7857987360",
@@ -1921,7 +2540,12 @@
       "ref": "P210"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "TBFP": 645,
+      "TBP": 1289
+    },
+    "comuna": "Las Condes"
   },
   {
     "id": "node/7857987369",
@@ -1937,7 +2561,8 @@
       "highway": "toll_gantry"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "comuna": "Las Condes"
   },
   {
     "id": "node/7857987371",
@@ -1954,7 +2579,8 @@
       "ref": "P108"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "Vitacura"
   },
   {
     "id": "node/7857987375",
@@ -1970,7 +2596,9 @@
       "highway": "toll_gantry"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "precio": 1655,
+    "comuna": "Vitacura"
   },
   {
     "id": "node/7857987382",
@@ -1987,7 +2615,13 @@
       "ref": "P205"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 990,
+    "tarifas_urbanas": {
+      "TBFP": 645,
+      "TBP": 1289
+    },
+    "comuna": "Vitacura"
   },
   {
     "id": "node/7858008986",
@@ -2004,7 +2638,13 @@
       "ref": "P104"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 1269,
+    "tarifas_urbanas": {
+      "TBFP": 841,
+      "TBP": 1682
+    },
+    "comuna": "Las Condes"
   },
   {
     "id": "node/7858008992",
@@ -2021,7 +2661,12 @@
       "ref": "P209"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "TBFP": 468,
+      "TBP": 936
+    },
+    "comuna": "Las Condes"
   },
   {
     "id": "node/9193098855",
@@ -2037,7 +2682,8 @@
       "highway": "toll_gantry"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "comuna": "Vitacura"
   },
   {
     "id": "node/9193205577",
@@ -2054,7 +2700,12 @@
       "ref": "P211"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "TBFP": 645,
+      "TBP": 1289
+    },
+    "comuna": "Las Condes"
   },
   {
     "id": "node/9193322368",
@@ -2071,7 +2722,13 @@
       "ref": "P103"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 978,
+    "tarifas_urbanas": {
+      "TBFP": 300,
+      "TBP": 601
+    },
+    "comuna": "Las Condes"
   },
   {
     "id": "node/9193389137",
@@ -2087,7 +2744,8 @@
       "highway": "toll_gantry"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "comuna": "Las Condes"
   },
   {
     "id": "node/9193389152",
@@ -2103,7 +2761,9 @@
       "highway": "toll_gantry"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "precio": 997,
+    "comuna": "Las Condes"
   },
   {
     "id": "node/9515305316",
@@ -2121,7 +2781,8 @@
       "ref": "P8.3"
     },
     "autopista": "Costanera Norte",
-    "color": "#3182CE"
+    "color": "#3182CE",
+    "comuna": "Vitacura"
   },
   {
     "id": "node/9515321517",
@@ -2139,7 +2800,25 @@
       "ref": "P8.2"
     },
     "autopista": "Costanera Norte",
-    "color": "#3182CE"
+    "color": "#3182CE",
+    "tarifas_urbanas": {
+      "categoria_1_4": {
+        "tarifa_base_fuera_punta": 119.41,
+        "tarifa_base_punta": 238.82,
+        "tarifa_saturacion": 358.23
+      },
+      "categoria_2": {
+        "tarifa_base_fuera_punta": 583.84,
+        "tarifa_base_punta": 1167.69,
+        "tarifa_saturacion": 1751.53
+      },
+      "categoria_3": {
+        "tarifa_base_fuera_punta": 1124.03,
+        "tarifa_base_punta": 2248.07,
+        "tarifa_saturacion": 3372.11
+      }
+    },
+    "comuna": "Vitacura"
   },
   {
     "id": "node/9516346638",
@@ -2157,7 +2836,8 @@
       "ref": "SB"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "comuna": "Providencia"
   },
   {
     "id": "node/9566814796",
@@ -2175,7 +2855,14 @@
       "ref": "PA37"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 455,
+    "tarifas_urbanas": {
+      "TBFP": 3195.55,
+      "TBP": 1507.34,
+      "TS": 723.52
+    },
+    "comuna": "San Bernardo"
   },
   {
     "id": "node/9611695677",
@@ -2193,7 +2880,28 @@
       "ref": "P2"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 210,
+    "tarifas_urbanas": {
+      "categoria_1_y_4": {
+        "laboral": {
+          "TBFP": 3.9,
+          "TBP": 7.8,
+          "TS": 11.7
+        },
+        "sabados_festivos": {
+          "TBFP": 7.8,
+          "TBP": 15.6,
+          "TS": 23.4
+        },
+        "domingo": {
+          "TBFP": 11.7,
+          "TBP": 23.4,
+          "TS": 35.1
+        }
+      }
+    },
+    "comuna": "Lo Prado"
   },
   {
     "id": "node/9611695678",
@@ -2211,7 +2919,9 @@
       "ref": "P16"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "precio": 480,
+    "comuna": "Lo Prado"
   },
   {
     "id": "node/9624207147",
@@ -2229,7 +2939,13 @@
       "ref": "P4.1"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "TBFP": 364.78,
+      "TBP": 1655.05,
+      "TS": null
+    },
+    "comuna": "San Joaquín"
   },
   {
     "id": "node/9626675441",
@@ -2247,7 +2963,25 @@
       "ref": "P00"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "categoria_1_4": {
+        "tarifa_base_fuera_punta": 535,
+        "tarifa_base_punta": 1070,
+        "tarifa_saturacion": 1605
+      },
+      "categoria_2": {
+        "tarifa_base_fuera_punta": 250.21,
+        "tarifa_base_punta": 500.43,
+        "tarifa_saturacion": 750.65
+      },
+      "categoria_3": {
+        "tarifa_base_fuera_punta": 481.73,
+        "tarifa_base_punta": 963.46,
+        "tarifa_saturacion": 1445.19
+      }
+    },
+    "comuna": "Lo Barnechea"
   },
   {
     "id": "node/9627393148",
@@ -2264,7 +2998,8 @@
       "ref": "P2.1 Gran Vía - Centenario"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "comuna": "Vitacura"
   },
   {
     "id": "node/9627393149",
@@ -2281,7 +3016,25 @@
       "ref": "P2.1 Puente Centenario - Gran Vía"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "tarifas_urbanas": {
+      "categoria_1_4": {
+        "tarifa_base_fuera_punta": 449.4,
+        "tarifa_base_punta": 898.8,
+        "tarifa_saturacion": 1348.2
+      },
+      "categoria_2": {
+        "tarifa_base_fuera_punta": 583.84,
+        "tarifa_base_punta": 1167.69,
+        "tarifa_saturacion": 1751.53
+      },
+      "categoria_3": {
+        "tarifa_base_fuera_punta": 1124.03,
+        "tarifa_base_punta": 2248.07,
+        "tarifa_saturacion": 3372.11
+      }
+    },
+    "comuna": "Vitacura"
   },
   {
     "id": "node/9638303963",
@@ -2299,7 +3052,25 @@
       "ref": "P03"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "categoria_1_4": {
+        "tarifa_base_fuera_punta": 535,
+        "tarifa_base_punta": 1070,
+        "tarifa_saturacion": 1605
+      },
+      "categoria_2": {
+        "tarifa_base_fuera_punta": 583.84,
+        "tarifa_base_punta": 1167.69,
+        "tarifa_saturacion": 1751.53
+      },
+      "categoria_3": {
+        "tarifa_base_fuera_punta": 1124.03,
+        "tarifa_base_punta": 2248.07,
+        "tarifa_saturacion": 3372.11
+      }
+    },
+    "comuna": "Providencia"
   },
   {
     "id": "node/9638303965",
@@ -2317,7 +3088,25 @@
       "ref": "P03"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "categoria_1_4": {
+        "tarifa_base_fuera_punta": 264.29,
+        "tarifa_base_punta": 528.58,
+        "tarifa_saturacion": 792.87
+      },
+      "categoria_2": {
+        "tarifa_base_fuera_punta": 583.84,
+        "tarifa_base_punta": 1167.69,
+        "tarifa_saturacion": 1751.53
+      },
+      "categoria_3": {
+        "tarifa_base_fuera_punta": 1124.03,
+        "tarifa_base_punta": 2248.07,
+        "tarifa_saturacion": 3372.11
+      }
+    },
+    "comuna": "Providencia"
   },
   {
     "id": "node/9641637788",
@@ -2335,7 +3124,25 @@
       "ref": "P6.1"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "categoria_1_4": {
+        "tarifa_base_fuera_punta": 239.68,
+        "tarifa_base_punta": 479.36,
+        "tarifa_saturacion": 719.04
+      },
+      "categoria_2": {
+        "tarifa_base_fuera_punta": 583.84,
+        "tarifa_base_punta": 1167.69,
+        "tarifa_saturacion": 1751.53
+      },
+      "categoria_3": {
+        "tarifa_base_fuera_punta": 1124.03,
+        "tarifa_base_punta": 2248.07,
+        "tarifa_saturacion": 3372.11
+      }
+    },
+    "comuna": "Renca"
   },
   {
     "id": "node/9641637789",
@@ -2353,7 +3160,25 @@
       "ref": "P6.1"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "tarifas_urbanas": {
+      "categoria_1_4": {
+        "tarifa_base_fuera_punta": 233.79,
+        "tarifa_base_punta": 467.59,
+        "tarifa_saturacion": 701.38
+      },
+      "categoria_2": {
+        "tarifa_base_fuera_punta": 583.84,
+        "tarifa_base_punta": 1167.69,
+        "tarifa_saturacion": 1751.53
+      },
+      "categoria_3": {
+        "tarifa_base_fuera_punta": 1124.03,
+        "tarifa_base_punta": 2248.07,
+        "tarifa_saturacion": 3372.11
+      }
+    },
+    "comuna": "Renca"
   },
   {
     "id": "node/9645902676",
@@ -2369,7 +3194,8 @@
       "highway": "toll_gantry"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "comuna": "Huechuraba"
   },
   {
     "id": "node/9645902677",
@@ -2385,7 +3211,8 @@
       "highway": "toll_gantry"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "comuna": "Huechuraba"
   },
   {
     "id": "node/9651968599",
@@ -2401,7 +3228,8 @@
       "highway": "toll_gantry"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "comuna": "Padre Hurtado"
   },
   {
     "id": "node/9651968600",
@@ -2417,7 +3245,8 @@
       "highway": "toll_gantry"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "comuna": "Padre Hurtado"
   },
   {
     "id": "node/9695367765",
@@ -2435,7 +3264,8 @@
       "ref": "P8.3"
     },
     "autopista": "Costanera Norte",
-    "color": "#3182CE"
+    "color": "#3182CE",
+    "comuna": "Las Condes"
   },
   {
     "id": "node/9844306687",
@@ -2453,7 +3283,14 @@
       "ref": "PA1"
     },
     "autopista": "Vespucio Norte/Sur",
-    "color": "#805AD5"
+    "color": "#805AD5",
+    "precio": 868,
+    "tarifas_urbanas": {
+      "TBFP": 1065.18,
+      "TBP": 502.45,
+      "TS": 241.17
+    },
+    "comuna": "Buin"
   },
   {
     "id": "node/9938078827",
@@ -2469,7 +3306,9 @@
       "highway": "toll_gantry"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "precio": 780,
+    "comuna": "Las Condes"
   },
   {
     "id": "node/10052503573",
@@ -2485,7 +3324,9 @@
       "highway": "toll_gantry"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "precio": 753,
+    "comuna": "Quilicura"
   },
   {
     "id": "node/10052503576",
@@ -2501,7 +3342,8 @@
       "highway": "toll_gantry"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "comuna": "Quilicura"
   },
   {
     "id": "node/12511401244",
@@ -2519,7 +3361,9 @@
       "ref": "T6"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "precio": 300,
+    "comuna": "Peñaflor"
   },
   {
     "id": "node/12511401245",
@@ -2537,7 +3381,9 @@
       "ref": "T6"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "precio": 300,
+    "comuna": "Peñaflor"
   },
   {
     "id": "node/12511401260",
@@ -2555,7 +3401,9 @@
       "ref": "T2"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "precio": 900,
+    "comuna": "Maipú"
   },
   {
     "id": "node/12511401261",
@@ -2573,7 +3421,9 @@
       "ref": "T2"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "precio": 900,
+    "comuna": "Maipú"
   },
   {
     "id": "node/12511401267",
@@ -2591,7 +3441,9 @@
       "ref": "T3"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "precio": 1400,
+    "comuna": "Padre Hurtado"
   },
   {
     "id": "node/12511401272",
@@ -2609,7 +3461,9 @@
       "ref": "T4"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "precio": 1600,
+    "comuna": "Padre Hurtado"
   },
   {
     "id": "node/12511401277",
@@ -2627,7 +3481,9 @@
       "ref": "T4"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "precio": 1600,
+    "comuna": "Padre Hurtado"
   },
   {
     "id": "node/12511401282",
@@ -2645,7 +3501,9 @@
       "ref": "T7"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "precio": 2900,
+    "comuna": "Talagante"
   },
   {
     "id": "node/12511401283",
@@ -2663,7 +3521,9 @@
       "ref": "T7"
     },
     "autopista": "Otros Peajes/TAG",
-    "color": "#94a3b8"
+    "color": "#94a3b8",
+    "precio": 2900,
+    "comuna": "Talagante"
   },
   {
     "id": "node/13122129279",
@@ -2681,7 +3541,8 @@
       "ref": "P11"
     },
     "autopista": "Autopista Central",
-    "color": "#E53E3E"
+    "color": "#E53E3E",
+    "comuna": "Huechuraba"
   },
   {
     "id": "node/243646585",
@@ -2697,7 +3558,9 @@
       "name": "Peaje Troncal Lo Prado"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1100,
+    "comuna": "Padre Hurtado"
   },
   {
     "id": "node/243658123",
@@ -2713,7 +3576,9 @@
       "fee": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San Fernando"
   },
   {
     "id": "node/254521764",
@@ -2728,7 +3593,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Quilpué"
   },
   {
     "id": "node/256284942",
@@ -2743,7 +3610,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Viña del Mar"
   },
   {
     "id": "node/266072602",
@@ -2759,7 +3628,8 @@
       "name": "Peaje Chillán"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Chillán"
   },
   {
     "id": "node/267231332",
@@ -2774,7 +3644,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Puerto Montt"
   },
   {
     "id": "node/267235510",
@@ -2793,7 +3665,9 @@
       "payment:cash": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 800,
+    "comuna": "Penco"
   },
   {
     "id": "node/267454369",
@@ -2810,7 +3684,9 @@
       "official_name": "Cruce Ruta 70 (Santiago) - Cruce Ruta 60 CH (Los Andes), Sector: Túnel Chacabuco - Cruce Ruta 60 CH (Los Andes)"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 5600,
+    "comuna": "Huechuraba"
   },
   {
     "id": "node/269817031",
@@ -2825,7 +3701,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Limache"
   },
   {
     "id": "node/270891412",
@@ -2840,7 +3718,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Osorno"
   },
   {
     "id": "node/270892686",
@@ -2855,7 +3735,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Osorno"
   },
   {
     "id": "node/270893651",
@@ -2870,7 +3752,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Osorno"
   },
   {
     "id": "node/271073049",
@@ -2885,7 +3769,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Río Negro"
   },
   {
     "id": "node/272205104",
@@ -2900,7 +3786,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Llanquihue"
   },
   {
     "id": "node/276093010",
@@ -2916,7 +3804,9 @@
       "name": "Peaje Troncal Sur Rutas del Pacífico"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 3800,
+    "comuna": "Quilpué"
   },
   {
     "id": "node/276192701",
@@ -2939,7 +3829,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/277060427",
@@ -2956,7 +3847,9 @@
       "official_name": "Cruce Ruta 70 (Santiago) - Cruce Ruta 60 CH (Los Andes), Sector: Túnel Chacabuco - Cruce Ruta 60 CH (Los Andes)"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 5600,
+    "comuna": "Huechuraba"
   },
   {
     "id": "node/277060582",
@@ -2971,7 +3864,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Huechuraba"
   },
   {
     "id": "node/279071594",
@@ -2986,7 +3881,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Nogales"
   },
   {
     "id": "node/282392436",
@@ -3001,7 +3898,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Casablanca"
   },
   {
     "id": "node/286402239",
@@ -3017,7 +3916,8 @@
       "name": "Peaje Troncal F-962-G"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Cartagena"
   },
   {
     "id": "node/286405164",
@@ -3033,7 +3933,8 @@
       "name": "Peaje Troncal Nuevo Camino Costero"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Cartagena"
   },
   {
     "id": "node/289393693",
@@ -3049,7 +3950,9 @@
       "fee": "4200 clp"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Nogales"
   },
   {
     "id": "node/289394039",
@@ -3067,7 +3970,9 @@
       "name:es": "Peaje Tunel el Melon"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 2900,
+    "comuna": "Nogales"
   },
   {
     "id": "node/290324399",
@@ -3083,7 +3988,9 @@
       "name": "Peaje Las Cuevas"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 6900,
+    "comuna": "San Esteban"
   },
   {
     "id": "node/294489553",
@@ -3099,7 +4006,9 @@
       "name": "Peaje Troncal Sur Rutas del Pacífico"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 3800,
+    "comuna": "Quilpué"
   },
   {
     "id": "node/294493344",
@@ -3114,7 +4023,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Quilpué"
   },
   {
     "id": "node/300780398",
@@ -3129,7 +4040,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Chillán Viejo"
   },
   {
     "id": "node/302481517",
@@ -3144,7 +4057,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Curicó"
   },
   {
     "id": "node/302481769",
@@ -3159,7 +4074,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Curicó"
   },
   {
     "id": "node/302520255",
@@ -3174,7 +4091,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Curicó"
   },
   {
     "id": "node/302520886",
@@ -3189,7 +4108,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Curicó"
   },
   {
     "id": "node/303533842",
@@ -3204,7 +4125,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Bulnes"
   },
   {
     "id": "node/303534586",
@@ -3220,7 +4143,9 @@
       "name": "Peaje Pilpilco"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 2750,
+    "comuna": "Los Álamos"
   },
   {
     "id": "node/303535031",
@@ -3236,7 +4161,9 @@
       "name": "Peaje Troncal Queime"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1750,
+    "comuna": "Florida"
   },
   {
     "id": "node/303739936",
@@ -3254,7 +4181,9 @@
       "payment:tag": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Casablanca"
   },
   {
     "id": "node/303743015",
@@ -3269,7 +4198,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Casablanca"
   },
   {
     "id": "node/303929417",
@@ -3284,7 +4215,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Osorno"
   },
   {
     "id": "node/304476315",
@@ -3300,7 +4233,8 @@
       "name": "Peaje Talcahuano"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Talcahuano"
   },
   {
     "id": "node/308525663",
@@ -3316,7 +4250,8 @@
       "name": "Salida San Carlos"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "San Carlos"
   },
   {
     "id": "node/310319125",
@@ -3332,7 +4267,8 @@
       "name": "Entrada Valle Hermoso"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "San Fabián"
   },
   {
     "id": "node/310364143",
@@ -3347,7 +4283,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San Carlos"
   },
   {
     "id": "node/310962046",
@@ -3362,7 +4300,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Paine"
   },
   {
     "id": "node/310962195",
@@ -3379,7 +4319,9 @@
       "operator": "Rutas del Maipo"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Paine"
   },
   {
     "id": "node/310964816",
@@ -3394,7 +4336,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Paine"
   },
   {
     "id": "node/310988842",
@@ -3411,7 +4355,9 @@
       "phone": "+56 72 922200"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San Bernardo"
   },
   {
     "id": "node/310991079",
@@ -3428,7 +4374,9 @@
       "phone": "+56 72 922200"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San Bernardo"
   },
   {
     "id": "node/311548941",
@@ -3443,7 +4391,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Limache"
   },
   {
     "id": "node/314200644",
@@ -3460,7 +4410,8 @@
       "name": "Peaje San José"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colina"
   },
   {
     "id": "node/314508313",
@@ -3475,7 +4426,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Graneros"
   },
   {
     "id": "node/315997443",
@@ -3491,7 +4444,9 @@
       "name": "Peaje Llay Llay"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1600,
+    "comuna": "Llaillay"
   },
   {
     "id": "node/315997453",
@@ -3507,7 +4462,9 @@
       "name": "Peaje Llay Llay"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1600,
+    "comuna": "Llaillay"
   },
   {
     "id": "node/323201402",
@@ -3526,7 +4483,9 @@
       "payment:cash": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 800,
+    "comuna": "Penco"
   },
   {
     "id": "node/323555648",
@@ -3542,7 +4501,8 @@
       "name": "Peaje Ramal Alessandri"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Hualpén"
   },
   {
     "id": "node/327686761",
@@ -3558,7 +4518,8 @@
       "name": "Peaje Las Maicas"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Mulchén"
   },
   {
     "id": "node/327686771",
@@ -3574,7 +4535,8 @@
       "name": "Peaje Las Maicas"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Mulchén"
   },
   {
     "id": "node/327784037",
@@ -3590,7 +4552,8 @@
       "name": "Troncal Quepe"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Freire"
   },
   {
     "id": "node/327802632",
@@ -3606,7 +4569,8 @@
       "name": "Púa"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Perquenco"
   },
   {
     "id": "node/327815169",
@@ -3622,7 +4586,8 @@
       "name": "Peaje Santa Clara"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Cabrero"
   },
   {
     "id": "node/327815183",
@@ -3638,7 +4603,8 @@
       "name": "Peaje Santa Clara"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Cabrero"
   },
   {
     "id": "node/330465315",
@@ -3661,7 +4627,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/335639289",
@@ -3677,7 +4644,9 @@
       "official_name": "Cruce Ruta 70 (Santiago) - Cruce Ruta 60 CH (Los Andes), Sector: Túnel Chacabuco - Cruce Ruta 60 CH (Los Andes)"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Calle Larga"
   },
   {
     "id": "node/380049058",
@@ -3692,7 +4661,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Padre Las Casas"
   },
   {
     "id": "node/380161463",
@@ -3708,7 +4679,8 @@
       "name": "Peaje Lateral Licanco"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Padre Las Casas"
   },
   {
     "id": "node/380261025",
@@ -3723,7 +4695,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Olivar"
   },
   {
     "id": "node/411093652",
@@ -3738,7 +4712,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Limache"
   },
   {
     "id": "node/497147664",
@@ -3763,7 +4739,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/527998360",
@@ -3779,7 +4756,9 @@
       "ref": "Tocornal Oriente"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Puente Alto"
   },
   {
     "id": "node/528012214",
@@ -3799,7 +4778,8 @@
       "name": "Peaje Gabriela Poniente"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "La Pintana"
   },
   {
     "id": "node/528012247",
@@ -3815,7 +4795,8 @@
       "name": "Peaje Gabriela Oriente"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "La Pintana"
   },
   {
     "id": "node/537382069",
@@ -3835,7 +4816,8 @@
       "payment:coins": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/538935918",
@@ -3850,7 +4832,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Ránquil"
   },
   {
     "id": "node/538935961",
@@ -3865,7 +4849,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Quillón"
   },
   {
     "id": "node/539094675",
@@ -3881,7 +4867,8 @@
       "name": "Troncal Quepe"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Freire"
   },
   {
     "id": "node/566750888",
@@ -3896,7 +4883,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Teno"
   },
   {
     "id": "node/610664957",
@@ -3911,7 +4900,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Puerto Varas"
   },
   {
     "id": "node/614532084",
@@ -3926,7 +4917,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Villa Alegre"
   },
   {
     "id": "node/614533211",
@@ -3941,7 +4934,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San Javier"
   },
   {
     "id": "node/636161562",
@@ -3956,7 +4951,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Parral"
   },
   {
     "id": "node/664173553",
@@ -3971,7 +4968,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Maule"
   },
   {
     "id": "node/687024108",
@@ -3987,7 +4986,9 @@
       "ref": "Tocornal Poniente"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Puente Alto"
   },
   {
     "id": "node/694519307",
@@ -4002,7 +5003,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Olivar"
   },
   {
     "id": "node/700672458",
@@ -4023,7 +5026,9 @@
       "payment:coins": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Malloa"
   },
   {
     "id": "node/700672595",
@@ -4043,7 +5048,9 @@
       "payment:coins": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Malloa"
   },
   {
     "id": "node/726965010",
@@ -4058,7 +5065,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San Fernando"
   },
   {
     "id": "node/726965123",
@@ -4073,7 +5082,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San Fernando"
   },
   {
     "id": "node/726966165",
@@ -4089,7 +5100,9 @@
       "fee": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San Fernando"
   },
   {
     "id": "node/800117192",
@@ -4104,7 +5117,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Llanquihue"
   },
   {
     "id": "node/801247129",
@@ -4119,7 +5134,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Llanquihue"
   },
   {
     "id": "node/801247271",
@@ -4134,7 +5151,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Llanquihue"
   },
   {
     "id": "node/801260694",
@@ -4149,7 +5168,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Llanquihue"
   },
   {
     "id": "node/801676737",
@@ -4164,7 +5185,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Llanquihue"
   },
   {
     "id": "node/804034814",
@@ -4179,7 +5202,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Pitrufquén"
   },
   {
     "id": "node/812339606",
@@ -4194,7 +5219,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Puerto Montt"
   },
   {
     "id": "node/812366998",
@@ -4211,7 +5238,9 @@
       "operator": "National Government"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 3600,
+    "comuna": "Puerto Varas"
   },
   {
     "id": "node/829090664",
@@ -4226,7 +5255,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Colchane"
   },
   {
     "id": "node/829136599",
@@ -4242,7 +5273,8 @@
       "name": "Reten de Santiago de Huari"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/889424786",
@@ -4258,7 +5290,9 @@
       "name": "Peaje Variante Melipilla"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 3900,
+    "comuna": "Melipilla"
   },
   {
     "id": "node/939364985",
@@ -4273,7 +5307,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Padre Las Casas"
   },
   {
     "id": "node/959025845",
@@ -4290,7 +5326,9 @@
       "name": "Peaje Lateral Guanaqueros"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 350,
+    "comuna": "Coquimbo"
   },
   {
     "id": "node/959025978",
@@ -4306,7 +5344,9 @@
       "name": "Peaje Lateral Tongoy Acceso Sur"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 350,
+    "comuna": "Ovalle"
   },
   {
     "id": "node/960933812",
@@ -4321,7 +5361,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Paillaco"
   },
   {
     "id": "node/967459410",
@@ -4336,7 +5378,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Maule"
   },
   {
     "id": "node/968141993",
@@ -4351,7 +5395,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Bulnes"
   },
   {
     "id": "node/979045538",
@@ -4366,7 +5412,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Loncoche"
   },
   {
     "id": "node/985870804",
@@ -4382,7 +5430,8 @@
       "name": "Peaje Lateral Cabrero"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Cabrero"
   },
   {
     "id": "node/1001230974",
@@ -4397,7 +5446,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Punitaqui"
   },
   {
     "id": "node/1021788130",
@@ -4414,7 +5465,8 @@
       "operator": "Peaje Lateral Frutillar"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Frutillar"
   },
   {
     "id": "node/1028381887",
@@ -4429,7 +5481,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Los Ángeles"
   },
   {
     "id": "node/1028608420",
@@ -4445,7 +5499,8 @@
       "name": "Peaje Lateral Los Ángeles"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Los Ángeles"
   },
   {
     "id": "node/1028608662",
@@ -4461,7 +5516,8 @@
       "name": "Peaje Lateral Los Ángeles"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Los Ángeles"
   },
   {
     "id": "node/1037850025",
@@ -4476,7 +5532,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Los Ángeles"
   },
   {
     "id": "node/1043963139",
@@ -4492,7 +5550,8 @@
       "name": "Peaje Lateral Lima"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Yumbel"
   },
   {
     "id": "node/1044170677",
@@ -4508,7 +5567,8 @@
       "name": "Peaje Lateral María Dolores"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Los Ángeles"
   },
   {
     "id": "node/1044171079",
@@ -4524,7 +5584,8 @@
       "name": "Peaje Lateral María Dolores"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Los Ángeles"
   },
   {
     "id": "node/1055479106",
@@ -4540,7 +5601,8 @@
       "name": "Peaje Desagüadero"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "San José de Maipo"
   },
   {
     "id": "node/1071540017",
@@ -4556,7 +5618,8 @@
       "name": "Peaje Lateral Rarinco"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Los Ángeles"
   },
   {
     "id": "node/1071540137",
@@ -4572,7 +5635,8 @@
       "name": "Peaje Lateral Rarinco"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Los Ángeles"
   },
   {
     "id": "node/1131731422",
@@ -4587,7 +5651,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San Fernando"
   },
   {
     "id": "node/1131731427",
@@ -4602,7 +5668,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San Fernando"
   },
   {
     "id": "node/1131764742",
@@ -4617,7 +5685,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Chimbarongo"
   },
   {
     "id": "node/1136582956",
@@ -4632,7 +5702,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Rengo"
   },
   {
     "id": "node/1136582973",
@@ -4648,7 +5720,9 @@
       "fee": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Rengo"
   },
   {
     "id": "node/1141577732",
@@ -4663,7 +5737,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Puerto Varas"
   },
   {
     "id": "node/1160666552",
@@ -4678,7 +5754,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Pirque"
   },
   {
     "id": "node/1166158995",
@@ -4693,7 +5771,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Penco"
   },
   {
     "id": "node/1166159006",
@@ -4709,7 +5789,9 @@
       "name": "Peaje Lateral Rafael"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 2200,
+    "comuna": "Penco"
   },
   {
     "id": "node/1167950721",
@@ -4724,7 +5806,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Lautaro"
   },
   {
     "id": "node/1167950893",
@@ -4740,7 +5824,8 @@
       "name": "Púa"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Perquenco"
   },
   {
     "id": "node/1168823913",
@@ -4755,7 +5840,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Lanco"
   },
   {
     "id": "node/1168824772",
@@ -4770,7 +5857,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Lanco"
   },
   {
     "id": "node/1168824970",
@@ -4785,7 +5874,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Lanco"
   },
   {
     "id": "node/1169043525",
@@ -4801,7 +5892,8 @@
       "name": "Peaje de la Unión"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Río Bueno"
   },
   {
     "id": "node/1169043544",
@@ -4817,7 +5909,8 @@
       "name": "Peaje de la Unión"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Río Bueno"
   },
   {
     "id": "node/1169052238",
@@ -4832,7 +5925,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San Pablo"
   },
   {
     "id": "node/1169173370",
@@ -4847,7 +5942,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Purranque"
   },
   {
     "id": "node/1169173374",
@@ -4862,7 +5959,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Purranque"
   },
   {
     "id": "node/1169178315",
@@ -4877,7 +5976,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Purranque"
   },
   {
     "id": "node/1172468534",
@@ -4892,7 +5993,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Sagrada Familia"
   },
   {
     "id": "node/1172468602",
@@ -4907,7 +6010,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Sagrada Familia"
   },
   {
     "id": "node/1180098111",
@@ -4922,7 +6027,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Olivar"
   },
   {
     "id": "node/1197204235",
@@ -4937,7 +6044,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Requínoa"
   },
   {
     "id": "node/1197290227",
@@ -4953,7 +6062,9 @@
       "fee": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Requínoa"
   },
   {
     "id": "node/1197291417",
@@ -4969,7 +6080,9 @@
       "fee": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Requínoa"
   },
   {
     "id": "node/1197293536",
@@ -4984,7 +6097,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Requínoa"
   },
   {
     "id": "node/1357203481",
@@ -4999,7 +6114,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Mulchén"
   },
   {
     "id": "node/1406550505",
@@ -5015,7 +6132,8 @@
       "name": "Peaje Troncal Las Raíces"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Lonquimay"
   },
   {
     "id": "node/1411400604",
@@ -5030,7 +6148,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San José de Maipo"
   },
   {
     "id": "node/1411862333",
@@ -5046,7 +6166,8 @@
       "name": "Peaje Los Puquios"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "San José de Maipo"
   },
   {
     "id": "node/1412966472",
@@ -5061,7 +6182,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San José de Maipo"
   },
   {
     "id": "node/1424652327",
@@ -5077,7 +6200,9 @@
       "name": "Toll Booth Rio Bueno"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 900,
+    "comuna": "Río Bueno"
   },
   {
     "id": "node/1438009145",
@@ -5093,7 +6218,9 @@
       "name": "Peaje Lateral Las Cruces"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1300,
+    "comuna": "El Tabo"
   },
   {
     "id": "node/1450348598",
@@ -5110,7 +6237,8 @@
       "name:es": "Peaje Combarbalá"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Canela"
   },
   {
     "id": "node/1450353534",
@@ -5127,7 +6255,8 @@
       "name:es": "Peaje Combarbalá"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Canela"
   },
   {
     "id": "node/1462311530",
@@ -5142,7 +6271,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Quillota"
   },
   {
     "id": "node/1462325851",
@@ -5157,7 +6288,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Quillota"
   },
   {
     "id": "node/1474285645",
@@ -5172,7 +6305,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Purranque"
   },
   {
     "id": "node/1502159436",
@@ -5189,7 +6324,9 @@
       "name:es": "Peaje Pichidangui"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 2900,
+    "comuna": "Los Vilos"
   },
   {
     "id": "node/1502159456",
@@ -5206,7 +6343,9 @@
       "name:es": "Peaje Pichidangui"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 2900,
+    "comuna": "Los Vilos"
   },
   {
     "id": "node/1552704940",
@@ -5221,7 +6360,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Villa Alegre"
   },
   {
     "id": "node/1573336768",
@@ -5236,7 +6377,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Alto Hospicio"
   },
   {
     "id": "node/1738234909",
@@ -5251,7 +6394,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Lautaro"
   },
   {
     "id": "node/1743802090",
@@ -5266,7 +6411,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Sagrada Familia"
   },
   {
     "id": "node/1768291863",
@@ -5281,7 +6428,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Bulnes"
   },
   {
     "id": "node/1815464312",
@@ -5296,7 +6445,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Loncoche"
   },
   {
     "id": "node/1876506401",
@@ -5312,7 +6463,8 @@
       "name": "Peaje Lateral Laja"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Yumbel"
   },
   {
     "id": "node/1887510312",
@@ -5327,7 +6479,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Puerto Montt"
   },
   {
     "id": "node/1915926904",
@@ -5342,7 +6496,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Victoria"
   },
   {
     "id": "node/1917607498",
@@ -5357,7 +6513,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Linares"
   },
   {
     "id": "node/1919595942",
@@ -5373,7 +6531,9 @@
       "name": "Peaje Troncal Ruta 1"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1550,
+    "comuna": "Mejillones"
   },
   {
     "id": "node/1919595943",
@@ -5389,7 +6549,9 @@
       "name": "Peaje Troncal Ruta 1"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1550,
+    "comuna": "Mejillones"
   },
   {
     "id": "node/1921568375",
@@ -5407,7 +6569,8 @@
       "payment:cash": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/1928059436",
@@ -5422,7 +6585,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Victoria"
   },
   {
     "id": "node/1938951638",
@@ -5441,7 +6606,9 @@
       "payment:cash": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 850,
+    "comuna": "Copiapó"
   },
   {
     "id": "node/1938951646",
@@ -5461,7 +6628,9 @@
       "payment:cash": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 850,
+    "comuna": "Copiapó"
   },
   {
     "id": "node/1946795899",
@@ -5480,7 +6649,9 @@
       "name": "Peaje Lampa"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 900,
+    "comuna": "Colina"
   },
   {
     "id": "node/1946795918",
@@ -5499,7 +6670,9 @@
       "name": "Peaje Lampa"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 900,
+    "comuna": "Colina"
   },
   {
     "id": "node/1948062939",
@@ -5514,7 +6687,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Vitacura"
   },
   {
     "id": "node/1949636338",
@@ -5533,7 +6708,9 @@
       "payment:cash": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 500,
+    "comuna": "Vallenar"
   },
   {
     "id": "node/1949636339",
@@ -5552,7 +6729,9 @@
       "payment:cash": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 500,
+    "comuna": "Vallenar"
   },
   {
     "id": "node/1955740434",
@@ -5567,7 +6746,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Providencia"
   },
   {
     "id": "node/1969887954",
@@ -5582,7 +6763,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Vitacura"
   },
   {
     "id": "node/1969887979",
@@ -5597,7 +6780,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Vitacura"
   },
   {
     "id": "node/1970134247",
@@ -5612,7 +6797,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Ovalle"
   },
   {
     "id": "node/1970135049",
@@ -5627,7 +6814,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Ovalle"
   },
   {
     "id": "node/1975904302",
@@ -5642,7 +6831,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Canela"
   },
   {
     "id": "node/1975916928",
@@ -5658,7 +6849,9 @@
       "name": "Peaje Lateral Acceso Ruta 1 Sector Aeropuerto"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 550,
+    "comuna": "Antofagasta"
   },
   {
     "id": "node/1982180056",
@@ -5673,7 +6866,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Antofagasta"
   },
   {
     "id": "node/2096993283",
@@ -5690,7 +6885,9 @@
       "payment:cash": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Caldera"
   },
   {
     "id": "node/2101959034",
@@ -5706,7 +6903,8 @@
       "name": "Peaje Desagüadero"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "San José de Maipo"
   },
   {
     "id": "node/2281476484",
@@ -5721,7 +6919,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Alto Hospicio"
   },
   {
     "id": "node/2297549389",
@@ -5738,7 +6938,9 @@
       "source": "GPS"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Colbún"
   },
   {
     "id": "node/2337678382",
@@ -5753,7 +6955,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Limache"
   },
   {
     "id": "node/2372472658",
@@ -5768,7 +6972,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Quillota"
   },
   {
     "id": "node/2372472714",
@@ -5783,7 +6989,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Quillota"
   },
   {
     "id": "node/2378439840",
@@ -5800,7 +7008,9 @@
       "phone": "+56 72 922200"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San Bernardo"
   },
   {
     "id": "node/2378439857",
@@ -5817,7 +7027,9 @@
       "phone": "+56 72 922200"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San Bernardo"
   },
   {
     "id": "node/2391019974",
@@ -5833,7 +7045,9 @@
       "operator": "Autopista Los Andes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San Felipe"
   },
   {
     "id": "node/2391020972",
@@ -5849,7 +7063,9 @@
       "operator": "Autopista Los Andes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San Felipe"
   },
   {
     "id": "node/2444845826",
@@ -5864,7 +7080,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Osorno"
   },
   {
     "id": "node/2451587257",
@@ -5880,7 +7098,9 @@
       "name": "Peaje Troncal F-90"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Casablanca"
   },
   {
     "id": "node/2504224239",
@@ -5897,7 +7117,8 @@
       "name": "Peaje La Paz"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "San José de Maipo"
   },
   {
     "id": "node/2504224240",
@@ -5914,7 +7135,8 @@
       "name": "Peaje La Paz"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "San José de Maipo"
   },
   {
     "id": "node/2519016416",
@@ -5930,7 +7152,8 @@
       "name": "Peaje Los Puquios"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "San José de Maipo"
   },
   {
     "id": "node/2519324724",
@@ -5945,7 +7168,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San José de Maipo"
   },
   {
     "id": "node/2545317626",
@@ -5960,7 +7185,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Providencia"
   },
   {
     "id": "node/2563054763",
@@ -5975,7 +7202,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Maule"
   },
   {
     "id": "node/2567414987",
@@ -5991,7 +7220,9 @@
       "name": "Peaje Curanilahue"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 2750,
+    "comuna": "Curanilahue"
   },
   {
     "id": "node/2567414989",
@@ -6007,7 +7238,9 @@
       "name": "Peaje Curanilahue"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 2750,
+    "comuna": "Curanilahue"
   },
   {
     "id": "node/2569095512",
@@ -6023,7 +7256,9 @@
       "name": "Peaje Pilpilco"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 2750,
+    "comuna": "Los Álamos"
   },
   {
     "id": "node/2604131666",
@@ -6048,7 +7283,9 @@
       "toll:bicycle": "no"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Colchane"
   },
   {
     "id": "node/2620071295",
@@ -6063,7 +7300,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San Fernando"
   },
   {
     "id": "node/2771391955",
@@ -6080,7 +7319,8 @@
       "operator": "Concesión COVISUR (IIRSA Sur, Tramo 5)"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Arica"
   },
   {
     "id": "node/2899126820",
@@ -6095,7 +7335,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Calbuco"
   },
   {
     "id": "node/2899136716",
@@ -6110,7 +7352,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Calbuco"
   },
   {
     "id": "node/2899137036",
@@ -6125,7 +7369,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Calbuco"
   },
   {
     "id": "node/2899137037",
@@ -6140,7 +7386,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Calbuco"
   },
   {
     "id": "node/2963473313",
@@ -6155,7 +7403,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Puerto Montt"
   },
   {
     "id": "node/2972280091",
@@ -6170,7 +7420,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Puerto Montt"
   },
   {
     "id": "node/3040237629",
@@ -6185,7 +7437,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Providencia"
   },
   {
     "id": "node/3044494467",
@@ -6200,7 +7454,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Curicó"
   },
   {
     "id": "node/3113622261",
@@ -6223,7 +7479,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "General Lagos"
   },
   {
     "id": "node/3327057923",
@@ -6239,7 +7496,9 @@
       "name": "Peaje Troncal Cristo Redentor"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 12200,
+    "comuna": "San Esteban"
   },
   {
     "id": "node/3359418518",
@@ -6256,7 +7515,9 @@
       "currency:CLP": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Alto del Carmen"
   },
   {
     "id": "node/3399239749",
@@ -6273,7 +7534,8 @@
       "name": "Peaje San Roque"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "San Rosendo"
   },
   {
     "id": "node/3428603553",
@@ -6289,7 +7551,8 @@
       "name": "Estación Peaje La Cumbre"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "San José de Maipo"
   },
   {
     "id": "node/3428603554",
@@ -6305,7 +7568,8 @@
       "name": "Estación Peaje La Cumbre"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "San José de Maipo"
   },
   {
     "id": "node/3440247872",
@@ -6321,7 +7585,8 @@
       "name": "Peaje Troncal Las Raíces"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Lonquimay"
   },
   {
     "id": "node/3479601467",
@@ -6336,7 +7601,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Antofagasta"
   },
   {
     "id": "node/3479601468",
@@ -6351,7 +7618,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Antofagasta"
   },
   {
     "id": "node/3498336636",
@@ -6367,7 +7636,9 @@
       "name": "Peaje Chivilingo"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 2750,
+    "comuna": "Lota"
   },
   {
     "id": "node/3498336637",
@@ -6383,7 +7654,9 @@
       "name": "Peaje Chivilingo"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 2750,
+    "comuna": "Lota"
   },
   {
     "id": "node/3823718534",
@@ -6406,7 +7679,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/3823718537",
@@ -6429,7 +7703,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/3880715144",
@@ -6455,7 +7730,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/4017401427",
@@ -6472,7 +7748,8 @@
       "operator": "Concesión COVINCA S.A."
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Arica"
   },
   {
     "id": "node/4017401429",
@@ -6489,7 +7766,8 @@
       "operator": "Concesión COVINCA S.A."
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Arica"
   },
   {
     "id": "node/4028433184",
@@ -6505,7 +7783,8 @@
       "name": "Tranca - Control Policial"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/4028435935",
@@ -6523,7 +7802,8 @@
       "payment:cash": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Putre"
   },
   {
     "id": "node/4096703253",
@@ -6540,7 +7820,8 @@
       "operator": "Concesión COVINCA S.A."
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Arica"
   },
   {
     "id": "node/4096703254",
@@ -6557,7 +7838,8 @@
       "operator": "Concesión COVINCA S.A."
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Arica"
   },
   {
     "id": "node/4209382181",
@@ -6573,7 +7855,9 @@
       "operator": "Caminos del Golfo"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Chile Chico"
   },
   {
     "id": "node/4218537516",
@@ -6590,7 +7874,8 @@
       "name": "Peaje cobrado por los Comunarios"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/4245203882",
@@ -6613,7 +7898,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/4249905414",
@@ -6629,7 +7915,8 @@
       "name": "Peaje Angostura"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Mostazal"
   },
   {
     "id": "node/4273727995",
@@ -6644,7 +7931,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Casablanca"
   },
   {
     "id": "node/4291821777",
@@ -6663,7 +7952,9 @@
       "name:es": "Peaje Punta Colorada"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 3150,
+    "comuna": "La Higuera"
   },
   {
     "id": "node/4313871201",
@@ -6678,7 +7969,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Colchane"
   },
   {
     "id": "node/4317735263",
@@ -6701,7 +7994,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "General Lagos"
   },
   {
     "id": "node/4317735410",
@@ -6725,7 +8019,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "General Lagos"
   },
   {
     "id": "node/4317735522",
@@ -6750,7 +8045,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "General Lagos"
   },
   {
     "id": "node/4317735523",
@@ -6775,7 +8071,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "General Lagos"
   },
   {
     "id": "node/4320241194",
@@ -6792,7 +8089,8 @@
       "operator": "Provias Nacional"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Arica"
   },
   {
     "id": "node/4320289194",
@@ -6809,7 +8107,8 @@
       "operator": "Concesión COVISUR (IIRSA Sur, Tramo 5)"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Arica"
   },
   {
     "id": "node/4320295374",
@@ -6826,7 +8125,8 @@
       "operator": "Concesión COVISUR (IIRSA Sur, Tramo 5)"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "General Lagos"
   },
   {
     "id": "node/4320302834",
@@ -6843,7 +8143,8 @@
       "operator": "Concesión COVINCA S.A."
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Arica"
   },
   {
     "id": "node/4340554528",
@@ -6862,7 +8163,9 @@
       "name:es": "Peaje Punta Colorada"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 3150,
+    "comuna": "La Higuera"
   },
   {
     "id": "node/4340572600",
@@ -6880,7 +8183,9 @@
       "name": "Peaje Cachiyuyo Troncal"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 3150,
+    "comuna": "Alto del Carmen"
   },
   {
     "id": "node/4422838092",
@@ -6898,7 +8203,9 @@
       "shop": "ticket"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Ollague"
   },
   {
     "id": "node/4483239086",
@@ -6913,7 +8220,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San Pedro de Atacama"
   },
   {
     "id": "node/4491781304",
@@ -6928,7 +8237,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Andacollo"
   },
   {
     "id": "node/4503134946",
@@ -6944,7 +8255,8 @@
       "name": "Peaje Angostura"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Mostazal"
   },
   {
     "id": "node/4505353301",
@@ -6961,7 +8273,8 @@
       "operator": "Talca Chillán Sociedad Concesionaria S.A."
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Chillán"
   },
   {
     "id": "node/4700308404",
@@ -6976,7 +8289,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San Javier"
   },
   {
     "id": "node/4812872771",
@@ -6998,7 +8313,9 @@
       "payment:cash": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Ollague"
   },
   {
     "id": "node/4896317197",
@@ -7013,7 +8330,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Paredones"
   },
   {
     "id": "node/5151082242",
@@ -7032,7 +8351,9 @@
       "payment:cash": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1150,
+    "comuna": "Florida"
   },
   {
     "id": "node/5151082243",
@@ -7051,7 +8372,9 @@
       "payment:cash": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1150,
+    "comuna": "Florida"
   },
   {
     "id": "node/5178799370",
@@ -7067,7 +8390,9 @@
       "name": "Peaje Puentes Negros"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 150,
+    "comuna": "Cabrero"
   },
   {
     "id": "node/5463432177",
@@ -7082,7 +8407,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Chimbarongo"
   },
   {
     "id": "node/5508725661",
@@ -7098,7 +8425,8 @@
       "name": "Peaje Troncal Lo Prado"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Padre Hurtado"
   },
   {
     "id": "node/5649019408",
@@ -7113,7 +8441,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Renca"
   },
   {
     "id": "node/5768578088",
@@ -7128,7 +8458,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Andacollo"
   },
   {
     "id": "node/5886095914",
@@ -7143,7 +8475,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Colchane"
   },
   {
     "id": "node/5891871618",
@@ -7158,7 +8492,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Collipulli"
   },
   {
     "id": "node/6114084131",
@@ -7173,7 +8509,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Colina"
   },
   {
     "id": "node/6119860277",
@@ -7188,7 +8526,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San Fernando"
   },
   {
     "id": "node/6172161088",
@@ -7211,7 +8551,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/6175809485",
@@ -7234,7 +8575,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/6321660240",
@@ -7255,7 +8597,8 @@
       "payment:coins": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "General Lagos"
   },
   {
     "id": "node/6322366337",
@@ -7272,7 +8615,8 @@
       "name": "Reten Policial"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "General Lagos"
   },
   {
     "id": "node/6326595641",
@@ -7288,7 +8632,9 @@
       "name": "Peaje Panquehue"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 900,
+    "comuna": "Panquehue"
   },
   {
     "id": "node/6326595642",
@@ -7304,7 +8650,9 @@
       "name": "Peaje Panquehue"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 900,
+    "comuna": "Panquehue"
   },
   {
     "id": "node/6344317505",
@@ -7320,7 +8668,9 @@
       "name": "Peaje Puentes Negros"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 150,
+    "comuna": "Cabrero"
   },
   {
     "id": "node/6386107343",
@@ -7337,7 +8687,8 @@
       "name": "Retén Uyuni"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Ollague"
   },
   {
     "id": "node/6386107344",
@@ -7354,7 +8705,8 @@
       "name": "Retén Uyuni"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Ollague"
   },
   {
     "id": "node/6613063427",
@@ -7372,7 +8724,8 @@
       "phone": "+5626800002"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Casablanca"
   },
   {
     "id": "node/6613063432",
@@ -7390,7 +8743,8 @@
       "phone": "+5626800002"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Casablanca"
   },
   {
     "id": "node/6630779555",
@@ -7405,7 +8759,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Pozo Almonte"
   },
   {
     "id": "node/6630779556",
@@ -7420,7 +8776,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Pozo Almonte"
   },
   {
     "id": "node/6781610121",
@@ -7436,7 +8794,8 @@
       "name": "Peaje Penco"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Penco"
   },
   {
     "id": "node/7027451707",
@@ -7451,7 +8810,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Pinto"
   },
   {
     "id": "node/7141956670",
@@ -7472,7 +8833,9 @@
       "payment:cash": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San José de Maipo"
   },
   {
     "id": "node/7149699513",
@@ -7498,7 +8861,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/7428647716",
@@ -7521,7 +8885,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/7557843241",
@@ -7546,7 +8911,9 @@
       "toll:bicycle": "no"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Colchane"
   },
   {
     "id": "node/8097722724",
@@ -7562,7 +8929,8 @@
       "name": "Peaje San Pedro"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/8215371095",
@@ -7580,7 +8948,8 @@
       "payment:cash": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/8233154690",
@@ -7603,7 +8972,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/8233154700",
@@ -7626,7 +8996,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/8233154701",
@@ -7649,7 +9020,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/8233154702",
@@ -7672,7 +9044,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/8233154703",
@@ -7695,7 +9068,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/8304560639",
@@ -7720,7 +9094,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/8304560640",
@@ -7745,7 +9120,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/8310400073",
@@ -7771,7 +9147,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/8310400074",
@@ -7797,7 +9174,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/8568369711",
@@ -7813,7 +9191,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Vitacura"
   },
   {
     "id": "node/8691474970",
@@ -7831,7 +9211,9 @@
       "payment:cash": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Colchane"
   },
   {
     "id": "node/8873341907",
@@ -7854,7 +9236,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/8954761153",
@@ -7869,7 +9252,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Calbuco"
   },
   {
     "id": "node/9438229387",
@@ -7884,7 +9269,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Chimbarongo"
   },
   {
     "id": "node/9493843494",
@@ -7899,7 +9286,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "San Fernando"
   },
   {
     "id": "node/9501551077",
@@ -7915,7 +9304,9 @@
       "name": "Peaje Las Cuevas"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 6900,
+    "comuna": "San Esteban"
   },
   {
     "id": "node/9714023298",
@@ -7930,7 +9321,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Quillota"
   },
   {
     "id": "node/9742602051",
@@ -7953,7 +9346,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "General Lagos"
   },
   {
     "id": "node/10282827208",
@@ -7968,7 +9362,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Río Claro"
   },
   {
     "id": "node/10282827909",
@@ -7983,7 +9379,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Río Claro"
   },
   {
     "id": "node/10282922114",
@@ -7998,7 +9396,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Retiro"
   },
   {
     "id": "node/10282922115",
@@ -8013,7 +9413,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Retiro"
   },
   {
     "id": "node/10833260554",
@@ -8028,7 +9430,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Lonquimay"
   },
   {
     "id": "node/10833260651",
@@ -8043,7 +9447,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Lonquimay"
   },
   {
     "id": "node/10833260652",
@@ -8058,7 +9464,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Lonquimay"
   },
   {
     "id": "node/10833260653",
@@ -8073,7 +9481,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Lonquimay"
   },
   {
     "id": "node/10833260654",
@@ -8088,7 +9498,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Lonquimay"
   },
   {
     "id": "node/10833260655",
@@ -8103,7 +9515,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Lonquimay"
   },
   {
     "id": "node/10848061260",
@@ -8118,7 +9532,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Nogales"
   },
   {
     "id": "node/10866116462",
@@ -8141,7 +9557,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/10866116463",
@@ -8164,7 +9581,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/11067780833",
@@ -8186,7 +9604,9 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Colchane"
   },
   {
     "id": "node/11071480043",
@@ -8209,7 +9629,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/11286209298",
@@ -8229,7 +9650,9 @@
       "operator": "Cooperativa Tatasi"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Ollague"
   },
   {
     "id": "node/12050978848",
@@ -8245,7 +9668,8 @@
       "name": "Plaza de Peaje Cerritos Bayos"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Sierra Gorda"
   },
   {
     "id": "node/12050978852",
@@ -8261,7 +9685,8 @@
       "name": "Plaza de Peaje Cerritos Bayos"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Sierra Gorda"
   },
   {
     "id": "node/12152931945",
@@ -8277,7 +9702,9 @@
       "name": "Peaje Troncal Renaico"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 2250,
+    "comuna": "Renaico"
   },
   {
     "id": "node/12152931946",
@@ -8293,7 +9720,9 @@
       "name": "Peaje Troncal Renaico"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 2250,
+    "comuna": "Renaico"
   },
   {
     "id": "node/12159040363",
@@ -8309,7 +9738,9 @@
       "name": "Peaje Troncal Coihue"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 2250,
+    "comuna": "Negrete"
   },
   {
     "id": "node/12159040364",
@@ -8325,7 +9756,9 @@
       "name": "Peaje Troncal Coihue"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 2250,
+    "comuna": "Negrete"
   },
   {
     "id": "node/12206488904",
@@ -8347,7 +9780,9 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Colchane"
   },
   {
     "id": "node/12206488905",
@@ -8369,7 +9804,9 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Colchane"
   },
   {
     "id": "node/12206488906",
@@ -8391,7 +9828,9 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Colchane"
   },
   {
     "id": "node/12306506360",
@@ -8406,7 +9845,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Colchane"
   },
   {
     "id": "node/12306506363",
@@ -8429,7 +9870,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/12413749923",
@@ -8445,7 +9887,9 @@
       "name": "Peaje Lateral Acceso Ruta 1 Sector Aeropuerto"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 550,
+    "comuna": "Antofagasta"
   },
   {
     "id": "node/12627913528",
@@ -8468,7 +9912,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Ollague"
   },
   {
     "id": "node/12627913529",
@@ -8491,7 +9936,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Ollague"
   },
   {
     "id": "node/12627913530",
@@ -8514,7 +9960,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Ollague"
   },
   {
     "id": "node/12627913531",
@@ -8537,7 +9984,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Ollague"
   },
   {
     "id": "node/12642099411",
@@ -8561,7 +10009,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "General Lagos"
   },
   {
     "id": "node/12642099413",
@@ -8585,7 +10034,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "General Lagos"
   },
   {
     "id": "node/12642099414",
@@ -8609,7 +10059,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "General Lagos"
   },
   {
     "id": "node/13009280921",
@@ -8627,7 +10078,9 @@
       "payment:cash": "yes"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Colchane"
   },
   {
     "id": "node/13056902351",
@@ -8643,7 +10096,9 @@
       "name": "Peaje Lateral Santa Fe"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 2250,
+    "comuna": "Los Ángeles"
   },
   {
     "id": "node/13195197072",
@@ -8666,7 +10121,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/13195197073",
@@ -8689,7 +10145,8 @@
       "website": "https://www.viasbolivia.gob.bo/"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "comuna": "Colchane"
   },
   {
     "id": "node/13382276202",
@@ -8704,7 +10161,9 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Puchuncaví"
   },
   {
     "id": "node/13382276203",
@@ -8719,6 +10178,8 @@
       "barrier": "toll_booth"
     },
     "autopista": "Peajes de Chile",
-    "color": "#38A169"
+    "color": "#38A169",
+    "precio": 1950,
+    "comuna": "Puchuncaví"
   }
 ]

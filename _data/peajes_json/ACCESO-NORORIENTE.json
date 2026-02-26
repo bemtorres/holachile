@@ -1,0 +1,101 @@
+{
+  "concesion": "ACCESO NORORIENTE",
+  "tipo_tarifas": "PEAJES TARIFAS 2026",
+  "ambito": "Autopistas Urbanas",
+  "plazas_peaje": [
+    {
+      "nombre": "SECTOR PONIENTE",
+      "horarios": [
+        {
+          "nombre": "NORMAL",
+          "tarifas": [
+            {
+              "categoria_vehiculo": "Autos y Camionetas, con y sin remolque",
+              "precio": 4116
+            },
+            {
+              "categoria_vehiculo": "Camiones y buses de dos ejes, camionetas de doble rueda trasera, maquinaria agrícola y maquinaria de construcción",
+              "precio": 7408
+            },
+            {
+              "categoria_vehiculo": "Camiones y buses de más de dos ejes",
+              "precio": 13170
+            },
+            {
+              "categoria_vehiculo": "Motos",
+              "precio": 1235
+            }
+          ]
+        },
+        {
+          "nombre": "PUNTA",
+          "tarifas": [
+            {
+              "categoria_vehiculo": "Autos y Camionetas, con y sin remolque",
+              "precio": 6173
+            },
+            {
+              "categoria_vehiculo": "Camiones y buses de dos ejes, camionetas de doble rueda trasera, maquinaria agrícola y maquinaria de construcción",
+              "precio": 11112
+            },
+            {
+              "categoria_vehiculo": "Camiones y buses de más de dos ejes",
+              "precio": 19755
+            },
+            {
+              "categoria_vehiculo": "Motos",
+              "precio": 1852
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "SECTOR ORIENTE",
+      "horarios": [
+        {
+          "nombre": "NORMAL",
+          "tarifas": [
+            {
+              "categoria_vehiculo": "Autos y Camionetas, con y sin remolque",
+              "precio": 4116
+            },
+            {
+              "categoria_vehiculo": "Camiones y buses de dos ejes, camionetas de doble rueda trasera, maquinaria agrícola y maquinaria de construcción",
+              "precio": 7408
+            },
+            {
+              "categoria_vehiculo": "Camiones y buses de más de dos ejes",
+              "precio": 13170
+            },
+            {
+              "categoria_vehiculo": "Motos",
+              "precio": 1235
+            }
+          ]
+        },
+        {
+          "nombre": "PUNTA",
+          "tarifas": [
+            {
+              "categoria_vehiculo": "Autos y Camionetas, con y sin remolque",
+              "precio": 6173
+            },
+            {
+              "categoria_vehiculo": "Camiones y buses de dos ejes, camionetas de doble rueda trasera, maquinaria agrícola y maquinaria de construcción",
+              "precio": 11112
+            },
+            {
+              "categoria_vehiculo": "Camiones y buses de más de dos ejes",
+              "precio": 19755
+            },
+            {
+              "categoria_vehiculo": "Motos",
+              "precio": 1852
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

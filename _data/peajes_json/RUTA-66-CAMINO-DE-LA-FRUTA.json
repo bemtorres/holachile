@@ -1,0 +1,151 @@
+{
+  "concesion": "RUTA 66 - CAMINO DE LA FRUTA",
+  "periodo_tarifario": "2026",
+  "tipo_ruta": "Rutas Transversales",
+  "plazas_peaje": [
+    {
+      "nombre": "TRONCAL LAS ARAÑAS",
+      "tarifas": [
+        {
+          "categoria_vehiculo": "Motos, cuatrimotos y motonetas",
+          "tipo_usuario": "CON TAG HABILITADO",
+          "precio": 600
+        },
+        {
+          "categoria_vehiculo": "Autos y camionetas, con o sin remolque, camionetas de doble rueda trasera, minibuses y casas rodantes",
+          "tipo_usuario": "CON TAG HABILITADO",
+          "precio": 2050
+        },
+        {
+          "categoria_vehiculo": "Buses de dos ejes",
+          "tipo_usuario": "CON TAG HABILITADO",
+          "precio": 3700
+        },
+        {
+          "categoria_vehiculo": "Camiones de dos ejes, maquinarias agrícolas y maquinarias de construcción",
+          "tipo_usuario": "CON TAG HABILITADO",
+          "precio": 6150
+        },
+        {
+          "categoria_vehiculo": "Buses de más de dos ejes",
+          "tipo_usuario": "CON TAG HABILITADO",
+          "precio": 6550
+        },
+        {
+          "categoria_vehiculo": "Camiones de más de dos ejes",
+          "tipo_usuario": "CON TAG HABILITADO",
+          "precio": 10200
+        },
+        {
+          "categoria_vehiculo": "Motos, cuatrimotos y motonetas",
+          "tipo_usuario": "SIN TAG O CON TAG INHABILITADO",
+          "precio": 750
+        },
+        {
+          "categoria_vehiculo": "Autos y camionetas, con o sin remolque, camionetas de doble rueda trasera, minibuses y casas rodantes",
+          "tipo_usuario": "SIN TAG O CON TAG INHABILITADO",
+          "precio": 2550
+        },
+        {
+          "categoria_vehiculo": "Buses de dos ejes",
+          "tipo_usuario": "SIN TAG O CON TAG INHABILITADO",
+          "precio": 4650
+        },
+        {
+          "categoria_vehiculo": "Camiones de dos ejes, maquinarias agrícolas y maquinarias de construcción",
+          "tipo_usuario": "SIN TAG O CON TAG INHABILITADO",
+          "precio": 7700
+        },
+        {
+          "categoria_vehiculo": "Buses de más de dos ejes",
+          "tipo_usuario": "SIN TAG O CON TAG INHABILITADO",
+          "precio": 8200
+        },
+        {
+          "categoria_vehiculo": "Camiones de más de dos ejes",
+          "tipo_usuario": "SIN TAG O CON TAG INHABILITADO",
+          "precio": 12750
+        }
+      ]
+    },
+    {
+      "nombre": "TRONCAL SAN PEDRO",
+      "tarifas": [
+        {
+          "categoria_vehiculo": "Motos, cuatrimotos y motonetas",
+          "tipo_usuario": "CON TAG HABILITADO",
+          "precio": 350
+        },
+        {
+          "categoria_vehiculo": "Autos y camionetas, con o sin remolque, camionetas de doble rueda trasera, minibuses y casas rodantes",
+          "tipo_usuario": "CON TAG HABILITADO",
+          "precio": 1100
+        },
+        {
+          "categoria_vehiculo": "Buses de dos ejes",
+          "tipo_usuario": "CON TAG HABILITADO",
+          "precio": 2000
+        },
+        {
+          "categoria_vehiculo": "Camiones de dos ejes, maquinarias agrícolas y maquinarias de construcción",
+          "tipo_usuario": "CON TAG HABILITADO",
+          "precio": 3300
+        },
+        {
+          "categoria_vehiculo": "Buses de más de dos ejes",
+          "tipo_usuario": "CON TAG HABILITADO",
+          "precio": 3500
+        },
+        {
+          "categoria_vehiculo": "Camiones de más de dos ejes",
+          "tipo_usuario": "CON TAG HABILITADO",
+          "precio": 5500
+        },
+        {
+          "categoria_vehiculo": "Motos, cuatrimotos y motonetas",
+          "tipo_usuario": "SIN TAG O CON TAG INHABILITADO",
+          "precio": 450
+        },
+        {
+          "categoria_vehiculo": "Autos y camionetas, con o sin remolque, camionetas de doble rueda trasera, minibuses y casas rodantes",
+          "tipo_usuario": "SIN TAG O CON TAG INHABILITADO",
+          "precio": 1400
+        },
+        {
+          "categoria_vehiculo": "Buses de dos ejes",
+          "tipo_usuario": "SIN TAG O CON TAG INHABILITADO",
+          "precio": 2500
+        },
+        {
+          "categoria_vehiculo": "Camiones de dos ejes, maquinarias agrícolas y maquinarias de construcción",
+          "tipo_usuario": "SIN TAG O CON TAG INHABILITADO",
+          "precio": 4150
+        },
+        {
+          "categoria_vehiculo": "Buses de más de dos ejes",
+          "tipo_usuario": "SIN TAG O CON TAG INHABILITADO",
+          "precio": 4400
+        },
+        {
+          "categoria_vehiculo": "Camiones de más de dos ejes",
+          "tipo_usuario": "SIN TAG O CON TAG INHABILITADO",
+          "precio": 6900
+        }
+      ]
+    }
+  ],
+  "categorias_vehiculos": [
+    "Motos, cuatrimotos y motonetas",
+    "Autos y camionetas, con o sin remolque, camionetas de doble rueda trasera, minibuses y casas rodantes",
+    "Buses de dos ejes",
+    "Camiones de dos ejes, maquinarias agrícolas y maquinarias de construcción",
+    "Buses de más de dos ejes",
+    "Camiones de más de dos ejes"
+  ],
+  "tipos_usuario": [
+    "CON TAG HABILITADO",
+    "SIN TAG O CON TAG INHABILITADO"
+  ],
+  "moneda": "CLP",
+  "notas": "Tarifas aplicables para el año 2026 en la concesión RUTA 66 - CAMINO DE LA FRUTA, correspondiente a Rutas Transversales."
+}

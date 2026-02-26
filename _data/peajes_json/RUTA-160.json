@@ -1,0 +1,110 @@
+{
+  "concesion": {
+    "nombre": "Ruta 160",
+    "tipo": "Rutas Transversales",
+    "periodo_tarifario": "2026",
+    "referencia": "PEAJES TARIFAS 2026 /Rutas Transversales"
+  },
+  "plazas_peaje": [
+    {
+      "nombre": "CHIVILINGO",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Motos y Motonetas",
+          "precio": 800
+        },
+        {
+          "tipo_vehiculo": "Autos y Camionetas sin remolque",
+          "precio": 2750
+        },
+        {
+          "tipo_vehiculo": "Autos y Camionetas con remolque",
+          "precio": 2750
+        },
+        {
+          "tipo_vehiculo": "Buses de 2 Ejes",
+          "precio": 2750
+        },
+        {
+          "tipo_vehiculo": "Camión 2 Ejes, Camioneta doble rueda trasera, Maquinaria Agrícola y de Const.",
+          "precio": 9400
+        },
+        {
+          "tipo_vehiculo": "Buses de más de 2 Ejes",
+          "precio": 2750
+        },
+        {
+          "tipo_vehiculo": "Camiones de más de 2 Ejes",
+          "precio": 15700
+        }
+      ]
+    },
+    {
+      "nombre": "CURANILAHUE",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Motos y Motonetas",
+          "precio": 600
+        },
+        {
+          "tipo_vehiculo": "Autos y Camionetas sin remolque",
+          "precio": null
+        },
+        {
+          "tipo_vehiculo": "Autos y Camionetas con remolque",
+          "precio": null
+        },
+        {
+          "tipo_vehiculo": "Buses de 2 Ejes",
+          "precio": null
+        },
+        {
+          "tipo_vehiculo": "Camión 2 Ejes, Camioneta doble rueda trasera, Maquinaria Agrícola y de Const.",
+          "precio": 7850
+        },
+        {
+          "tipo_vehiculo": "Buses de más de 2 Ejes",
+          "precio": null
+        },
+        {
+          "tipo_vehiculo": "Camiones de más de 2 Ejes",
+          "precio": 13100
+        }
+      ]
+    },
+    {
+      "nombre": "PILPILCO",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Motos y Motonetas",
+          "precio": 600
+        },
+        {
+          "tipo_vehiculo": "Autos y Camionetas sin remolque",
+          "precio": 600
+        },
+        {
+          "tipo_vehiculo": "Autos y Camionetas con remolque",
+          "precio": 600
+        },
+        {
+          "tipo_vehiculo": "Buses de 2 Ejes",
+          "precio": 2300
+        },
+        {
+          "tipo_vehiculo": "Camión 2 Ejes, Camioneta doble rueda trasera, Maquinaria Agrícola y de Const.",
+          "precio": 7850
+        },
+        {
+          "tipo_vehiculo": "Buses de más de 2 Ejes",
+          "precio": 2300
+        },
+        {
+          "tipo_vehiculo": "Camiones de más de 2 Ejes",
+          "precio": 13100
+        }
+      ]
+    }
+  ],
+  "observaciones": "Los valores nulos (null) indican que no se proporcionó un precio específico para ese tipo de vehículo en la plaza de peaje correspondiente según el texto disponible."
+}

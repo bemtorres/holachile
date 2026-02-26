@@ -1,0 +1,77 @@
+{
+  "concesion": "Ruta 5 Sur",
+  "periodo_tarifario": "2026",
+  "tramos": [
+    {
+      "nombre": "CHILLÁN - COLLIPULLI",
+      "plazas_peaje": [
+        {
+          "nombre": "LATERALES",
+          "tarifas": [
+            {
+              "tipo_vehiculo": "Motos, cuatrimotos y motonetas",
+              "precio": 1000
+            },
+            {
+              "tipo_vehiculo": "Autos y camionetas",
+              "precio": 3400
+            },
+            {
+              "tipo_vehiculo": "Autos y camionetas con remolque",
+              "precio": 5100
+            },
+            {
+              "tipo_vehiculo": "Buses de dos ejes y casas rodantes",
+              "precio": 6100
+            },
+            {
+              "tipo_vehiculo": "Camiones de dos ejes",
+              "precio": 6100
+            },
+            {
+              "tipo_vehiculo": "Buses de más de dos ejes",
+              "precio": 10800
+            },
+            {
+              "tipo_vehiculo": "Camiones de más de dos ejes",
+              "precio": 10800
+            }
+          ]
+        },
+        {
+          "nombre": "TRONCALES",
+          "tarifas": [
+            {
+              "tipo_vehiculo": "Motos, cuatrimotos y motonetas",
+              "precio": 300
+            },
+            {
+              "tipo_vehiculo": "Autos y camionetas",
+              "precio": 800
+            },
+            {
+              "tipo_vehiculo": "Autos y camionetas con remolque",
+              "precio": 1300
+            },
+            {
+              "tipo_vehiculo": "Buses de dos ejes y casas rodantes",
+              "precio": 1500
+            },
+            {
+              "tipo_vehiculo": "Camiones de dos ejes",
+              "precio": 1500
+            },
+            {
+              "tipo_vehiculo": "Buses de más de dos ejes",
+              "precio": 2700
+            },
+            {
+              "tipo_vehiculo": "Camiones de más de dos ejes",
+              "precio": 2700
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

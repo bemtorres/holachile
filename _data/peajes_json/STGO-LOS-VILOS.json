@@ -1,0 +1,308 @@
+{
+  "concesion": "SANTIAGO - LOS VILOS",
+  "ruta": "Ruta 5 Norte",
+  "periodo_tarifario": "2026",
+  "tramos": [
+    {
+      "nombre": "Paso superior Lo Marcoleta",
+      "tipo": "Paso superior",
+      "tarifas": [
+        {
+          "tipo_tarifa": "NORMAL",
+          "precios": [
+            {
+              "categoria_vehiculo": "Autos y camionetas con o sin remolque",
+              "precio": 181
+            },
+            {
+              "categoria_vehiculo": "Camiones de 2 o más ejes",
+              "precio": 326
+            },
+            {
+              "categoria_vehiculo": "Buses de 2 o más ejes",
+              "precio": 579
+            },
+            {
+              "categoria_vehiculo": "Motos y Motonetas",
+              "precio": 54
+            }
+          ]
+        },
+        {
+          "tipo_tarifa": "PUNTA",
+          "precios": [
+            {
+              "categoria_vehiculo": "Autos y camionetas con o sin remolque",
+              "precio": 362
+            },
+            {
+              "categoria_vehiculo": "Camiones de 2 o más ejes",
+              "precio": 652
+            },
+            {
+              "categoria_vehiculo": "Buses de 2 o más ejes",
+              "precio": 1158
+            },
+            {
+              "categoria_vehiculo": "Motos y Motonetas",
+              "precio": 109
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Enlace Buenaventura",
+      "tipo": "Enlace",
+      "tarifas": [
+        {
+          "tipo_tarifa": "NORMAL",
+          "precios": [
+            {
+              "categoria_vehiculo": "Autos y camionetas con o sin remolque",
+              "precio": 218
+            },
+            {
+              "categoria_vehiculo": "Camiones de 2 o más ejes",
+              "precio": 392
+            },
+            {
+              "categoria_vehiculo": "Buses de 2 o más ejes",
+              "precio": 698
+            },
+            {
+              "categoria_vehiculo": "Motos y Motonetas",
+              "precio": 65
+            }
+          ]
+        },
+        {
+          "tipo_tarifa": "PUNTA",
+          "precios": [
+            {
+              "categoria_vehiculo": "Autos y camionetas con o sin remolque",
+              "precio": 436
+            },
+            {
+              "categoria_vehiculo": "Camiones de 2 o más ejes",
+              "precio": 785
+            },
+            {
+              "categoria_vehiculo": "Buses de 2 o más ejes",
+              "precio": 1395
+            },
+            {
+              "categoria_vehiculo": "Motos y Motonetas",
+              "precio": 131
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Paso superior La Montaña",
+      "tipo": "Paso superior",
+      "tarifas": [
+        {
+          "tipo_tarifa": "NORMAL",
+          "precios": [
+            {
+              "categoria_vehiculo": "Autos y camionetas con o sin remolque",
+              "precio": 397
+            },
+            {
+              "categoria_vehiculo": "Camiones de 2 o más ejes",
+              "precio": 715
+            },
+            {
+              "categoria_vehiculo": "Buses de 2 o más ejes",
+              "precio": 1270
+            },
+            {
+              "categoria_vehiculo": "Motos y Motonetas",
+              "precio": 119
+            }
+          ]
+        },
+        {
+          "tipo_tarifa": "PUNTA",
+          "precios": [
+            {
+              "categoria_vehiculo": "Autos y camionetas con o sin remolque",
+              "precio": 794
+            },
+            {
+              "categoria_vehiculo": "Camiones de 2 o más ejes",
+              "precio": 1429
+            },
+            {
+              "categoria_vehiculo": "Buses de 2 o más ejes",
+              "precio": 2541
+            },
+            {
+              "categoria_vehiculo": "Motos y Motonetas",
+              "precio": 238
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Enlace Lo Pinto",
+      "tipo": "Enlace",
+      "tarifas": [
+        {
+          "tipo_tarifa": "NORMAL",
+          "precios": [
+            {
+              "categoria_vehiculo": "Autos y camionetas con o sin remolque",
+              "precio": 486
+            },
+            {
+              "categoria_vehiculo": "Camiones de 2 o más ejes",
+              "precio": 875
+            },
+            {
+              "categoria_vehiculo": "Buses de 2 o más ejes",
+              "precio": 1555
+            },
+            {
+              "categoria_vehiculo": "Motos y Motonetas",
+              "precio": 146
+            }
+          ]
+        },
+        {
+          "tipo_tarifa": "PUNTA",
+          "precios": [
+            {
+              "categoria_vehiculo": "Autos y camionetas con o sin remolque",
+              "precio": 972
+            },
+            {
+              "categoria_vehiculo": "Camiones de 2 o más ejes",
+              "precio": 1750
+            },
+            {
+              "categoria_vehiculo": "Buses de 2 o más ejes",
+              "precio": 3110
+            },
+            {
+              "categoria_vehiculo": "Motos y Motonetas",
+              "precio": 292
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Lampa",
+      "tipo": "Peaje",
+      "tarifas": [
+        {
+          "tipo_tarifa": "NORMAL",
+          "precios": [
+            {
+              "categoria_vehiculo": "Autos y camionetas con o sin remolque",
+              "precio": 900
+            },
+            {
+              "categoria_vehiculo": "Camiones de 2 o más ejes",
+              "precio": 1600
+            },
+            {
+              "categoria_vehiculo": "Buses de 2 o más ejes",
+              "precio": 2900
+            },
+            {
+              "categoria_vehiculo": "Motos y Motonetas",
+              "precio": 300
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Las Vegas",
+      "tipo": "Peaje",
+      "tarifas": [
+        {
+          "tipo_tarifa": "NORMAL",
+          "precios": [
+            {
+              "categoria_vehiculo": "Autos y camionetas con o sin remolque",
+              "precio": 2900
+            },
+            {
+              "categoria_vehiculo": "Camiones de 2 o más ejes",
+              "precio": 5300
+            },
+            {
+              "categoria_vehiculo": "Buses de 2 o más ejes",
+              "precio": 9400
+            },
+            {
+              "categoria_vehiculo": "Motos y Motonetas",
+              "precio": 900
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Pichidangui",
+      "tipo": "Peaje",
+      "tarifas": [
+        {
+          "tipo_tarifa": "NORMAL",
+          "precios": [
+            {
+              "categoria_vehiculo": "Autos y camionetas con o sin remolque",
+              "precio": 2900
+            },
+            {
+              "categoria_vehiculo": "Camiones de 2 o más ejes",
+              "precio": 5300
+            },
+            {
+              "categoria_vehiculo": "Buses de 2 o más ejes",
+              "precio": 9400
+            },
+            {
+              "categoria_vehiculo": "Motos y Motonetas",
+              "precio": 900
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Túnel El Melón",
+      "tipo": "Túnel",
+      "tarifas": [
+        {
+          "tipo_tarifa": "NORMAL",
+          "precios": [
+            {
+              "categoria_vehiculo": "Autos y camionetas con o sin remolque",
+              "precio": 2900
+            },
+            {
+              "categoria_vehiculo": "Camiones de 2 o más ejes",
+              "precio": 5300
+            },
+            {
+              "categoria_vehiculo": "Buses de 2 o más ejes",
+              "precio": 9400
+            },
+            {
+              "categoria_vehiculo": "Motos y Motonetas",
+              "precio": 900
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "observaciones": "Para los peajes Lampa, Las Vegas, Pichidangui y Túnel El Melón solo se muestra tarifa NORMAL en el fragmento proporcionado. No se especifica si tienen tarifa PUNTA."
+}

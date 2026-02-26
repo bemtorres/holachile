@@ -1,0 +1,609 @@
+{
+  "concesion": "AMÉRICO VESPUCIO ORIENTE (AVO I), TRAMO AV. EL SALTO - PRÍNCIPE DE GALES",
+  "anio_tarifas": 2026,
+  "areas": [
+    {
+      "nombre": "ÁREA 1. DIRECCIÓN PRÍNCIPE DE GALES - EL SALTO",
+      "descripcion": "Para el resto de los horarios laborales, sábado y domingo aplica TBFP (Tarifa Base Fuera de Punta). Excepto días festivos.",
+      "tarifas_base_por_km": {
+        "categoria_1_4": {
+          "TBFP": 232,
+          "TBP": 464
+        },
+        "categoria_2": {
+          "TBFP": 696,
+          "TBP": 928
+        },
+        "categoria_3": {
+          "TBFP": 1392,
+          "TBP": 1856
+        }
+      },
+      "horarios_punta": [
+        {
+          "nombre": "TBP (Tarifa Base Punta)",
+          "dias": "Lunes a Viernes",
+          "horas": ["7:30 - 9:30", "17:30 - 19:30"]
+        }
+      ],
+      "tramos": [
+        {
+          "entrada": "P101 Bilbao",
+          "salida": "P102 Martin de Zamora",
+          "longitud_km": 2.35,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 545,
+              "TBP": 1090
+            },
+            {
+              "categoria": "2",
+              "TBFP": 644,
+              "TBP": 1287
+            },
+            {
+              "categoria": "3",
+              "TBFP": 900,
+              "TBP": 1799
+            }
+          ]
+        },
+        {
+          "entrada": "P101 Bilbao",
+          "salida": "P104 Presidente Riesco",
+          "longitud_km": 2.77,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 841,
+              "TBP": 1682
+            },
+            {
+              "categoria": "2",
+              "TBFP": 983,
+              "TBP": 1966
+            },
+            {
+              "categoria": "3",
+              "TBFP": 1269,
+              "TBP": 2538
+            }
+          ]
+        },
+        {
+          "entrada": "P101 Bilbao",
+          "salida": "P107 Kennedy-Vespucio",
+          "longitud_km": 3.88,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 254,
+              "TBP": 507
+            },
+            {
+              "categoria": "2",
+              "TBFP": 352,
+              "TBP": 704
+            },
+            {
+              "categoria": "3",
+              "TBFP": 608,
+              "TBP": 1216
+            }
+          ]
+        },
+        {
+          "entrada": "P101 Bilbao",
+          "salida": "P110 La Pirámide",
+          "longitud_km": 3.62,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 549,
+              "TBP": 1099
+            },
+            {
+              "categoria": "2",
+              "TBFP": 692,
+              "TBP": 1383
+            },
+            {
+              "categoria": "3",
+              "TBFP": 978,
+              "TBP": 1955
+            }
+          ]
+        },
+        {
+          "entrada": "P101 Bilbao",
+          "salida": "P103 Los Militares",
+          "longitud_km": 4.24,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 300,
+              "TBP": 601
+            },
+            {
+              "categoria": "2",
+              "TBFP": 242,
+              "TBP": 483
+            },
+            {
+              "categoria": "3",
+              "TBFP": 384,
+              "TBP": 767
+            }
+          ]
+        },
+        {
+          "entrada": "P101 Bilbao",
+          "salida": "P111 Cerro Colorado",
+          "longitud_km": 5.47,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 670,
+              "TBP": 1340
+            },
+            {
+              "categoria": "2",
+              "TBFP": 374,
+              "TBP": 748
+            },
+            {
+              "categoria": "3",
+              "TBFP": 660,
+              "TBP": 1321
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "ÁREA 1. DIRECCIÓN EL SALTO - PRÍNCIPE DE GALES",
+      "descripcion": "Para el resto de los horarios laborales, sábado y domingo aplica TBFP (Tarifa Base Fuera de Punta). Excepto días festivos.",
+      "tarifas_base_por_km": {
+        "categoria_1_4": {
+          "TBFP": 116,
+          "TBP": 232
+        },
+        "categoria_2": {
+          "TBFP": 348,
+          "TBP": 464
+        },
+        "categoria_3": {
+          "TBFP": 696,
+          "TBP": 928
+        }
+      },
+      "horarios_punta": [
+        {
+          "nombre": "TBP (Tarifa Base Punta)",
+          "dias": "Lunes a Viernes",
+          "horas": ["7:30 - 9:30", "17:30 - 19:30"]
+        }
+      ],
+      "tramos": [
+        {
+          "entrada": "P201 C. Empresarial - El Salto",
+          "salida": "P202 Viaducto",
+          "longitud_km": 2.31,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 536,
+              "TBP": 1072
+            },
+            {
+              "categoria": "2",
+              "TBFP": 765,
+              "TBP": 1530
+            },
+            {
+              "categoria": "3",
+              "TBFP": 860,
+              "TBP": 1720
+            }
+          ]
+        },
+        {
+          "entrada": "P201 C. Empresarial - El Salto",
+          "salida": "P205 Vitacura",
+          "longitud_km": 3.3,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 1519,
+              "TBP": 3038
+            },
+            {
+              "categoria": "2",
+              "TBFP": 1834,
+              "TBP": 3667
+            },
+            {
+              "categoria": "3",
+              "TBFP": 1999,
+              "TBP": 3998
+            }
+          ]
+        },
+        {
+          "entrada": "P201 C. Empresarial - El Salto",
+          "salida": "P107 Kennedy-Vespucio",
+          "longitud_km": 3.71,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 704,
+              "TBP": 1407
+            },
+            {
+              "categoria": "2",
+              "TBFP": 932,
+              "TBP": 1865
+            },
+            {
+              "categoria": "3",
+              "TBFP": 1028,
+              "TBP": 2056
+            }
+          ]
+        },
+        {
+          "entrada": "P201 C. Empresarial - El Salto",
+          "salida": "P206 Kennedy-Vespucio Sur",
+          "longitud_km": 6.55,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 1686,
+              "TBP": 3373
+            },
+            {
+              "categoria": "2",
+              "TBFP": 2001,
+              "TBP": 4002
+            },
+            {
+              "categoria": "3",
+              "TBFP": 2167,
+              "TBP": 4333
+            }
+          ]
+        },
+        {
+          "entrada": "P201 C. Empresarial - El Salto",
+          "salida": "P209 Cristobal Colón",
+          "longitud_km": 7.9,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 468,
+              "TBP": 936
+            },
+            {
+              "categoria": "2",
+              "TBFP": 783,
+              "TBP": 1566
+            },
+            {
+              "categoria": "3",
+              "TBFP": 948,
+              "TBP": 1897
+            }
+          ]
+        },
+        {
+          "entrada": "P201 C. Empresarial - El Salto",
+          "salida": "P203 Costanera Norte Oriente",
+          "longitud_km": 8.62,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 510,
+              "TBP": 1020
+            },
+            {
+              "categoria": "2",
+              "TBFP": 824,
+              "TBP": 1649
+            },
+            {
+              "categoria": "3",
+              "TBFP": 990,
+              "TBP": 1980
+            }
+          ]
+        },
+        {
+          "entrada": "P202 Viaducto",
+          "salida": "P212 Costanera Sur",
+          "longitud_km": 3.03,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 645,
+              "TBP": 1289
+            },
+            {
+              "categoria": "2",
+              "TBFP": 810,
+              "TBP": 1620
+            },
+            {
+              "categoria": "3",
+              "TBFP": 278,
+              "TBP": 557
+            }
+          ]
+        },
+        {
+          "entrada": "P202 Viaducto",
+          "salida": "P204 Salida Av. Vitacura",
+          "longitud_km": 4.02,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 645,
+              "TBP": 1289
+            },
+            {
+              "categoria": "2",
+              "TBFP": 810,
+              "TBP": 1620
+            },
+            {
+              "categoria": "3",
+              "TBFP": 278,
+              "TBP": 557
+            }
+          ]
+        },
+        {
+          "entrada": "P202 Viaducto",
+          "salida": "P103 Los Militares",
+          "longitud_km": 4.43,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 645,
+              "TBP": 1289
+            },
+            {
+              "categoria": "2",
+              "TBFP": 810,
+              "TBP": 1620
+            },
+            {
+              "categoria": "3",
+              "TBFP": 278,
+              "TBP": 557
+            }
+          ]
+        },
+        {
+          "entrada": "P205 Vitacura",
+          "salida": "P210 Isabel la Católica",
+          "longitud_km": 2.02,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 645,
+              "TBP": 1289
+            },
+            {
+              "categoria": "2",
+              "TBFP": 810,
+              "TBP": 1620
+            },
+            {
+              "categoria": "3",
+              "TBFP": 278,
+              "TBP": 557
+            }
+          ]
+        },
+        {
+          "entrada": "P205 Vitacura",
+          "salida": "P211 Tobalaba",
+          "longitud_km": 3.37,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 645,
+              "TBP": 1289
+            },
+            {
+              "categoria": "2",
+              "TBFP": 810,
+              "TBP": 1620
+            },
+            {
+              "categoria": "3",
+              "TBFP": 278,
+              "TBP": 557
+            }
+          ]
+        },
+        {
+          "entrada": "P107 Kennedy-Vespucio",
+          "salida": "P103 Los Militares",
+          "longitud_km": 4.09,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 645,
+              "TBP": 1289
+            },
+            {
+              "categoria": "2",
+              "TBFP": 810,
+              "TBP": 1620
+            },
+            {
+              "categoria": "3",
+              "TBFP": 278,
+              "TBP": 557
+            }
+          ]
+        },
+        {
+          "entrada": "P107 Kennedy-Vespucio",
+          "salida": "P210 Isabel la Católica",
+          "longitud_km": 2.2,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 645,
+              "TBP": 1289
+            },
+            {
+              "categoria": "2",
+              "TBFP": 810,
+              "TBP": 1620
+            },
+            {
+              "categoria": "3",
+              "TBFP": 278,
+              "TBP": 557
+            }
+          ]
+        },
+        {
+          "entrada": "P107 Kennedy-Vespucio",
+          "salida": "P211 Tobalaba",
+          "longitud_km": 3.55,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 645,
+              "TBP": 1289
+            },
+            {
+              "categoria": "2",
+              "TBFP": 810,
+              "TBP": 1620
+            },
+            {
+              "categoria": "3",
+              "TBFP": 278,
+              "TBP": 557
+            }
+          ]
+        },
+        {
+          "entrada": "P206 Kennedy-Vespucio Sur",
+          "salida": "P103 Los Militares",
+          "longitud_km": 4.27,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 645,
+              "TBP": 1289
+            },
+            {
+              "categoria": "2",
+              "TBFP": 810,
+              "TBP": 1620
+            },
+            {
+              "categoria": "3",
+              "TBFP": 278,
+              "TBP": 557
+            }
+          ]
+        },
+        {
+          "entrada": "P206 Kennedy-Vespucio Sur",
+          "salida": "P210 Isabel la Católica",
+          "longitud_km": 2.78,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 645,
+              "TBP": 1289
+            },
+            {
+              "categoria": "2",
+              "TBFP": 810,
+              "TBP": 1620
+            },
+            {
+              "categoria": "3",
+              "TBFP": 278,
+              "TBP": 557
+            }
+          ]
+        },
+        {
+          "entrada": "P206 Kennedy-Vespucio Sur",
+          "salida": "P211 Tobalaba",
+          "longitud_km": 3.49,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 645,
+              "TBP": 1289
+            },
+            {
+              "categoria": "2",
+              "TBFP": 810,
+              "TBP": 1620
+            },
+            {
+              "categoria": "3",
+              "TBFP": 278,
+              "TBP": 557
+            }
+          ]
+        },
+        {
+          "entrada": "P209 Cristobal Colón",
+          "salida": "P103 Los Militares",
+          "longitud_km": 1.2,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 645,
+              "TBP": 1289
+            },
+            {
+              "categoria": "2",
+              "TBFP": 810,
+              "TBP": 1620
+            },
+            {
+              "categoria": "3",
+              "TBFP": 278,
+              "TBP": 557
+            }
+          ]
+        },
+        {
+          "entrada": "P203 Costanera Norte Oriente",
+          "salida": "P210 Isabel la Católica",
+          "longitud_km": 2.3,
+          "tarifas": [
+            {
+              "categoria": "1 y 4",
+              "TBFP": 267,
+              "TBP": 534
+            },
+            {
+              "categoria": "2",
+              "TBFP": 534,
+              "TBP": 1067
+            },
+            {
+              "categoria": "3",
+              "TBFP": 800,
+              "TBP": 1601
+            }
+          ]
+        },
+        {
+          "entrada": "P203
+}

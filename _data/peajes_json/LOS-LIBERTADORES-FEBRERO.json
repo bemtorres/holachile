@@ -1,0 +1,101 @@
+{
+  "concesion": "AUTOPISTA LOS LIBERTADORES | SANTIAGO - COLINA - LOS ANDES",
+  "plazas_peaje": [
+    {
+      "nombre": "CHACABUCO",
+      "descripcion": "Tarifas usuarios con TAG habilitado o que utiliza vía de pago Manual",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Autos, camionetas y station wagon con uno o más ejes adicionales",
+          "precio": 1200
+        },
+        {
+          "tipo_vehiculo": "Camiones y buses de dos ejes, maquinaria agrícola, de construcción y camionetas con doble rueda trasera",
+          "precio": 2100
+        },
+        {
+          "tipo_vehiculo": "Camiones y buses con más de dos ejes",
+          "precio": 3800
+        },
+        {
+          "tipo_vehiculo": "Motos y motonetas",
+          "precio": 400
+        }
+      ]
+    },
+    {
+      "nombre": "LAS CANTERAS",
+      "descripcion": "Tarifas usuarios sin TAG en vías de cobro electrónico Free Flow",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Autos, camionetas y station wagon con uno o más ejes adicionales",
+          "precio": 3300
+        },
+        {
+          "tipo_vehiculo": "Camiones y buses de dos ejes, maquinaria agrícola, de construcción y camionetas con doble rueda trasera",
+          "precio": 6000
+        },
+        {
+          "tipo_vehiculo": "Camiones y buses con más de dos ejes",
+          "precio": 10600
+        },
+        {
+          "tipo_vehiculo": "Motos y motonetas",
+          "precio": 1000
+        }
+      ]
+    },
+    {
+      "nombre": "SAN JOSÉ",
+      "descripcion": "Tarifas usuarios sin TAG en vías de cobro electrónico Free Flow",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Autos, camionetas y station wagon con uno o más ejes adicionales",
+          "precio": 1400
+        },
+        {
+          "tipo_vehiculo": "Camiones y buses de dos ejes, maquinaria agrícola, de construcción y camionetas con doble rueda trasera",
+          "precio": 2500
+        },
+        {
+          "tipo_vehiculo": "Camiones y buses con más de dos ejes",
+          "precio": 4500
+        },
+        {
+          "tipo_vehiculo": "Motos y motonetas",
+          "precio": 400
+        }
+      ]
+    },
+    {
+      "nombre": "TRONCAL",
+      "descripcion": "Tarifas usuarios sin TAG en vías de cobro electrónico Free Flow",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Autos, camionetas y station wagon con uno o más ejes adicionales",
+          "precio": 2800
+        },
+        {
+          "tipo_vehiculo": "Camiones y buses de dos ejes, maquinaria agrícola, de construcción y camionetas con doble rueda trasera",
+          "precio": 5000
+        },
+        {
+          "tipo_vehiculo": "Camiones y buses con más de dos ejes",
+          "precio": 9000
+        },
+        {
+          "tipo_vehiculo": "Motos y motonetas",
+          "precio": 800
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "periodo_tarifario": "2026",
+    "tipo_ruta": "Rutas Transversales",
+    "notas": [
+      "LAS CANTERAS, SAN LUIS, CHICUREO aparecen listados pero sin tarifas específicas en el texto proporcionado.",
+      "SAN LUIS y CHICUREO no tienen tarifas detalladas en el fragmento."
+    ]
+  }
+}

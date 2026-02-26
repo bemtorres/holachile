@@ -1,0 +1,106 @@
+{
+  "concesion": "Ruta del Itata (Acceso Norte a Concepción)",
+  "tipo_tarifario": "Tarifas 2026",
+  "categoria_ruta": "Rutas Transversales",
+  "plazas_peaje": [
+    {
+      "nombre": "Agua Amarilla",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Motos y motonetas",
+          "precio": 2200
+        },
+        {
+          "tipo_vehiculo": "Autos y camionetas",
+          "precio": 4400
+        },
+        {
+          "tipo_vehiculo": "Autocarro",
+          "precio": 6600
+        },
+        {
+          "tipo_vehiculo": "Buses de dos ejes",
+          "precio": 9700
+        },
+        {
+          "tipo_vehiculo": "Camiones de dos ejes",
+          "precio": 9700
+        },
+        {
+          "tipo_vehiculo": "Buses de más de dos ejes",
+          "precio": 13200
+        },
+        {
+          "tipo_vehiculo": "Camiones de más de dos ejes",
+          "precio": 19800
+        }
+      ]
+    },
+    {
+      "nombre": "Rafael",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Motos y motonetas",
+          "precio": 800
+        },
+        {
+          "tipo_vehiculo": "Autos y camionetas",
+          "precio": 1700
+        },
+        {
+          "tipo_vehiculo": "Autocarro",
+          "precio": 2500
+        },
+        {
+          "tipo_vehiculo": "Buses de dos ejes",
+          "precio": 3700
+        },
+        {
+          "tipo_vehiculo": "Camiones de dos ejes",
+          "precio": 3700
+        },
+        {
+          "tipo_vehiculo": "Buses de más de dos ejes",
+          "precio": 5100
+        },
+        {
+          "tipo_vehiculo": "Camiones de más de dos ejes",
+          "precio": 7600
+        }
+      ]
+    },
+    {
+      "nombre": "Nueva Aldea",
+      "tarifas": [
+        {
+          "tipo_vehiculo": "Motos y motonetas",
+          "precio": 500
+        },
+        {
+          "tipo_vehiculo": "Autos y camionetas",
+          "precio": 1000
+        },
+        {
+          "tipo_vehiculo": "Autocarro",
+          "precio": 1500
+        },
+        {
+          "tipo_vehiculo": "Buses de dos ejes",
+          "precio": 2200
+        },
+        {
+          "tipo_vehiculo": "Camiones de dos ejes",
+          "precio": 2200
+        },
+        {
+          "tipo_vehiculo": "Buses de más de dos ejes",
+          "precio": 3100
+        },
+        {
+          "tipo_vehiculo": "Camiones de más de dos ejes",
+          "precio": 4600
+        }
+      ]
+    }
+  ]
+}

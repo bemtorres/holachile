@@ -1,0 +1,143 @@
+{
+  "concesion": "RED VIAL LITORAL CENTRAL",
+  "periodo_tarifario": "2026",
+  "nota": "Tarifas para Rutas Transversales",
+  "tramos": [
+    {
+      "nombre": "TRONCAL RUTA F/90",
+      "tipo": "TRONCAL",
+      "sector": "SECTOR 1",
+      "plazas_peaje": [
+        {
+          "nombre": "LAS CRUCES",
+          "rutas_asociadas": ["F-94", "G-984"],
+          "tarifas": [
+            {
+              "tipo_vehiculo": "Motos y motonetas",
+              "precios": {
+                "normal": 600,
+                "punta": 850,
+                "valle": 400
+              }
+            },
+            {
+              "tipo_vehiculo": "Autos y camionetas",
+              "precios": {
+                "normal": 1950,
+                "punta": 2900,
+                "valle": 1300
+              }
+            },
+            {
+              "tipo_vehiculo": "Autos y camionetas con remolque",
+              "precios": {
+                "normal": 1950,
+                "punta": 2900,
+                "valle": 1300
+              }
+            },
+            {
+              "tipo_vehiculo": "Buses de dos ejes",
+              "precios": {
+                "normal": 3850,
+                "punta": 5800,
+                "valle": 2600
+              }
+            },
+            {
+              "tipo_vehiculo": "Camiones de dos ejes",
+              "precios": {
+                "normal": 3850,
+                "punta": 7750,
+                "valle": 2600
+              }
+            },
+            {
+              "tipo_vehiculo": "Buses de más de dos ejes",
+              "precios": {
+                "normal": 5800,
+                "punta": 8700,
+                "valle": 3900
+              }
+            },
+            {
+              "tipo_vehiculo": "Camiones de más de dos ejes",
+              "precios": {
+                "normal": 5800,
+                "punta": 11600,
+                "valle": 3900
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "TRONCAL F/965 G",
+      "tipo": "TRONCAL",
+      "plazas_peaje": [
+        {
+          "nombre": "PLAZA NO ESPECIFICADA EN TEXTO",
+          "tarifas": [
+            {
+              "tipo_vehiculo": "Motos y motonetas",
+              "precios": {
+                "normal": 1250,
+                "punta": null,
+                "valle": 250
+              }
+            },
+            {
+              "tipo_vehiculo": "Autos y camionetas",
+              "precios": {
+                "normal": 4100,
+                "punta": null,
+                "valle": 850
+              }
+            },
+            {
+              "tipo_vehiculo": "Autos y camionetas con remolque",
+              "precios": {
+                "normal": 4100,
+                "punta": null,
+                "valle": 850
+              }
+            },
+            {
+              "tipo_vehiculo": "Buses de dos ejes",
+              "precios": {
+                "normal": 8250,
+                "punta": null,
+                "valle": 1700
+              }
+            },
+            {
+              "tipo_vehiculo": "Camiones de dos ejes",
+              "precios": {
+                "normal": 8250,
+                "punta": null,
+                "valle": 1700
+              }
+            },
+            {
+              "tipo_vehiculo": "Buses de más de dos ejes",
+              "precios": {
+                "normal": 12350,
+                "punta": null,
+                "valle": 2550
+              }
+            },
+            {
+              "tipo_vehiculo": "Camiones de más de dos ejes",
+              "precios": {
+                "normal": 12350,
+                "punta": null,
+                "valle": 2550
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

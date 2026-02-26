@@ -1,0 +1,65 @@
+{
+  "concesion": "Ruta 5 Norte",
+  "tramo": "LOS VILOS - LA SERENA",
+  "periodo_tarifario": "2026",
+  "tipo_estructura": "troncales_y_laterales",
+  "laterales": [
+    "Combarbalá",
+    "Ovalle",
+    "Tongoy",
+    "Guanaqueros"
+  ],
+  "troncales": [
+    "Norte",
+    "Sur"
+  ],
+  "tarifas": [
+    {
+      "categoria": "Motos, Cuatrimotos y motonetas",
+      "descripcion": "Vehículos de dos ruedas o similares",
+      "precio_troncal": 350,
+      "precio_lateral": null,
+      "unidad_monetaria": "CLP"
+    },
+    {
+      "categoria": "Autos y camionetas con o sin remolque, camionetas de doble rueda trasera",
+      "descripcion": "Vehículos ligeros de hasta dos ejes",
+      "precio_troncal": 1100,
+      "precio_lateral": null,
+      "unidad_monetaria": "CLP"
+    },
+    {
+      "categoria": "Buses de dos ejes y casas rodantes",
+      "descripcion": "Vehículos de transporte de pasajeros de dos ejes",
+      "precio_troncal": 2000,
+      "precio_lateral": null,
+      "unidad_monetaria": "CLP"
+    },
+    {
+      "categoria": "Camiones de dos ejes, maquinaria agrícola y maquinaria de construcción de dos ejes",
+      "descripcion": "Vehículos de carga o maquinaria de dos ejes",
+      "precio_troncal": 2000,
+      "precio_lateral": null,
+      "unidad_monetaria": "CLP"
+    },
+    {
+      "categoria": "Buses de más de dos ejes",
+      "descripcion": "Vehículos de transporte de pasajeros con más de dos ejes",
+      "precio_troncal": 3500,
+      "precio_lateral": null,
+      "unidad_monetaria": "CLP"
+    },
+    {
+      "categoria": "Camiones de más de dos ejes, maquinaria agrícola y de construcción de más de dos ejes y vehículos con sobredimensión",
+      "descripcion": "Vehículos de carga pesada, maquinaria grande o sobredimensionados",
+      "precio_troncal": 3500,
+      "precio_lateral": null,
+      "unidad_monetaria": "CLP"
+    }
+  ],
+  "observaciones": [
+    "Los precios listados corresponden a tarifas para troncales (Norte y Sur).",
+    "No se especifican tarifas diferenciadas para laterales en el texto proporcionado.",
+    "No se mencionan rebajas, horarios punta/valle u otras variaciones tarifarias en el texto."
+  ]
+}

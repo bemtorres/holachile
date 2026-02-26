@@ -14,6 +14,9 @@ export type Portico = {
   tags: Record<string, string>;
   autopista: string;
   color: string;
+  precio?: number;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  tarifas_urbanas?: any;
 };
 
 export type Autopista = {
@@ -26,6 +29,7 @@ export type Autopista = {
   porticos: Portico[];
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const allPorticos = (allTolls as any) as Portico[];
 
 const autopistaMap = new Map<string, Autopista>();
