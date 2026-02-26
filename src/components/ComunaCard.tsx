@@ -5,21 +5,9 @@ import {
   Globe, Users, User, MapPin, Loader2, ExternalLink,
   Building2, Mountain, Hash, Navigation, Scale
 } from 'lucide-react';
-import comunasData from '@/data/comunas-metropolitanas.json';
+import { findComuna, type Comuna } from '@/data';
 
 // ── types ─────────────────────────────────────────────────────────────────────
-
-interface ComunaLocal {
-  comuna: string;
-  cut: string;
-  lat: number;
-  lng: number;
-  poblacion: number;
-  direccion_municipal: string;
-  url_municipal: string;
-  wiki_url: string;
-  logo_url: string;
-}
 
 interface WikiExtra {
   extract?: string;
@@ -29,18 +17,6 @@ interface WikiExtra {
   superficie?: string;
   densidad?: string;
   region?: string;
-}
-
-// Build a flat lookup: "nombre" → ComunaLocal
-const LOCAL_MAP: Record<string, ComunaLocal & { provincia: string }> = {};
-for (const [provincia, comunas] of Object.entries(comunasData as Record<string, ComunaLocal[]>)) {
-  for (const c of comunas) {
-    LOCAL_MAP[c.comuna.toLowerCase()] = { ...c, provincia };
-  }
-}
-
-function findLocal(nombre: string): (ComunaLocal & { provincia: string }) | undefined {
-  return LOCAL_MAP[nombre.toLowerCase()];
 }
 
 // ── Wikipedia enrichment ──────────────────────────────────────────────────────
@@ -111,7 +87,7 @@ async function fetchWikiExtra(wiki_url: string): Promise<WikiExtra> {
 interface Props { comuna: string; }
 
 export default function ComunaCard({ comuna }: Props) {
-  const local = findLocal(comuna);
+  const local = findComuna(comuna);
   const [wiki, setWiki] = useState<WikiExtra | null>(null);
   const [loading, setLoading] = useState(false);
   const [lastComuna, setLastComuna] = useState('');

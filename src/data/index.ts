@@ -53,4 +53,34 @@ allPorticos.forEach(p => {
 
 export const autopistas: Autopista[] = Array.from(autopistaMap.values()).sort((a, b) => b.totalPorticos - a.totalPorticos);
 
+// --- Comunas Data ---
+import comunasDataRaw from './comunas-metropolitanas.json';
+
+export interface Comuna {
+  comuna: string;
+  cut: string;
+  lat: number;
+  lng: number;
+  poblacion: number;
+  direccion_municipal: string;
+  url_municipal: string;
+  wiki_url: string;
+  logo_url: string;
+  provincia: string;
+}
+
+const LOCAL_COMUNA_MAP: Record<string, Comuna> = {};
+for (const [provincia, comunas] of Object.entries(comunasDataRaw as Record<string, any[]>)) {
+  for (const c of comunas) {
+    LOCAL_COMUNA_MAP[c.comuna.toLowerCase()] = { ...c, provincia } as Comuna;
+  }
+}
+
+export const allComunas = Object.values(LOCAL_COMUNA_MAP).sort((a, b) => a.comuna.localeCompare(b.comuna));
+
+export function findComuna(nombre: string): Comuna | undefined {
+  if (!nombre) return undefined;
+  return LOCAL_COMUNA_MAP[nombre.toLowerCase()];
+}
+
 export default autopistas;

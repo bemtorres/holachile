@@ -9,7 +9,10 @@
       "direccion_municipal": "Av. Pedro Aguirre Cerda 9100, Cerrillos",
       "url_municipal": "https://mcerrillos.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Cerrillos_(comuna)",
-      "logo_url": "https://mcerrillos.cl/img/logo.png"
+      "logo_url": "https://mcerrillos.cl/img/logo.png",
+      "instagram": "https://www.instagram.com/muni_cerrillos",
+      "facebook": "https://www.facebook.com/municerrillos",
+      "linktr": "https://linktr.ee/municerrillos"
     },
     {
       "comuna": "Cerro Navia",
@@ -53,7 +56,7 @@
       "direccion_municipal": "Av. Ecuador 3485, Estación Central",
       "url_municipal": "https://www.estacioncentral.cl",
       "wiki_url": "https://es.wikipedia.org/wiki/Estaci%C3%B3n_Central_(Chile)",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Escudo_de_Estaci%C3%B3n_Central.svg/200px-Escudo_de_Estaci%C3%B3n_Central.svg.png"
+      "logo_url": "https://www.municipalidaddeestacioncentral.cl/wp-content/uploads/2026/01/img_logo-estacion.png"
     },
     {
       "comuna": "Huechuraba",
@@ -407,9 +410,10 @@
       "lng": -70.7387,
       "poblacion": 84649,
       "direccion_municipal": "Manuel Rodríguez 550, Buin",
-      "url_municipal": "https://www.munibuin.cl",
+      "url_municipal": "https://www.buin.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Buin_(Chile)",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Escudo_de_Buin.svg/200px-Escudo_de_Buin.svg.png"
+      "logo_url": "https://www.buin.cl/wp-content/uploads/2020/12/logo.png",
+      "instagram": "https://www.instagram.com/munibuin2028/"
     },
     {
       "comuna": "Calera de Tango",
@@ -418,9 +422,10 @@
       "lng": -70.765,
       "poblacion": 24972,
       "direccion_municipal": "Camino a Calera de Tango 3150, Calera de Tango",
-      "url_municipal": "https://www.caleraodetango.cl",
+      "url_municipal": "https://www.caleradetango.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Calera_de_Tango",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Escudo_Calera_de_Tango.svg/200px-Escudo_Calera_de_Tango.svg.png"
+      "logo_url": "https://static.wixstatic.com/media/0c33ad_e9a53595d6124e9895052f54fafc5be3~mv2.png/v1/crop/x_57,y_0,w_927,h_400/fill/w_482,h_208,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LogoCaleraDeTango_4.png",
+      "instagram": "https://www.instagram.com/municdt"
     },
     {
       "comuna": "Paine",
@@ -429,9 +434,10 @@
       "lng": -70.741,
       "poblacion": 80869,
       "direccion_municipal": "Manuel Rodríguez 350, Paine",
-      "url_municipal": "https://www.munipaine.cl",
+      "url_municipal": "https://www.paine.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Paine",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Escudo_de_Paine.svg/200px-Escudo_de_Paine.svg.png"
+      "logo_url": "https://www.paine.cl/wp-content/themes/picostrap5-child-base/images/LogoPaine.svg",
+      "instagram": "https://www.instagram.com/munidepaine"
     }
   ],
   "Provincia Talagante": [
@@ -442,9 +448,9 @@
       "lng": -70.925,
       "poblacion": 72977,
       "direccion_municipal": "Ignacio Carrera Pinto 285, Talagante",
-      "url_municipal": "https://www.municipalidaddetalagante.cl",
+      "url_municipal": "https://www.munitalagante.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Talagante",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Escudo_de_Talagante.svg/200px-Escudo_de_Talagante.svg.png"
+      "logo_url": "https://static.wixstatic.com/media/1b53a1_806b9f1da2c64b819f15bb2d804b967a~mv2.png/v1/fill/w_642,h_372,al_c,lg_1,q_85,enc_avif,quality_auto/logo%20municipal%20rojo.png"
     },
     {
       "comuna": "El Monte",
@@ -453,9 +459,9 @@
       "lng": -71.021,
       "poblacion": 34893,
       "direccion_municipal": "Bilbao 530, El Monte",
-      "url_municipal": "https://www.elmonte.cl",
+      "url_municipal": "https://www.munielmonte.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/El_Monte_(Chile)",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Escudo_de_El_Monte.svg/200px-Escudo_de_El_Monte.svg.png"
+      "logo_url": "https://www.munielmonte.cl/favImage.png"
     },
     {
       "comuna": "Isla de Maipo",
@@ -464,9 +470,9 @@
       "lng": -70.899,
       "poblacion": 37167,
       "direccion_municipal": "Rodriguez 561, Isla de Maipo",
-      "url_municipal": "https://www.islasedemaipo.cl",
+      "url_municipal": "https://www.islademaipo.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Isla_de_Maipo",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Escudo_de_Isla_de_Maipo.svg/200px-Escudo_de_Isla_de_Maipo.svg.png"
+      "logo_url": "https://scontent.fscl25-1.fna.fbcdn.net/v/t39.30808-6/436379601_834140828756023_1340716738744961583_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeGguTy3OyiQg0VpM8Qe9hZAER7QpdskfisRHtCl2yR-KwocE5Q_0GtMpQoTeDf1te_44fUTRpBnpe_HoW18xvzq&_nc_ohc=CbPlFH6V0CcQ7kNvwF45gfT&_nc_oc=AdlAmtGRv2lS3t2FkxSsiwCXOIlOXI9CQLPdUjGsCr8zAnRoaW-PVH0-3ve-dnCndcA&_nc_zt=23&_nc_ht=scontent.fscl25-1.fna&_nc_gid=knXi-YbXHp0kvpVzlzMzCg&oh=00_AfsQ46Rcf4ektJcPHT_hWHkuZ4ZeszxHZkQ61S0BXnOdyQ&oe=69A5D5F5"
     },
     {
       "comuna": "Padre Hurtado",
@@ -475,9 +481,9 @@
       "lng": -70.8212,
       "poblacion": 75471,
       "direccion_municipal": "Av. Las Parcelas 150, Padre Hurtado",
-      "url_municipal": "https://www.padrehurtado.cl",
-      "wiki_url": "https://es.wikipedia.org/wiki/Padre_Hurtado_(Chile)",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Escudo_Padre_Hurtado.svg/200px-Escudo_Padre_Hurtado.svg.png"
+      "url_municipal": "https://portal.mph.cl/",
+      "wiki_url": "https://es.wikipedia.org/wiki/Padre_Hurtado_(comuna)",
+      "logo_url": "https://portal.mph.cl/wp-content/uploads/2022/05/LOGO-PNG-e1653334484821.png"
     },
     {
       "comuna": "Peñaflor",
@@ -486,9 +492,9 @@
       "lng": -70.883,
       "poblacion": 103000,
       "direccion_municipal": "Casanova 60, Peñaflor",
-      "url_municipal": "https://www.munipeniaflor.cl",
-      "wiki_url": "https://es.wikipedia.org/wiki/Pe%C3%B1aflor",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Escudo_de_Pe%C3%B1aflor.svg/200px-Escudo_de_Pe%C3%B1aflor.svg.png"
+      "url_municipal": "https://penaflor.cl/",
+      "wiki_url": "https://es.wikipedia.org/wiki/Pe%C3%B1aflor_(Chile)",
+      "logo_url": "https://penaflor.cl/extra-file-gdm/logo.png"
     }
   ],
   "Provincia Melipilla": [
@@ -501,7 +507,7 @@
       "direccion_municipal": "Manuel de Salas 449, Melipilla",
       "url_municipal": "https://www.munimelipilla.cl",
       "wiki_url": "https://es.wikipedia.org/wiki/Melipilla",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Escudo_de_Melipilla.svg/200px-Escudo_de_Melipilla.svg.png"
+      "logo_url": "https://melipilla.cl/wp-content/archivos/2025/02/logo-Muni-Melipilla.png"
     },
     {
       "comuna": "Alhué",
@@ -510,9 +516,9 @@
       "lng": -71.121,
       "poblacion": 5271,
       "direccion_municipal": "Balmaceda 125, Alhué",
-      "url_municipal": "https://www.alhue.cl",
+      "url_municipal": "https://municipalidadalhue.cl/portal/",
       "wiki_url": "https://es.wikipedia.org/wiki/Alhu%C3%A9",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Escudo_de_Alhu%C3%A9.svg/200px-Escudo_de_Alhu%C3%A9.svg.png"
+      "logo_url": "https://municipalidadalhue.cl/portal/wp-content/uploads/2024/12/cropped-Alhue-sigamos-trabajando-juntos_.png"
     },
     {
       "comuna": "Curacaví",
@@ -521,9 +527,9 @@
       "lng": -71.14,
       "poblacion": 33438,
       "direccion_municipal": "Camino Real s/n, Curacaví",
-      "url_municipal": "https://www.curacavi.cl",
+      "url_municipal": "https://municipalidadcuracavi.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Curacav%C3%AD",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Escudo_de_Curacav%C3%AD.svg/200px-Escudo_de_Curacav%C3%AD.svg.png"
+      "logo_url": "https://municipalidadcuracavi.cl/wp-content/uploads/2024/12/logo-blanco.png"
     },
     {
       "comuna": "María Pinto",
@@ -532,9 +538,9 @@
       "lng": -71.1527,
       "poblacion": 14827,
       "direccion_municipal": "Arturo Prat 211, María Pinto",
-      "url_municipal": "https://www.mariapinto.cl",
+      "url_municipal": "https://mpinto.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Mar%C3%ADa_Pinto",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Escudo_de_Mar%C3%ADa_Pinto.svg/200px-Escudo_de_Mar%C3%ADa_Pinto.svg.png"
+      "logo_url": "https://mpinto.cl/wp-content/uploads/2023/06/LOGO-MUNICIPAL-2025-e1769172435748.png"
     },
     {
       "comuna": "San Pedro",
@@ -543,9 +549,9 @@
       "lng": -71.47,
       "poblacion": 11690,
       "direccion_municipal": "Av. Bernardo O'Higgins 620, San Pedro de Melipilla",
-      "url_municipal": "https://www.munisp.cl",
-      "wiki_url": "https://es.wikipedia.org/wiki/San_Pedro_(Melipilla)",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Escudo_de_San_Pedro_(Melipilla).svg/200px-Escudo_de_San_Pedro_(Melipilla).svg.png"
+      "url_municipal": "https://www.munisanpedro.cl/",
+      "wiki_url": "https://es.wikipedia.org/wiki/San_Pedro_(Chile)",
+      "logo_url": "https://www.munisanpedro.cl/wp-content/uploads/2025/09/FACEBOOK-PUBLICACION-8-e1758725283318.png"
     }
   ],
   "Provincia Chacabuco": [
@@ -556,9 +562,9 @@
       "lng": -70.6722,
       "poblacion": 156044,
       "direccion_municipal": "Av. El Roble 4501, Colina",
-      "url_municipal": "https://www.muniocolina.cl",
+      "url_municipal": "https://www.colina.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Colina_(Chile)",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Escudo_de_Colina.svg/200px-Escudo_de_Colina.svg.png"
+      "logo_url": "https://www.colina.cl/wp-content/uploads/2022/02/logo-2022.png"
     },
     {
       "comuna": "Lampa",
@@ -567,9 +573,9 @@
       "lng": -70.88,
       "poblacion": 91897,
       "direccion_municipal": "Condell 999, Lampa",
-      "url_municipal": "https://www.munilampa.cl",
-      "wiki_url": "https://es.wikipedia.org/wiki/Lampa",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Escudo_de_Lampa.svg/200px-Escudo_de_Lampa.svg.png"
+      "url_municipal": "https://lampa.cl/",
+      "wiki_url": "https://es.wikipedia.org/wiki/Lampa_(Chile)",
+      "logo_url": "https://lampa.cl/website/wp-content/uploads/2022/08/logo-municipalidad-lampa-horizontal-color-texto-gris-2022.png"
     },
     {
       "comuna": "Tiltil",
@@ -580,7 +586,7 @@
       "direccion_municipal": "O'Higgins 10, Tiltil",
       "url_municipal": "https://www.munitiltil.cl",
       "wiki_url": "https://es.wikipedia.org/wiki/Til_Til",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Escudo_de_Til_Til.svg/200px-Escudo_de_Til_Til.svg.png"
+      "logo_url": "https://munitiltil.cl/wp-content/uploads/2024/12/escudotiltil.png"
     }
   ]
 }

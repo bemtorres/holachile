@@ -1,7 +1,8 @@
 'use client';
 
 import { useEffect, useRef, useState, useCallback } from 'react';
-import type { Portico } from '@/data';
+import { Portico, findComuna } from '@/data';
+import * as L from 'leaflet';
 
 type MapProps = {
   porticos: Portico[];
@@ -20,138 +21,52 @@ type MapProps = {
   pctCat1?: number;
   pctCat2?: number;
   routePorticos?: Portico[];
-  timeProfile?: 'valle' | 'punta' | 'saturacion';
-  onSimTick?: (vehicles: number, revenue: number, elapsed: number) => void;
+  timeProfile?: 'punta' | 'valle' | 'saturacion';
+  onSimTick?: (stats: { vehicles: number; revenue: number; minutes: number }) => void;
   onSimComplete?: () => void;
 };
 
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
-
-// ─── Vehicle helpers ─────────────────────────────────────────────────────────
-
-const CAR_COLORS = ['#60a5fa', '#34d399', '#f472b6', '#facc15', '#a78bfa', '#fb923c'];
-const TRUCK_COLORS = ['#94a3b8', '#cbd5e1', '#f1f5f9'];
-
-function randomBetween(a: number, b: number) { return a + Math.random() * (b - a); }
-
-type VehicleType = 'car' | 'truck' | 'heavy';
-interface SimVehicle {
+// Types for simulation
+interface Vehicle {
   id: number;
-  color: string;
-  type: VehicleType;
-  /** 0–1 progress along route */
-  t: number;
-  speed: number; // dt per frame
-  revenue: number;
-  firedPorticos: Set<number>; // indices of portals fired
-  el: HTMLDivElement;
   marker: L.Marker;
+  path: L.LatLng[];
+  totalDist: number;
+  currentDist: number;
+  speed: number; // km/min
+  porticosPassed: Set<string>;
+  startTime: number;
+  category: 1 | 2;
+  color: string;
 }
 
 interface MoneyBurst {
+  id: number;
   el: HTMLDivElement;
-  created: number;
+  startTime: number;
 }
 
-function makeSVGIcon(type: VehicleType, color: string): string {
-  if (type === 'car') {
-    return `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18">
-      <ellipse cx="14" cy="16" rx="12" ry="2.5" fill="black" opacity="0.3"/>
-      <rect x="2" y="7" width="24" height="9" fill="${color}" rx="3"/>
-      <rect x="6" y="3" width="16" height="9" fill="${color}" rx="3"/>
-      <rect x="8" y="4" width="12" height="6" fill="#1e3a5f" rx="2" opacity="0.85"/>
-      <circle cx="7" cy="16" r="3" fill="#09090b"/><circle cx="7" cy="16" r="1.2" fill="#52525b"/>
-      <circle cx="21" cy="16" r="3" fill="#09090b"/><circle cx="21" cy="16" r="1.2" fill="#52525b"/>
-      <rect x="2" y="9" width="3" height="3" fill="#fef08a" rx="0.5" opacity="0.9"/>
-      <rect x="23" y="9" width="3" height="3" fill="#ef4444" rx="0.5" opacity="0.7"/>
-    </svg>`;
+// Helper to split route into small segments for interpolation
+function routeSegments(geometry: GeoJSON.LineString) {
+  const coords = geometry.coordinates;
+  const segments: { p1: L.LatLng; p2: L.LatLng; dist: number }[] = [];
+  let totalDist = 0;
+
+  for (let i = 0; i < coords.length - 1; i++) {
+    const p1 = L.latLng(coords[i][1], coords[i][0]);
+    const p2 = L.latLng(coords[i + 1][1], coords[i + 1][0]);
+    const d = p1.distanceTo(p2) / 1000; // km
+    segments.push({ p1, p2, dist: d });
+    totalDist += d;
   }
-  if (type === 'truck') {
-    return `<svg xmlns="http://www.w3.org/2000/svg" width="42" height="18" viewBox="0 0 42 18">
-      <ellipse cx="21" cy="16" rx="19" ry="2.5" fill="black" opacity="0.3"/>
-      <rect x="2" y="5" width="26" height="11" fill="${color}" rx="2" opacity="0.85"/>
-      <rect x="28" y="3" width="12" height="12" fill="#cbd5e1" rx="3"/>
-      <rect x="30" y="4.5" width="8" height="7" fill="#1e3a5f" rx="1.5" opacity="0.8"/>
-      <circle cx="8" cy="16" r="3.2" fill="#09090b"/><circle cx="8" cy="16" r="1.3" fill="#3f3f46"/>
-      <circle cx="21" cy="16" r="3.2" fill="#09090b"/><circle cx="21" cy="16" r="1.3" fill="#3f3f46"/>
-      <circle cx="34" cy="16" r="3.2" fill="#09090b"/><circle cx="34" cy="16" r="1.3" fill="#3f3f46"/>
-      <rect x="38" y="7" width="2.5" height="3.5" fill="#fef08a" rx="0.5" opacity="0.85"/>
-    </svg>`;
-  }
-  // heavy
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="54" height="20" viewBox="0 0 54 20">
-    <ellipse cx="27" cy="18" rx="25" ry="2.5" fill="black" opacity="0.3"/>
-    <rect x="2" y="5" width="32" height="13" fill="${color}" rx="2" opacity="0.8"/>
-    <rect x="4" y="11" width="28" height="3" fill="#7c3aed" opacity="0.4"/>
-    <rect x="34" y="3" width="16" height="14" fill="#94a3b8" rx="3"/>
-    <rect x="36" y="4.5" width="11" height="8" fill="#1e3a5f" rx="1.5" opacity="0.8"/>
-    <circle cx="8" cy="18" r="3.5" fill="#09090b"/><circle cx="8" cy="18" r="1.5" fill="#3f3f46"/>
-    <circle cx="20" cy="18" r="3.5" fill="#09090b"/><circle cx="20" cy="18" r="1.5" fill="#3f3f46"/>
-    <circle cx="32" cy="18" r="3.5" fill="#09090b"/><circle cx="32" cy="18" r="1.5" fill="#3f3f46"/>
-    <circle cx="44" cy="18" r="3.5" fill="#09090b"/><circle cx="44" cy="18" r="1.5" fill="#3f3f46"/>
-    <rect x="48" y="7" width="3" height="4" fill="#fef08a" rx="0.5" opacity="0.85"/>
-  </svg>`;
+  return { segments, totalDist };
 }
 
-function makeLeafletIcon(type: VehicleType, color: string, bearing: number) {
-  const svg = makeSVGIcon(type, color);
-  const w = type === 'car' ? 28 : type === 'truck' ? 42 : 54;
-  return L.divIcon({
-    html: `<div style="transform:rotate(${bearing}deg);transform-origin:center center;line-height:0">${svg}</div>`,
-    className: '',
-    iconSize: [w, 20],
-    iconAnchor: [w / 2, 10],
-  });
+// Function to generate golden-angle HSL colors for distinct communes
+function getComunaColor(index: number, total: number) {
+  const hue = (index * 137.508) % 360; // Golden angle
+  return `hsl(${hue}, 65%, 55%)`;
 }
-
-// ─── Route interpolation helpers ──────────────────────────────────────────────
-
-function coordsToPoints(coords: number[][]): [number, number][] {
-  return coords.map(([lng, lat]) => [lat, lng]);
-}
-
-function routeSegments(pts: [number, number][]) {
-  const segs: { from: [number, number]; to: [number, number]; dist: number; cumul: number }[] = [];
-  let cumul = 0;
-  for (let i = 0; i < pts.length - 1; i++) {
-    const d = haversine(pts[i], pts[i + 1]);
-    segs.push({ from: pts[i], to: pts[i + 1], dist: d, cumul });
-    cumul += d;
-  }
-  return { segs, total: cumul };
-}
-
-function haversine([lat1, lng1]: [number, number], [lat2, lng2]: [number, number]) {
-  const R = 6371000;
-  const dLat = ((lat2 - lat1) * Math.PI) / 180;
-  const dLng = ((lng2 - lng1) * Math.PI) / 180;
-  const a = Math.sin(dLat / 2) ** 2 + Math.cos((lat1 * Math.PI) / 180) * Math.cos((lat2 * Math.PI) / 180) * Math.sin(dLng / 2) ** 2;
-  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-}
-
-function interpolateRoute(
-  segs: ReturnType<typeof routeSegments>['segs'],
-  total: number,
-  t: number
-): { latlng: [number, number]; bearing: number } {
-  const target = t * total;
-  let acc = 0;
-  for (const seg of segs) {
-    if (acc + seg.dist >= target) {
-      const frac = (target - acc) / seg.dist;
-      const lat = seg.from[0] + (seg.to[0] - seg.from[0]) * frac;
-      const lng = seg.from[1] + (seg.to[1] - seg.from[1]) * frac;
-      const bearing = (Math.atan2(seg.to[1] - seg.from[1], seg.to[0] - seg.from[0]) * 180) / Math.PI;
-      return { latlng: [lat, lng], bearing };
-    }
-    acc += seg.dist;
-  }
-  const last = segs[segs.length - 1];
-  return { latlng: last.to, bearing: 0 };
-}
-
-// ─── Component ────────────────────────────────────────────────────────────────
 
 export default function MapView({
   porticos,
@@ -161,10 +76,10 @@ export default function MapView({
   routeGeometry,
   origin,
   destination,
-  showComunas = false,
+  showComunas,
   onComunaClick,
-  simActive = false,
-  simPaused = false,
+  simActive,
+  simPaused,
   flowPerHour = 1500,
   pctCat1 = 70,
   pctCat2 = 20,
@@ -176,26 +91,28 @@ export default function MapView({
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<L.Map | null>(null);
   const markersRef = useRef<L.CircleMarker[]>([]);
-  const routeLayerRef = useRef<L.GeoJSON | null>(null);
-  const originMarkerRef = useRef<L.CircleMarker | null>(null);
-  const destMarkerRef = useRef<L.CircleMarker | null>(null);
-  const comunaLayerRef = useRef<L.GeoJSON | null>(null);
-  const comunaGeoJSONRef = useRef<any>(null); // cached GeoJSON
+  const routeLayerRef = useRef<L.Polyline | null>(null);
+  const originMarkerRef = useRef<L.Marker | null>(null);
+  const destMarkerRef = useRef<L.Marker | null>(null);
   const [isReady, setIsReady] = useState(false);
+
+  // Comunas layer state
+  const comunasLayerRef = useRef<L.GeoJSON | null>(null);
   const [comunaColors, setComunaColors] = useState<Record<string, string>>({});
   const [loadingComunas, setLoadingComunas] = useState(false);
   const [legendOpen, setLegendOpen] = useState(true);
   const [legendFilter, setLegendFilter] = useState('');
+  const geoJsonCacheRef = useRef<any>(null);
 
-  // Simulation internals
-  const rafRef = useRef<number | null>(null);
-  const vehiclesRef = useRef<SimVehicle[]>([]);
-  const moneyBurstsRef = useRef<MoneyBurst[]>([]);
+  // Simulation Refs
   const vehicleLayerRef = useRef<L.LayerGroup | null>(null);
-  const simStartRef = useRef(0);
-  const pausedAtRef = useRef(0);
-  const lastSpawnRef = useRef(0);
-  const accRevRef = useRef(0);
+  const vehiclesRef = useRef<Vehicle[]>([]);
+  const moneyBurstsRef = useRef<MoneyBurst[]>([]);
+  const rafRef = useRef<number | null>(null);
+  const simStartRef = useRef<number>(0);
+  const pausedAtRef = useRef<number>(0);
+  const lastSpawnRef = useRef<number>(0);
+  const accRevenueRef = useRef(0);
   const accVehRef = useRef(0);
   const vehicleIdRef = useRef(0);
   const isPausedRef = useRef(false);
@@ -264,13 +181,19 @@ export default function MapView({
         tarifasHtml += `</div>`;
       }
 
-      marker.bindPopup(`<div style="font-family:'Inter',sans-serif;min-width:220px;color:#f4f4f5;background:#09090b;padding:6px;border:none;">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
-          <div style="width:8px;height:8px;border-radius:50%;background:${p.color}"></div>
-          <div style="font-size:14px;font-weight:600">${p.nombre}</div>
+      const cData = p.comuna ? findComuna(p.comuna) : null;
+      const logoHtml = cData ? `<img src="${cData.logo_url}" style="width:20px;height:20px;object-contain:contain;" />` : '';
+
+      marker.bindPopup(`<div style="font-family:'Inter',sans-serif;min-width:240px;color:#f4f4f5;background:#09090b;padding:6px;border:none;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+          <div style="display:flex;items-center:center;gap:8px;">
+            <div style="width:8px;height:8px;border-radius:50%;background:${p.color}"></div>
+            <div style="font-size:14px;font-weight:600">${p.nombre}</div>
+          </div>
+          ${logoHtml}
         </div>
-        <div style="font-size:12px;color:#a1a1aa;margin-bottom:8px">${p.autopista} ${p.tramo === 'N/A' ? '' : '• ' + p.tramo}</div>
-        <div style="font-size:12px;color:#d4d4d8;line-height:1.6">
+        <div style="font-size:12px;color:#a1a1aa;margin-bottom:12px">${p.autopista} ${p.tramo === 'N/A' ? '' : '• ' + p.tramo}</div>
+        <div style="font-size:12px;color:#d4d4d8;line-height:1.6;background:#18181b;padding:8px;border-radius:6px;border:1px solid #27272a;">
           <div style="display:flex;justify-content:space-between;"><span style="color:#71717a">Kilómetro:</span><span>${p.km}</span></div>
           <div style="display:flex;justify-content:space-between;"><span style="color:#71717a">Comuna:</span><span>${p.comuna || 'N/A'}</span></div>
           ${p.sentido ? `<div style="display:flex;justify-content:space-between;"><span style="color:#71717a">Sentido:</span><span>${p.sentido}</span></div>` : ''}
@@ -298,349 +221,265 @@ export default function MapView({
     destMarkerRef.current?.remove(); destMarkerRef.current = null;
 
     if (routeGeometry) {
-      routeLayerRef.current = L.geoJSON(routeGeometry, {
-        style: { color: '#3b82f6', weight: 6, opacity: 0.8, lineCap: 'round', lineJoin: 'round' },
-      }).addTo(map);
-      map.fitBounds(routeLayerRef.current.getBounds(), { padding: [50, 50] });
-
-      // Pre-compute route segments for animation
-      const pts = coordsToPoints(routeGeometry.coordinates as number[][]);
-      routeSegsRef.current = routeSegments(pts);
-    } else {
-      routeSegsRef.current = null;
+      const latlngs = routeGeometry.coordinates.map(c => [c[1], c[0]] as [number, number]);
+      routeLayerRef.current = L.polyline(latlngs, { color: '#3b82f6', weight: 5, opacity: 0.8 }).addTo(map);
+      map.fitBounds(routeLayerRef.current.getBounds(), { padding: [40, 40] });
     }
 
     if (origin) {
-      originMarkerRef.current = L.circleMarker(origin, { radius: 8, fillColor: '#22c55e', color: '#fff', weight: 3, opacity: 1, fillOpacity: 1 }).addTo(map);
+      originMarkerRef.current = L.marker([origin[0], origin[1]], {
+        icon: L.divIcon({
+          className: 'custom-div-icon',
+          html: `<div style="background-color:#10b981;width:12px;height:12px;border:2px solid white;border-radius:50%;box-shadow:0 0 10px rgba(16,185,129,0.5);"></div>`,
+          iconSize: [12, 12],
+          iconAnchor: [6, 6]
+        })
+      }).addTo(map);
     }
+
     if (destination) {
-      destMarkerRef.current = L.circleMarker(destination, { radius: 8, fillColor: '#ef4444', color: '#fff', weight: 3, opacity: 1, fillOpacity: 1 }).addTo(map);
+      destMarkerRef.current = L.marker([destination[0], destination[1]], {
+        icon: L.divIcon({
+          className: 'custom-div-icon',
+          html: `<div style="background-color:#ef4444;width:12px;height:12px;border:2px solid white;border-radius:50%;box-shadow:0 0 10px rgba(239,68,68,0.5);"></div>`,
+          iconSize: [12, 12],
+          iconAnchor: [6, 6]
+        })
+      }).addTo(map);
     }
   }, [isReady, routeGeometry, origin, destination]);
 
-  // ── Comunas GeoJSON layer (à la Windy) ─────────────────────────────
+  // ── Comunas GeoJSON Layer ──────────────────────────────────────────────────
   useEffect(() => {
     if (!isReady || !mapInstanceRef.current) return;
     const map = mapInstanceRef.current;
 
-    if (!showComunas) {
-      if (comunaLayerRef.current) {
-        comunaLayerRef.current.remove();
-        comunaLayerRef.current = null;
-      }
-      setComunaColors({});
-      return;
+    if (comunasLayerRef.current) {
+      comunasLayerRef.current.remove();
+      comunasLayerRef.current = null;
     }
 
-    // ── Golden-angle HSL ↔ maximum differentiation between neighbours ──
-    const getColor = (i: number) => {
-      const hue = Math.round((i * 137.508) % 360);
-      const sat = 70 + (i % 3) * 8;   // 70 | 78 | 86
-      const lit = 52 + (i % 4) * 3;   // 52 | 55 | 58 | 61
-      return `hsl(${hue},${sat}%,${lit}%)`;
-    };
+    if (!showComunas) return;
 
-    const buildLayer = (geojson: any) => {
-      const rmFeatures: any[] = geojson.features
-        .filter((f: any) => f.properties.codregion === 13)
-        .sort((a: any, b: any) =>
-          a.properties.Comuna.localeCompare(b.properties.Comuna, 'es')
-        );
-
-      const colorMap: Record<string, string> = {};
-      rmFeatures.forEach((f: any, i: number) => {
-        colorMap[f.properties.Comuna] = getColor(i);
-      });
-      setComunaColors(colorMap);
-
-      const defaultStyle = (color: string): L.PathOptions => ({
-        fillColor: color,
-        fillOpacity: 0.48,
-        color: 'rgba(0,0,0,0)',   // invisible internal borders
-        weight: 0,
-      });
-      const hoverStyle = (color: string): L.PathOptions => ({
-        fillColor: color,
-        fillOpacity: 0.82,
-        color: 'rgba(255,255,255,0.90)',
-        weight: 2,
-      });
-
-
-      const layer = L.geoJSON(
-        { ...geojson, features: rmFeatures } as any,
-        {
-          style: (feature: any) => defaultStyle(
-            colorMap[feature.properties.Comuna] ?? '#6366f1'
-          ),
-          onEachFeature: (feature: any, lyr: any) => {
-            const nombre: string = feature.properties.Comuna;
-            const color = colorMap[nombre] ?? '#6366f1';
-
-            lyr.bindTooltip(
-              `<span style="display:inline-flex;align-items:center;gap:5px">
-                 <span style="width:8px;height:8px;border-radius:50%;background:${color};flex-shrink:0;display:inline-block"></span>
-                 ${nombre}
-               </span>`,
-              { permanent: false, direction: 'auto', className: 'comuna-tooltip', sticky: true }
-            );
-
-            lyr.on('mouseover', () => {
-              lyr.setStyle(hoverStyle(color));
-              lyr.bringToFront();
-            });
-            lyr.on('mouseout', () => lyr.setStyle(defaultStyle(color)));
-            lyr.on('click', () => onComunaClick?.(nombre));
-          },
-        }
-      );
-
-      return layer;
-    };
-
-    const show = async () => {
+    const loadGeoJson = async () => {
       setLoadingComunas(true);
       try {
-        if (!comunaGeoJSONRef.current) {
-          const res = await fetch(
-            'https://raw.githubusercontent.com/fcortes/Chile-GeoJSON/master/comunas.geojson'
-          );
-          comunaGeoJSONRef.current = await res.json();
+        let geoData = geoJsonCacheRef.current;
+        if (!geoData) {
+          const res = await fetch('https://raw.githubusercontent.com/fcortes/Chile-GeoJSON/master/comunas.geojson');
+          geoData = await res.json();
+          geoJsonCacheRef.current = geoData;
         }
-        comunaLayerRef.current?.remove();
-        comunaLayerRef.current = null;
-        const lyr = buildLayer(comunaGeoJSONRef.current);
-        lyr.addTo(map);
-        comunaLayerRef.current = lyr;
-      } catch (e) {
-        console.error('Error loading comunas GeoJSON', e);
+
+        // Filter to Santiago Metropolitan Region (Region 13)
+        const rmComunas = {
+          ...geoData,
+          features: geoData.features.filter((f: any) => f.properties.REGION === "13")
+        };
+
+        // Create colors
+        const colors: Record<string, string> = {};
+        rmComunas.features.forEach((f: any, i: number) => {
+          colors[f.properties.COMUNA] = getComunaColor(i, rmComunas.features.length);
+        });
+        setComunaColors(colors);
+
+        comunasLayerRef.current = L.geoJSON(rmComunas, {
+          style: (feature: any) => ({
+            fillColor: colors[feature.properties.COMUNA],
+            weight: 0,
+            opacity: 0,
+            fillOpacity: 0.35,
+          }),
+          onEachFeature: (feature: any, layer: L.Layer) => {
+            const name = feature.properties.COMUNA;
+            layer.bindTooltip(`<div class="comuna-tooltip">${name}</div>`, {
+              sticky: true,
+              direction: 'center',
+              className: 'comuna-label'
+            });
+
+            layer.on({
+              mouseover: (e: any) => {
+                const lyr = e.target;
+                lyr.setStyle({ fillOpacity: 0.6, weight: 1, color: '#fff' } as L.PathOptions);
+              },
+              mouseout: (e: any) => {
+                const lyr = e.target;
+                lyr.setStyle({ fillOpacity: 0.35, weight: 0 } as L.PathOptions);
+              },
+              click: (e: any) => {
+                L.DomEvent.stopPropagation(e);
+                onComunaClick?.(name);
+              }
+            });
+          }
+        }).addTo(map);
+      } catch (err) {
+        console.error('Error loading GeoJSON:', err);
       } finally {
         setLoadingComunas(false);
       }
     };
 
-    show();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isReady, showComunas]);
+    loadGeoJson();
+  }, [isReady, showComunas, onComunaClick]);
 
-  // ── Pre-compute portico positions on route ────────────────────────────────
-  useEffect(() => {
-    routePorticosRef.current = routePorticos;
-    if (!routeSegsRef.current || routePorticos.length === 0) {
-      porticoPositionsRef.current = [];
-      return;
-    }
-    const { segs, total } = routeSegsRef.current;
+  // ── Simulation Logic ────────────────────────────────────────────────────────
+  const animate = useCallback((time: number) => {
+    if (!simActiveRef.current || isPausedRef.current) return;
 
-    // For each routePortico find its closest t on the route
-    const positions = routePorticos.map((p) => {
-      let bestT = 0;
-      let bestDist = Infinity;
-      let cumul = 0;
-      for (const seg of segs) {
-        // Sample a few points along segment
-        for (let f = 0; f <= 1; f += 0.1) {
-          const lat = seg.from[0] + (seg.to[0] - seg.from[0]) * f;
-          const lng = seg.from[1] + (seg.to[1] - seg.from[1]) * f;
-          const d = haversine([lat, lng], [p.lat, p.lng]);
-          const t = (cumul + seg.dist * f) / total;
-          if (d < bestDist) { bestDist = d; bestT = t; }
-        }
-        cumul += seg.dist;
+    const elapsedWall = time - simStartRef.current; // Real time since start
+    const simMinutes = elapsedWall / 100; // 1 second real = 10 minutes sim
+
+    // 1. Spawn logic
+    const intervalMs = (60 / flowPerHour) * 100;
+    if (time - lastSpawnRef.current > intervalMs) {
+      if (routeSegsRef.current) {
+        const cat = Math.random() < (pctCat1 / 100) ? 1 : 2;
+        const speed = (90 + Math.random() * 20) / 60; // 90-110 km/h to km/min
+        const pathCoords: L.LatLng[] = [];
+        routeSegsRef.current.segments.forEach(s => pathCoords.push(s.p1));
+        const last = routeSegsRef.current.segments[routeSegsRef.current.segments.length - 1];
+        if (last) pathCoords.push(last.p2);
+
+        const marker = L.marker(pathCoords[0], {
+          icon: L.divIcon({
+            className: 'vehicle-icon',
+            html: `<div style="transform: rotate(0deg); transition: transform 0.2s;">
+              ${cat === 1
+                ? '<svg width="14" height="14" viewBox="0 0 24 24" fill="#3b82f6"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42.99L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM5 13h14v5H5v-5zm11.5 4c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM7.5 17c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>'
+                : '<svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm-3.5-6H5V6h11v6.5z"/></svg>'
+              }
+            </div>`,
+            iconSize: [20, 20],
+            iconAnchor: [10, 10]
+          })
+        }).addTo(vehicleLayerRef.current!);
+
+        vehiclesRef.current.push({
+          id: vehicleIdRef.current++,
+          marker,
+          path: pathCoords,
+          totalDist: routeSegsRef.current.totalDist,
+          currentDist: 0,
+          speed,
+          porticosPassed: new Set(),
+          startTime: time,
+          category: cat as 1 | 2,
+          color: cat === 1 ? '#3b82f6' : '#f59e0b'
+        });
+        accVehRef.current++;
+        lastSpawnRef.current = time;
       }
-      // revenue for cat1 avg
-      const getPrice = (cat: 1 | 2 | 3) => {
-        if (p.tarifas_urbanas) {
-          const catKey = cat === 1 ? 'categoria_1_4' : cat === 2 ? 'categoria_2' : 'categoria_3';
-          const data = (p.tarifas_urbanas as any)[catKey] || p.tarifas_urbanas;
-          let price: number | undefined;
-          if (timeProfile === 'valle') price = (data as any).TBFP || (data as any).tarifa_base_fuera_punta;
-          if (timeProfile === 'punta') price = (data as any).TBP || (data as any).tarifa_base_punta;
-          if (timeProfile === 'saturacion') price = (data as any).TS || (data as any).tarifa_saturacion;
-          if (price !== undefined) return Number(price);
+    }
+
+    // 2. Move logic
+    const activeVehicles: Vehicle[] = [];
+    const now = time;
+
+    vehiclesRef.current.forEach(v => {
+      const dt = 16.67; // Assuming 60fps
+      const simDt = dt / 100;
+      v.currentDist += v.speed * simDt;
+
+      if (v.currentDist < v.totalDist) {
+        // Find position on path
+        let d = 0;
+        let p: L.LatLng = v.path[0];
+        for (let i = 0; i < v.path.length - 1; i++) {
+          const segD = v.path[i].distanceTo(v.path[i + 1]) / 1000;
+          if (d + segD > v.currentDist) {
+            const ratio = (v.currentDist - d) / segD;
+            p = L.latLng(
+              v.path[i].lat + (v.path[i + 1].lat - v.path[i].lat) * ratio,
+              v.path[i].lng + (v.path[i + 1].lng - v.path[i].lng) * ratio
+            );
+            break;
+          }
+          d += segD;
         }
-        const base = p.precio || 1200;
-        if (cat === 1) return base;
-        if (cat === 2) return base * 1.8;
-        return base * 3.5;
-      };
-      const pct3 = Math.max(0, 100 - pctCat1 - pctCat2);
-      const avgRev = (getPrice(1) * pctCat1 + getPrice(2) * pctCat2 + getPrice(3) * pct3) / 100;
-      return { t: bestT, revenue: avgRev };
-    });
-    porticoPositionsRef.current = positions;
-  }, [routePorticos, routeGeometry, pctCat1, pctCat2, timeProfile]);
+        v.marker.setLatLng(p);
 
-  // ── Helper to spawn a vehicle ────────────────────────────────────────────
-  const spawnVehicle = useCallback((): SimVehicle | null => {
-    if (!vehicleLayerRef.current || !mapInstanceRef.current) return null;
-    const roll = Math.random() * 100;
-    let type: VehicleType;
-    let revenue = 1200;
-    const pct3 = Math.max(0, 100 - pctCat1 - pctCat2);
-    if (roll < pctCat1) {
-      type = 'car';
-      revenue = porticoPositionsRef.current.length > 0
-        ? porticoPositionsRef.current.reduce((s, p) => s + p.revenue, 0) / porticoPositionsRef.current.length
-        : 1200;
-    } else if (roll < pctCat1 + pctCat2) {
-      type = 'truck';
-      revenue = (porticoPositionsRef.current.length > 0
-        ? porticoPositionsRef.current.reduce((s, p) => s + p.revenue, 0) / porticoPositionsRef.current.length
-        : 1200) * 1.8;
-    } else {
-      type = 'heavy';
-      revenue = (porticoPositionsRef.current.length > 0
-        ? porticoPositionsRef.current.reduce((s, p) => s + p.revenue, 0) / porticoPositionsRef.current.length
-        : 1200) * 3.5;
-    }
+        // Portico intersection
+        porticoPositionsRef.current.forEach((pp, idx) => {
+          if (v.currentDist >= pp.t && !v.porticosPassed.has(idx.toString())) {
+            v.porticosPassed.add(idx.toString());
 
-    const color = type === 'car'
-      ? CAR_COLORS[Math.floor(Math.random() * CAR_COLORS.length)]
-      : TRUCK_COLORS[Math.floor(Math.random() * TRUCK_COLORS.length)];
+            // Calculate actual price base on category
+            let price = pp.revenue;
+            if (v.category === 2) price *= 2.5; // Commercial multiplier
 
-    const speedKmh = type === 'car' ? randomBetween(60, 100) : type === 'truck' ? randomBetween(40, 65) : randomBetween(30, 50);
-    // t per second: how much of the route covered per second (route total in meters / 1000 → km, /speedKmh * 3600 → seconds)
-    const totalM = routeSegsRef.current?.total ?? 10000;
-    const speedTperSec = (speedKmh / 3.6) / totalM; // fraction of route per second
+            accRevenueRef.current += price;
 
-    const el = document.createElement('div');
-    const marker = L.marker([0, 0], {
-      icon: makeLeafletIcon(type, color, 0),
-      zIndexOffset: 1000,
-      interactive: false,
-    });
-    marker.addTo(vehicleLayerRef.current!);
+            // Money burst animation
+            const point = mapInstanceRef.current!.latLngToContainerPoint(p);
+            const burst = document.createElement('div');
+            burst.className = 'money-burst';
+            burst.innerText = `+$${Math.round(price)}`;
+            burst.style.left = `${point.x}px`;
+            burst.style.top = `${point.y}px`;
+            burst.style.color = v.color;
+            mapRef.current!.appendChild(burst);
+            moneyBurstsRef.current.push({ id: Date.now() + Math.random(), el: burst, startTime: now });
+          }
+        });
 
-    return {
-      id: vehicleIdRef.current++,
-      color,
-      type,
-      t: 0,
-      speed: speedTperSec,
-      revenue,
-      firedPorticos: new Set(),
-      el,
-      marker,
-    };
-  }, [pctCat1, pctCat2]);
-
-  // ── Money burst helper ───────────────────────────────────────────────────
-  const spawnMoneyBurst = useCallback((latlng: [number, number], amount: number) => {
-    if (!mapInstanceRef.current) return;
-    const map = mapInstanceRef.current;
-    const pt = map.latLngToContainerPoint(latlng);
-
-    const el = document.createElement('div');
-    el.style.cssText = `
-      position:absolute;
-      left:${pt.x}px;
-      top:${pt.y}px;
-      transform:translate(-50%,-50%);
-      background:#16a34a;
-      color:white;
-      font-size:11px;
-      font-weight:700;
-      font-family:monospace;
-      padding:3px 8px;
-      border-radius:999px;
-      pointer-events:none;
-      z-index:9999;
-      white-space:nowrap;
-      box-shadow:0 0 12px rgba(34,197,94,0.5);
-      transition:none;
-    `;
-    el.textContent = `+$${Math.round(amount).toLocaleString('es-CL')}`;
-    mapRef.current?.parentElement?.appendChild(el);
-    moneyBurstsRef.current.push({ el, created: performance.now() });
-  }, []);
-
-  // ── Main sim loop ────────────────────────────────────────────────────────
-  const animate = useCallback((ts: number) => {
-    if (!simActiveRef.current) return;
-    if (isPausedRef.current) { rafRef.current = requestAnimationFrame(animate); return; }
-
-    const elapsed = (ts - simStartRef.current) / 1000; // seconds
-    const SIM_DURATION_S = 10;
-    const progress = Math.min(elapsed / SIM_DURATION_S, 1);
-
-    // Spawn vehicles
-    const spawnIntervalMs = 1000 / (flowPerHour / 3600);
-    if (ts - lastSpawnRef.current > spawnIntervalMs) {
-      lastSpawnRef.current = ts;
-      const v = spawnVehicle();
-      if (v) vehiclesRef.current.push(v);
-    }
-
-    const dt = 1 / 60; // assume ~60fps
-    const dead: SimVehicle[] = [];
-
-    vehiclesRef.current.forEach((v) => {
-      v.t += v.speed * dt;
-
-      if (v.t >= 1) {
-        dead.push(v);
-        return;
+        activeVehicles.push(v);
+      } else {
+        v.marker.remove();
       }
-
-      if (!routeSegsRef.current) return;
-      const { latlng, bearing } = interpolateRoute(routeSegsRef.current.segs, routeSegsRef.current.total, v.t);
-      v.marker.setLatLng(latlng);
-      v.marker.setIcon(makeLeafletIcon(v.type, v.color, bearing));
-
-      // Check portico crossings
-      porticoPositionsRef.current.forEach((pp, idx) => {
-        if (!v.firedPorticos.has(idx) && v.t >= pp.t) {
-          v.firedPorticos.add(idx);
-          accRevRef.current += v.revenue;
-          accVehRef.current += 1;
-          spawnMoneyBurst(latlng, v.revenue);
-        }
-      });
     });
+    vehiclesRef.current = activeVehicles;
 
-    // Remove finished vehicles
-    dead.forEach((v) => {
-      v.marker.remove();
-      vehiclesRef.current = vehiclesRef.current.filter((x) => x.id !== v.id);
-    });
-
-    // Animate money bursts
-    const now = performance.now();
-    moneyBurstsRef.current = moneyBurstsRef.current.filter((b) => {
-      const age = (now - b.created) / 1000;
-      if (age > 1.5) { b.el.remove(); return false; }
-      const frac = age / 1.5;
-      b.el.style.opacity = String(1 - frac);
-      b.el.style.top = `${parseFloat(b.el.style.top) - 0.5}px`;
+    // 3. Bursts cleanup
+    moneyBurstsRef.current = moneyBurstsRef.current.filter(b => {
+      if (now - b.startTime > 1000) {
+        b.el.remove();
+        return false;
+      }
       return true;
     });
 
-    onSimTickRef.current?.(accVehRef.current, accRevRef.current, progress * 60);
+    onSimTickRef.current?.({
+      vehicles: accVehRef.current,
+      revenue: accRevenueRef.current,
+      minutes: simMinutes
+    });
 
-    if (progress < 1) {
-      rafRef.current = requestAnimationFrame(animate);
-    } else {
-      // cleanup vehicles
-      vehiclesRef.current.forEach((v) => v.marker.remove());
-      vehiclesRef.current = [];
-      moneyBurstsRef.current.forEach((b) => b.el.remove());
-      moneyBurstsRef.current = [];
-      simActiveRef.current = false;
-      onSimCompleteRef.current?.();
-    }
-  }, [flowPerHour, spawnVehicle, spawnMoneyBurst]);
+    rafRef.current = requestAnimationFrame(animate);
+  }, [flowPerHour, pctCat1, onSimTick]);
 
-  // ── React to simActive prop changes ──────────────────────────────────────
   useEffect(() => {
-    if (simActive) {
-      // Reset state
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      vehiclesRef.current.forEach((v) => v.marker.remove());
-      vehiclesRef.current = [];
-      moneyBurstsRef.current.forEach((b) => b.el.remove());
-      moneyBurstsRef.current = [];
-      accRevRef.current = 0;
+    if (simActive && routeGeometry) {
+      const segs = routeSegments(routeGeometry);
+      routeSegsRef.current = segs;
+
+      // Pre-calculate portico T positions (0 to totalDist)
+      const pp: { t: number; revenue: number }[] = [];
+      routePorticos.forEach(rp => {
+        // Find closest point on path for this portico
+        let minDist = Infinity;
+        let minT = 0;
+        let d = 0;
+        for (let i = 0; i < segs.segments.length; i++) {
+          const s = segs.segments[i];
+          const distToP1 = L.latLng(rp.lat, rp.lng).distanceTo(s.p1) / 1000;
+          if (distToP1 < minDist) { minDist = distToP1; minT = d; }
+          d += s.dist;
+        }
+
+        let price = rp.precio || 0;
+        if (rp.tarifas_urbanas) {
+          const catObj = rp.tarifas_urbanas.categoria_1_4 || rp.tarifas_urbanas;
+          const key = timeProfile === 'punta' ? 'TBP' : timeProfile === 'saturacion' ? 'TS' : 'TBFP';
+          price = catObj[key] || catObj.TBFP || rp.precio || 0;
+        }
+        pp.push({ t: minT, revenue: price });
+      });
+      porticoPositionsRef.current = pp;
+
+      accRevenueRef.current = 0;
       accVehRef.current = 0;
       vehicleIdRef.current = 0;
       lastSpawnRef.current = 0;
@@ -656,7 +495,7 @@ export default function MapView({
       moneyBurstsRef.current.forEach((b) => b.el.remove());
       moneyBurstsRef.current = [];
     }
-  }, [simActive, animate]);
+  }, [simActive, animate, routeGeometry, routePorticos, timeProfile]);
 
   // ── React to pause ────────────────────────────────────────────────────────
   useEffect(() => {
@@ -678,7 +517,7 @@ export default function MapView({
 
       {/* Loading comunas */}
       {loadingComunas && (
-        <div className="absolute top-12 left-1/2 -translate-x-1/2 z-[800] flex items-center gap-2 bg-zinc-900/90 border border-zinc-700 text-zinc-300 text-[10px] font-semibold px-3 py-1.5 rounded-full shadow-lg pointer-events-none">
+        <div className="absolute top-12 left-1/2 -translate-x-1/2 z-800 flex items-center gap-2 bg-zinc-900/90 border border-zinc-700 text-zinc-300 text-[10px] font-semibold px-3 py-1.5 rounded-full shadow-lg pointer-events-none">
           <span className="w-3 h-3 rounded-full border-2 border-indigo-400 border-t-transparent animate-spin" />
           Cargando comunas…
         </div>
@@ -686,7 +525,7 @@ export default function MapView({
 
       {/* Comunas legend – Windy style */}
       {showComunas && Object.keys(comunaColors).length > 0 && (
-        <div className="absolute bottom-12 right-14 z-[800] pointer-events-auto select-none" style={{ maxHeight: '60vh' }}>
+        <div className="absolute bottom-12 right-14 z-800 pointer-events-auto select-none" style={{ maxHeight: '60vh' }}>
           <div className="bg-zinc-950/85 backdrop-blur-md border border-zinc-700/60 rounded-xl shadow-2xl overflow-hidden" style={{ width: 180 }}>
             {/* Header */}
             <button
@@ -743,6 +582,7 @@ export default function MapView({
           </div>
         </div>
       )}
+
 
       {!isReady && (
         <div className="absolute inset-0 z-50 flex items-center justify-center bg-black pointer-events-none">

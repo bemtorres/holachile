@@ -228,9 +228,9 @@ export default function SimulationTab({
 
           {/* Revenue */}
           <div className="flex flex-col items-center justify-center py-5 bg-zinc-900/60 rounded-xl border border-emerald-500/20 shadow-[0_0_20px_rgba(16,185,129,0.07)] relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-emerald-950/0 to-emerald-950/20 pointer-events-none" />
+            <div className="absolute inset-0 bg-linear-to-b from-emerald-950/0 to-emerald-950/20 pointer-events-none" />
             <span className="text-[9px] text-zinc-500 font-semibold uppercase tracking-wider mb-1">Ingreso Bruto Acumulado</span>
-            <div className="text-4xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-300 font-mono z-10">
+            <div className="text-4xl font-bold tracking-tighter text-transparent bg-clip-text bg-linear-to-r from-emerald-400 to-green-300 font-mono z-10">
               ${Math.round(liveRevenue).toLocaleString('es-CL')}
             </div>
             <span className="text-[9px] text-zinc-600 mt-1 z-10">CLP · en tiempo real</span>
@@ -258,7 +258,7 @@ export default function SimulationTab({
           <div>
             <div className="h-1.5 w-full bg-zinc-900 rounded-full overflow-hidden">
               <div
-                className="h-full bg-gradient-to-r from-purple-600 to-blue-500 transition-all duration-100"
+                className="h-full bg-linear-to-r from-purple-600 to-blue-500 transition-all duration-100"
                 style={{ width: `${progressPct}%` }}
               />
             </div>
