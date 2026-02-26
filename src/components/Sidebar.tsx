@@ -14,28 +14,28 @@ export default function Sidebar({ autopistas, selectedAutopista, onSelectAutopis
   return (
     <div className="flex flex-col h-full bg-zinc-950 border-r border-zinc-800 text-zinc-100 font-sans">
       {/* Header */}
-      <div className="px-6 py-6 border-b border-zinc-900 bg-zinc-950/50">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-md bg-white flex items-center justify-center text-zinc-950 font-bold text-lg shadow-sm">
+      <div className="px-8 py-8 border-b border-zinc-900 bg-zinc-950/50">
+        <div className="flex items-center gap-4">
+          <div className="w-12 h-12 rounded-xl bg-zinc-100 flex items-center justify-center text-zinc-950 font-bold text-xl shadow-xl shadow-white/5">
             TG
           </div>
           <div>
-            <h1 className="text-zinc-50 font-semibold text-lg tracking-tight leading-tight">TAG Chile</h1>
-            <p className="text-zinc-400 text-sm mt-0.5">Gestión de Peajes</p>
+            <h1 className="text-zinc-50 font-bold text-xl tracking-tight leading-tight">TAG Chile</h1>
+            <p className="text-zinc-500 text-sm mt-1 font-medium">Gestión de Peajes</p>
           </div>
         </div>
       </div>
 
       {/* Stats bar */}
-      <div className="px-6 py-4 border-b border-zinc-900 bg-zinc-900/20">
-        <div className="grid grid-cols-2 gap-4">
-          <div className="flex flex-col space-y-1">
-            <span className="text-zinc-500 text-xs font-medium">Pórticos</span>
-            <span className="text-2xl font-semibold text-zinc-50 tracking-tight">{totalPorticos}</span>
+      <div className="px-8 py-6 border-b border-zinc-900 bg-zinc-900/10">
+        <div className="grid grid-cols-2 gap-6">
+          <div className="flex flex-col space-y-1.5 border-r border-zinc-800/50">
+            <span className="text-zinc-600 text-[10px] font-bold uppercase tracking-widest">Pórticos</span>
+            <span className="text-3xl font-bold text-zinc-50 tracking-tighter">{totalPorticos}</span>
           </div>
-          <div className="flex flex-col space-y-1">
-            <span className="text-zinc-500 text-xs font-medium">Sistemas</span>
-            <span className="text-2xl font-semibold text-zinc-50 tracking-tight">{autopistas.length}</span>
+          <div className="flex flex-col space-y-1.5 pl-2">
+            <span className="text-zinc-600 text-[10px] font-bold uppercase tracking-widest">Sistemas</span>
+            <span className="text-3xl font-bold text-zinc-50 tracking-tighter">{autopistas.length}</span>
           </div>
         </div>
       </div>
@@ -44,16 +44,16 @@ export default function Sidebar({ autopistas, selectedAutopista, onSelectAutopis
         {/* All button */}
         <button
           onClick={() => onSelectAutopista(null)}
-          className={`group flex items-center justify-between w-full px-3 py-2.5 mb-4 rounded-md transition-all duration-200 ${selectedAutopista === null
-              ? 'bg-zinc-100 text-zinc-900 font-medium shadow-sm'
-              : 'text-zinc-400 hover:bg-zinc-900 hover:text-zinc-100'
+          className={`group flex items-center justify-between w-full px-4 py-3.5 mb-6 rounded-xl transition-all duration-300 border ${selectedAutopista === null
+            ? 'bg-zinc-100 text-zinc-900 font-bold shadow-xl shadow-white/5 border-white'
+            : 'text-zinc-400 hover:bg-zinc-900 hover:text-zinc-100 border-transparent hover:border-zinc-800'
             }`}
         >
           <div className="flex items-center gap-3 overflow-hidden">
-            <Layers className="w-4 h-4 shrink-0" />
-            <span className="text-sm truncate">Ver red completa</span>
+            <Layers className="w-5 h-5 shrink-0" />
+            <span className="text-sm font-semibold truncate">Ver red completa</span>
           </div>
-          <span className={`text-xs ml-2 px-2 py-0.5 rounded-full border ${selectedAutopista === null ? 'border-zinc-300 text-zinc-600' : 'border-zinc-800 text-zinc-500 group-hover:border-zinc-700'
+          <span className={`text-[10px] ml-2 px-2.5 py-1 rounded-full border font-bold ${selectedAutopista === null ? 'border-zinc-300 text-zinc-600 bg-zinc-200/50' : 'border-zinc-800 text-zinc-600 group-hover:border-zinc-700'
             }`}>
             {totalPorticos}
           </span>
@@ -68,9 +68,9 @@ export default function Sidebar({ autopistas, selectedAutopista, onSelectAutopis
               <button
                 key={a.autopista}
                 onClick={() => onSelectAutopista(isSelected ? null : a.autopista)}
-                className={`group flex flex-col w-full px-3 py-2.5 rounded-md transition-all duration-200 text-left relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 ${isSelected
-                    ? 'bg-zinc-800 text-zinc-50 shadow-sm'
-                    : 'text-zinc-400 hover:bg-zinc-900/80 hover:text-zinc-100'
+                className={`group flex flex-col w-full px-4 py-4 rounded-xl transition-all duration-300 text-left relative overflow-hidden focus-visible:outline-none border ${isSelected
+                  ? 'bg-zinc-900 border-zinc-700 text-zinc-50 shadow-xl'
+                  : 'text-zinc-500 border-transparent hover:bg-zinc-900/50 hover:text-zinc-200 hover:border-zinc-800/50'
                   }`}
               >
                 <div className="flex items-center justify-between w-full relative z-10">

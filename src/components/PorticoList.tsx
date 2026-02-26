@@ -38,21 +38,21 @@ export default function PorticoList({ porticos, selectedAutopista, onPorticoClic
   return (
     <div className="flex flex-col h-full bg-black text-zinc-100">
       {/* Search */}
-      <div className="p-4 border-b border-zinc-900 bg-zinc-950">
+      <div className="p-6 border-b border-zinc-900 bg-zinc-950">
         <div className="relative group">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500 group-focus-within:text-white transition-colors" />
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-zinc-500 group-focus-within:text-white transition-colors" />
           <input
             type="text"
-            placeholder="SEARCH NODE / SECTION..."
+            placeholder="BUSCAR NODO / TRAMO..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-3 bg-black border border-zinc-800 rounded-none text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-white focus:ring-0 transition-all font-mono tracking-widest uppercase"
+            className="w-full pl-12 pr-4 py-3.5 bg-zinc-900/50 border border-zinc-800 rounded-xl text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-white focus:ring-4 focus:ring-white/5 transition-all font-mono tracking-widest uppercase"
           />
         </div>
-        <div className="mt-3 flex items-center gap-2">
-          <Activity className="w-3 h-3 text-zinc-500" />
+        <div className="mt-4 flex items-center gap-3">
+          <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)] animate-pulse" />
           <span className="text-[10px] text-zinc-500 uppercase tracking-[0.2em] font-bold">
-            {filtered.length} NODE{filtered.length !== 1 ? 'S' : ''} DETECTED
+            {filtered.length} NODO{filtered.length !== 1 ? 'S' : ''} DETECTADOS
           </span>
         </div>
       </div>
@@ -63,9 +63,8 @@ export default function PorticoList({ porticos, selectedAutopista, onPorticoClic
           const isExpanded = expandedId === p.id;
           return (
             <div key={p.id} className="group border-b border-zinc-900 border-dashed last:border-none relative">
-              {isExpanded && <div className="absolute left-0 top-0 bottom-0 w-1 bg-white" />}
               <button
-                className={`w-full px-5 py-4 flex items-start gap-4 transition-colors text-left ${isExpanded ? 'bg-zinc-900/50' : 'hover:bg-zinc-950'}`}
+                className={`w-full px-6 py-6 flex items-start gap-5 transition-all duration-300 text-left border-l-2 ${isExpanded ? 'bg-zinc-900/40 border-white' : 'hover:bg-zinc-900/20 border-transparent hover:border-zinc-800'}`}
                 onClick={() => {
                   setExpandedId(isExpanded ? null : p.id);
                   onPorticoClick?.(p);
@@ -98,39 +97,39 @@ export default function PorticoList({ porticos, selectedAutopista, onPorticoClic
 
                   {/* Expanded OSM tags */}
                   {isExpanded && (
-                    <div className="mt-4 border border-zinc-800 bg-black p-4">
-                      <div className="flex items-center gap-2 mb-3 pb-2 border-b border-zinc-800">
-                        <MapPin className="w-3 h-3 text-zinc-400" />
-                        <span className="text-zinc-400 font-bold uppercase tracking-[0.2em] text-[10px]">Telemetry Raw Data</span>
+                    <div className="mt-6 border border-zinc-800 bg-zinc-950/50 rounded-xl p-6 shadow-2xl animate-in zoom-in-95 duration-300">
+                      <div className="flex items-center gap-2.5 mb-5 pb-3 border-b border-zinc-800/50">
+                        <Activity className="w-3.5 h-3.5 text-zinc-400" />
+                        <span className="text-zinc-400 font-bold uppercase tracking-[0.2em] text-[11px]">TELEMETRÍA_RAW_DATA</span>
                       </div>
-                      <div className="grid grid-cols-1 gap-2">
+                      <div className="grid grid-cols-1 gap-3">
                         {Object.entries(p.tags).map(([key, value]) => (
-                          <div key={key} className="flex justify-between gap-4 text-[10px]">
-                            <span className="text-zinc-600 font-mono uppercase truncate">{TAG_LABELS[key] || key}</span>
-                            <span className={`font-mono uppercase text-right truncate ${value === 'yes' ? 'text-emerald-500' : value === 'no' ? 'text-red-500' : 'text-zinc-300'}`}>
+                          <div key={key} className="flex justify-between gap-6 text-[10px]">
+                            <span className="text-zinc-600 font-mono uppercase tracking-wider truncate">{TAG_LABELS[key] || key}</span>
+                            <span className={`font-mono uppercase text-right tracking-tight ${value === 'yes' ? 'text-emerald-500' : value === 'no' ? 'text-red-500' : 'text-zinc-200'}`}>
                               {value}
                             </span>
                           </div>
                         ))}
-                        <div className="flex justify-between gap-4 mt-2 pt-2 border-t border-zinc-800 border-dashed text-[10px]">
-                          <span className="text-zinc-600 font-mono uppercase">LATITUDE</span>
-                          <span className="text-zinc-300 font-mono">{p.lat.toFixed(6)}</span>
+                        <div className="flex justify-between gap-6 mt-3 pt-3 border-t border-zinc-800 border-dashed text-[10px]">
+                          <span className="text-zinc-600 font-mono uppercase tracking-wider">LATITUDE_COORD</span>
+                          <span className="text-zinc-200 font-mono tracking-tight">{p.lat.toFixed(6)}</span>
                         </div>
-                        <div className="flex justify-between gap-4 text-[10px]">
-                          <span className="text-zinc-600 font-mono uppercase">LONGITUDE</span>
-                          <span className="text-zinc-300 font-mono">{p.lng.toFixed(6)}</span>
+                        <div className="flex justify-between gap-6 text-[10px]">
+                          <span className="text-zinc-600 font-mono uppercase tracking-wider">LONGITUDE_COORD</span>
+                          <span className="text-zinc-200 font-mono tracking-tight">{p.lng.toFixed(6)}</span>
                         </div>
                       </div>
-                      <div className="mt-4 pt-3 border-t border-zinc-800">
+                      <div className="mt-6 pt-4 border-t border-zinc-800/50">
                         <a
-                          href={`https://www.openstreetmap.org/?mlat=${p.lat}&mlon=${p.lng}&zoom=16`}
+                          href={`https://www.openstreetmap.org/node/${p.id}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-white hover:text-zinc-300 text-[10px] font-bold tracking-widest uppercase flex items-center gap-1.5 transition-colors"
+                          className="w-full justify-center bg-white text-zinc-900 rounded-lg py-2.5 text-[10px] font-black tracking-[0.2em] uppercase flex items-center gap-2 hover:bg-zinc-200 transition-all shadow-lg active:scale-95"
                           onClick={(e) => e.stopPropagation()}
                         >
-                          <ExternalLink className="w-3 h-3" />
-                          Verify node online
+                          <ExternalLink className="w-3.5 h-3.5" />
+                          VER_NODO_OSM
                         </a>
                       </div>
                     </div>

@@ -2,13 +2,13 @@
 
 import { useState, useCallback, useEffect } from 'react';
 import dynamic from 'next/dynamic';
-import autopistas, { allPorticos, findComuna } from '@/data';
+import autopistas, { allPorticos, findComuna, allComunas } from '@/data';
 import Sidebar from '@/components/Sidebar';
 import PorticoList from '@/components/PorticoList';
 import SimulationTab, { type SimParams } from '@/components/SimulationTab';
 import ComunasTab from '@/components/ComunasTab';
 import ComunaCard from '@/components/ComunaCard';
-import { MapPin } from 'lucide-react';
+import { MapPin, Search, ChevronDown } from 'lucide-react';
 import type { Portico } from '@/data';
 import * as turf from '@turf/turf';
 
@@ -29,6 +29,7 @@ export default function HomePage() {
   const [selectedAutopista, setSelectedAutopista] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'lista' | 'tags' | 'ruta' | 'simulacion' | 'comunas'>('ruta');
   const [selectedPortico, setSelectedPortico] = useState<Portico | null>(null);
+  const [selectedComuna, setSelectedComuna] = useState<any>(null);
   const [isMobileListOpen, setIsMobileListOpen] = useState(false);
 
   // --- Start Route Calculator State ---
@@ -179,7 +180,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col h-screen bg-zinc-950 overflow-hidden font-sans text-zinc-50">
       {/* Top bar */}
-      <header className="flex items-center justify-between px-6 py-3 bg-zinc-950 border-b border-zinc-800 z-20 shrink-0">
+      <header className="flex items-center justify-between px-8 py-4 bg-zinc-950/90 backdrop-blur-sm border-b border-zinc-800 z-50 shrink-0">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-md bg-zinc-100 flex items-center justify-center shrink-0 shadow-sm shadow-white/10">
             <span className="text-zinc-950 font-semibold text-lg">T</span>
@@ -199,6 +200,29 @@ export default function HomePage() {
               {selectedAutopista}
             </div>
           )}
+
+          {/* Global Comuna Search */}
+          <div className="hidden md:block relative group">
+            <div className="flex items-center gap-2 bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-1.5 focus-within:border-blue-500/50 transition-all w-48 xl:w-64">
+              <Search className="w-3.5 h-3.5 text-zinc-500" />
+              <input
+                type="text"
+                placeholder="Buscar comuna..."
+                className="bg-transparent border-none outline-none text-xs text-zinc-200 placeholder:text-zinc-600 w-full"
+                onChange={(e) => {
+                  const val = e.target.value.toLowerCase();
+                  if (val.length > 2) {
+                    const match = (allComunas as any[]).find(c => c.comuna.toLowerCase().startsWith(val) || c.comuna.toLowerCase().includes(val));
+                    if (match) {
+                      setSelectedComuna(match);
+                      setActiveTab('comunas');
+                    }
+                  }
+                }}
+              />
+            </div>
+          </div>
+
           <div className="flex items-center gap-2 border border-zinc-800 bg-zinc-900/50 px-3 py-1.5 rounded-md shadow-sm">
             <div className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
             <span className="text-xs text-zinc-300 font-medium">{allPorticos.length} Nodos</span>
@@ -215,7 +239,7 @@ export default function HomePage() {
       {/* Main content */}
       <div className="flex flex-1 overflow-hidden">
         {/* Left sidebar — autopista selector */}
-        <aside className="hidden lg:flex flex-col w-72 xl:w-80 bg-zinc-950 border-r border-zinc-800 overflow-hidden shrink-0 z-10 shadow-lg">
+        <aside className="hidden lg:flex flex-col w-80 xl:w-88 bg-zinc-950 border-r border-zinc-800 overflow-hidden shrink-0 z-10 shadow-lg">
           <Sidebar
             autopistas={autopistas}
             selectedAutopista={selectedAutopista}
@@ -243,9 +267,13 @@ export default function HomePage() {
               routePorticos={routePorticos}
               timeProfile={simParams?.timeProfile ?? 'punta'}
               showComunas={showComunas}
+              selectedComuna={selectedComuna}
               onComunaClick={(nombre) => {
-                const found = allPorticos.find(p => p.comuna?.toLowerCase() === nombre.toLowerCase());
-                if (found) { setSelectedPortico(found); setActiveTab('tags'); }
+                const c = findComuna(nombre);
+                if (c) {
+                  setSelectedComuna(c);
+                  setActiveTab('comunas');
+                }
               }}
               onSimTick={handleSimTick}
               onSimComplete={handleSimComplete}
@@ -294,10 +322,10 @@ export default function HomePage() {
         </main>
 
         {/* Right panel */}
-        <aside className="hidden md:flex flex-col w-80 xl:w-96 bg-zinc-950 border-l border-zinc-800 overflow-hidden shrink-0 z-10 shadow-xl">
+        <aside className="hidden md:flex flex-col w-96 xl:w-[28rem] bg-zinc-950 border-l border-zinc-800 overflow-hidden shrink-0 z-10 shadow-xl">
           {/* Tabs */}
-          <div className="p-3 border-b border-zinc-800 shrink-0 bg-zinc-950/50">
-            <div className="flex items-center gap-1 p-1 bg-zinc-900 rounded-md">
+          <div className="p-4 border-b border-zinc-800 shrink-0 bg-zinc-950/50">
+            <div className="flex items-center gap-1.5 p-1.5 bg-zinc-900/50 rounded-xl border border-zinc-800">
               {[
                 { id: 'lista', label: 'Lista' },
                 { id: 'ruta', label: 'Ruta' },
@@ -307,7 +335,7 @@ export default function HomePage() {
               ].map((tab) => (
                 <button
                   key={tab.id}
-                  className={`flex-1 py-1.5 px-1 rounded-sm text-[10px] xl:text-xs font-medium transition-all ${activeTab === tab.id ? `bg-zinc-800 ${tab.color || 'text-zinc-50'} shadow-sm` : `text-zinc-400 ${tab.hover || 'hover:text-zinc-100'} hover:bg-zinc-800/50`}`}
+                  className={`flex-1 py-2 px-1 rounded-lg text-xs font-semibold transition-all duration-200 ${activeTab === tab.id ? `bg-zinc-800 ${tab.color || 'text-zinc-50'} shadow-md border border-zinc-700/50` : `text-zinc-400 ${tab.hover || 'hover:text-zinc-100'} hover:bg-zinc-800/30`}`}
                   onClick={() => setActiveTab(tab.id as any)}
                 >
                   {tab.label}
@@ -461,7 +489,12 @@ export default function HomePage() {
               />
             )}
 
-            {activeTab === 'comunas' && <ComunasTab />}
+            {activeTab === 'comunas' && (
+              <ComunasTab
+                selectedComuna={selectedComuna}
+                onSelectComuna={setSelectedComuna}
+              />
+            )}
           </div>
         </aside>
       </div>

@@ -14,6 +14,7 @@ type MapProps = {
   destination?: [number, number] | null;
   showComunas?: boolean;
   onComunaClick?: (nombre: string) => void;
+  selectedComuna?: any;
   // Simulation props
   simActive?: boolean;
   simPaused?: boolean;
@@ -78,6 +79,7 @@ export default function MapView({
   destination,
   showComunas,
   onComunaClick,
+  selectedComuna,
   simActive,
   simPaused,
   flowPerHour = 1500,
@@ -285,12 +287,16 @@ export default function MapView({
         setComunaColors(colors);
 
         comunasLayerRef.current = L.geoJSON(rmComunas, {
-          style: (feature: any) => ({
-            fillColor: colors[feature.properties.COMUNA],
-            weight: 0,
-            opacity: 0,
-            fillOpacity: 0.35,
-          }),
+          style: (feature: any) => {
+            const isSelected = selectedComuna?.comuna?.toLowerCase() === feature.properties.COMUNA?.toLowerCase();
+            return {
+              fillColor: colors[feature.properties.COMUNA],
+              weight: isSelected ? 3 : 0,
+              opacity: isSelected ? 1 : 0,
+              color: isSelected ? '#3b82f6' : 'transparent',
+              fillOpacity: isSelected ? 0.6 : 0.35,
+            };
+          },
           onEachFeature: (feature: any, layer: L.Layer) => {
             const name = feature.properties.COMUNA;
             layer.bindTooltip(`<div class="comuna-tooltip">${name}</div>`, {
@@ -301,29 +307,45 @@ export default function MapView({
 
             layer.on({
               mouseover: (e: any) => {
-                const lyr = e.target;
-                lyr.setStyle({ fillOpacity: 0.6, weight: 1, color: '#fff' } as L.PathOptions);
+                const l = e.target;
+                l.setStyle({ fillOpacity: 0.6, weight: 2, color: '#fff', opacity: 1 });
               },
               mouseout: (e: any) => {
-                const lyr = e.target;
-                lyr.setStyle({ fillOpacity: 0.35, weight: 0 } as L.PathOptions);
+                const l = e.target;
+                const isSelected = selectedComuna?.comuna?.toLowerCase() === feature.properties.COMUNA?.toLowerCase();
+                l.setStyle({
+                  fillOpacity: isSelected ? 0.6 : 0.35,
+                  weight: isSelected ? 3 : 0,
+                  color: isSelected ? '#3b82f6' : 'transparent',
+                  opacity: isSelected ? 1 : 0
+                });
               },
               click: (e: any) => {
+                onComunaClick?.(feature.properties.COMUNA);
                 L.DomEvent.stopPropagation(e);
-                onComunaClick?.(name);
               }
             });
           }
         }).addTo(map);
       } catch (err) {
-        console.error('Error loading GeoJSON:', err);
+        console.error('Error loading comunas GeoJSON:', err);
       } finally {
         setLoadingComunas(false);
       }
     };
 
     loadGeoJson();
-  }, [isReady, showComunas, onComunaClick]);
+  }, [isReady, showComunas, onComunaClick, selectedComuna]); // selectedComuna added to deps
+
+  // ── Auto-pan to selected comuna ──────────────────────────────────────────
+  useEffect(() => {
+    if (isReady && mapInstanceRef.current && selectedComuna) {
+      mapInstanceRef.current.flyTo([selectedComuna.lat, selectedComuna.lng], 13, {
+        animate: true,
+        duration: 1.5
+      });
+    }
+  }, [isReady, selectedComuna]);
 
   // ── Simulation Logic ────────────────────────────────────────────────────────
   const animate = useCallback((time: number) => {
