@@ -15,16 +15,19 @@ type MapProps = {
   showComunas?: boolean;
   onComunaClick?: (nombre: string) => void;
   selectedComuna?: any;
+  centerOn?: [number, number] | null;
   // Simulation props
   simActive?: boolean;
   simPaused?: boolean;
   flowPerHour?: number;
   pctCat1?: number;
   pctCat2?: number;
+  pctCat3?: number;
   routePorticos?: Portico[];
   timeProfile?: 'punta' | 'valle' | 'saturacion';
   onSimTick?: (stats: { vehicles: number; revenue: number; minutes: number }) => void;
   onSimComplete?: () => void;
+  pickingMode?: 'origin' | 'destination' | null;
 };
 
 // Types for simulation
@@ -37,7 +40,7 @@ interface Vehicle {
   speed: number; // km/min
   porticosPassed: Set<string>;
   startTime: number;
-  category: 1 | 2;
+  category: 1 | 2 | 3;
   color: string;
 }
 
@@ -80,15 +83,18 @@ export default function MapView({
   showComunas,
   onComunaClick,
   selectedComuna,
+  centerOn,
   simActive,
   simPaused,
   flowPerHour = 1500,
   pctCat1 = 70,
   pctCat2 = 20,
+  pctCat3 = 10,
   routePorticos = [],
   timeProfile = 'punta',
   onSimTick,
   onSimComplete,
+  pickingMode,
 }: MapProps) {
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<L.Map | null>(null);
@@ -96,6 +102,7 @@ export default function MapView({
   const routeLayerRef = useRef<L.Polyline | null>(null);
   const originMarkerRef = useRef<L.Marker | null>(null);
   const destMarkerRef = useRef<L.Marker | null>(null);
+  const muniMarkerRef = useRef<L.Marker | null>(null);
   const [isReady, setIsReady] = useState(false);
 
   // Comunas layer state
@@ -119,7 +126,14 @@ export default function MapView({
   const vehicleIdRef = useRef(0);
   const isPausedRef = useRef(false);
   const simActiveRef = useRef(false);
+
+  // Per-portico simulation counters
+  const porticoStatsLayerRef = useRef<L.LayerGroup | null>(null);
+  const porticoAccumulatedRef = useRef<number[]>([]);
+  const porticoMarkersRef = useRef<L.Marker[]>([]);
+
   const routeSegsRef = useRef<ReturnType<typeof routeSegments> | null>(null);
+  const routeCoordsRef = useRef<[number, number][]>([]);
   const routePorticosRef = useRef<Portico[]>([]);
   const porticoPositionsRef = useRef<{ t: number; revenue: number }[]>([]);
 
@@ -129,6 +143,18 @@ export default function MapView({
   useEffect(() => { onSimTickRef.current = onSimTick; }, [onSimTick]);
   const onSimCompleteRef = useRef(onSimComplete);
   useEffect(() => { onSimCompleteRef.current = onSimComplete; }, [onSimComplete]);
+
+  // Refs for sim params to avoid animate recreation
+  const flowPerHourRef = useRef(flowPerHour);
+  useEffect(() => { flowPerHourRef.current = flowPerHour; }, [flowPerHour]);
+  const pctCat1Ref = useRef(pctCat1);
+  useEffect(() => { pctCat1Ref.current = pctCat1; }, [pctCat1]);
+  const pctCat2Ref = useRef(pctCat2);
+  useEffect(() => { pctCat2Ref.current = pctCat2; }, [pctCat2]);
+  const pctCat3Ref = useRef(pctCat3);
+  useEffect(() => { pctCat3Ref.current = pctCat3; }, [pctCat3]);
+  const timeProfileRef = useRef(timeProfile);
+  useEffect(() => { timeProfileRef.current = timeProfile; }, [timeProfile]);
 
   // ── Map init ────────────────────────────────────────────────────────────────
   useEffect(() => {
@@ -147,6 +173,7 @@ export default function MapView({
     map.on('click', (e: any) => { onMapClickRef.current?.(e.latlng.lat, e.latlng.lng); });
 
     vehicleLayerRef.current = L.layerGroup().addTo(map);
+    porticoStatsLayerRef.current = L.layerGroup().addTo(map);
     mapInstanceRef.current = map;
     setIsReady(true);
 
@@ -155,6 +182,13 @@ export default function MapView({
       if (mapInstanceRef.current) { mapInstanceRef.current.remove(); mapInstanceRef.current = null; }
     };
   }, []);
+
+  // ── Center on location ─────────────────────────────────────────────────────────
+  useEffect(() => {
+    if (isReady && centerOn && mapInstanceRef.current) {
+      mapInstanceRef.current.flyTo(centerOn, 12, { duration: 1.5 });
+    }
+  }, [centerOn, isReady]);
 
   // ── Portico markers ──────────────────────────────────────────────────────────
   useEffect(() => {
@@ -261,7 +295,7 @@ export default function MapView({
       comunasLayerRef.current = null;
     }
 
-    if (!showComunas) return;
+    if (!showComunas && !selectedComuna) return;
 
     const loadGeoJson = async () => {
       setLoadingComunas(true);
@@ -289,21 +323,32 @@ export default function MapView({
         comunasLayerRef.current = L.geoJSON(rmComunas, {
           style: (feature: any) => {
             const isSelected = selectedComuna?.comuna?.toLowerCase() === feature.properties.COMUNA?.toLowerCase();
+
+            // Si no estamos mostrando todas, y esta no es la seleccionada, hacerla invisible
+            if (!showComunas && !isSelected) {
+              return { fillOpacity: 0, weight: 0, opacity: 0, color: 'transparent' };
+            }
+
             return {
-              fillColor: colors[feature.properties.COMUNA],
-              weight: isSelected ? 3 : 0,
-              opacity: isSelected ? 1 : 0,
-              color: isSelected ? '#3b82f6' : 'transparent',
-              fillOpacity: isSelected ? 0.6 : 0.35,
+              fillColor: isSelected ? '#3b82f6' : colors[feature.properties.COMUNA],
+              weight: isSelected ? 4 : 0.5,
+              opacity: isSelected ? 1 : 0.2,
+              color: isSelected ? '#fff' : 'transparent',
+              fillOpacity: isSelected ? 0.45 : 0.35,
             };
           },
           onEachFeature: (feature: any, layer: L.Layer) => {
             const name = feature.properties.COMUNA;
-            layer.bindTooltip(`<div class="comuna-tooltip">${name}</div>`, {
-              sticky: true,
-              direction: 'center',
-              className: 'comuna-label'
-            });
+            const isSelected = selectedComuna?.comuna?.toLowerCase() === name?.toLowerCase();
+
+            // Solo poner tooltip si es visible
+            if (showComunas || isSelected) {
+              layer.bindTooltip(`<div class="comuna-tooltip">${name}</div>`, {
+                sticky: true,
+                direction: 'center',
+                className: 'comuna-label'
+              });
+            }
 
             layer.on({
               mouseover: (e: any) => {
@@ -337,10 +382,39 @@ export default function MapView({
     loadGeoJson();
   }, [isReady, showComunas, onComunaClick, selectedComuna]); // selectedComuna added to deps
 
-  // ── Auto-pan to selected comuna ──────────────────────────────────────────
+  // ── Auto-pan to selected comuna & Show Muni Marker ──────────────────────────
   useEffect(() => {
-    if (isReady && mapInstanceRef.current && selectedComuna) {
-      mapInstanceRef.current.flyTo([selectedComuna.lat, selectedComuna.lng], 13, {
+    if (!isReady || !mapInstanceRef.current) return;
+    const map = mapInstanceRef.current;
+
+    muniMarkerRef.current?.remove();
+    muniMarkerRef.current = null;
+
+    if (selectedComuna) {
+      // Create house icon for Municipalidad
+      const houseIcon = L.divIcon({
+        className: 'muni-marker-icon',
+        html: `
+          <div style="background: #3b82f6; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid white; box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+        `,
+        iconSize: [32, 32],
+        iconAnchor: [16, 16]
+      });
+
+      muniMarkerRef.current = L.marker([selectedComuna.lat, selectedComuna.lng], { icon: houseIcon })
+        .addTo(map)
+        .bindPopup(`
+          <div style="text-align: center; padding: 4px; font-family: 'Inter', sans-serif;">
+            <div style="font-weight: 800; font-size: 13px; color: #fff;">Municipalidad de ${selectedComuna.comuna}</div>
+            <div style="font-size: 11px; color: #a1a1aa; margin-top: 4px;">${selectedComuna.direccion_municipal || 'Dirección no disponible'}</div>
+          </div>
+        `, { className: 'muni-popup' });
+
+      map.flyTo([selectedComuna.lat, selectedComuna.lng], 14, {
         animate: true,
         duration: 1.5
       });
@@ -351,48 +425,74 @@ export default function MapView({
   const animate = useCallback((time: number) => {
     if (!simActiveRef.current || isPausedRef.current) return;
 
-    const elapsedWall = time - simStartRef.current; // Real time since start
-    const simMinutes = elapsedWall / 100; // 1 second real = 10 minutes sim
+    const elapsedWall = time - simStartRef.current;
+    const simMinutes = elapsedWall / 166.67; // 10 seconds real = 60 minutes sim (60 / 10 = 6 min/sec = 0.006 min/ms -> 1/0.006 = 166.67)
+
+    // Check for completion
+    if (simMinutes >= 60) {
+      simActiveRef.current = false;
+      onSimCompleteRef.current?.();
+      return;
+    }
 
     // 1. Spawn logic
-    const intervalMs = (60 / flowPerHour) * 100;
-    if (time - lastSpawnRef.current > intervalMs) {
-      if (routeSegsRef.current) {
-        const cat = Math.random() < (pctCat1 / 100) ? 1 : 2;
-        const speed = (90 + Math.random() * 20) / 60; // 90-110 km/h to km/min
-        const pathCoords: L.LatLng[] = [];
-        routeSegsRef.current.segments.forEach(s => pathCoords.push(s.p1));
-        const last = routeSegsRef.current.segments[routeSegsRef.current.segments.length - 1];
-        if (last) pathCoords.push(last.p2);
+    const flow = flowPerHourRef.current || 1500;
+    const intervalMs = (60 / flow) * 166.67; // Interval in real MS
 
-        const marker = L.marker(pathCoords[0], {
+    // Pulse spawn: permit spawning multiple per frame if flow is very high
+    let timeToSpawn = time - lastSpawnRef.current;
+    while (timeToSpawn > intervalMs) {
+      if (routeSegsRef.current) {
+        const rand = Math.random() * 100;
+        let cat: 1 | 2 | 3 = 1;
+        let color = '#3b82f6';
+        let iconHtml = '';
+
+        if (rand < pctCat1Ref.current) {
+          cat = 1;
+          color = '#3b82f6';
+          iconHtml = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42.99L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM5 13h14v5H5v-5zm11.5 4c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM7.5 17c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>';
+        } else if (rand < pctCat1Ref.current + pctCat2Ref.current) {
+          cat = 2;
+          color = '#f59e0b';
+          iconHtml = '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm-3.5-6H5V6h11v6.5z"/></svg>';
+        } else {
+          cat = 3;
+          color = '#ef4444';
+          iconHtml = '<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/><rect x="4" y="14" width="14" height="2" fill="white" fill-opacity="0.3"/><circle cx="7" cy="18.5" r="1.5"/><circle cx="16" cy="18.5" r="1.5"/></svg>';
+        }
+
+        const pathCoords = routeCoordsRef.current;
+        const latLngPath = pathCoords.map(c => L.latLng(c[1], c[0]));
+        
+        const speed = 0.5 + Math.random() * 0.5; // 0.5-1.0 km/min
+        
+        const marker = L.marker(latLngPath[0], {
           icon: L.divIcon({
             className: 'vehicle-icon',
-            html: `<div style="transform: rotate(0deg); transition: transform 0.2s;">
-              ${cat === 1
-                ? '<svg width="14" height="14" viewBox="0 0 24 24" fill="#3b82f6"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42.99L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM5 13h14v5H5v-5zm11.5 4c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM7.5 17c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>'
-                : '<svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm-3.5-6H5V6h11v6.5z"/></svg>'
-              }
-            </div>`,
-            iconSize: [20, 20],
-            iconAnchor: [10, 10]
+            html: `<div style="color: ${color}; transform: rotate(0deg); transition: transform 0.2s;">${iconHtml}</div>`,
+            iconSize: [24, 24],
+            iconAnchor: [12, 12]
           })
         }).addTo(vehicleLayerRef.current!);
 
         vehiclesRef.current.push({
           id: vehicleIdRef.current++,
           marker,
-          path: pathCoords,
-          totalDist: routeSegsRef.current.totalDist,
+          path: latLngPath,
+          totalDist: routeSegsRef.current!.totalDist,
           currentDist: 0,
           speed,
           porticosPassed: new Set(),
           startTime: time,
-          category: cat as 1 | 2,
-          color: cat === 1 ? '#3b82f6' : '#f59e0b'
+          category: cat,
+          color: color
         });
         accVehRef.current++;
-        lastSpawnRef.current = time;
+        lastSpawnRef.current += intervalMs;
+        timeToSpawn -= intervalMs;
+      } else {
+        break;
       }
     }
 
@@ -401,8 +501,8 @@ export default function MapView({
     const now = time;
 
     vehiclesRef.current.forEach(v => {
-      const dt = 16.67; // Assuming 60fps
-      const simDt = dt / 100;
+      const dt = 16.67;
+      const simDt = dt / 166.67;
       v.currentDist += v.speed * simDt;
 
       if (v.currentDist < v.totalDist) {
@@ -430,20 +530,67 @@ export default function MapView({
 
             // Calculate actual price base on category
             let price = pp.revenue;
-            if (v.category === 2) price *= 2.5; // Commercial multiplier
+
+            // Try to use exact category mapping if data available
+            const rp = routePorticosRef.current[idx];
+            if (rp && rp.tarifas_urbanas) {
+              const catKey = v.category === 1 ? 'categoria_1_4' : v.category === 2 ? 'categoria_2' : 'categoria_3';
+              const catObj = rp.tarifas_urbanas[catKey] || rp.tarifas_urbanas;
+              const keyMap: any = {
+                'punta': ['tarifa_base_punta', 'TBP', 'Tarifa_Punta', 'TS'],
+                'saturacion': ['tarifa_saturacion', 'TS', 'Tarifa_Saturacion', 'TBP'],
+                'valle': ['tarifa_base_fuera_punta', 'TBFP', 'Tarifa_Base']
+              };
+              const keys = keyMap[timeProfileRef.current];
+              let foundP = 0;
+              for (const k of keys) {
+                if (catObj[k] !== undefined && catObj[k] !== null) { foundP = Number(catObj[k]); break; }
+              }
+              price = foundP || Number(catObj.TBFP) || Number(catObj.tarifa_base_fuera_punta) || pp.revenue || 0;
+            } else {
+              // Fallback multiplier if urban data is missing
+              if (v.category === 2) price *= 2.3;
+              if (v.category === 3) price *= 3.5;
+            }
 
             accRevenueRef.current += price;
 
+            // Updated: Update per-portico counter
+            if (porticoAccumulatedRef.current[idx] !== undefined) {
+              porticoAccumulatedRef.current[idx] += price;
+              const marker = porticoMarkersRef.current[idx];
+              if (marker) {
+                const total = Math.round(porticoAccumulatedRef.current[idx]);
+                marker.setIcon(L.divIcon({
+                  className: 'portico-revenue-label pulse',
+                  html: `<span>${routePorticosRef.current[idx]?.nombre || 'Pórtico'}</span><span class="value">$${total.toLocaleString('es-CL')}</span>`,
+                  iconSize: [80, 40],
+                  iconAnchor: [40, 50]
+                }));
+                // Remove pulse class after animation
+                setTimeout(() => {
+                  marker.setIcon(L.divIcon({
+                    className: 'portico-revenue-label',
+                    html: `<span>${routePorticosRef.current[idx]?.nombre || 'Pórtico'}</span><span class="value">$${total.toLocaleString('es-CL')}</span>`,
+                    iconSize: [80, 40],
+                    iconAnchor: [40, 50]
+                  }));
+                }, 300);
+              }
+            }
+
             // Money burst animation
-            const point = mapInstanceRef.current!.latLngToContainerPoint(p);
-            const burst = document.createElement('div');
-            burst.className = 'money-burst';
-            burst.innerText = `+$${Math.round(price)}`;
-            burst.style.left = `${point.x}px`;
-            burst.style.top = `${point.y}px`;
-            burst.style.color = v.color;
-            mapRef.current!.appendChild(burst);
-            moneyBurstsRef.current.push({ id: Date.now() + Math.random(), el: burst, startTime: now });
+            if (mapInstanceRef.current && mapRef.current) {
+              const point = mapInstanceRef.current.latLngToContainerPoint(p);
+              const burst = document.createElement('div');
+              burst.className = 'money-burst';
+              burst.innerText = `+$${Math.round(price)}`;
+              burst.style.left = `${point.x}px`;
+              burst.style.top = `${point.y}px`;
+              burst.style.color = v.color;
+              mapRef.current.appendChild(burst);
+              moneyBurstsRef.current.push({ id: Date.now() + Math.random(), el: burst, startTime: now });
+            }
           }
         });
 
@@ -470,12 +617,13 @@ export default function MapView({
     });
 
     rafRef.current = requestAnimationFrame(animate);
-  }, [flowPerHour, pctCat1, onSimTick]);
+  }, []); // No dependencies - uses refs internally
 
   useEffect(() => {
     if (simActive && routeGeometry) {
       const segs = routeSegments(routeGeometry);
       routeSegsRef.current = segs;
+      routeCoordsRef.current = routeGeometry.coordinates as [number, number][];
 
       // Pre-calculate portico T positions (0 to totalDist)
       const pp: { t: number; revenue: number }[] = [];
@@ -500,6 +648,24 @@ export default function MapView({
         pp.push({ t: minT, revenue: price });
       });
       porticoPositionsRef.current = pp;
+      routePorticosRef.current = routePorticos;
+
+      // Initialize per-portico counters
+      porticoStatsLayerRef.current?.clearLayers();
+      porticoAccumulatedRef.current = new Array(routePorticos.length).fill(0);
+      porticoMarkersRef.current = [];
+
+      routePorticos.forEach((rp, i) => {
+        const marker = L.marker([rp.lat, rp.lng], {
+          icon: L.divIcon({
+            className: 'portico-revenue-label',
+            html: `<span>${rp.nombre}</span><span class="value">$0</span>`,
+            iconSize: [80, 40],
+            iconAnchor: [40, 50]
+          })
+        }).addTo(porticoStatsLayerRef.current!);
+        porticoMarkersRef.current.push(marker);
+      });
 
       accRevenueRef.current = 0;
       accVehRef.current = 0;
@@ -508,6 +674,8 @@ export default function MapView({
       isPausedRef.current = false;
       simActiveRef.current = true;
       simStartRef.current = performance.now();
+      // Ensure we clean up any old loop before starting new one
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
       rafRef.current = requestAnimationFrame(animate);
     } else {
       simActiveRef.current = false;
@@ -516,7 +684,12 @@ export default function MapView({
       vehiclesRef.current = [];
       moneyBurstsRef.current.forEach((b) => b.el.remove());
       moneyBurstsRef.current = [];
+      porticoStatsLayerRef.current?.clearLayers();
     }
+
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
   }, [simActive, animate, routeGeometry, routePorticos, timeProfile]);
 
   // ── React to pause ────────────────────────────────────────────────────────
@@ -534,8 +707,8 @@ export default function MapView({
   }, [simPaused]);
 
   return (
-    <div className="relative w-full h-full bg-black">
-      <div ref={mapRef} className="absolute inset-0 z-0 bg-black" />
+    <div className={`relative w-full h-full bg-black ${pickingMode ? 'cursor-crosshair' : ''}`}>
+      <div ref={mapRef} className={`absolute inset-0 z-0 bg-black ${pickingMode ? 'pointer-events-auto' : ''}`} />
 
       {/* Loading comunas */}
       {loadingComunas && (

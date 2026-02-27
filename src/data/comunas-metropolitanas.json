@@ -43,9 +43,11 @@
       "lng": -70.674,
       "poblacion": 177023,
       "direccion_municipal": "Av. Concha y Toro 2901, El Bosque",
-      "url_municipal": "https://www.municipioelbosque.cl",
+      "url_municipal": "https://www.municipalidadelbosque.cl",
       "wiki_url": "https://es.wikipedia.org/wiki/El_Bosque_(Chile)",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Escudo_El_Bosque.svg/200px-Escudo_El_Bosque.svg.png"
+      "logo_url": "https://logosdechile.cl/cdn/shop/files/elbosque_Mesadetrabajo1.jpg?v=1742777478&width=1920",
+      "facebook": "https://www.facebook.com/munielbosque/",
+      "instagram": "https://www.instagram.com/munielbosque/"
     },
     {
       "comuna": "Estación Central",
@@ -54,9 +56,10 @@
       "lng": -70.6778,
       "poblacion": 147623,
       "direccion_municipal": "Av. Ecuador 3485, Estación Central",
-      "url_municipal": "https://www.estacioncentral.cl",
+      "url_municipal": "https://www.municipalidaddeestacioncentral.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Estaci%C3%B3n_Central_(Chile)",
-      "logo_url": "https://www.municipalidaddeestacioncentral.cl/wp-content/uploads/2026/01/img_logo-estacion.png"
+      "logo_url": "https://www.municipalidaddeestacioncentral.cl/wp-content/uploads/2026/01/img_logo-estacion.png",
+      "instagram": "https://www.instagram.com/muniecentral"
     },
     {
       "comuna": "Huechuraba",
@@ -67,7 +70,8 @@
       "direccion_municipal": "Av. Recoleta 7255, Huechuraba",
       "url_municipal": "https://www.huechuraba.cl",
       "wiki_url": "https://es.wikipedia.org/wiki/Huechuraba",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Escudo_de_Huechuraba.svg/200px-Escudo_de_Huechuraba.svg.png"
+      "logo_url": "https://huechuraba.cl/images/Logo-Huechuraba-v3.svg",
+      "instagram": "https://www.instagram.com/munihuechuraba/"
     },
     {
       "comuna": "Independencia",
@@ -76,9 +80,10 @@
       "lng": -70.656,
       "poblacion": 113001,
       "direccion_municipal": "Av. Independencia 1600, Independencia",
-      "url_municipal": "https://www.munistgoindependencia.cl",
+      "url_municipal": "https://www.independencia.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Independencia_(Chile)",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Escudo_de_Independencia.svg/200px-Escudo_de_Independencia.svg.png"
+      "logo_url": "https://huechuraba.cl/images/Logo-Huechuraba-v3.svg",
+      "instagram": "https://www.instagram.com/muni_independencia/"
     },
     {
       "comuna": "La Cisterna",
@@ -87,9 +92,11 @@
       "lng": -70.662,
       "poblacion": 94236,
       "direccion_municipal": "Av. Pedro Aguirre Cerda 4590, La Cisterna",
-      "url_municipal": "https://www.lacisterna.cl",
+      "url_municipal": "https://www.cisterna.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/La_Cisterna",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Escudo_La_Cisterna.svg/200px-Escudo_La_Cisterna.svg.png"
+      "logo_url": "https://uploads.mejormunicipio.com/websites/menu/logo/b46348b6-c372-4dfd-bcbb-a933eac0c1a6/logo_250x50.png?t=1772149611223",
+      "instagram": "https://www.instagram.com/muni.lacisterna",
+      "facebook": "https://www.facebook.com/cisterna.cl/"
     },
     {
       "comuna": "La Florida",
@@ -98,9 +105,11 @@
       "lng": -70.5897,
       "poblacion": 366916,
       "direccion_municipal": "Av. Vicuña Mackenna 7110, La Florida",
-      "url_municipal": "https://www.laflorida.cl",
+      "url_municipal": "https://www.laflorida.cl/sitio/",
       "wiki_url": "https://es.wikipedia.org/wiki/La_Florida_(Chile)",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Escudo_de_La_Florida.svg/200px-Escudo_de_La_Florida.svg.png"
+      "logo_url": "https://www.laflorida.cl/sitio/wp-content/uploads/2026/01/logo_mdlf_2026_color.png",
+      "instagram": "https://www.instagram.com/muni.laflorida",
+      "facebook": "https://www.facebook.com/laflorida.cl/"
     },
     {
       "comuna": "La Granja",
@@ -109,9 +118,11 @@
       "lng": -70.638,
       "poblacion": 132681,
       "direccion_municipal": "Av. Pedro Aguirre Cerda 6226, La Granja",
-      "url_municipal": "https://www.municipiolagranja.cl",
+      "url_municipal": "https://www.municipalidadlagranja.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/La_Granja_(Chile)",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Escudo_de_La_Granja.svg/200px-Escudo_de_La_Granja.svg.png"
+      "logo_url": "https://www.municipalidadlagranja.cl/wp-content/uploads/2025/07/Escudo-y-texto.png",
+      "instagram": "https://www.instagram.com/muni_lagranja/",
+      "facebook": "https://www.facebook.com/IMunicipalidadDeLaGranja"
     },
     {
       "comuna": "La Pintana",
@@ -120,9 +131,11 @@
       "lng": -70.63,
       "poblacion": 190085,
       "direccion_municipal": "Av. Gabriela Oriente 4001, La Pintana",
-      "url_municipal": "https://www.lapintana.cl",
+      "url_municipal": "https://pintana.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/La_Pintana",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Escudo_de_La_Pintana.svg/200px-Escudo_de_La_Pintana.svg.png"
+      "logo_url": "https://pintana.cl/wp-content/uploads/2024/04/logo.png",
+      "instagram": "https://www.instagram.com/munilapintana/",
+      "facebook": "https://www.facebook.com/munipintana/"
     },
     {
       "comuna": "La Reina",
@@ -133,7 +146,9 @@
       "direccion_municipal": "Av. Ossa 735, La Reina",
       "url_municipal": "https://www.lareina.cl",
       "wiki_url": "https://es.wikipedia.org/wiki/La_Reina",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Escudo_La_Reina.svg/200px-Escudo_La_Reina.svg.png"
+      "logo_url": "https://www.lareina.cl/wp-content/uploads/elementor/thumbs/lareina-monotono-przxay3628ls6foz0ys9nw0b7h7za372ifpndaom3k.png",
+      "instagram": "https://www.instagram.com/munilareina/",
+      "facebook": "https://www.facebook.com/MuniLaReina/"
     },
     {
       "comuna": "Las Condes",
@@ -144,7 +159,9 @@
       "direccion_municipal": "Av. Apoquindo 3458, Las Condes",
       "url_municipal": "https://www.lascondes.cl",
       "wiki_url": "https://es.wikipedia.org/wiki/Las_Condes",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Escudo_de_Las_Condes.svg/200px-Escudo_de_Las_Condes.svg.png"
+      "logo_url": "https://www.lascondes.cl/wp-content/uploads/2025/03/logo_blanco.svg",
+      "instagram": "https://www.instagram.com/munilascondes/",
+      "facebook": "https://www.facebook.com/munilascondes/"
     },
     {
       "comuna": "Lo Barnechea",
@@ -153,9 +170,11 @@
       "lng": -70.5156,
       "poblacion": 105833,
       "direccion_municipal": "Av. Los Militares 6210, Lo Barnechea",
-      "url_municipal": "https://www.lobarnechea.cl",
+      "url_municipal": "https://lobarnechea.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Lo_Barnechea",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Escudo_de_Lo_Barnechea.svg/200px-Escudo_de_Lo_Barnechea.svg.png"
+      "logo_url": "https://lobarnechea.cl/wp-content/themes/lo_barnechea_wp/assets/img/icons/logo-blanco.png",
+      "instagram": "https://www.instagram.com/mlobarnechea/",
+      "facebook": "https://www.facebook.com/MLoBarnechea/"
     },
     {
       "comuna": "Lo Espejo",
@@ -166,7 +185,9 @@
       "direccion_municipal": "Av. Lo Espejo 1870, Lo Espejo",
       "url_municipal": "https://www.loespejo.cl",
       "wiki_url": "https://es.wikipedia.org/wiki/Lo_Espejo",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Escudo_de_Lo_Espejo.svg/200px-Escudo_de_Lo_Espejo.svg.png"
+      "logo_url": "https://www.loespejo.cl/wp-content/uploads/2023/10/log_retin.png",
+      "instagram": "https://www.instagram.com/muniloespejo/",
+      "facebook": "https://www.facebook.com/MunicipalidaddeLoEspejo/"
     },
     {
       "comuna": "Lo Prado",
@@ -175,9 +196,11 @@
       "lng": -70.722,
       "poblacion": 105233,
       "direccion_municipal": "Av. Lo Prado 3561, Lo Prado",
-      "url_municipal": "https://www.loprado.cl",
+      "url_municipal": "https://loprado.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Lo_Prado",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Escudo_de_Lo_Prado.svg/200px-Escudo_de_Lo_Prado.svg.png"
+      "logo_url": "https://loprado.cl/wp-content/uploads/2024/04/LOGO-MUNICIPAL-LO-PRADO_Mesa-de-trabajo-1-copia.png",
+      "instagram": "https://www.instagram.com/muniloprado/",
+      "facebook": "https://www.facebook.com/muniloprado/"
     },
     {
       "comuna": "Macul",
@@ -186,9 +209,11 @@
       "lng": -70.602,
       "poblacion": 118370,
       "direccion_municipal": "Av. Departamental 1050, Macul",
-      "url_municipal": "https://www.macul.cl",
+      "url_municipal": "https://www.munimacul.cl/portalnv/",
       "wiki_url": "https://es.wikipedia.org/wiki/Macul",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Escudo_de_Macul.svg/200px-Escudo_de_Macul.svg.png"
+      "logo_url": "https://www.munimacul.cl/portalnv/wp-content/uploads/2022/12/LOGO-COMUNA-FAMILIAR-HORIZ-TRANSP.png",
+      "instagram": "https://www.instagram.com/muni_macul/",
+      "facebook": "https://www.facebook.com/muni.macul/"
     },
     {
       "comuna": "Maipú",
@@ -198,8 +223,10 @@
       "poblacion": 521627,
       "direccion_municipal": "Av. 5 de Abril 190, Maipú",
       "url_municipal": "https://www.maipu.cl",
-      "wiki_url": "https://es.wikipedia.org/wiki/Maip%C3%BA",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Escudo_de_Maip%C3%BA.svg/200px-Escudo_de_Maip%C3%BA.svg.png"
+      "wiki_url": "https://es.wikipedia.org/wiki/Maip%C3%BA_(Chile)",
+      "logo_url": "https://www.maipu.cl/img/escudo_maipu.32d4bc5a.png",
+      "instagram": "https://www.instagram.com/muni_maipu/",
+      "facebook": "https://www.facebook.com/munimaipu/"
     },
     {
       "comuna": "Ñuñoa",
@@ -210,7 +237,9 @@
       "direccion_municipal": "Av. Irarrázaval 4964, Ñuñoa",
       "url_municipal": "https://www.nunoa.cl",
       "wiki_url": "https://es.wikipedia.org/wiki/%C3%91u%C3%B1oa",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Escudo_de_%C3%91u%C3%B1oa.svg/200px-Escudo_de_%C3%91u%C3%B1oa.svg.png"
+      "logo_url": "https://www.nunoa.cl/app/uploads/2025/03/logo-nunoa_amarillo.svg",
+      "instagram": "https://www.instagram.com/muninunoa/",
+      "facebook": "https://www.facebook.com/muninunoacl/"
     },
     {
       "comuna": "Pedro Aguirre Cerda",
@@ -219,9 +248,11 @@
       "lng": -70.672,
       "poblacion": 114673,
       "direccion_municipal": "Av. José Joaquín Pérez 6030, Pedro Aguirre Cerda",
-      "url_municipal": "https://www.pac.cl",
-      "wiki_url": "https://es.wikipedia.org/wiki/Pedro_Aguirre_Cerda",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Escudo_de_Pedro_Aguirre_Cerda.svg/200px-Escudo_de_Pedro_Aguirre_Cerda.svg.png"
+      "url_municipal": "https://www.pedroaguirrecerda.cl/",
+      "wiki_url": "https://es.wikipedia.org/wiki/Pedro_Aguirre_Cerda_(comuna)",
+      "logo_url": "https://www.pedroaguirrecerda.cl/app/themes/pac_theme/public/images/logo_PAC.565179.png",
+      "instagram": "https://www.instagram.com/PACmunicipio/",
+      "facebook": "https://www.facebook.com/PACmunicipio/"
     },
     {
       "comuna": "Peñalolén",
@@ -230,9 +261,11 @@
       "lng": -70.5373,
       "poblacion": 241910,
       "direccion_municipal": "Av. Tobalaba 12.511, Peñalolén",
-      "url_municipal": "https://www.penalolen.cl",
+      "url_municipal": "https://www.penalolen.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Pe%C3%B1alol%C3%A9n",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Escudo_de_Pe%C3%B1alol%C3%A9n.svg/200px-Escudo_de_Pe%C3%B1alol%C3%A9n.svg.png"
+      "logo_url": "https://www.penalolen.cl/social/logo.png",
+      "instagram": "https://www.instagram.com/penalolen/",
+      "facebook": "https://www.facebook.com/munipena/"
     },
     {
       "comuna": "Providencia",
@@ -243,7 +276,9 @@
       "direccion_municipal": "Av. 11 de Septiembre 1542, Providencia",
       "url_municipal": "https://www.providencia.cl",
       "wiki_url": "https://es.wikipedia.org/wiki/Providencia_(Chile)",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Escudo_de_Providencia.svg/200px-Escudo_de_Providencia.svg.png"
+      "logo_url": "https://providencia.cl/provi/img/Logo-municipal-2025-W2.png",
+      "instagram": "https://www.instagram.com/muniprovi/",
+      "facebook": "https://www.facebook.com/MunicipalidadDeProvidencia/"
     },
     {
       "comuna": "Pudahuel",
@@ -252,9 +287,11 @@
       "lng": -70.7644,
       "poblacion": 233467,
       "direccion_municipal": "Av. Félix Fontecilla 420, Pudahuel",
-      "url_municipal": "https://www.pudahuel.cl",
+      "url_municipal": "https://www.mpudahuel.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Pudahuel",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Escudo_de_Pudahuel.svg/200px-Escudo_de_Pudahuel.svg.png"
+      "logo_url": "https://es.wikipedia.org/wiki/Pudahuel",
+      "instagram": "https://www.instagram.com/mpudahuel/",
+      "facebook": "https://www.facebook.com/impudahuel/"
     },
     {
       "comuna": "Quilicura",
@@ -263,9 +300,11 @@
       "lng": -70.728,
       "poblacion": 219548,
       "direccion_municipal": "Av. Manuel Antonio Matta 870, Quilicura",
-      "url_municipal": "https://www.quilicura.cl",
+      "url_municipal": "https://es.wikipedia.org/wiki/Quilicura",
       "wiki_url": "https://es.wikipedia.org/wiki/Quilicura",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Escudo_de_Quilicura.svg/200px-Escudo_de_Quilicura.svg.png"
+      "logo_url": "https://scontent.fscl25-1.fna.fbcdn.net/v/t39.30808-6/271190070_1721060298083634_79656040982676787_n.png?_nc_cat=104&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeGzoVfqdVhVMP01t2RY2aEGkKbBThg6KNuQpsFOGDoo2xik2xFYFYE3SZ8-qZuOF8RMMOkjUOGNI8jq5K9B0RZu&_nc_ohc=ZyDxUPwBtSIQ7kNvwEf7tfo&_nc_oc=AdmzJHOQwl-V6iEC-bdHXBVsYtGkSpmFDwv8RvvD-SJxicRTOGvF7cgEG0Fedd-6Xvc&_nc_zt=23&_nc_ht=scontent.fscl25-1.fna&_nc_gid=dSplXEuL5T-xlr2gWRFz9Q&oh=00_AfuteAr0R79BsJ3nbqrQGAoW3KRsStK74xz6Oay62c7HQA&oe=69A732B0",
+      "instagram": "https://www.instagram.com/muniquilicura/",
+      "facebook": "https://www.facebook.com/muniquilicura/"
     },
     {
       "comuna": "Quinta Normal",
@@ -274,9 +313,11 @@
       "lng": -70.7048,
       "poblacion": 104012,
       "direccion_municipal": "Av. Mapocho 4765, Quinta Normal",
-      "url_municipal": "https://www.quintanormal.cl",
+      "url_municipal": "https://www.quintanormal.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Quinta_Normal",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Escudo_de_Quinta_Normal.svg/200px-Escudo_de_Quinta_Normal.svg.png"
+      "logo_url": "https://images.ligup2.com/eyJidWNrZXQiOiJsaWd1cC12MiIsImtleSI6InF1aW50YW5vcm1hbC91c2Vycy83NTUxOF9sb2dvX3F0YW5vcm1hbC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjIwMDAsImhlaWdodCI6MjAwMCwiZml0IjoiaW5zaWRlIn0sInJvdGF0ZSI6bnVsbH19",
+      "instagram": "https://www.instagram.com/muniquintanormal/",
+      "facebook": "https://www.facebook.com/MunicipalidadQuintaNormal/"
     },
     {
       "comuna": "Recoleta",
@@ -285,9 +326,11 @@
       "lng": -70.6425,
       "poblacion": 148220,
       "direccion_municipal": "Av. Recoleta 2774, Recoleta",
-      "url_municipal": "https://www.recoleta.cl",
+      "url_municipal": "https://www.recoleta.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Recoleta_(Chile)",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Escudo_de_Recoleta.svg/200px-Escudo_de_Recoleta.svg.png"
+      "logo_url": "https://storage.googleapis.com/media-recoletacl/wp-content/uploads/2024/12/logo-recoleta-avanza.png",
+      "instagram": "https://www.instagram.com/municipalidadrecoleta/",
+      "facebook": "https://www.facebook.com/MunicipalidadDeRecoleta/"
     },
     {
       "comuna": "Renca",
@@ -296,9 +339,11 @@
       "lng": -70.721,
       "poblacion": 145670,
       "direccion_municipal": "Av. Renca Norte 701, Renca",
-      "url_municipal": "https://www.renca.cl",
-      "wiki_url": "https://es.wikipedia.org/wiki/Renca",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Escudo_de_Renca.svg/200px-Escudo_de_Renca.svg.png"
+      "url_municipal": "https://renca.cl/",
+      "wiki_url": "https://es.wikipedia.org/wiki/Renca_(Chile)",
+      "logo_url": "https://storage.googleapis.com/wordpress-transparencia/logo_renca.png",
+      "instagram": "https://www.instagram.com/muni_renca/",
+      "facebook": "https://www.facebook.com/MuniRenca/"
     },
     {
       "comuna": "San Joaquín",
@@ -309,7 +354,9 @@
       "direccion_municipal": "Av. Departamental 1820, San Joaquín",
       "url_municipal": "https://www.sanjoaquin.cl",
       "wiki_url": "https://es.wikipedia.org/wiki/San_Joaqu%C3%ADn_(Chile)",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Escudo_de_San_Joaqu%C3%ADn.svg/200px-Escudo_de_San_Joaqu%C3%ADn.svg.png"
+      "logo_url": "https://sanjoaquin.cl/wp-content/uploads/2021/11/logoblanco.png",
+      "instagram": "https://www.instagram.com/municipalidadsanjoaquin/",
+      "facebook": "https://www.facebook.com/muni.joaquin/"
     },
     {
       "comuna": "San Miguel",
@@ -318,9 +365,11 @@
       "lng": -70.6455,
       "poblacion": 107697,
       "direccion_municipal": "Av. Departamental 450, San Miguel",
-      "url_municipal": "https://www.sanmiguel.cl",
+      "url_municipal": "https://web.sanmiguel.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/San_Miguel_(Chile)",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Escudo_de_San_Miguel.svg/200px-Escudo_de_San_Miguel.svg.png"
+      "logo_url": "https://web.sanmiguel.cl/wp-content/uploads/2024/12/logo-web.png",
+      "instagram": "https://www.instagram.com/sanmiguel_cl/",
+      "facebook": "https://www.facebook.com/sanmiguel.cl/"
     },
     {
       "comuna": "San Ramón",
@@ -329,9 +378,11 @@
       "lng": -70.64,
       "poblacion": 96756,
       "direccion_municipal": "Av. La Serena 3337, San Ramón",
-      "url_municipal": "https://www.sanramon.cl",
+      "url_municipal": "https://municipalidadsanramon.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/San_Ram%C3%B3n_(Chile)",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Escudo_San_Ram%C3%B3n.svg/200px-Escudo_San_Ram%C3%B3n.svg.png"
+      "logo_url": "https://municipalidadsanramon.cl/wp-content/uploads/2025/01/Sin-titulo-1.png",
+      "instagram": "https://www.instagram.com/municipalidadsanramon/",
+      "facebook": "https://www.facebook.com/municipalidadsanramon/"
     },
     {
       "comuna": "Santiago",
@@ -340,9 +391,11 @@
       "lng": -70.6483,
       "poblacion": 404495,
       "direccion_municipal": "Plaza de Armas s/n, Santiago Centro",
-      "url_municipal": "https://www.santiago.cl",
-      "wiki_url": "https://es.wikipedia.org/wiki/Santiago_de_Chile",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Escudo_de_Santiago_de_Chile.svg/200px-Escudo_de_Santiago_de_Chile.svg.png"
+      "url_municipal": "https://www.munistgo.cl/",
+      "wiki_url": "https://es.wikipedia.org/wiki/Santiago_(comuna)",
+      "logo_url": "https://www.munistgo.cl/wp-content/uploads/2024/12/GRILLA-LOGO-IMS-2024.png",
+      "instagram": "https://www.instagram.com/munistgo/",
+      "facebook": "https://www.facebook.com/munistgo/"
     },
     {
       "comuna": "Vitacura",
@@ -353,7 +406,9 @@
       "direccion_municipal": "Av. Bicentenario 3500, Vitacura",
       "url_municipal": "https://www.vitacura.cl",
       "wiki_url": "https://es.wikipedia.org/wiki/Vitacura",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Escudo_de_Vitacura.svg/200px-Escudo_de_Vitacura.svg.png"
+      "logo_url": "https://vitacura.cl/app/themes/vitacura-sage/public/images/logos-vitacura_sineslogan_hor.36ae38.png",
+      "instagram": "https://www.instagram.com/vitacura_/",
+      "facebook": "https://www.facebook.com/vitacura/"
     }
   ],
   "Provincia Cordillera": [
@@ -364,9 +419,11 @@
       "lng": -70.5772,
       "poblacion": 568106,
       "direccion_municipal": "Av. Concha y Toro 590, Puente Alto",
-      "url_municipal": "https://www.puentealto.cl",
+      "url_municipal": "https://www.mpuentealto.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Puente_Alto",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Escudo_de_Puente_Alto.svg/200px-Escudo_de_Puente_Alto.svg.png"
+      "logo_url": "https://www.mpuentealto.cl/wp-content/uploads/2025/06/log_mpte.png",
+      "instagram": "https://www.instagram.com/mpuentealto/",
+      "facebook": "https://www.facebook.com/munipuentealto/"
     },
     {
       "comuna": "Pirque",
@@ -374,10 +431,21 @@
       "lat": -33.6453,
       "lng": -70.556,
       "poblacion": 17118,
-      "direccion_municipal": "Av. Concha y Toro s/n, Pirque",
+      "direccion_municipal": "Av. Concha y Toro 02548, Pirque",
       "url_municipal": "https://www.pirque.cl",
       "wiki_url": "https://es.wikipedia.org/wiki/Pirque",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Escudo_de_Pirque.svg/200px-Escudo_de_Pirque.svg.png"
+      "logo_url": "https://www.pirque.cl/wp-content/uploads/2025/05/Logo-Municipal-100-anos-HORIZONTAL-Documentos-4-600x367.png",
+      "instagram": "https://www.instagram.com/munipirque/",
+      "facebook": "https://www.facebook.com/munipirque/",
+      "mayores": {
+        "actual": {
+          "name": "Jaime Escudero Ramos",
+          "email": "secretaria@mpirque.cl",
+          "img": "https://www.pirque.cl/wp-content/uploads/2024/06/Alcalde-Jaime-Escudero-Abril-2024-1-400x406.jpg",
+          "instagram": "https://www.instagram.com/jaime.escudero.pirque/",
+          "web": "https://www.pirque.cl/autoridades/"
+        }
+      }
     },
     {
       "comuna": "San José de Maipo",
@@ -386,9 +454,20 @@
       "lng": -70.3533,
       "poblacion": 16684,
       "direccion_municipal": "Calle Comercio 19530, San José de Maipo",
-      "url_municipal": "https://www.msjosedemaipo.cl",
+      "url_municipal": "https://www.sanjosedemaipo.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/San_Jos%C3%A9_de_Maipo",
-      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Escudo_de_San_Jos%C3%A9_de_Maipo.svg/200px-Escudo_de_San_Jos%C3%A9_de_Maipo.svg.png"
+      "logo_url": "https://cdn.sanjosedemaipo.cl/images/Logo_Municipalidad_San_Jose_de_Mai.original.format-avif.avif",
+      "instagram": "https://www.instagram.com/munisanjosedemaipo/",
+      "facebook": "https://www.facebook.com/MunicipalidaddeSanJosedeMaipo/",
+      "mayores": {
+        "actual": {
+          "name": "Roberto Pérez Rojas",
+          "email": "[EMAIL_ADDRESS]",
+          "img": "https://cdn.sanjosedemaipo.cl/images/Roberto_Perez_Rojas.original.format-avif.avif",
+          "instagram": "https://www.instagram.com/robertoperezrojas/",
+          "web": "https://www.sanjosedemaipo.cl/autoridades/"
+        }
+      }
     }
   ],
   "Provincia Maipo": [

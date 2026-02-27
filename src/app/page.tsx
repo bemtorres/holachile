@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import autopistas, { allPorticos, findComuna, allComunas } from '@/data';
 import Sidebar from '@/components/Sidebar';
@@ -8,24 +9,30 @@ import PorticoList from '@/components/PorticoList';
 import SimulationTab, { type SimParams } from '@/components/SimulationTab';
 import ComunasTab from '@/components/ComunasTab';
 import ComunaCard from '@/components/ComunaCard';
-import { MapPin, Search, ChevronDown } from 'lucide-react';
+import { MapPin, Search, ChevronDown, Loader2 } from 'lucide-react';
 import type { Portico } from '@/data';
 import * as turf from '@turf/turf';
+import MatrixCanvas from '@/components/MatrixCanvas';
+import MatrixConsole from '@/components/MatrixConsole';
+import MatrixCommandTerminal from '@/components/MatrixCommandTerminal';
 
 const MapView = dynamic(() => import('@/components/MapView'), { ssr: false });
 
-function InfoRow({ label, value, color, mono }: { label: string; value: string; color?: string; mono?: boolean }) {
-  return (
+
+function AppContent() {
+  const searchParams = useSearchParams();
+  const isOlimpo = searchParams.get('type') === 'olimpo';
+  const isMatrix = searchParams.get('type') === 'matrix';
+
+  const InfoRow = ({ label, value, color, mono }: { label: string; value: string; color?: string; mono?: boolean }) => (
     <div className="flex justify-between gap-4 text-xs items-center">
-      <span className="text-zinc-400 font-medium capitalize">{label}</span>
-      <span className={`text-right ${color ? 'font-semibold' : 'text-zinc-200'} ${mono ? 'font-mono' : 'font-medium'}`} style={color ? { color } : {}}>
-        {value}
+      <span className={`${isMatrix ? 'matrix-text' : 'text-zinc-400'} font-medium capitalize`}>{label}</span>
+      <span className={`text-right ${color ? 'font-semibold' : isMatrix ? 'matrix-text' : 'text-zinc-200'} ${mono || isMatrix ? 'font-mono' : 'font-medium'}`} style={color ? { color } : {}}>
+        {isMatrix ? `> ${value}` : value}
       </span>
     </div>
   );
-}
 
-export default function HomePage() {
   const [selectedAutopista, setSelectedAutopista] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'lista' | 'tags' | 'ruta' | 'simulacion' | 'comunas'>('ruta');
   const [selectedPortico, setSelectedPortico] = useState<Portico | null>(null);
@@ -44,21 +51,37 @@ export default function HomePage() {
   const [routeDistanceKm, setRouteDistanceKm] = useState(0);
   const [fuelCost, setFuelCost] = useState(0);
   const [isCalculating, setIsCalculating] = useState(false);
+  const [routeCategory, setRouteCategory] = useState<'cat1' | 'cat2' | 'cat3'>('cat1');
+  const [routeTimeProfile, setRouteTimeProfile] = useState<'TBFP' | 'TBP' | 'TS'>('TBP');
+  const [totalTollCost, setTotalTollCost] = useState(0);
   // --- End Route Calculator State ---
 
-  // --- Simulation State ---
-  const [isSimulating, setIsSimulating] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
-  const [simCompleted, setSimCompleted] = useState(false);
-  const [simParams, setSimParams] = useState<SimParams | null>(null);
-  const [liveVehicles, setLiveVehicles] = useState(0);
-  const [liveRevenue, setLiveRevenue] = useState(0);
-  const [liveMinutes, setLiveMinutes] = useState(0);
-  // --- End Simulation State ---
+  // --- End Route Calculator State ---
 
   // --- Map Layer State ---
   const [showComunas, setShowComunas] = useState(false);
+  const [mapCenter, setMapCenter] = useState<[number, number] | null>(null);
   // --- End Map Layer State ---
+
+  const handleConsoleCommand = useCallback((cmd: string, args: string[], onResult: (data: any) => void) => {
+    if (cmd === 'map') {
+      const comunaName = args.join(' ').toLowerCase();
+      const comuna = findComuna(comunaName);
+      if (comuna) {
+        setMapCenter([comuna.lat, comuna.lng]);
+        setSelectedComuna(comuna);
+        setActiveTab('comunas');
+        onResult?.({
+          nombre: comuna.comuna,
+          lat: comuna.lat,
+          lng: comuna.lng,
+          poblacion: comuna.poblacion || 0,
+          provincia: comuna.provincia || '',
+          direccion: comuna.direccion_municipal || ''
+        });
+      }
+    }
+  }, []);
 
   const handlePorticoClick = useCallback((p: Portico) => {
     setSelectedPortico(p);
@@ -91,21 +114,39 @@ export default function HomePage() {
   const calculateRoute = async () => {
     if (!origin || !destination) return;
     setIsCalculating(true);
-    try {
-      const res = await fetch(`https://router.project-osrm.org/route/v1/driving/${origin[1]},${origin[0]};${destination[1]},${destination[0]}?overview=full&geometries=geojson&alternatives=3`);
-      const data = await res.json();
+    setRouteAlternatives([]);
+    setRouteGeometry(null);
+    setRoutePorticos([]);
 
-      if (data.routes && data.routes.length > 0) {
-        setRouteAlternatives(data.routes);
-        setSelectedRouteIndex(0);
-      } else {
-        alert('No se encontraron rutas.');
+    // Lista de endpoints para intentar (el público de OSRM falla a veces)
+    const endpoints = [
+      `https://router.project-osrm.org/route/v1/driving/${origin[1]},${origin[0]};${destination[1]},${destination[0]}?overview=full&geometries=geojson&alternatives=3`,
+      `https://routing.openstreetmap.de/routed-car/route/v1/driving/${origin[1]},${origin[0]};${destination[1]},${destination[0]}?overview=full&geometries=geojson&alternatives=3`
+    ];
+
+    let success = false;
+    for (const url of endpoints) {
+      if (success) break;
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+        const data = await res.json();
+
+        if (data.routes && data.routes.length > 0) {
+          setRouteAlternatives(data.routes);
+          setSelectedRouteIndex(0);
+          success = true;
+        }
+      } catch (e) {
+        console.warn(`Error con endpoint ${url}:`, e);
       }
-    } catch (e) {
-      alert('Error calculando ruta');
-    } finally {
-      setIsCalculating(false);
     }
+
+    if (!success) {
+      alert('No se pudo calcular la ruta. Es posible que el servicio esté temporalmente fuera de servicio o que los puntos no sean accesibles por carretera.');
+    }
+
+    setIsCalculating(false);
   };
 
   useEffect(() => {
@@ -128,66 +169,79 @@ export default function HomePage() {
 
       const routeLine = turf.lineString(geometry.coordinates);
 
+      let tollSum = 0;
       const found = allPorticos.filter(p => {
         const pt = turf.point([p.lng, p.lat]);
-        const distanceBytes = turf.pointToLineDistance(pt, routeLine, { units: 'meters' });
-        return distanceBytes < 50;
+        const distance = turf.pointToLineDistance(pt, routeLine, { units: 'meters' });
+        const isNear = distance < 150;
+
+        if (isNear) {
+          let price = p.precio || 0;
+          if (p.tarifas_urbanas) {
+            const catKey = routeCategory === 'cat1' ? 'categoria_1_4' : routeCategory === 'cat2' ? 'categoria_2' : 'categoria_3';
+            const catObj = p.tarifas_urbanas[catKey] || p.tarifas_urbanas;
+
+            // Map labels to internal keys
+            const keyMap: any = {
+              'TBFP': ['tarifa_base_fuera_punta', 'TBFP', 'Tarifa_Base'],
+              'TBP': ['tarifa_base_punta', 'TBP', 'Tarifa_Punta'],
+              'TS': ['tarifa_saturacion', 'TS', 'Tarifa_Saturacion']
+            };
+
+            const keys = keyMap[routeTimeProfile];
+            let foundPrice = 0;
+            for (const k of keys) {
+              if (catObj[k] !== undefined && catObj[k] !== null) {
+                foundPrice = Number(catObj[k]);
+                break;
+              }
+            }
+            price = foundPrice || catObj.TBFP || p.precio || 0;
+          }
+          tollSum += price;
+        }
+        return isNear;
       });
 
       setRoutePorticos(found);
+      setTotalTollCost(tollSum);
     } else {
       setRouteGeometry(null);
       setRouteDistanceKm(0);
       setRoutePorticos([]);
+      setTotalTollCost(0);
     }
-  }, [routeAlternatives, selectedRouteIndex, vehicleType]);
+  }, [routeAlternatives, selectedRouteIndex, vehicleType, routeCategory, routeTimeProfile]);
 
-  // --- Simulation handlers ---
-  const handleSimStart = useCallback((params: SimParams) => {
-    setSimParams(params);
-    setLiveVehicles(0);
-    setLiveRevenue(0);
-    setLiveMinutes(0);
-    setSimCompleted(false);
-    setIsPaused(false);
-    setIsSimulating(true);
-  }, []);
-
-  const handleSimPause = useCallback(() => setIsPaused(true), []);
-  const handleSimResume = useCallback(() => setIsPaused(false), []);
-
-  const handleSimReset = useCallback(() => {
-    setIsSimulating(false);
-    setIsPaused(false);
-    setSimCompleted(false);
-    setLiveVehicles(0);
-    setLiveRevenue(0);
-    setLiveMinutes(0);
-    setSimParams(null);
-  }, []);
-
-  const handleSimTick = useCallback(({ vehicles, revenue, minutes }: { vehicles: number; revenue: number; minutes: number }) => {
-    setLiveVehicles(vehicles);
-    setLiveRevenue(revenue);
-    setLiveMinutes(minutes);
-  }, []);
-
-  const handleSimComplete = useCallback(() => {
-    setIsSimulating(false);
-    setSimCompleted(true);
-  }, []);
+  // --- End Route Calculator Effect ---
 
   return (
-    <div className="flex flex-col h-screen bg-zinc-950 overflow-hidden font-sans text-zinc-50">
+    <div className={`flex flex-col h-screen ${isOlimpo ? 'olimpo-gradient' : isMatrix ? 'matrix-bg matrix-grid' : 'bg-zinc-950'} overflow-hidden font-sans text-zinc-50 ${isMatrix ? 'matrix-mode' : ''}`}>
+      {isMatrix && <MatrixCanvas />}
+      {isMatrix && <MatrixConsole onCommand={handleConsoleCommand} />}
+      {isMatrix && <MatrixCommandTerminal onCommand={handleConsoleCommand} />}
+      {isMatrix && <div className="matrix-scanline" />}
       {/* Top bar */}
-      <header className="flex items-center justify-between px-8 py-4 bg-zinc-950/90 backdrop-blur-sm border-b border-zinc-800 z-50 shrink-0">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-md bg-zinc-100 flex items-center justify-center shrink-0 shadow-sm shadow-white/10">
-            <span className="text-zinc-950 font-semibold text-lg">T</span>
+      <header className={`flex items-center justify-between px-8 py-4 ${isOlimpo ? 'bg-amber-950/90 border-amber-500/30 shadow-[0_0_20px_rgba(251,191,36,0.1)]' : isMatrix ? 'bg-black/90 border-emerald-500/30 animate-matrix-flicker' : 'bg-zinc-950/90 border-zinc-800'} backdrop-blur-sm border-b z-50 shrink-0 relative overflow-hidden`}>
+        {isOlimpo && (
+          <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 via-transparent to-amber-500/10 pointer-events-none" />
+        )}
+        <div className="flex items-center gap-4 relative z-10">
+          <div className={`relative w-12 h-9 rounded-md overflow-hidden shadow-lg border ${isOlimpo ? 'border-amber-400 shadow-amber-900/40' : isMatrix ? 'border-emerald-500 shadow-emerald-900/40 animate-matrix-flicker' : 'border-white/10'} shrink-0`}>
+            {/* Chilean Flag Stylized */}
+            <div className={`absolute top-0 left-0 w-full h-1/2 ${isOlimpo ? 'bg-amber-50' : isMatrix ? 'bg-zinc-100' : 'bg-white'}`} />
+            <div className={`absolute bottom-0 left-0 w-full h-1/2 ${isOlimpo ? 'bg-amber-700' : isMatrix ? 'bg-emerald-900' : 'bg-red-600'}`} />
+            <div className={`absolute top-0 left-0 w-5 h-1/2 ${isOlimpo ? 'bg-amber-900' : isMatrix ? 'bg-emerald-950' : 'bg-blue-700'} flex items-center justify-center`}>
+              <span className={`${isOlimpo ? 'text-amber-400 animate-spin-slow' : isMatrix ? 'text-emerald-400 matrix-text animate-pulse' : 'text-white'} text-[12px] pb-[1px]`}>★</span>
+            </div>
           </div>
           <div>
-            <h1 className="text-sm font-semibold text-zinc-100 leading-none">TAG Chile</h1>
-            <p className="text-xs text-zinc-400 mt-1">Plataforma de Consulta</p>
+            <h1 className={`text-xl font-black ${isOlimpo ? 'text-amber-400 animate-gold-glow' : isMatrix ? 'matrix-text' : 'text-white'} leading-none tracking-tight`}>
+              {isOlimpo ? 'Olimpo Chile' : isMatrix ? 'MATRIX SYSTEM' : 'HolaChile'}
+            </h1>
+            <p className={`text-[10px] ${isOlimpo ? 'text-amber-600' : isMatrix ? 'text-emerald-500 font-mono' : 'text-zinc-400'} font-bold uppercase tracking-[0.25em] mt-1`}>
+              {isOlimpo ? 'Nivel Divino de Consulta' : isMatrix ? '> ACCESSING TOLL_DATA_STREAM...' : 'Plataforma de Consulta'}
+            </p>
           </div>
         </div>
 
@@ -203,13 +257,15 @@ export default function HomePage() {
 
           {/* Global Comuna Search */}
           <div className="hidden md:block relative group">
-            <div className="flex items-center gap-2 bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-1.5 focus-within:border-blue-500/50 transition-all w-48 xl:w-64">
+            <div className={`flex items-center gap-2 bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-1.5 focus-within:border-blue-500/50 transition-all w-48 xl:w-64 ${isMatrix ? 'pointer-events-none opacity-30' : ''}`}>
               <Search className="w-3.5 h-3.5 text-zinc-500" />
               <input
                 type="text"
-                placeholder="Buscar comuna..."
+                placeholder={isMatrix ? "Console activa..." : "Buscar comuna..."}
                 className="bg-transparent border-none outline-none text-xs text-zinc-200 placeholder:text-zinc-600 w-full"
+                disabled={isMatrix}
                 onChange={(e) => {
+                  if (isMatrix) return;
                   const val = e.target.value.toLowerCase();
                   if (val.length > 2) {
                     const match = (allComunas as any[]).find(c => c.comuna.toLowerCase().startsWith(val) || c.comuna.toLowerCase().includes(val));
@@ -239,7 +295,7 @@ export default function HomePage() {
       {/* Main content */}
       <div className="flex flex-1 overflow-hidden">
         {/* Left sidebar — autopista selector */}
-        <aside className="hidden lg:flex flex-col w-80 xl:w-88 bg-zinc-950 border-r border-zinc-800 overflow-hidden shrink-0 z-10 shadow-lg">
+        <aside className={`hidden lg:flex flex-col w-80 xl:w-88 ${isOlimpo ? 'bg-amber-950/40 border-amber-900/50' : isMatrix ? 'bg-black border-emerald-900/50' : 'bg-zinc-950 border-zinc-800'} border-r overflow-hidden shrink-0 z-10 shadow-lg`}>
           <Sidebar
             autopistas={autopistas}
             selectedAutopista={selectedAutopista}
@@ -252,22 +308,18 @@ export default function HomePage() {
         <main className="flex-1 relative overflow-hidden bg-zinc-950">
           <div className="absolute inset-0">
             <MapView
-              porticos={activeTab === 'ruta' || activeTab === 'simulacion' ? routePorticos : allPorticos}
+              porticos={(activeTab === 'ruta' || activeTab === 'simulacion') && routeGeometry ? routePorticos : allPorticos}
               selectedAutopista={selectedAutopista}
               onPorticoClick={handlePorticoClick}
               onMapClick={handleMapClick}
               origin={origin}
               destination={destination}
               routeGeometry={routeGeometry}
-              simActive={isSimulating}
-              simPaused={isPaused}
-              flowPerHour={simParams?.flowPerHour ?? 1500}
-              pctCat1={simParams?.pctCat1 ?? 70}
-              pctCat2={simParams?.pctCat2 ?? 20}
               routePorticos={routePorticos}
-              timeProfile={simParams?.timeProfile ?? 'punta'}
               showComunas={showComunas}
               selectedComuna={selectedComuna}
+              centerOn={mapCenter}
+              pickingMode={pickingMode}
               onComunaClick={(nombre) => {
                 const c = findComuna(nombre);
                 if (c) {
@@ -275,8 +327,6 @@ export default function HomePage() {
                   setActiveTab('comunas');
                 }
               }}
-              onSimTick={handleSimTick}
-              onSimComplete={handleSimComplete}
             />
           </div>
 
@@ -322,23 +372,22 @@ export default function HomePage() {
         </main>
 
         {/* Right panel */}
-        <aside className="hidden md:flex flex-col w-96 xl:w-[28rem] bg-zinc-950 border-l border-zinc-800 overflow-hidden shrink-0 z-10 shadow-xl">
-          {/* Tabs */}
-          <div className="p-4 border-b border-zinc-800 shrink-0 bg-zinc-950/50">
-            <div className="flex items-center gap-1.5 p-1.5 bg-zinc-900/50 rounded-xl border border-zinc-800">
+        <aside className={`hidden md:flex flex-col w-96 xl:w-[28rem] ${isOlimpo ? 'bg-amber-950/20 border-amber-900/50' : isMatrix ? 'bg-black border-emerald-900/50 shadow-[0_0_15px_rgba(0,255,65,0.05)]' : 'bg-zinc-950 border-zinc-800'} border-l overflow-hidden shrink-0 z-10 shadow-xl`}>
+          <div className={`p-4 border-b ${isMatrix ? 'border-emerald-900/50' : 'border-zinc-800'} shrink-0 ${isMatrix ? 'bg-black' : 'bg-zinc-950/50'}`}>
+            <div className={`flex items-center gap-1.5 p-1.5 ${isMatrix ? 'bg-black border-emerald-500/20' : 'bg-zinc-900/50 border-zinc-800'} rounded-xl border`}>
               {[
-                { id: 'lista', label: 'Lista' },
-                { id: 'ruta', label: 'Ruta' },
-                { id: 'simulacion', label: 'Simulación', color: 'text-purple-400', hover: 'hover:text-purple-300' },
-                { id: 'tags', label: 'Tags' },
-                { id: 'comunas', label: 'Comunas', color: 'text-blue-400', hover: 'hover:text-blue-300' }
+                { id: 'lista', label: 'DATABASE' },
+                { id: 'ruta', label: 'TRAJECTORY' },
+                { id: 'simulacion', label: 'SIMULATION', color: isMatrix ? 'matrix-text' : 'text-purple-400', hover: isMatrix ? 'hover:text-emerald-300' : 'hover:text-purple-300' },
+                { id: 'tags', label: 'PORTICOS' },
+                { id: 'comunas', label: 'GEODATA', color: isMatrix ? 'matrix-text' : 'text-blue-400', hover: isMatrix ? 'hover:text-emerald-300' : 'hover:text-blue-300' }
               ].map((tab) => (
                 <button
                   key={tab.id}
-                  className={`flex-1 py-2 px-1 rounded-lg text-xs font-semibold transition-all duration-200 ${activeTab === tab.id ? `bg-zinc-800 ${tab.color || 'text-zinc-50'} shadow-md border border-zinc-700/50` : `text-zinc-400 ${tab.hover || 'hover:text-zinc-100'} hover:bg-zinc-800/30`}`}
+                  className={`flex-1 py-2 px-1 rounded-lg text-xs font-semibold transition-all duration-200 ${activeTab === tab.id ? `${isMatrix ? 'bg-emerald-950/40 border-emerald-500/50 matrix-text' : 'bg-zinc-800 text-zinc-50'} shadow-md border` : `${isMatrix ? 'text-emerald-900' : 'text-zinc-400'} ${tab.hover || 'hover:text-zinc-100'} hover:bg-zinc-800/30`}`}
                   onClick={() => setActiveTab(tab.id as any)}
                 >
-                  {tab.label}
+                  {isMatrix ? `[${tab.label}]` : tab.label}
                 </button>
               ))}
             </div>
@@ -377,8 +426,29 @@ export default function HomePage() {
                         <option value="electrico">Eléctrico</option>
                       </select>
                     </div>
-                    <button onClick={calculateRoute} disabled={!origin || !destination || isCalculating} className="w-full bg-white hover:bg-zinc-200 disabled:bg-zinc-900 disabled:text-zinc-500 rounded-md text-zinc-900 font-semibold py-2.5 text-sm transition-colors">
-                      {isCalculating ? 'Calculando...' : 'Trazar Ruta'}
+                    <div className="space-y-2">
+                      <label className="text-xs text-zinc-400 font-medium">Categoría TAG</label>
+                      <select value={routeCategory} onChange={(e) => setRouteCategory(e.target.value as any)} className="w-full bg-zinc-950 border border-zinc-800 rounded-md px-3 py-2 text-sm text-zinc-100 outline-none">
+                        <option value="cat1">Cat 1 y 4: Autos, Camionetas, Motos</option>
+                        <option value="cat2">Cat 2: Buses y Camiones simples</option>
+                        <option value="cat3">Cat 3: Camiones con remolque</option>
+                      </select>
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-xs text-zinc-400 font-medium">Horario de Tránsito</label>
+                      <select value={routeTimeProfile} onChange={(e) => setRouteTimeProfile(e.target.value as any)} className="w-full bg-zinc-950 border border-zinc-800 rounded-md px-3 py-2 text-sm text-zinc-100 outline-none">
+                        <option value="TBFP">Valle (Tarifa Base Fuera Punta)</option>
+                        <option value="TBP">Punta (Tarifa Base Punta)</option>
+                        <option value="TS">Saturación (Tarifa Saturación)</option>
+                      </select>
+                    </div>
+                    <button onClick={calculateRoute} disabled={!origin || !destination || isCalculating} className="w-full bg-white hover:bg-zinc-200 disabled:bg-zinc-900 disabled:text-zinc-500 rounded-md text-zinc-900 font-semibold py-2.5 text-sm transition-colors flex items-center justify-center gap-2">
+                      {isCalculating ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          Calculando...
+                        </>
+                      ) : 'Trazar Ruta'}
                     </button>
                   </div>
                 </div>
@@ -391,9 +461,17 @@ export default function HomePage() {
                         <div className="text-xl font-semibold text-zinc-100">{routeDistanceKm.toFixed(1)} km</div>
                       </div>
                       <div className="border border-zinc-800 rounded-md p-3 bg-zinc-900/40">
-                        <div className="text-[10px] text-zinc-500 font-bold uppercase mb-1">Costo Est.</div>
+                        <div className="text-[10px] text-emerald-500 font-bold uppercase mb-1">Costo TAG</div>
+                        <div className="text-xl font-semibold text-emerald-400">${Math.round(totalTollCost).toLocaleString('es-CL')}</div>
+                      </div>
+                      <div className="border border-zinc-800 rounded-md p-3 bg-zinc-900/40">
+                        <div className="text-[10px] text-zinc-500 font-bold uppercase mb-1">Combustible</div>
                         <div className="text-xl font-semibold text-zinc-100">${Math.round(fuelCost).toLocaleString('es-CL')}</div>
                       </div>
+                    </div>
+                    <div className="bg-emerald-500/10 border border-emerald-500/20 p-3 rounded-md flex justify-between items-center">
+                      <span className="text-xs font-bold text-emerald-500 uppercase">Costo Total Viaje</span>
+                      <span className="text-lg font-bold text-white">${Math.round(totalTollCost + fuelCost).toLocaleString('es-CL')}</span>
                     </div>
                     <div className="border-t border-zinc-800 pt-4">
                       <div className="text-[10px] font-bold text-zinc-500 uppercase mb-3 tracking-widest">Pórticos Intersectados ({routePorticos.length})</div>
@@ -482,10 +560,7 @@ export default function HomePage() {
               <SimulationTab
                 routePorticos={routePorticos} routeDistanceKm={routeDistanceKm} origin={origin} destination={destination}
                 pickingMode={pickingMode} setPickingMode={setPickingMode} calculateRoute={calculateRoute}
-                isCalculating={isCalculating} requestGeolocation={requestGeolocation} onStart={handleSimStart}
-                onPause={handleSimPause} onResume={handleSimResume} onReset={handleSimReset}
-                isSimulating={isSimulating} isPaused={isPaused} simCompleted={simCompleted}
-                liveVehicles={liveVehicles} liveRevenue={liveRevenue} liveMinutes={liveMinutes}
+                isCalculating={isCalculating} requestGeolocation={requestGeolocation}
               />
             )}
 
@@ -515,5 +590,13 @@ export default function HomePage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function HomePage() {
+  return (
+    <Suspense fallback={<div className="h-screen w-screen bg-black flex items-center justify-center text-white">Cargando...</div>}>
+      <AppContent />
+    </Suspense>
   );
 }

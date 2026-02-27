@@ -116,3 +116,262 @@ a {
 .comuna-tooltip::before {
   display: none;
 }
+
+/* ── Simulation Animations ── */
+.money-burst {
+  position: absolute;
+  pointer-events: none;
+  font-family: var(--font-inter);
+  font-weight: 800;
+  font-size: 14px;
+  z-index: 1000;
+  animation: money-rise 1s ease-out forwards;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  white-space: nowrap;
+}
+
+@keyframes money-rise {
+  0% {
+    transform: translate(-50%, 0) scale(0.5);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translate(-50%, -20px) scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -60px) scale(1);
+    opacity: 0;
+  }
+}
+
+.vehicle-icon {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background: transparent !important;
+  border: none !important;
+}
+
+.vehicle-icon>div {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+/* ── Portico Revenue Labels ── */
+.portico-revenue-label {
+  background: rgba(9, 9, 11, 0.95);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #10b981;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: var(--font-inter);
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
+}
+
+.portico-revenue-label .value {
+  font-size: 11px;
+  color: #fff;
+}
+
+.portico-revenue-label.pulse {
+  transform: scale(1.2);
+  border-color: #10b981;
+  background: #10b981;
+  color: #fff;
+}
+
+/* ── Olimpo Mode ── */
+@keyframes gold-shimmer {
+  0% {
+    text-shadow: 0 0 5px rgba(251, 191, 36, 0.2);
+  }
+
+  50% {
+    text-shadow: 0 0 20px rgba(251, 191, 36, 0.8), 0 0 30px rgba(251, 191, 36, 0.4);
+  }
+
+  100% {
+    text-shadow: 0 0 5px rgba(251, 191, 36, 0.2);
+  }
+}
+
+.animate-gold-glow {
+  animation: gold-shimmer 3s infinite ease-in-out;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.olimpo-gradient {
+  background: linear-gradient(135deg, #451a03 0%, #000 100%);
+}
+
+/* ── Matrix Mode ── */
+.matrix-mode {
+  --matrix-green: #00ff41;
+  --matrix-dark: #0d0d0d;
+}
+
+.matrix-text {
+  color: #00ff41 !important;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 1), 0 0 20px rgba(0, 255, 65, 0.5), 0 0 30px rgba(0, 255, 65, 0.3);
+  font-family: var(--font-mono), 'JetBrains Mono', 'Fira Code', 'Courier New', monospace !important;
+  letter-spacing: 0.1em;
+  animation: matrix-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes matrix-glow {
+  from {
+    text-shadow: 0 0 10px rgba(0, 255, 65, 1), 0 0 20px rgba(0, 255, 65, 0.5);
+  }
+  to {
+    text-shadow: 0 0 15px rgba(0, 255, 65, 1), 0 0 30px rgba(0, 255, 65, 0.7), 0 0 40px rgba(0, 255, 65, 0.4);
+  }
+}
+
+.matrix-bg {
+  background: #000000 !important;
+}
+
+.matrix-mode .text-zinc-50,
+.matrix-mode .text-zinc-100,
+.matrix-mode .text-zinc-200,
+.matrix-mode .text-zinc-300,
+.matrix-mode .text-zinc-400 {
+  color: #00ff41 !important;
+}
+
+.matrix-mode .bg-zinc-950,
+.matrix-mode .bg-zinc-900,
+.matrix-mode .bg-black {
+  background: rgba(0, 10, 0, 0.9) !important;
+}
+
+.matrix-mode .border-zinc-800,
+.matrix-mode .border-zinc-700 {
+  border-color: rgba(0, 255, 65, 0.4) !important;
+}
+
+.matrix-mode input,
+.matrix-mode select,
+.matrix-mode textarea {
+  background: #0d0d0d !important;
+  color: #00ff41 !important;
+  border: 1px solid rgba(0, 255, 65, 0.5) !important;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
+}
+
+.matrix-mode input::placeholder {
+  color: rgba(0, 255, 65, 0.4) !important;
+}
+
+.matrix-mode button {
+  color: #00ff41 !important;
+  border-color: rgba(0, 255, 65, 0.5) !important;
+}
+
+.matrix-mode button:hover {
+  background: rgba(0, 255, 65, 0.1) !important;
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.3) !important;
+}
+
+.matrix-mode .bg-white {
+  background: #00ff41 !important;
+}
+
+.matrix-border {
+  border-color: rgba(0, 255, 65, 0.4) !important;
+}
+
+.matrix-bg {
+  background: #000000 !important;
+}
+
+@keyframes matrix-flicker {
+  0% {
+    opacity: 0.97;
+  }
+
+  5% {
+    opacity: 0.95;
+  }
+
+  10% {
+    opacity: 0.99;
+  }
+
+  15% {
+    opacity: 0.94;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.95;
+  }
+
+  30% {
+    opacity: 0.99;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-matrix-flicker {
+  animation: matrix-flicker 0.15s infinite;
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.matrix-scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(0, 255, 65, 0.1);
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+  z-index: 100;
+  pointer-events: none;
+  animation: scanline 4s linear infinite;
+}
+
+.matrix-grid {
+  background-image: linear-gradient(rgba(0, 255, 65, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 65, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
