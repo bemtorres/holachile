@@ -67,6 +67,16 @@ export interface Comuna {
   wiki_url: string;
   logo_url: string;
   provincia: string;
+  mayores?: {
+    actual?: {
+      name?: string;
+      email?: string;
+      img?: string;
+      instagram?: string;
+      web?: string;
+      twitter?: string;
+    }
+  };
 }
 
 const LOCAL_COMUNA_MAP: Record<string, Comuna> = {};

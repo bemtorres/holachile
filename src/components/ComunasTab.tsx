@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Search, MapPin, Users, Building2, ChevronRight, X, Globe, Instagram } from 'lucide-react';
+import { Search, MapPin, Users, Building2, ChevronRight, X, Globe, Instagram, Fingerprint, Scan, ShieldAlert, Terminal, BadgeInfo, Mail, Link as LinkIcon, Lock, User } from 'lucide-react';
 import { allComunas, type Comuna } from '@/data';
 import ComunaCard from './ComunaCard';
 
@@ -149,7 +149,74 @@ export default function ComunasTab({
           <div className="flex-1 overflow-y-auto p-6 custom-scrollbar space-y-6">
             <ComunaCard comuna={selectedComuna.comuna} />
 
-            <div className="grid grid-cols-2 gap-4 pb-12">
+            {/* Mayor Profile Section - Wanted Style */}
+            {selectedComuna.mayores?.actual && (
+              <div className="mt-8 font-sans">
+                {/* Header Title Outside */}
+                <h2 className="text-white text-base sm:text-lg font-bold mb-1 uppercase tracking-wider pl-1 font-arial">
+                  {selectedComuna.mayores.actual.name || 'UNKNOWN SUBJECT'}
+                </h2>
+
+                {/* Main Card */}
+                <div className="relative bg-linear-to-br from-[#1b3a57] to-[#0a192f] border border-[#2c5282] rounded-lg shadow-2xl p-4 overflow-hidden border-t-2 border-t-[#3b82f6]/30">
+                  {/* Subtle Map Background Simulation */}
+                  <div className="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay" style={{ backgroundImage: 'radial-gradient(circle at center, #60a5fa 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
+                  <div className="absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400/20 via-transparent to-transparent" />
+
+                  <div className="relative z-10 flex flex-row gap-4">
+                    {/* Image Area with Silver Border */}
+                    <div className="shrink-0 flex flex-col">
+                      <div className="w-[100px] sm:w-[120px] aspect-[3/4] rounded-xl border-[4px] border-[#cbd5e1] shadow-[0_4px_10px_rgba(0,0,0,0.5),inset_0_3px_6px_rgba(255,255,255,0.4)] overflow-hidden bg-slate-800 relative">
+                        <div className="absolute top-0 w-full h-1/4 bg-linear-to-b from-white/30 to-transparent z-10 pointer-events-none mix-blend-overlay" />
+                        {selectedComuna.mayores.actual.img ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            src={selectedComuna.mayores.actual.img}
+                            alt="Subject"
+                            className="w-full h-full object-cover object-top filter contrast-110"
+                          />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center bg-slate-700">
+                            <User className="w-10 h-10 text-slate-400" />
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Data Area */}
+                    <div className="flex-1 flex flex-col justify-between min-w-0 pt-1">
+                      <div className="space-y-2 text-xs sm:text-sm text-blue-50/90 leading-snug wrap-break-word">
+                        <p>
+                          <span className="font-bold text-white">Jurisdiction: </span>
+                          Alcaldía de {selectedComuna.comuna}
+                        </p>
+                        <p>
+                          <span className="font-bold text-white">Comms: </span>
+                          {selectedComuna.mayores.actual.email || 'N/A'}
+                        </p>
+                        <p>
+                          <span className="font-bold text-white">Digital: </span>
+                          {selectedComuna.mayores.actual.instagram ? `@${selectedComuna.mayores.actual.instagram.replace(/\/$/, '').split('/').pop()}` : (selectedComuna.mayores.actual.twitter ? 'X/Twitter account detected' : 'N/A')}
+                        </p>
+                        <p>
+                          <span className="font-bold text-white">Status: </span>
+                          Active
+                        </p>
+                      </div>
+
+                      {/* Pill Button Container */}
+                      <div className="flex justify-end mt-4">
+                        <div className="bg-linear-to-b from-[#dc2626] to-[#991b1b] text-white text-[10px] sm:text-xs font-bold px-4 pt-1 pb-1.5 rounded-full border-[1.5px] border-[#fca5a5] shadow-[0_2px_4px_rgba(0,0,0,0.5)] cursor-default tracking-wide">
+                          Classified Dossier...
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            <div className="hidden grid grid-cols-2 gap-4 pb-12">
               <a
                 href={selectedComuna.url_municipal}
                 target="_blank"
@@ -168,6 +235,17 @@ export default function ComunasTab({
                 <Globe className="w-6 h-6" />
                 <span className="text-[11px] font-bold uppercase tracking-widest text-center">Wikipedia</span>
               </a>
+              {selectedComuna.mayores?.actual?.web && (
+                <a
+                  href={selectedComuna.mayores.actual.web}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col col-span-2 items-center justify-center gap-3 bg-emerald-900/20 hover:bg-emerald-900/40 border border-emerald-800/50 text-emerald-400 rounded-2xl py-6 transition-all shadow-lg hover:-translate-y-1 font-mono group"
+                >
+                  <LinkIcon className="w-6 h-6 group-hover:scale-110 transition-transform" />
+                  <span className="text-[11px] font-bold uppercase tracking-widest text-center">Directorio Autoridades [EXT]</span>
+                </a>
+              )}
             </div>
           </div>
         </div>

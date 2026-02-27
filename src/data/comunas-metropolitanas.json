@@ -12,7 +12,14 @@
       "logo_url": "https://mcerrillos.cl/img/logo.png",
       "instagram": "https://www.instagram.com/muni_cerrillos",
       "facebook": "https://www.facebook.com/municerrillos",
-      "linktr": "https://linktr.ee/municerrillos"
+      "linktr": "https://linktr.ee/municerrillos",
+      "mayores": {
+        "actual": {
+          "name": "Johnny Yáñez Díaz",
+          "web": "https://mcerrillos.cl/autoridades/",
+          "email": "alcaldia@mcerrillos.cl"
+        }
+      }
     },
     {
       "comuna": "Cerro Navia",
@@ -23,7 +30,15 @@
       "direccion_municipal": "Av. Pedro Aguirre Cerda 7530, Cerro Navia",
       "url_municipal": "https://www.cerronavia.cl",
       "wiki_url": "https://es.wikipedia.org/wiki/Cerro_Navia",
-      "logo_url": "https://www.cerronavia.cl/wp-content/uploads/2020/03/Logo_CerroNavia.png"
+      "logo_url": "https://www.cerronavia.cl/wp-content/uploads/2020/03/Logo_CerroNavia.png",
+      "mayores": {
+        "actual": {
+          "name": "Mauro Tamayo Rozas",
+          "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Mauro%20Tamayo%20(30663438223)%20(cropped).jpg?width=400",
+          "web": "https://www.cerronavia.cl/autoridades/",
+          "email": "alcaldia@cerronavia.cl"
+        }
+      }
     },
     {
       "comuna": "Conchalí",
@@ -34,7 +49,15 @@
       "direccion_municipal": "Av. Independencia 5860, Conchalí",
       "url_municipal": "https://www.conchali.cl",
       "wiki_url": "https://es.wikipedia.org/wiki/Conchal%C3%AD",
-      "logo_url": "https://conchali.cl/wp-content/uploads/2025/06/Logos-RGB.png"
+      "logo_url": "https://conchali.cl/wp-content/uploads/2025/06/Logos-RGB.png",
+      "mayores": {
+        "actual": {
+          "name": "René De La Vega Fuentes",
+          "web": "https://www.conchali.cl/autoridades/",
+          "email": "alcaldia@conchali.cl",
+          "img": "https://conchali.cl/wp-content/uploads/2025/10/alcalde1.png"
+        }
+      }
     },
     {
       "comuna": "El Bosque",
@@ -47,7 +70,14 @@
       "wiki_url": "https://es.wikipedia.org/wiki/El_Bosque_(Chile)",
       "logo_url": "https://logosdechile.cl/cdn/shop/files/elbosque_Mesadetrabajo1.jpg?v=1742777478&width=1920",
       "facebook": "https://www.facebook.com/munielbosque/",
-      "instagram": "https://www.instagram.com/munielbosque/"
+      "instagram": "https://www.instagram.com/munielbosque/",
+      "mayores": {
+        "actual": {
+          "name": "Manuel Francisco Zúñiga Aguilar",
+          "web": "https://www.municipalidadelbosque.cl/autoridades/",
+          "email": "alcaldia@municipalidadelbosque.cl"
+        }
+      }
     },
     {
       "comuna": "Estación Central",
@@ -59,7 +89,14 @@
       "url_municipal": "https://www.municipalidaddeestacioncentral.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Estaci%C3%B3n_Central_(Chile)",
       "logo_url": "https://www.municipalidaddeestacioncentral.cl/wp-content/uploads/2026/01/img_logo-estacion.png",
-      "instagram": "https://www.instagram.com/muniecentral"
+      "instagram": "https://www.instagram.com/muniecentral",
+      "mayores": {
+        "actual": {
+          "name": "Felipe Eduardo Muñoz Vallejos",
+          "web": "https://www.municipalidaddeestacioncentral.cl/autoridades/",
+          "email": "alcaldia@municipalidaddeestacioncentral.cl"
+        }
+      }
     },
     {
       "comuna": "Huechuraba",
@@ -71,7 +108,14 @@
       "url_municipal": "https://www.huechuraba.cl",
       "wiki_url": "https://es.wikipedia.org/wiki/Huechuraba",
       "logo_url": "https://huechuraba.cl/images/Logo-Huechuraba-v3.svg",
-      "instagram": "https://www.instagram.com/munihuechuraba/"
+      "instagram": "https://www.instagram.com/munihuechuraba/",
+      "mayores": {
+        "actual": {
+          "name": "Maximiliano Luksic Lederer",
+          "web": "https://www.huechuraba.cl/autoridades/",
+          "email": "alcaldia@huechuraba.cl"
+        }
+      }
     },
     {
       "comuna": "Independencia",
@@ -83,7 +127,14 @@
       "url_municipal": "https://www.independencia.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Independencia_(Chile)",
       "logo_url": "https://huechuraba.cl/images/Logo-Huechuraba-v3.svg",
-      "instagram": "https://www.instagram.com/muni_independencia/"
+      "instagram": "https://www.instagram.com/muni_independencia/",
+      "mayores": {
+        "actual": {
+          "name": "Agustín Iglesias Muñoz",
+          "web": "https://www.independencia.cl/autoridades/",
+          "email": "alcaldia@independencia.cl"
+        }
+      }
     },
     {
       "comuna": "La Cisterna",
@@ -96,7 +147,14 @@
       "wiki_url": "https://es.wikipedia.org/wiki/La_Cisterna",
       "logo_url": "https://uploads.mejormunicipio.com/websites/menu/logo/b46348b6-c372-4dfd-bcbb-a933eac0c1a6/logo_250x50.png?t=1772149611223",
       "instagram": "https://www.instagram.com/muni.lacisterna",
-      "facebook": "https://www.facebook.com/cisterna.cl/"
+      "facebook": "https://www.facebook.com/cisterna.cl/",
+      "mayores": {
+        "actual": {
+          "name": "Joel Andrés Olmos Espinoza",
+          "web": "https://www.cisterna.cl/autoridades/",
+          "email": "alcaldia@cisterna.cl"
+        }
+      }
     },
     {
       "comuna": "La Florida",
@@ -109,7 +167,14 @@
       "wiki_url": "https://es.wikipedia.org/wiki/La_Florida_(Chile)",
       "logo_url": "https://www.laflorida.cl/sitio/wp-content/uploads/2026/01/logo_mdlf_2026_color.png",
       "instagram": "https://www.instagram.com/muni.laflorida",
-      "facebook": "https://www.facebook.com/laflorida.cl/"
+      "facebook": "https://www.facebook.com/laflorida.cl/",
+      "mayores": {
+        "actual": {
+          "name": "Daniel Reyes Morales",
+          "web": "https://www.laflorida.cl/sitio/autoridades/",
+          "email": "alcaldia@laflorida.cl"
+        }
+      }
     },
     {
       "comuna": "La Granja",
@@ -122,7 +187,15 @@
       "wiki_url": "https://es.wikipedia.org/wiki/La_Granja_(Chile)",
       "logo_url": "https://www.municipalidadlagranja.cl/wp-content/uploads/2025/07/Escudo-y-texto.png",
       "instagram": "https://www.instagram.com/muni_lagranja/",
-      "facebook": "https://www.facebook.com/IMunicipalidadDeLaGranja"
+      "facebook": "https://www.facebook.com/IMunicipalidadDeLaGranja",
+      "mayores": {
+        "actual": {
+          "name": "Claudio Eugenio Arriagada Macaya",
+          "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Claudio%20Eugenio%20Arriagada%20Macaya.jpg?width=400",
+          "web": "https://www.municipalidadlagranja.cl/autoridades/",
+          "email": "alcaldia@municipalidadlagranja.cl"
+        }
+      }
     },
     {
       "comuna": "La Pintana",
@@ -135,7 +208,17 @@
       "wiki_url": "https://es.wikipedia.org/wiki/La_Pintana",
       "logo_url": "https://pintana.cl/wp-content/uploads/2024/04/logo.png",
       "instagram": "https://www.instagram.com/munilapintana/",
-      "facebook": "https://www.facebook.com/munipintana/"
+      "facebook": "https://www.facebook.com/munipintana/",
+      "mayores": {
+        "actual": {
+          "name": "Claudia Pizarro Peña",
+          "img": "https://commons.wikimedia.org/wiki/Special:FilePath/CLAUDIA%20PIZARRO%20ALCALDESA%20LA%20PINTANA%20(cropped).jpg?width=400",
+          "instagram": "https://www.instagram.com/alcaldesaclaudiapizarro/",
+          "twitter": "https://twitter.com/ClaudiaPizarro",
+          "web": "https://pintana.cl/autoridades/",
+          "email": "alcaldia@pintana.cl"
+        }
+      }
     },
     {
       "comuna": "La Reina",
@@ -148,7 +231,17 @@
       "wiki_url": "https://es.wikipedia.org/wiki/La_Reina",
       "logo_url": "https://www.lareina.cl/wp-content/uploads/elementor/thumbs/lareina-monotono-przxay3628ls6foz0ys9nw0b7h7za372ifpndaom3k.png",
       "instagram": "https://www.instagram.com/munilareina/",
-      "facebook": "https://www.facebook.com/MuniLaReina/"
+      "facebook": "https://www.facebook.com/MuniLaReina/",
+      "mayores": {
+        "actual": {
+          "name": "José Manuel Palacios Parra",
+          "img": "https://commons.wikimedia.org/wiki/Special:FilePath/JM%20Palacios.jpg?width=400",
+          "instagram": "https://www.instagram.com/jmpalaciosparra/",
+          "twitter": "https://twitter.com/JMPalaciosParra",
+          "web": "https://www.lareina.cl/autoridades/",
+          "email": "alcaldia@lareina.cl"
+        }
+      }
     },
     {
       "comuna": "Las Condes",
@@ -161,7 +254,15 @@
       "wiki_url": "https://es.wikipedia.org/wiki/Las_Condes",
       "logo_url": "https://www.lascondes.cl/wp-content/uploads/2025/03/logo_blanco.svg",
       "instagram": "https://www.instagram.com/munilascondes/",
-      "facebook": "https://www.facebook.com/munilascondes/"
+      "facebook": "https://www.facebook.com/munilascondes/",
+      "mayores": {
+        "actual": {
+          "name": "Catalina San Martín Cavada",
+          "web": "https://www.lascondes.cl/autoridades/",
+          "email": "alcaldia@lascondes.cl",
+          "img": "https://www.lascondes.cl/wp-content/uploads/2023/05/alcaldesa-catalina2.webp"
+        }
+      }
     },
     {
       "comuna": "Lo Barnechea",
@@ -174,7 +275,16 @@
       "wiki_url": "https://es.wikipedia.org/wiki/Lo_Barnechea",
       "logo_url": "https://lobarnechea.cl/wp-content/themes/lo_barnechea_wp/assets/img/icons/logo-blanco.png",
       "instagram": "https://www.instagram.com/mlobarnechea/",
-      "facebook": "https://www.facebook.com/MLoBarnechea/"
+      "facebook": "https://www.facebook.com/MLoBarnechea/",
+      "mayores": {
+        "actual": {
+          "name": "Felipe Alessandri Vergara",
+          "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Felipe%20Alessandri%20(32727066712)%20(cropped).jpg?width=400",
+          "web": "http://www.felipealessandri.cl/",
+          "twitter": "https://twitter.com/AlessandriFelip",
+          "email": "alcaldia@lobarnechea.cl"
+        }
+      }
     },
     {
       "comuna": "Lo Espejo",
@@ -187,7 +297,15 @@
       "wiki_url": "https://es.wikipedia.org/wiki/Lo_Espejo",
       "logo_url": "https://www.loespejo.cl/wp-content/uploads/2023/10/log_retin.png",
       "instagram": "https://www.instagram.com/muniloespejo/",
-      "facebook": "https://www.facebook.com/MunicipalidaddeLoEspejo/"
+      "facebook": "https://www.facebook.com/MunicipalidaddeLoEspejo/",
+      "mayores": {
+        "actual": {
+          "name": "Javiera Paz Reyes Jara",
+          "img": "https://commons.wikimedia.org/wiki/Special:FilePath/RETRATOS%20ALCALDESA%20JAVIERA%20REYES%2011149.jpg?width=400",
+          "web": "https://www.loespejo.cl/autoridades/",
+          "email": "alcaldia@loespejo.cl"
+        }
+      }
     },
     {
       "comuna": "Lo Prado",
@@ -200,7 +318,14 @@
       "wiki_url": "https://es.wikipedia.org/wiki/Lo_Prado",
       "logo_url": "https://loprado.cl/wp-content/uploads/2024/04/LOGO-MUNICIPAL-LO-PRADO_Mesa-de-trabajo-1-copia.png",
       "instagram": "https://www.instagram.com/muniloprado/",
-      "facebook": "https://www.facebook.com/muniloprado/"
+      "facebook": "https://www.facebook.com/muniloprado/",
+      "mayores": {
+        "actual": {
+          "name": "Maximiliano Ríos Galleguillos",
+          "web": "https://loprado.cl/autoridades/",
+          "email": "alcaldia@loprado.cl"
+        }
+      }
     },
     {
       "comuna": "Macul",
@@ -213,7 +338,17 @@
       "wiki_url": "https://es.wikipedia.org/wiki/Macul",
       "logo_url": "https://www.munimacul.cl/portalnv/wp-content/uploads/2022/12/LOGO-COMUNA-FAMILIAR-HORIZ-TRANSP.png",
       "instagram": "https://www.instagram.com/muni_macul/",
-      "facebook": "https://www.facebook.com/muni.macul/"
+      "facebook": "https://www.facebook.com/muni.macul/",
+      "mayores": {
+        "actual": {
+          "name": "Eduardo René Espinoza Gaete",
+          "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Eduardo%20Espinoza%20Gaete.jpg?width=400",
+          "instagram": "https://www.instagram.com/eduardo_yayo_espinoza/",
+          "web": "https://www.eduardoespinoza.cl/",
+          "twitter": "https://twitter.com/EstoyContigoM",
+          "email": "alcaldia@munimacul.cl"
+        }
+      }
     },
     {
       "comuna": "Maipú",
@@ -226,7 +361,14 @@
       "wiki_url": "https://es.wikipedia.org/wiki/Maip%C3%BA_(Chile)",
       "logo_url": "https://www.maipu.cl/img/escudo_maipu.32d4bc5a.png",
       "instagram": "https://www.instagram.com/muni_maipu/",
-      "facebook": "https://www.facebook.com/munimaipu/"
+      "facebook": "https://www.facebook.com/munimaipu/",
+      "mayores": {
+        "actual": {
+          "name": "Tomás Vodanovic Escudero",
+          "web": "https://www.maipu.cl/autoridades/",
+          "email": "alcaldia@maipu.cl"
+        }
+      }
     },
     {
       "comuna": "Ñuñoa",
@@ -239,7 +381,17 @@
       "wiki_url": "https://es.wikipedia.org/wiki/%C3%91u%C3%B1oa",
       "logo_url": "https://www.nunoa.cl/app/uploads/2025/03/logo-nunoa_amarillo.svg",
       "instagram": "https://www.instagram.com/muninunoa/",
-      "facebook": "https://www.facebook.com/muninunoacl/"
+      "facebook": "https://www.facebook.com/muninunoacl/",
+      "mayores": {
+        "actual": {
+          "name": "Sebastián Sichel Ramírez",
+          "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Sebasti%C3%A1n%20Sichel.jpg?width=400",
+          "instagram": "https://www.instagram.com/sebastiansichel/",
+          "twitter": "https://twitter.com/sebastiansichel",
+          "web": "https://www.nunoa.cl/autoridades/",
+          "email": "alcaldia@nunoa.cl"
+        }
+      }
     },
     {
       "comuna": "Pedro Aguirre Cerda",
@@ -252,7 +404,15 @@
       "wiki_url": "https://es.wikipedia.org/wiki/Pedro_Aguirre_Cerda_(comuna)",
       "logo_url": "https://www.pedroaguirrecerda.cl/app/themes/pac_theme/public/images/logo_PAC.565179.png",
       "instagram": "https://www.instagram.com/PACmunicipio/",
-      "facebook": "https://www.facebook.com/PACmunicipio/"
+      "facebook": "https://www.facebook.com/PACmunicipio/",
+      "mayores": {
+        "actual": {
+          "name": "Luis Alberto Astudillo Peiretti",
+          "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Foto%20Luis%20Astudillo%20Alcalde%20PAC.jpg?width=400",
+          "web": "https://www.pedroaguirrecerda.cl/autoridades/",
+          "email": "alcaldia@pedroaguirrecerda.cl"
+        }
+      }
     },
     {
       "comuna": "Peñalolén",
@@ -265,7 +425,14 @@
       "wiki_url": "https://es.wikipedia.org/wiki/Pe%C3%B1alol%C3%A9n",
       "logo_url": "https://www.penalolen.cl/social/logo.png",
       "instagram": "https://www.instagram.com/penalolen/",
-      "facebook": "https://www.facebook.com/munipena/"
+      "facebook": "https://www.facebook.com/munipena/",
+      "mayores": {
+        "actual": {
+          "name": "Miguel Andrés Concha Manso",
+          "web": "https://www.penalolen.cl/autoridades/",
+          "email": "alcaldia@penalolen.cl"
+        }
+      }
     },
     {
       "comuna": "Providencia",
@@ -278,7 +445,16 @@
       "wiki_url": "https://es.wikipedia.org/wiki/Providencia_(Chile)",
       "logo_url": "https://providencia.cl/provi/img/Logo-municipal-2025-W2.png",
       "instagram": "https://www.instagram.com/muniprovi/",
-      "facebook": "https://www.facebook.com/MunicipalidadDeProvidencia/"
+      "facebook": "https://www.facebook.com/MunicipalidadDeProvidencia/",
+      "mayores": {
+        "actual": {
+          "name": "Jaime Bellolio",
+          "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ministro%20Vocero%20de%20Gobierno%20Jaime%20Bellolio.jpg?width=400",
+          "twitter": "https://twitter.com/jbellolio",
+          "web": "https://www.providencia.cl/autoridades/",
+          "email": "alcaldia@providencia.cl"
+        }
+      }
     },
     {
       "comuna": "Pudahuel",
@@ -289,9 +465,17 @@
       "direccion_municipal": "Av. Félix Fontecilla 420, Pudahuel",
       "url_municipal": "https://www.mpudahuel.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Pudahuel",
-      "logo_url": "https://es.wikipedia.org/wiki/Pudahuel",
+      "logo_url": "https://www.mpudahuel.cl/assets/logo-color-1-03dd0859.webp",
       "instagram": "https://www.instagram.com/mpudahuel/",
-      "facebook": "https://www.facebook.com/impudahuel/"
+      "facebook": "https://www.facebook.com/impudahuel/",
+      "mayores": {
+        "actual": {
+          "name": "Ítalo Bravo",
+          "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Alcalde%20de%20Pudahuel%20Italo%20Bravo%2003%2008%202021.jpg?width=400",
+          "web": "https://www.mpudahuel.cl/autoridades/",
+          "email": "alcaldia@mpudahuel.cl"
+        }
+      }
     },
     {
       "comuna": "Quilicura",
@@ -304,7 +488,14 @@
       "wiki_url": "https://es.wikipedia.org/wiki/Quilicura",
       "logo_url": "https://scontent.fscl25-1.fna.fbcdn.net/v/t39.30808-6/271190070_1721060298083634_79656040982676787_n.png?_nc_cat=104&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeGzoVfqdVhVMP01t2RY2aEGkKbBThg6KNuQpsFOGDoo2xik2xFYFYE3SZ8-qZuOF8RMMOkjUOGNI8jq5K9B0RZu&_nc_ohc=ZyDxUPwBtSIQ7kNvwEf7tfo&_nc_oc=AdmzJHOQwl-V6iEC-bdHXBVsYtGkSpmFDwv8RvvD-SJxicRTOGvF7cgEG0Fedd-6Xvc&_nc_zt=23&_nc_ht=scontent.fscl25-1.fna&_nc_gid=dSplXEuL5T-xlr2gWRFz9Q&oh=00_AfuteAr0R79BsJ3nbqrQGAoW3KRsStK74xz6Oay62c7HQA&oe=69A732B0",
       "instagram": "https://www.instagram.com/muniquilicura/",
-      "facebook": "https://www.facebook.com/muniquilicura/"
+      "facebook": "https://www.facebook.com/muniquilicura/",
+      "mayores": {
+        "actual": {
+          "name": "Paulina Bobadilla",
+          "web": "https://es.wikipedia.org/wiki/Quilicura/autoridades/",
+          "email": "alcaldia@es.wikipedia.org"
+        }
+      }
     },
     {
       "comuna": "Quinta Normal",
@@ -317,7 +508,14 @@
       "wiki_url": "https://es.wikipedia.org/wiki/Quinta_Normal",
       "logo_url": "https://images.ligup2.com/eyJidWNrZXQiOiJsaWd1cC12MiIsImtleSI6InF1aW50YW5vcm1hbC91c2Vycy83NTUxOF9sb2dvX3F0YW5vcm1hbC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjIwMDAsImhlaWdodCI6MjAwMCwiZml0IjoiaW5zaWRlIn0sInJvdGF0ZSI6bnVsbH19",
       "instagram": "https://www.instagram.com/muniquintanormal/",
-      "facebook": "https://www.facebook.com/MunicipalidadQuintaNormal/"
+      "facebook": "https://www.facebook.com/MunicipalidadQuintaNormal/",
+      "mayores": {
+        "actual": {
+          "name": "Karina Delfino",
+          "web": "https://www.quintanormal.cl/autoridades/",
+          "email": "alcaldia@quintanormal.cl"
+        }
+      }
     },
     {
       "comuna": "Recoleta",
@@ -330,7 +528,14 @@
       "wiki_url": "https://es.wikipedia.org/wiki/Recoleta_(Chile)",
       "logo_url": "https://storage.googleapis.com/media-recoletacl/wp-content/uploads/2024/12/logo-recoleta-avanza.png",
       "instagram": "https://www.instagram.com/municipalidadrecoleta/",
-      "facebook": "https://www.facebook.com/MunicipalidadDeRecoleta/"
+      "facebook": "https://www.facebook.com/MunicipalidadDeRecoleta/",
+      "mayores": {
+        "actual": {
+          "name": "Fares Jadue",
+          "web": "https://www.recoleta.cl/autoridades/",
+          "email": "alcaldia@recoleta.cl"
+        }
+      }
     },
     {
       "comuna": "Renca",
@@ -343,7 +548,17 @@
       "wiki_url": "https://es.wikipedia.org/wiki/Renca_(Chile)",
       "logo_url": "https://storage.googleapis.com/wordpress-transparencia/logo_renca.png",
       "instagram": "https://www.instagram.com/muni_renca/",
-      "facebook": "https://www.facebook.com/MuniRenca/"
+      "facebook": "https://www.facebook.com/MuniRenca/",
+      "mayores": {
+        "actual": {
+          "name": "Claudio Castro",
+          "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Claudio%20Castro%20como%20Vice%20Governador%20do%20Rio%20de%20Janeiro.jpg?width=400",
+          "instagram": "https://www.instagram.com/claudiocastrorj/",
+          "web": "http://www.claudiocastro.net/site/",
+          "twitter": "https://twitter.com/claudiocastroRJ",
+          "email": "alcaldia@renca.cl"
+        }
+      }
     },
     {
       "comuna": "San Joaquín",
@@ -356,7 +571,14 @@
       "wiki_url": "https://es.wikipedia.org/wiki/San_Joaqu%C3%ADn_(Chile)",
       "logo_url": "https://sanjoaquin.cl/wp-content/uploads/2021/11/logoblanco.png",
       "instagram": "https://www.instagram.com/municipalidadsanjoaquin/",
-      "facebook": "https://www.facebook.com/muni.joaquin/"
+      "facebook": "https://www.facebook.com/muni.joaquin/",
+      "mayores": {
+        "actual": {
+          "name": "Cristóbal Labra",
+          "web": "https://www.sanjoaquin.cl/autoridades/",
+          "email": "alcaldia@sanjoaquin.cl"
+        }
+      }
     },
     {
       "comuna": "San Miguel",
@@ -367,9 +589,18 @@
       "direccion_municipal": "Av. Departamental 450, San Miguel",
       "url_municipal": "https://web.sanmiguel.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/San_Miguel_(Chile)",
-      "logo_url": "https://web.sanmiguel.cl/wp-content/uploads/2024/12/logo-web.png",
+      "logo_url": "https://cmsm.cl/dev2/wp-content/uploads/2021/08/Logo-Corporacion-vertical.svg",
       "instagram": "https://www.instagram.com/sanmiguel_cl/",
-      "facebook": "https://www.facebook.com/sanmiguel.cl/"
+      "facebook": "https://www.facebook.com/sanmiguel.cl/",
+      "mayores": {
+        "actual": {
+          "name": "Carol Bown",
+          "img": "https://commons.wikimedia.org/wiki/Special:FilePath/CAROL%20BOWN%20SEP%C3%9ALVEDA%202018.jpg?width=400",
+          "twitter": "https://twitter.com/CarolCBown",
+          "web": "https://web.sanmiguel.cl/autoridades/",
+          "email": "alcaldia@web.sanmiguel.cl"
+        }
+      }
     },
     {
       "comuna": "San Ramón",
@@ -382,7 +613,14 @@
       "wiki_url": "https://es.wikipedia.org/wiki/San_Ram%C3%B3n_(Chile)",
       "logo_url": "https://municipalidadsanramon.cl/wp-content/uploads/2025/01/Sin-titulo-1.png",
       "instagram": "https://www.instagram.com/municipalidadsanramon/",
-      "facebook": "https://www.facebook.com/municipalidadsanramon/"
+      "facebook": "https://www.facebook.com/municipalidadsanramon/",
+      "mayores": {
+        "actual": {
+          "name": "Gustavo Toro",
+          "web": "https://municipalidadsanramon.cl/autoridades/",
+          "email": "alcaldia@municipalidadsanramon.cl"
+        }
+      }
     },
     {
       "comuna": "Santiago",
@@ -395,7 +633,17 @@
       "wiki_url": "https://es.wikipedia.org/wiki/Santiago_(comuna)",
       "logo_url": "https://www.munistgo.cl/wp-content/uploads/2024/12/GRILLA-LOGO-IMS-2024.png",
       "instagram": "https://www.instagram.com/munistgo/",
-      "facebook": "https://www.facebook.com/munistgo/"
+      "facebook": "https://www.facebook.com/munistgo/",
+      "mayores": {
+        "actual": {
+          "name": "Mario Desbordes",
+          "img": "https://commons.wikimedia.org/wiki/Special:FilePath/MARIO%20DESBORDES%20JIMENEZ.jpg?width=400",
+          "instagram": "https://www.instagram.com/diputadodesbordes/",
+          "twitter": "https://twitter.com/desbordes",
+          "web": "https://www.munistgo.cl/autoridades/",
+          "email": "alcaldia@munistgo.cl"
+        }
+      }
     },
     {
       "comuna": "Vitacura",
@@ -408,7 +656,16 @@
       "wiki_url": "https://es.wikipedia.org/wiki/Vitacura",
       "logo_url": "https://vitacura.cl/app/themes/vitacura-sage/public/images/logos-vitacura_sineslogan_hor.36ae38.png",
       "instagram": "https://www.instagram.com/vitacura_/",
-      "facebook": "https://www.facebook.com/vitacura/"
+      "facebook": "https://www.facebook.com/vitacura/",
+      "mayores": {
+        "actual": {
+          "name": "Camila Merino",
+          "img": "https://vitanew.tchile.com/app/uploads/2023/09/img_muni_alcaldesa.7edb9a.jpg",
+          "instagram": "https://www.instagram.com/camilamerinoc/",
+          "web": "https://vitacura.cl/municipalidad/alcalde/",
+          "email": "alcaldia@vitacura.cl"
+        }
+      }
     }
   ],
   "Provincia Cordillera": [
@@ -423,7 +680,14 @@
       "wiki_url": "https://es.wikipedia.org/wiki/Puente_Alto",
       "logo_url": "https://www.mpuentealto.cl/wp-content/uploads/2025/06/log_mpte.png",
       "instagram": "https://www.instagram.com/mpuentealto/",
-      "facebook": "https://www.facebook.com/munipuentealto/"
+      "facebook": "https://www.facebook.com/munipuentealto/",
+      "mayores": {
+        "actual": {
+          "name": "Matías Toledo",
+          "web": "https://www.mpuentealto.cl/autoridades/",
+          "email": "alcaldia@mpuentealto.cl"
+        }
+      }
     },
     {
       "comuna": "Pirque",
@@ -461,7 +725,7 @@
       "facebook": "https://www.facebook.com/MunicipalidaddeSanJosedeMaipo/",
       "mayores": {
         "actual": {
-          "name": "Roberto Pérez Rojas",
+          "name": "Marco Antonio Aravena",
           "email": "[EMAIL_ADDRESS]",
           "img": "https://cdn.sanjosedemaipo.cl/images/Roberto_Perez_Rojas.original.format-avif.avif",
           "instagram": "https://www.instagram.com/robertoperezrojas/",
@@ -480,7 +744,14 @@
       "direccion_municipal": "Freire 270, San Bernardo",
       "url_municipal": "https://www.sanbernardo.cl",
       "wiki_url": "https://es.wikipedia.org/wiki/San_Bernardo_(Chile)",
-      "logo_url": "https://www.sanbernardo.cl/wp-content/uploads/2024/03/img_logo.png"
+      "logo_url": "https://www.sanbernardo.cl/wp-content/uploads/2024/03/img_logo.png",
+      "mayores": {
+        "actual": {
+          "name": "Christopher White",
+          "web": "https://www.sanbernardo.cl/autoridades/",
+          "email": "alcaldia@sanbernardo.cl"
+        }
+      }
     },
     {
       "comuna": "Buin",
@@ -492,7 +763,14 @@
       "url_municipal": "https://www.buin.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Buin_(Chile)",
       "logo_url": "https://www.buin.cl/wp-content/uploads/2020/12/logo.png",
-      "instagram": "https://www.instagram.com/munibuin2028/"
+      "instagram": "https://www.instagram.com/munibuin2028/",
+      "mayores": {
+        "actual": {
+          "name": "Miguel Araya Lobos",
+          "web": "https://www.buin.cl/autoridades/",
+          "email": "alcaldia@buin.cl"
+        }
+      }
     },
     {
       "comuna": "Calera de Tango",
@@ -504,7 +782,14 @@
       "url_municipal": "https://www.caleradetango.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Calera_de_Tango",
       "logo_url": "https://static.wixstatic.com/media/0c33ad_e9a53595d6124e9895052f54fafc5be3~mv2.png/v1/crop/x_57,y_0,w_927,h_400/fill/w_482,h_208,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LogoCaleraDeTango_4.png",
-      "instagram": "https://www.instagram.com/municdt"
+      "instagram": "https://www.instagram.com/municdt",
+      "mayores": {
+        "actual": {
+          "name": "Hortensia Mora Catalán",
+          "web": "https://www.caleradetango.cl/autoridades/",
+          "email": "alcaldia@caleradetango.cl"
+        }
+      }
     },
     {
       "comuna": "Paine",
@@ -516,7 +801,15 @@
       "url_municipal": "https://www.paine.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Paine",
       "logo_url": "https://www.paine.cl/wp-content/themes/picostrap5-child-base/images/LogoPaine.svg",
-      "instagram": "https://www.instagram.com/munidepaine"
+      "instagram": "https://www.instagram.com/munidepaine",
+      "mayores": {
+        "actual": {
+          "name": "Rodrigo Contreras",
+          "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Rodrigo%20Contreras%202018.jpg?width=400",
+          "web": "https://www.paine.cl/autoridades/",
+          "email": "alcaldia@paine.cl"
+        }
+      }
     }
   ],
   "Provincia Talagante": [
@@ -529,7 +822,15 @@
       "direccion_municipal": "Ignacio Carrera Pinto 285, Talagante",
       "url_municipal": "https://www.munitalagante.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Talagante",
-      "logo_url": "https://static.wixstatic.com/media/1b53a1_806b9f1da2c64b819f15bb2d804b967a~mv2.png/v1/fill/w_642,h_372,al_c,lg_1,q_85,enc_avif,quality_auto/logo%20municipal%20rojo.png"
+      "logo_url": "https://static.wixstatic.com/media/1b53a1_806b9f1da2c64b819f15bb2d804b967a~mv2.png/v1/fill/w_642,h_372,al_c,lg_1,q_85,enc_avif,quality_auto/logo%20municipal%20rojo.png",
+      "mayores": {
+        "actual": {
+          "name": "Carlos Álvarez",
+          "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Carlos%20Chacho%20%C3%81lvarez%20(cropped).jpg?width=400",
+          "web": "https://www.munitalagante.cl/autoridades/",
+          "email": "alcaldia@munitalagante.cl"
+        }
+      }
     },
     {
       "comuna": "El Monte",
@@ -540,7 +841,14 @@
       "direccion_municipal": "Bilbao 530, El Monte",
       "url_municipal": "https://www.munielmonte.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/El_Monte_(Chile)",
-      "logo_url": "https://www.munielmonte.cl/favImage.png"
+      "logo_url": "https://www.munielmonte.cl/favImage.png",
+      "mayores": {
+        "actual": {
+          "name": "Zandra Sofía Maulén Jofré",
+          "web": "https://www.munielmonte.cl/autoridades/",
+          "email": "alcaldia@munielmonte.cl"
+        }
+      }
     },
     {
       "comuna": "Isla de Maipo",
@@ -551,7 +859,14 @@
       "direccion_municipal": "Rodriguez 561, Isla de Maipo",
       "url_municipal": "https://www.islademaipo.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Isla_de_Maipo",
-      "logo_url": "https://scontent.fscl25-1.fna.fbcdn.net/v/t39.30808-6/436379601_834140828756023_1340716738744961583_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeGguTy3OyiQg0VpM8Qe9hZAER7QpdskfisRHtCl2yR-KwocE5Q_0GtMpQoTeDf1te_44fUTRpBnpe_HoW18xvzq&_nc_ohc=CbPlFH6V0CcQ7kNvwF45gfT&_nc_oc=AdlAmtGRv2lS3t2FkxSsiwCXOIlOXI9CQLPdUjGsCr8zAnRoaW-PVH0-3ve-dnCndcA&_nc_zt=23&_nc_ht=scontent.fscl25-1.fna&_nc_gid=knXi-YbXHp0kvpVzlzMzCg&oh=00_AfsQ46Rcf4ektJcPHT_hWHkuZ4ZeszxHZkQ61S0BXnOdyQ&oe=69A5D5F5"
+      "logo_url": "https://scontent.fscl25-1.fna.fbcdn.net/v/t39.30808-6/436379601_834140828756023_1340716738744961583_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeGguTy3OyiQg0VpM8Qe9hZAER7QpdskfisRHtCl2yR-KwocE5Q_0GtMpQoTeDf1te_44fUTRpBnpe_HoW18xvzq&_nc_ohc=CbPlFH6V0CcQ7kNvwF45gfT&_nc_oc=AdlAmtGRv2lS3t2FkxSsiwCXOIlOXI9CQLPdUjGsCr8zAnRoaW-PVH0-3ve-dnCndcA&_nc_zt=23&_nc_ht=scontent.fscl25-1.fna&_nc_gid=knXi-YbXHp0kvpVzlzMzCg&oh=00_AfsQ46Rcf4ektJcPHT_hWHkuZ4ZeszxHZkQ61S0BXnOdyQ&oe=69A5D5F5",
+      "mayores": {
+        "actual": {
+          "name": "Juan Pablo Olave Cambara",
+          "web": "https://www.islademaipo.cl/autoridades/",
+          "email": "alcaldia@islademaipo.cl"
+        }
+      }
     },
     {
       "comuna": "Padre Hurtado",
@@ -562,7 +877,15 @@
       "direccion_municipal": "Av. Las Parcelas 150, Padre Hurtado",
       "url_municipal": "https://portal.mph.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Padre_Hurtado_(comuna)",
-      "logo_url": "https://portal.mph.cl/wp-content/uploads/2022/05/LOGO-PNG-e1653334484821.png"
+      "logo_url": "https://portal.mph.cl/wp-content/uploads/2022/05/LOGO-PNG-e1653334484821.png",
+      "mayores": {
+        "actual": {
+          "name": "Felipe Muñoz",
+          "web": "https://portal.mph.cl/autoridades/",
+          "email": "alcaldia@portal.mph.cl",
+          "img": "https://portal.mph.cl/wp-content/uploads/2022/01/BOTON-ESCRÍBELE-A-TU-ALCALDE-280x300.jpg"
+        }
+      }
     },
     {
       "comuna": "Peñaflor",
@@ -573,7 +896,15 @@
       "direccion_municipal": "Casanova 60, Peñaflor",
       "url_municipal": "https://penaflor.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Pe%C3%B1aflor_(Chile)",
-      "logo_url": "https://penaflor.cl/extra-file-gdm/logo.png"
+      "logo_url": "https://penaflor.cl/extra-file-gdm/logo.png",
+      "mayores": {
+        "actual": {
+          "name": "Nibaldo Meza",
+          "web": "https://penaflor.cl/autoridades/",
+          "email": "alcaldia@penaflor.cl",
+          "img": "https://penaflor.cl/wp-content/uploads/2024/12/alcalde-2.png"
+        }
+      }
     }
   ],
   "Provincia Melipilla": [
@@ -586,7 +917,14 @@
       "direccion_municipal": "Manuel de Salas 449, Melipilla",
       "url_municipal": "https://www.munimelipilla.cl",
       "wiki_url": "https://es.wikipedia.org/wiki/Melipilla",
-      "logo_url": "https://melipilla.cl/wp-content/archivos/2025/02/logo-Muni-Melipilla.png"
+      "logo_url": "https://melipilla.cl/wp-content/archivos/2025/02/logo-Muni-Melipilla.png",
+      "mayores": {
+        "actual": {
+          "name": "Paula Garate",
+          "web": "https://www.munimelipilla.cl/autoridades/",
+          "email": "alcaldia@munimelipilla.cl"
+        }
+      }
     },
     {
       "comuna": "Alhué",
@@ -597,7 +935,15 @@
       "direccion_municipal": "Balmaceda 125, Alhué",
       "url_municipal": "https://municipalidadalhue.cl/portal/",
       "wiki_url": "https://es.wikipedia.org/wiki/Alhu%C3%A9",
-      "logo_url": "https://municipalidadalhue.cl/portal/wp-content/uploads/2024/12/cropped-Alhue-sigamos-trabajando-juntos_.png"
+      "logo_url": "https://municipalidadalhue.cl/portal/wp-content/uploads/2024/12/cropped-Alhue-sigamos-trabajando-juntos_.png",
+      "mayores": {
+        "actual": {
+          "name": "Marcela Chamorro Macías",
+          "web": "https://municipalidadalhue.cl/portal/autoridades/",
+          "email": "alcaldia@municipalidadalhue.cl",
+          "img": "https://municipalidadalhue.cl/portal/wp-content/uploads/2025/01/Alcaldesa_.png"
+        }
+      }
     },
     {
       "comuna": "Curacaví",
@@ -608,7 +954,14 @@
       "direccion_municipal": "Camino Real s/n, Curacaví",
       "url_municipal": "https://municipalidadcuracavi.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Curacav%C3%AD",
-      "logo_url": "https://municipalidadcuracavi.cl/wp-content/uploads/2024/12/logo-blanco.png"
+      "logo_url": "https://municipalidadcuracavi.cl/wp-content/uploads/2024/12/logo-blanco.png",
+      "mayores": {
+        "actual": {
+          "name": "Christian Hernández Villanueva",
+          "web": "https://municipalidadcuracavi.cl/autoridades/",
+          "email": "alcaldia@municipalidadcuracavi.cl"
+        }
+      }
     },
     {
       "comuna": "María Pinto",
@@ -619,7 +972,15 @@
       "direccion_municipal": "Arturo Prat 211, María Pinto",
       "url_municipal": "https://mpinto.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Mar%C3%ADa_Pinto",
-      "logo_url": "https://mpinto.cl/wp-content/uploads/2023/06/LOGO-MUNICIPAL-2025-e1769172435748.png"
+      "logo_url": "https://mpinto.cl/wp-content/uploads/2023/06/LOGO-MUNICIPAL-2025-e1769172435748.png",
+      "mayores": {
+        "actual": {
+          "name": "Jessica Mualim",
+          "img": "https://commons.wikimedia.org/wiki/Special:FilePath/J%C3%A9ssica%20Mualim%20Fajuri%20Sernam%20(2012).jpg?width=400",
+          "web": "https://mpinto.cl/autoridades/",
+          "email": "alcaldia@mpinto.cl"
+        }
+      }
     },
     {
       "comuna": "San Pedro",
@@ -630,7 +991,14 @@
       "direccion_municipal": "Av. Bernardo O'Higgins 620, San Pedro de Melipilla",
       "url_municipal": "https://www.munisanpedro.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/San_Pedro_(Chile)",
-      "logo_url": "https://www.munisanpedro.cl/wp-content/uploads/2025/09/FACEBOOK-PUBLICACION-8-e1758725283318.png"
+      "logo_url": "https://www.munisanpedro.cl/wp-content/uploads/2025/09/FACEBOOK-PUBLICACION-8-e1758725283318.png",
+      "mayores": {
+        "actual": {
+          "name": "Manuel Devia",
+          "web": "https://www.munisanpedro.cl/autoridades/",
+          "email": "alcaldia@munisanpedro.cl"
+        }
+      }
     }
   ],
   "Provincia Chacabuco": [
@@ -643,7 +1011,14 @@
       "direccion_municipal": "Av. El Roble 4501, Colina",
       "url_municipal": "https://www.colina.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Colina_(Chile)",
-      "logo_url": "https://www.colina.cl/wp-content/uploads/2022/02/logo-2022.png"
+      "logo_url": "https://www.colina.cl/wp-content/uploads/2022/02/logo-2022.png",
+      "mayores": {
+        "actual": {
+          "name": "Isabel Valenzuela Ahumada",
+          "web": "https://www.colina.cl/autoridades/",
+          "email": "alcaldia@colina.cl"
+        }
+      }
     },
     {
       "comuna": "Lampa",
@@ -654,7 +1029,15 @@
       "direccion_municipal": "Condell 999, Lampa",
       "url_municipal": "https://lampa.cl/",
       "wiki_url": "https://es.wikipedia.org/wiki/Lampa_(Chile)",
-      "logo_url": "https://lampa.cl/website/wp-content/uploads/2022/08/logo-municipalidad-lampa-horizontal-color-texto-gris-2022.png"
+      "logo_url": "https://lampa.cl/website/wp-content/uploads/2022/08/logo-municipalidad-lampa-horizontal-color-texto-gris-2022.png",
+      "mayores": {
+        "actual": {
+          "name": "Jonathan Opazo Carrasco",
+          "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Visita%20Humedal%20de%20Batuco.jpg?width=400",
+          "web": "https://lampa.cl/autoridades/",
+          "email": "alcaldia@lampa.cl"
+        }
+      }
     },
     {
       "comuna": "Tiltil",
@@ -665,7 +1048,14 @@
       "direccion_municipal": "O'Higgins 10, Tiltil",
       "url_municipal": "https://www.munitiltil.cl",
       "wiki_url": "https://es.wikipedia.org/wiki/Til_Til",
-      "logo_url": "https://munitiltil.cl/wp-content/uploads/2024/12/escudotiltil.png"
+      "logo_url": "https://munitiltil.cl/wp-content/uploads/2024/12/escudotiltil.png",
+      "mayores": {
+        "actual": {
+          "name": "Luis Valenzuela Cruz",
+          "web": "https://www.munitiltil.cl/autoridades/",
+          "email": "alcaldia@munitiltil.cl"
+        }
+      }
     }
   ]
 }
