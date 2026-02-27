@@ -158,7 +158,7 @@ export default function ComunasTab({
                 </h2>
 
                 {/* Main Card */}
-                <div className="relative bg-linear-to-br from-[#1b3a57] to-[#0a192f] border border-[#2c5282] rounded-lg shadow-2xl p-4 overflow-hidden border-t-2 border-t-[#3b82f6]/30">
+                <div className="relative border border-[#2c5282] bg-black/50 rounded-lg shadow-2xl p-4 overflow-hidden border-t-2 border-t-[#3b82f6]/30">
                   {/* Subtle Map Background Simulation */}
                   <div className="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay" style={{ backgroundImage: 'radial-gradient(circle at center, #60a5fa 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
                   <div className="absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400/20 via-transparent to-transparent" />
@@ -198,17 +198,6 @@ export default function ComunasTab({
                           <span className="font-bold text-white">Digital: </span>
                           {selectedComuna.mayores.actual.instagram ? `@${selectedComuna.mayores.actual.instagram.replace(/\/$/, '').split('/').pop()}` : (selectedComuna.mayores.actual.twitter ? 'X/Twitter account detected' : 'N/A')}
                         </p>
-                        <p>
-                          <span className="font-bold text-white">Status: </span>
-                          Active
-                        </p>
-                      </div>
-
-                      {/* Pill Button Container */}
-                      <div className="flex justify-end mt-4">
-                        <div className="bg-linear-to-b from-[#dc2626] to-[#991b1b] text-white text-[10px] sm:text-xs font-bold px-4 pt-1 pb-1.5 rounded-full border-[1.5px] border-[#fca5a5] shadow-[0_2px_4px_rgba(0,0,0,0.5)] cursor-default tracking-wide">
-                          Classified Dossier...
-                        </div>
                       </div>
                     </div>
                   </div>

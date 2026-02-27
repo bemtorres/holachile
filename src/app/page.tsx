@@ -63,6 +63,13 @@ function AppContent() {
   const [mapCenter, setMapCenter] = useState<[number, number] | null>(null);
   // --- End Map Layer State ---
 
+  // --- Simulation Integration State ---
+  const [simActive, setSimActive] = useState(false);
+  const [simParams, setSimParams] = useState<SimParams>({ flowPerHour: 1500, pctCat1: 70, pctCat2: 20, pctCat3: 10, timeProfile: 'punta' });
+  const [simStats, setSimStats] = useState({ vehicles: 0, revenue: 0, minutes: 0 });
+  const [simCompleted, setSimCompleted] = useState(false);
+  // --- End Simulation State ---
+
   const handleConsoleCommand = useCallback((cmd: string, args: string[], onResult: (data: any) => void) => {
     if (cmd === 'map') {
       const comunaName = args.join(' ').toLowerCase();
@@ -320,6 +327,17 @@ function AppContent() {
               selectedComuna={selectedComuna}
               centerOn={mapCenter}
               pickingMode={pickingMode}
+              simActive={simActive}
+              flowPerHour={simParams.flowPerHour}
+              pctCat1={simParams.pctCat1}
+              pctCat2={simParams.pctCat2}
+              pctCat3={simParams.pctCat3}
+              timeProfile={simParams.timeProfile}
+              onSimTick={setSimStats}
+              onSimComplete={() => {
+                setSimActive(false);
+                setSimCompleted(true);
+              }}
               onComunaClick={(nombre) => {
                 const c = findComuna(nombre);
                 if (c) {
@@ -331,7 +349,7 @@ function AppContent() {
           </div>
 
           {/* ── Comunas toggle ── */}
-          <div className="absolute top-3 left-1/2 -translate-x-1/2 z-9999 pointer-events-auto">
+          <div className="absolute top-3 left-1/2 -translate-x-1/2 z-[9999] pointer-events-auto">
             <button
               onClick={() => setShowComunas(v => !v)}
               className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xl border transition-all duration-200
@@ -561,6 +579,10 @@ function AppContent() {
                 routePorticos={routePorticos} routeDistanceKm={routeDistanceKm} origin={origin} destination={destination}
                 pickingMode={pickingMode} setPickingMode={setPickingMode} calculateRoute={calculateRoute}
                 isCalculating={isCalculating} requestGeolocation={requestGeolocation}
+                simActive={simActive} setSimActive={setSimActive}
+                simParams={simParams} setSimParams={setSimParams}
+                simStats={simStats} setSimStats={setSimStats}
+                simCompleted={simCompleted} setSimCompleted={setSimCompleted}
               />
             )}
 

@@ -17,6 +17,15 @@ type Props = {
   calculateRoute: () => void;
   isCalculating: boolean;
   requestGeolocation: () => void;
+  // External Sim State
+  simActive: boolean;
+  setSimActive: (val: boolean) => void;
+  simParams: SimParams;
+  setSimParams: (params: SimParams) => void;
+  simStats: { vehicles: number; revenue: number; minutes: number };
+  setSimStats: (stats: { vehicles: number; revenue: number; minutes: number }) => void;
+  simCompleted: boolean;
+  setSimCompleted: (val: boolean) => void;
 };
 
 export type SimParams = {
@@ -48,30 +57,27 @@ export default function SimulationTab({
   calculateRoute,
   isCalculating,
   requestGeolocation,
+  simActive,
+  setSimActive,
+  simParams,
+  setSimParams,
+  simStats,
+  setSimStats,
+  simCompleted,
+  setSimCompleted
 }: Props) {
-  const [flowPerHour, setFlowPerHour] = useState(1500);
-  const [pctCat1, setPctCat1] = useState(70);
-  const [pctCat2, setPctCat2] = useState(20);
-  const [pctCat3, setPctCat3] = useState(10);
-  const [timeProfile, setTimeProfile] = useState<'valle' | 'punta' | 'saturacion'>('punta');
+  const { flowPerHour, pctCat1, pctCat2, pctCat3, timeProfile } = simParams;
 
-  const [isSimulating, setIsSimulating] = useState(false);
-  const [simCompleted, setSimCompleted] = useState(false);
-  const [liveMinutes, setLiveMinutes] = useState(0);
+  const updateParam = (key: keyof SimParams, val: any) => {
+    setSimParams({ ...simParams, [key]: val });
+  };
 
   const [results, setResults] = useState<ResultRow[]>([]);
-  const [totalVehicles, setTotalVehicles] = useState(0);
-  const [totalRevenue, setTotalRevenue] = useState(0);
-
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleStart = () => {
-    setIsSimulating(true);
     setSimCompleted(false);
-    setLiveMinutes(0);
     setResults([]);
-    setTotalVehicles(0);
-    setTotalRevenue(0);
+    setSimStats({ vehicles: 0, revenue: 0, minutes: 0 });
 
     // Calc totals
     const vehCat1 = Math.round(flowPerHour * (pctCat1 / 100));
@@ -79,7 +85,7 @@ export default function SimulationTab({
     const vehCat3 = Math.round(flowPerHour * (pctCat3 / 100));
     const totVeh = vehCat1 + vehCat2 + vehCat3;
 
-    // Create results array instantly
+    // Create results array instantly for the final report
     let totRev = 0;
     const finalResults: ResultRow[] = routePorticos.map(rp => {
       let p1 = rp.precio || 0;
@@ -116,32 +122,15 @@ export default function SimulationTab({
       };
     });
 
-    // Fast timer to count up to 60 minutes
-    timerRef.current = setInterval(() => {
-      setLiveMinutes((prev) => {
-        const next = prev + 2; // progress 2 mins per tick
-        if (next >= 60) {
-          clearInterval(timerRef.current!);
-          setIsSimulating(false);
-          setSimCompleted(true);
-          setResults(finalResults);
-          setTotalVehicles(totVeh);
-          setTotalRevenue(totRev);
-          return 60;
-        }
-        return next;
-      });
-    }, 50); // Fast interval
+    setResults(finalResults);
+    setSimActive(true);
   };
 
   const handleReset = () => {
-    if (timerRef.current) clearInterval(timerRef.current);
-    setIsSimulating(false);
+    setSimActive(false);
     setSimCompleted(false);
-    setLiveMinutes(0);
     setResults([]);
-    setTotalVehicles(0);
-    setTotalRevenue(0);
+    setSimStats({ vehicles: 0, revenue: 0, minutes: 0 });
   };
 
   const downloadCSV = () => {
@@ -154,7 +143,7 @@ export default function SimulationTab({
     const vC1 = results.length > 0 ? results[0].vehCat1 : 0;
     const vC2 = results.length > 0 ? results[0].vehCat2 : 0;
     const vC3 = results.length > 0 ? results[0].vehCat3 : 0;
-    csv += `\nTOTALES,,,,${vC1},${vC2},${vC3},${totalRevenue}\n`;
+    csv += `\nTOTALES,,,,${vC1},${vC2},${vC3},${simStats.revenue}\n`;
 
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
@@ -166,7 +155,7 @@ export default function SimulationTab({
     document.body.removeChild(link);
   };
 
-  const progressPct = (liveMinutes / 60) * 100;
+  const progressPct = Math.min((simStats.minutes / 60) * 100, 100);
 
   return (
     <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-5 custom-scrollbar bg-zinc-950">
@@ -229,7 +218,7 @@ export default function SimulationTab({
       </div>
 
       {/* Config panel — only shown before simulation */}
-      {routePorticos.length > 0 && !isSimulating && !simCompleted && (
+      {routePorticos.length > 0 && !simActive && !simCompleted && (
         <div className="bg-zinc-900/30 p-5 rounded-lg border border-zinc-800 flex flex-col gap-5 animate-in fade-in slide-in-from-bottom-2">
           <h2 className="text-sm font-semibold text-zinc-100 flex items-center gap-2">
             <Activity className="w-4 h-4 text-emerald-500" />
@@ -240,7 +229,7 @@ export default function SimulationTab({
             <label className="text-xs text-zinc-400 font-medium">Volumen por Hora</label>
             <input
               type="range" min="100" max="10000" step="100" value={flowPerHour}
-              onChange={(e) => setFlowPerHour(parseInt(e.target.value))}
+              onChange={(e) => updateParam('flowPerHour', parseInt(e.target.value))}
               className="w-full accent-blue-500"
             />
             <div className="text-right text-xs font-medium text-blue-400">{flowPerHour} veh/hr</div>
@@ -256,8 +245,7 @@ export default function SimulationTab({
               </div>
               <input type="range" min="0" max="100" value={pctCat1} onChange={(e) => {
                 const v = parseInt(e.target.value);
-                setPctCat1(v);
-                if (v + pctCat2 > 100) setPctCat2(100 - v);
+                setSimParams({ ...simParams, pctCat1: v, pctCat2: Math.min(pctCat2, 100 - v) });
               }} className="w-full accent-blue-500" />
             </div>
 
@@ -266,7 +254,7 @@ export default function SimulationTab({
                 <span className="text-zinc-300 flex items-center gap-1"><Truck className="w-3 h-3 text-slate-400" /> Categoría 2 (2 ejes)</span>
                 <span className="font-mono text-slate-400">{pctCat2}%</span>
               </div>
-              <input type="range" min="0" max={100 - pctCat1} value={pctCat2} onChange={(e) => setPctCat2(parseInt(e.target.value))} className="w-full accent-slate-500" />
+              <input type="range" min="0" max={100 - pctCat1} value={pctCat2} onChange={(e) => updateParam('pctCat2', parseInt(e.target.value))} className="w-full accent-slate-500" />
             </div>
 
             <div className="flex flex-col gap-1 mt-2">
@@ -274,7 +262,7 @@ export default function SimulationTab({
                 <span className="text-zinc-300 flex items-center gap-1"><Truck className="w-3 h-3 text-amber-500" /> Categoría 3 (Pesados)</span>
                 <span className="font-mono text-amber-500">{pctCat3}%</span>
               </div>
-              <input type="range" min="0" max={100 - pctCat1 - pctCat2} value={pctCat3} onChange={(e) => setPctCat3(parseInt(e.target.value))} className="w-full accent-amber-500" />
+              <input type="range" min="0" max={100 - pctCat1 - pctCat2} value={pctCat3} onChange={(e) => updateParam('pctCat3', parseInt(e.target.value))} className="w-full accent-amber-500" />
             </div>
           </div>
 
@@ -282,7 +270,7 @@ export default function SimulationTab({
             <label className="text-xs text-zinc-400 font-medium">Horario Tarifario</label>
             <select
               value={timeProfile}
-              onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setTimeProfile(e.target.value as 'valle' | 'punta' | 'saturacion')}
+              onChange={(e: React.ChangeEvent<HTMLSelectElement>) => updateParam('timeProfile', e.target.value as 'valle' | 'punta' | 'saturacion')}
               className="w-full bg-zinc-950 border border-zinc-800 rounded-md px-3 py-2 text-sm font-medium text-zinc-100 focus:outline-none focus:ring-1 focus:ring-zinc-700"
             >
               <option value="valle">Valle (TBFP) — Tarifa Normal</option>
@@ -302,13 +290,13 @@ export default function SimulationTab({
       )}
 
       {/* Live simulation panel */}
-      {(isSimulating || simCompleted) && (
+      {(simActive || simCompleted) && (
         <div className="flex flex-col gap-4">
 
           {/* Status header */}
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2">
-              {isSimulating
+              {simActive
                 ? <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 : <div className="w-2 h-2 rounded-full bg-purple-500" />
               }
@@ -318,7 +306,7 @@ export default function SimulationTab({
             </div>
             <div className="font-mono text-sm text-zinc-400 flex items-center gap-1.5">
               <Clock className="w-3.5 h-3.5" />
-              {Math.floor(liveMinutes).toString().padStart(2, '0')}:00
+              {Math.floor(simStats.minutes).toString().padStart(2, '0')}:00
             </div>
           </div>
 
@@ -333,7 +321,7 @@ export default function SimulationTab({
               </div>
               <div className="flex justify-between text-[10px] text-zinc-600 mt-1">
                 <span>0 min</span>
-                <span className="text-zinc-500">{Math.round(liveMinutes)} min</span>
+                <span className="text-zinc-500">{Math.round(simStats.minutes)} min</span>
                 <span>60 min</span>
               </div>
             </div>
@@ -347,9 +335,9 @@ export default function SimulationTab({
                 <div className="absolute inset-0 bg-linear-to-b from-emerald-950/0 to-emerald-950/20 pointer-events-none" />
                 <span className="text-[9px] text-zinc-500 font-semibold uppercase tracking-wider mb-1">Ingreso Bruto de 1 Hora</span>
                 <div className="text-4xl font-bold tracking-tighter text-transparent bg-clip-text bg-linear-to-r from-emerald-400 to-green-300 font-mono z-10">
-                  ${Math.round(totalRevenue).toLocaleString('es-CL')}
+                  ${Math.round(simStats.revenue).toLocaleString('es-CL')}
                 </div>
-                <span className="text-[9px] text-zinc-600 mt-1 z-10">Calculado en {totalVehicles.toLocaleString('es-CL')} vehículos</span>
+                <span className="text-[9px] text-zinc-600 mt-1 z-10">Calculado en {simStats.vehicles.toLocaleString('es-CL')} vehículos</span>
               </div>
 
               {/* Table Preview */}
@@ -396,7 +384,7 @@ export default function SimulationTab({
             onClick={handleReset}
             className="w-full bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-400 hover:text-zinc-200 rounded-md font-medium py-2 text-xs transition-colors flex items-center justify-center gap-2"
           >
-            <RotateCcw className="w-3 h-3" /> {isSimulating ? 'Cancelar Calculo' : 'Nueva Simulación'}
+            <RotateCcw className="w-3 h-3" /> {simActive ? 'Cancelar Calculo' : 'Nueva Simulación'}
           </button>
 
         </div>
